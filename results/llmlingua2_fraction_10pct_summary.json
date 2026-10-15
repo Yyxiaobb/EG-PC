@@ -1,0 +1,212 @@
+{
+  "fraction": 0.1,
+  "seed": 42,
+  "dataset_counts": {
+    "hotpotqa": {
+      "total": 7405,
+      "sampled": 741
+    },
+    "2wikimultihopqa": {
+      "total": 12576,
+      "sampled": 1258
+    },
+    "musique": {
+      "total": 2417,
+      "sampled": 242
+    }
+  },
+  "llmlingua2_model": "D:\\HF_dl\\model\\llmlingua-2-bert-base-multilingual-cased-meetingbank",
+  "rows": 8964,
+  "summaries": [
+    {
+      "method": "evidence_graph",
+      "n": 2241,
+      "mean_input_tokens": 738.1856314145471,
+      "mean_token_reduction_rate": 0.4504607769109949,
+      "mean_compression_ms": 893.6294420794288,
+      "p50_compression_ms": 917.3746,
+      "mean_evidence_f1": 0.30171463947366783,
+      "mean_supporting_fact_recall": 0.5236690627899044,
+      "mean_answer_presence_in_context": 0.4926372155287818
+    },
+    {
+      "method": "fixed_budget_50",
+      "n": 2241,
+      "mean_input_tokens": 673.714859437751,
+      "mean_token_reduction_rate": 0.5002367024165263,
+      "mean_compression_ms": 3.5082922356091033,
+      "p50_compression_ms": 3.2228,
+      "mean_evidence_f1": 0.14141238174416276,
+      "mean_supporting_fact_recall": 0.5239627884124975,
+      "mean_answer_presence_in_context": 0.5622489959839357
+    },
+    {
+      "method": "llmlingua2_50",
+      "n": 2241,
+      "mean_input_tokens": 535.4136546184739,
+      "mean_token_reduction_rate": 0.5968658732591247,
+      "mean_compression_ms": 312.4085771975657,
+      "p50_compression_ms": 275.3989000048023,
+      "mean_evidence_f1": 0.0,
+      "mean_supporting_fact_recall": 0.0,
+      "mean_answer_presence_in_context": 0.6224899598393574
+    },
+    {
+      "method": "no_compression",
+      "n": 2241,
+      "mean_input_tokens": 1347.9437751004016,
+      "mean_token_reduction_rate": 0.0,
+      "mean_compression_ms": 0.0018290049085229808,
+      "p50_compression_ms": 0.0017,
+      "mean_evidence_f1": 0.1540944824226697,
+      "mean_supporting_fact_recall": 0.999503907887442,
+      "mean_answer_presence_in_context": 0.9473449352967426
+    }
+  ],
+  "summaries_by_dataset": [
+    {
+      "dataset": "2wikimultihopqa",
+      "method": "evidence_graph",
+      "n": 1258,
+      "mean_input_tokens": 571.9419713831478,
+      "mean_token_reduction_rate": 0.45642935808908786,
+      "mean_compression_ms": 1043.3345852941177,
+      "p50_compression_ms": 1036.6577,
+      "mean_evidence_f1": 0.3345280294636779,
+      "mean_supporting_fact_recall": 0.49414616069706846,
+      "mean_answer_presence_in_context": 0.44753577106518283
+    },
+    {
+      "dataset": "2wikimultihopqa",
+      "method": "fixed_budget_50",
+      "n": 1258,
+      "mean_input_tokens": 526.5699523052464,
+      "mean_token_reduction_rate": 0.5003001260335644,
+      "mean_compression_ms": 2.688821303656598,
+      "p50_compression_ms": 2.4252,
+      "mean_evidence_f1": 0.1597440593124122,
+      "mean_supporting_fact_recall": 0.5556605485269318,
+      "mean_answer_presence_in_context": 0.5437201907790143
+    },
+    {
+      "dataset": "2wikimultihopqa",
+      "method": "llmlingua2_50",
+      "n": 1258,
+      "mean_input_tokens": 434.6279809220986,
+      "mean_token_reduction_rate": 0.5818512105724863,
+      "mean_compression_ms": 275.6199476946999,
+      "p50_compression_ms": 259.52230000984855,
+      "mean_evidence_f1": 0.0,
+      "mean_supporting_fact_recall": 0.0,
+      "mean_answer_presence_in_context": 0.6836248012718601
+    },
+    {
+      "dataset": "2wikimultihopqa",
+      "method": "no_compression",
+      "n": 1258,
+      "mean_input_tokens": 1053.6756756756756,
+      "mean_token_reduction_rate": 0.0,
+      "mean_compression_ms": 0.0018378378378378377,
+      "p50_compression_ms": 0.0017,
+      "mean_evidence_f1": 0.16281339053425486,
+      "mean_supporting_fact_recall": 0.9998012718600954,
+      "mean_answer_presence_in_context": 0.9284578696343402
+    },
+    {
+      "dataset": "hotpotqa",
+      "method": "evidence_graph",
+      "n": 741,
+      "mean_input_tokens": 823.6626180836707,
+      "mean_token_reduction_rate": 0.43515384223390635,
+      "mean_compression_ms": 390.90680904183534,
+      "p50_compression_ms": 390.3882,
+      "mean_evidence_f1": 0.25762744646284447,
+      "mean_supporting_fact_recall": 0.6649315596684018,
+      "mean_answer_presence_in_context": 0.6423751686909581
+    },
+    {
+      "dataset": "hotpotqa",
+      "method": "fixed_budget_50",
+      "n": 741,
+      "mean_input_tokens": 730.1646423751687,
+      "mean_token_reduction_rate": 0.5001739485331759,
+      "mean_compression_ms": 3.835339811066127,
+      "p50_compression_ms": 3.7676,
+      "mean_evidence_f1": 0.10283495596924679,
+      "mean_supporting_fact_recall": 0.5088618983355826,
+      "mean_answer_presence_in_context": 0.6072874493927125
+    },
+    {
+      "dataset": "hotpotqa",
+      "method": "llmlingua2_50",
+      "n": 741,
+      "mean_input_tokens": 560.0512820512821,
+      "mean_token_reduction_rate": 0.6174757289382036,
+      "mean_compression_ms": 292.4644503369802,
+      "p50_compression_ms": 279.0367999987211,
+      "mean_evidence_f1": 0.0,
+      "mean_supporting_fact_recall": 0.0,
+      "mean_answer_presence_in_context": 0.5614035087719298
+    },
+    {
+      "dataset": "hotpotqa",
+      "method": "no_compression",
+      "n": 741,
+      "mean_input_tokens": 1460.8151147098515,
+      "mean_token_reduction_rate": 0.0,
+      "mean_compression_ms": 0.0017740890688259109,
+      "p50_compression_ms": 0.0017,
+      "mean_evidence_f1": 0.10965020612500678,
+      "mean_supporting_fact_recall": 0.9993252361673415,
+      "mean_answer_presence_in_context": 0.9622132253711201
+    },
+    {
+      "dataset": "musique",
+      "method": "evidence_graph",
+      "n": 242,
+      "mean_input_tokens": 1340.6487603305786,
+      "mean_token_reduction_rate": 0.46630360118240693,
+      "mean_compression_ms": 1654.7385367768595,
+      "p50_compression_ms": 1638.506,
+      "mean_evidence_f1": 0.26613350481907055,
+      "mean_supporting_fact_recall": 0.2445959249627197,
+      "mean_answer_presence_in_context": 0.26859504132231404
+    },
+    {
+      "dataset": "musique",
+      "method": "fixed_budget_50",
+      "n": 242,
+      "mean_input_tokens": 1265.7768595041323,
+      "mean_token_reduction_rate": 0.5000991557939167,
+      "mean_compression_ms": 6.766772314049587,
+      "p50_compression_ms": 6.5462,
+      "mean_evidence_f1": 0.16424139876215857,
+      "mean_supporting_fact_recall": 0.40542550462338856,
+      "mean_answer_presence_in_context": 0.5206611570247934
+    },
+    {
+      "dataset": "musique",
+      "method": "llmlingua2_50",
+      "n": 242,
+      "mean_input_tokens": 983.8925619834711,
+      "mean_token_reduction_rate": 0.6118102641748002,
+      "mean_compression_ms": 564.7172297525204,
+      "p50_compression_ms": 557.8398999932688,
+      "mean_evidence_f1": 0.0,
+      "mean_supporting_fact_recall": 0.0,
+      "mean_answer_presence_in_context": 0.49173553719008267
+    },
+    {
+      "dataset": "musique",
+      "method": "no_compression",
+      "n": 242,
+      "mean_input_tokens": 2532.0413223140495,
+      "mean_token_reduction_rate": 0.0,
+      "mean_compression_ms": 0.0019512396694214877,
+      "p50_compression_ms": 0.0018,
+      "mean_evidence_f1": 0.24485821106809974,
+      "mean_supporting_fact_recall": 0.9985051965940395,
+      "mean_answer_presence_in_context": 1.0
+    }
+  ]
+}

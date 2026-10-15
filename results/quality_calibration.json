@@ -1,0 +1,252 @@
+{
+  "examples": [
+    {
+      "prompt_tokens": 1024,
+      "redundancy_ratio": 0.9052734375,
+      "context_query_overlap": 0.625,
+      "query_alignment_position": 0.017313171159325003,
+      "tail_query_overlap": 0.0,
+      "retain_ratio": 1.0,
+      "observed_quality": 1.0
+    },
+    {
+      "prompt_tokens": 1024,
+      "redundancy_ratio": 0.9052734375,
+      "context_query_overlap": 0.625,
+      "query_alignment_position": 0.017313171159325003,
+      "tail_query_overlap": 0.0,
+      "retain_ratio": 0.75,
+      "observed_quality": 1.0
+    },
+    {
+      "prompt_tokens": 1024,
+      "redundancy_ratio": 0.9052734375,
+      "context_query_overlap": 0.625,
+      "query_alignment_position": 0.017313171159325003,
+      "tail_query_overlap": 0.0,
+      "retain_ratio": 0.5,
+      "observed_quality": 1.0
+    },
+    {
+      "prompt_tokens": 1024,
+      "redundancy_ratio": 0.9052734375,
+      "context_query_overlap": 0.625,
+      "query_alignment_position": 0.017313171159325003,
+      "tail_query_overlap": 0.0,
+      "retain_ratio": 0.25,
+      "observed_quality": 1.0
+    },
+    {
+      "prompt_tokens": 1024,
+      "redundancy_ratio": 0.923828125,
+      "context_query_overlap": 0.7272727272727273,
+      "query_alignment_position": 0.48360766610024775,
+      "tail_query_overlap": 1.0,
+      "retain_ratio": 1.0,
+      "observed_quality": 1.0
+    },
+    {
+      "prompt_tokens": 1024,
+      "redundancy_ratio": 0.923828125,
+      "context_query_overlap": 0.7272727272727273,
+      "query_alignment_position": 0.48360766610024775,
+      "tail_query_overlap": 1.0,
+      "retain_ratio": 0.75,
+      "observed_quality": 1.0
+    },
+    {
+      "prompt_tokens": 1024,
+      "redundancy_ratio": 0.923828125,
+      "context_query_overlap": 0.7272727272727273,
+      "query_alignment_position": 0.48360766610024775,
+      "tail_query_overlap": 1.0,
+      "retain_ratio": 0.5,
+      "observed_quality": 1.0
+    },
+    {
+      "prompt_tokens": 1024,
+      "redundancy_ratio": 0.923828125,
+      "context_query_overlap": 0.7272727272727273,
+      "query_alignment_position": 0.48360766610024775,
+      "tail_query_overlap": 1.0,
+      "retain_ratio": 0.25,
+      "observed_quality": 1.0
+    },
+    {
+      "prompt_tokens": 1024,
+      "redundancy_ratio": 0.9052734375,
+      "context_query_overlap": 0.625,
+      "query_alignment_position": 0.28851632697786544,
+      "tail_query_overlap": 0.0,
+      "retain_ratio": 1.0,
+      "observed_quality": 1.0
+    },
+    {
+      "prompt_tokens": 1024,
+      "redundancy_ratio": 0.9052734375,
+      "context_query_overlap": 0.625,
+      "query_alignment_position": 0.28851632697786544,
+      "tail_query_overlap": 0.0,
+      "retain_ratio": 0.75,
+      "observed_quality": 1.0
+    },
+    {
+      "prompt_tokens": 1024,
+      "redundancy_ratio": 0.9052734375,
+      "context_query_overlap": 0.625,
+      "query_alignment_position": 0.28851632697786544,
+      "tail_query_overlap": 0.0,
+      "retain_ratio": 0.5,
+      "observed_quality": 0.0
+    },
+    {
+      "prompt_tokens": 1024,
+      "redundancy_ratio": 0.9052734375,
+      "context_query_overlap": 0.625,
+      "query_alignment_position": 0.28851632697786544,
+      "tail_query_overlap": 0.0,
+      "retain_ratio": 0.25,
+      "observed_quality": 0.0
+    },
+    {
+      "prompt_tokens": 1024,
+      "redundancy_ratio": 0.923828125,
+      "context_query_overlap": 0.7272727272727273,
+      "query_alignment_position": 0.49417941109335767,
+      "tail_query_overlap": 1.0,
+      "retain_ratio": 1.0,
+      "observed_quality": 1.0
+    },
+    {
+      "prompt_tokens": 1024,
+      "redundancy_ratio": 0.923828125,
+      "context_query_overlap": 0.7272727272727273,
+      "query_alignment_position": 0.49417941109335767,
+      "tail_query_overlap": 1.0,
+      "retain_ratio": 0.75,
+      "observed_quality": 1.0
+    },
+    {
+      "prompt_tokens": 1024,
+      "redundancy_ratio": 0.923828125,
+      "context_query_overlap": 0.7272727272727273,
+      "query_alignment_position": 0.49417941109335767,
+      "tail_query_overlap": 1.0,
+      "retain_ratio": 0.5,
+      "observed_quality": 1.0
+    },
+    {
+      "prompt_tokens": 1024,
+      "redundancy_ratio": 0.923828125,
+      "context_query_overlap": 0.7272727272727273,
+      "query_alignment_position": 0.49417941109335767,
+      "tail_query_overlap": 1.0,
+      "retain_ratio": 0.25,
+      "observed_quality": 0.0
+    },
+    {
+      "prompt_tokens": 1024,
+      "redundancy_ratio": 0.9052734375,
+      "context_query_overlap": 0.625,
+      "query_alignment_position": 0.5597194827964058,
+      "tail_query_overlap": 0.625,
+      "retain_ratio": 1.0,
+      "observed_quality": 1.0
+    },
+    {
+      "prompt_tokens": 1024,
+      "redundancy_ratio": 0.9052734375,
+      "context_query_overlap": 0.625,
+      "query_alignment_position": 0.5597194827964058,
+      "tail_query_overlap": 0.625,
+      "retain_ratio": 0.75,
+      "observed_quality": 0.0
+    },
+    {
+      "prompt_tokens": 1024,
+      "redundancy_ratio": 0.9052734375,
+      "context_query_overlap": 0.625,
+      "query_alignment_position": 0.5597194827964058,
+      "tail_query_overlap": 0.625,
+      "retain_ratio": 0.5,
+      "observed_quality": 0.0
+    },
+    {
+      "prompt_tokens": 1024,
+      "redundancy_ratio": 0.9052734375,
+      "context_query_overlap": 0.625,
+      "query_alignment_position": 0.5597194827964058,
+      "tail_query_overlap": 0.625,
+      "retain_ratio": 0.25,
+      "observed_quality": 0.0
+    },
+    {
+      "prompt_tokens": 1024,
+      "redundancy_ratio": 0.923828125,
+      "context_query_overlap": 0.7272727272727273,
+      "query_alignment_position": 0.5053048940289296,
+      "tail_query_overlap": 1.0,
+      "retain_ratio": 1.0,
+      "observed_quality": 1.0
+    },
+    {
+      "prompt_tokens": 1024,
+      "redundancy_ratio": 0.923828125,
+      "context_query_overlap": 0.7272727272727273,
+      "query_alignment_position": 0.5053048940289296,
+      "tail_query_overlap": 1.0,
+      "retain_ratio": 0.75,
+      "observed_quality": 0.0
+    },
+    {
+      "prompt_tokens": 1024,
+      "redundancy_ratio": 0.923828125,
+      "context_query_overlap": 0.7272727272727273,
+      "query_alignment_position": 0.5053048940289296,
+      "tail_query_overlap": 1.0,
+      "retain_ratio": 0.5,
+      "observed_quality": 0.0
+    },
+    {
+      "prompt_tokens": 1024,
+      "redundancy_ratio": 0.923828125,
+      "context_query_overlap": 0.7272727272727273,
+      "query_alignment_position": 0.5053048940289296,
+      "tail_query_overlap": 1.0,
+      "retain_ratio": 0.25,
+      "observed_quality": 0.0
+    }
+  ],
+  "sample_predictions": [
+    {
+      "request_id": "calibration_early_0.2",
+      "answer_position": "early",
+      "predicted_quality_at_50_percent": 0.98
+    },
+    {
+      "request_id": "calibration_early_0.8",
+      "answer_position": "early",
+      "predicted_quality_at_50_percent": 0.6466666666666666
+    },
+    {
+      "request_id": "calibration_middle_0.2",
+      "answer_position": "middle",
+      "predicted_quality_at_50_percent": 0.0
+    },
+    {
+      "request_id": "calibration_middle_0.8",
+      "answer_position": "middle",
+      "predicted_quality_at_50_percent": 0.6466666666666666
+    },
+    {
+      "request_id": "calibration_late_0.2",
+      "answer_position": "late",
+      "predicted_quality_at_50_percent": 0.0
+    },
+    {
+      "request_id": "calibration_late_0.8",
+      "answer_position": "late",
+      "predicted_quality_at_50_percent": 0.6466666666666666
+    }
+  ]
+}

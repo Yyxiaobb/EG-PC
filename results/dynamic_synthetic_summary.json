@@ -1,0 +1,75 @@
+{
+  "summary": [
+    {
+      "method": "dynamic:no_compression",
+      "n": 4,
+      "mean_token_reduction_rate": 0.0,
+      "mean_compression_ms": 0.001875,
+      "mean_prefill_ms": 613.76,
+      "mean_decode_ms": 32.0,
+      "mean_end_to_end_ms": 645.761875,
+      "p50_end_to_end_ms": 522.7617,
+      "p95_end_to_end_ms": 1243.4817399999997,
+      "mean_quality_score": 1.0,
+      "mean_quality_drop_vs_no_compression": 0.0,
+      "mean_speedup_vs_no_compression": 0.0,
+      "mean_answer_presence": 1.0,
+      "mean_context_quality": 1.0,
+      "mean_primary_quality": 1.0
+    }
+  ],
+  "decisions": [
+    {
+      "candidate": {
+        "method": "no_compression",
+        "target_budget_ratio": 1.0,
+        "predicted_quality": 1.0,
+        "predicted_compression_ms": 0.0
+      },
+      "predicted_prefill_ms": 163.76,
+      "predicted_decode_ms": 32.0,
+      "predicted_end_to_end_ms": 195.76,
+      "quality_constraint_satisfied": true,
+      "reason": "minimum predicted end-to-end latency within quality floor"
+    },
+    {
+      "candidate": {
+        "method": "no_compression",
+        "target_budget_ratio": 1.0,
+        "predicted_quality": 1.0,
+        "predicted_compression_ms": 0.0
+      },
+      "predicted_prefill_ms": 326.96,
+      "predicted_decode_ms": 32.0,
+      "predicted_end_to_end_ms": 358.96,
+      "quality_constraint_satisfied": true,
+      "reason": "minimum predicted end-to-end latency within quality floor"
+    },
+    {
+      "candidate": {
+        "method": "no_compression",
+        "target_budget_ratio": 1.0,
+        "predicted_quality": 1.0,
+        "predicted_compression_ms": 0.0
+      },
+      "predicted_prefill_ms": 654.5600000000001,
+      "predicted_decode_ms": 32.0,
+      "predicted_end_to_end_ms": 686.5600000000001,
+      "quality_constraint_satisfied": true,
+      "reason": "minimum predicted end-to-end latency within quality floor"
+    },
+    {
+      "candidate": {
+        "method": "no_compression",
+        "target_budget_ratio": 1.0,
+        "predicted_quality": 1.0,
+        "predicted_compression_ms": 0.0
+      },
+      "predicted_prefill_ms": 1309.76,
+      "predicted_decode_ms": 32.0,
+      "predicted_end_to_end_ms": 1341.76,
+      "quality_constraint_satisfied": true,
+      "reason": "minimum predicted end-to-end latency within quality floor"
+    }
+  ]
+}

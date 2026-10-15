@@ -1,0 +1,281 @@
+{
+  "rows": 27,
+  "sequence_count": 3,
+  "sequence_length": 3,
+  "sequences": [
+    {
+      "sequence_id": "hotpotqa_sequence_0",
+      "dataset": "hotpotqa",
+      "request_ids": [
+        "5a70eee85542994082a3e3f0",
+        "5ab266b5554299340b5254b4",
+        "5a845d735542996488c2e52e"
+      ],
+      "adjacent_shared_titles": [
+        [
+          "mohamed sillah"
+        ],
+        [
+          "samuel sam-sumana",
+          "willie mae reid"
+        ]
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_sequence_0",
+      "dataset": "2wikimultihopqa",
+      "request_ids": [
+        "0008d48808a011ebbd78ac1f6bf848b6",
+        "a6689af208b911ebbd88ac1f6bf848b6",
+        "02506a4208b611ebbd88ac1f6bf848b6"
+      ],
+      "adjacent_shared_titles": [
+        [
+          "edgar mulder",
+          "list of people named o'grady",
+          "mulder and scully",
+          "mulder and scully (song)",
+          "mulder and scully meet the were-monster",
+          "syzygy (the x-files)"
+        ],
+        [
+          "list of people named o'grady"
+        ]
+      ]
+    },
+    {
+      "sequence_id": "musique_sequence_0",
+      "dataset": "musique",
+      "request_ids": [
+        "2hop__10017_18974",
+        "2hop__631024_18974",
+        "2hop__36747_18974"
+      ],
+      "adjacent_shared_titles": [
+        [
+          "antarctica",
+          "hokkien",
+          "military history of indonesia",
+          "newton–jenney party",
+          "siege of germanicia"
+        ],
+        [
+          "battle of little blue river",
+          "hokkien",
+          "siege of germanicia"
+        ]
+      ]
+    }
+  ],
+  "model": "D:\\HF_dl\\model\\Qwen2.5-7B-Instruct-GGUF\\qwen2.5-7b-instruct-q4_k_m-00001-of-00002.gguf",
+  "tokenizer": "artifacts\\tokenizer\\qwen2.5-7b-instruct",
+  "summaries": [
+    {
+      "method": "evidence_graph_dynamic",
+      "turn_index": 0,
+      "sequence_count": 3,
+      "n": 3,
+      "mean_input_tokens": 1316.3333333333333,
+      "mean_token_reduction_rate": 0.3059314211486656,
+      "mean_token_f1": 0.20350877192982456,
+      "mean_exact_match": 0.0,
+      "mean_answer_context_support": 1.0,
+      "mean_supporting_fact_precision": 0.0629419191919192,
+      "mean_supporting_fact_recall": 0.5873015873015873,
+      "mean_evidence_f1": 0.11071428571428572,
+      "mean_citation_f1": 0.0,
+      "mean_end_to_end_ms": 822.3440333333333,
+      "p50_end_to_end_ms": 881.8479,
+      "p95_end_to_end_ms": 925.3788,
+      "mean_compression_ms": 18.76536666666667,
+      "mean_prefill_ms": 434.94366666666673,
+      "mean_decode_ms": 368.635,
+      "mean_reused_evidence_count": 0.0,
+      "mean_historical_candidate_count": 0.0
+    },
+    {
+      "method": "evidence_graph_dynamic",
+      "turn_index": 1,
+      "sequence_count": 3,
+      "n": 3,
+      "mean_input_tokens": 1326.0,
+      "mean_token_reduction_rate": 0.5020688034873186,
+      "mean_token_f1": 0.0634920634920635,
+      "mean_exact_match": 0.0,
+      "mean_answer_context_support": 1.0,
+      "mean_supporting_fact_precision": 0.07388741526672561,
+      "mean_supporting_fact_recall": 0.5,
+      "mean_evidence_f1": 0.12077008222643897,
+      "mean_citation_f1": 0.0,
+      "mean_end_to_end_ms": 901.3881,
+      "p50_end_to_end_ms": 949.6323,
+      "p95_end_to_end_ms": 966.7757999999999,
+      "mean_compression_ms": 27.303766666666665,
+      "mean_prefill_ms": 415.65633333333335,
+      "mean_decode_ms": 458.42800000000005,
+      "mean_reused_evidence_count": 13.0,
+      "mean_historical_candidate_count": 13.333333333333334
+    },
+    {
+      "method": "evidence_graph_dynamic",
+      "turn_index": 2,
+      "sequence_count": 3,
+      "n": 3,
+      "mean_input_tokens": 970.3333333333334,
+      "mean_token_reduction_rate": 0.4769371741783479,
+      "mean_token_f1": 0.3333333333333333,
+      "mean_exact_match": 0.3333333333333333,
+      "mean_answer_context_support": 0.6666666666666666,
+      "mean_supporting_fact_precision": 0.26171717171717174,
+      "mean_supporting_fact_recall": 0.6007751937984497,
+      "mean_evidence_f1": 0.277634130575307,
+      "mean_citation_f1": 0.0,
+      "mean_end_to_end_ms": 657.3935,
+      "p50_end_to_end_ms": 643.0291,
+      "p95_end_to_end_ms": 998.0204,
+      "mean_compression_ms": 31.071166666666667,
+      "mean_prefill_ms": 313.46066666666667,
+      "mean_decode_ms": 312.8616666666667,
+      "mean_reused_evidence_count": 6.333333333333333,
+      "mean_historical_candidate_count": 15.333333333333334
+    },
+    {
+      "method": "fixed_budget_50",
+      "turn_index": 0,
+      "sequence_count": 3,
+      "n": 3,
+      "mean_input_tokens": 983.3333333333334,
+      "mean_token_reduction_rate": 0.500120510966498,
+      "mean_token_f1": 0.0,
+      "mean_exact_match": 0.0,
+      "mean_answer_context_support": 1.0,
+      "mean_supporting_fact_precision": 0.05887445887445888,
+      "mean_supporting_fact_recall": 0.6666666666666666,
+      "mean_evidence_f1": 0.10818713450292398,
+      "mean_citation_f1": 0.0,
+      "mean_end_to_end_ms": 811.4329666666667,
+      "p50_end_to_end_ms": 869.0928000000001,
+      "p95_end_to_end_ms": 873.3778,
+      "mean_compression_ms": 9.022633333333333,
+      "mean_prefill_ms": 323.4686666666667,
+      "mean_decode_ms": 478.94166666666666,
+      "mean_reused_evidence_count": 0.0,
+      "mean_historical_candidate_count": 0.0
+    },
+    {
+      "method": "fixed_budget_50",
+      "turn_index": 1,
+      "sequence_count": 3,
+      "n": 3,
+      "mean_input_tokens": 1346.3333333333333,
+      "mean_token_reduction_rate": 0.5001922467531683,
+      "mean_token_f1": 0.0,
+      "mean_exact_match": 0.0,
+      "mean_answer_context_support": 1.0,
+      "mean_supporting_fact_precision": 0.04151404151404151,
+      "mean_supporting_fact_recall": 0.4583333333333333,
+      "mean_evidence_f1": 0.072856221792392,
+      "mean_citation_f1": 0.0,
+      "mean_end_to_end_ms": 908.3154333333333,
+      "p50_end_to_end_ms": 906.2279,
+      "p95_end_to_end_ms": 991.8411000000001,
+      "mean_compression_ms": 14.222433333333335,
+      "mean_prefill_ms": 423.641,
+      "mean_decode_ms": 470.452,
+      "mean_reused_evidence_count": 0.0,
+      "mean_historical_candidate_count": 0.0
+    },
+    {
+      "method": "fixed_budget_50",
+      "turn_index": 2,
+      "sequence_count": 3,
+      "n": 3,
+      "mean_input_tokens": 998.3333333333334,
+      "mean_token_reduction_rate": 0.5001595771616305,
+      "mean_token_f1": 0.0,
+      "mean_exact_match": 0.0,
+      "mean_answer_context_support": 1.0,
+      "mean_supporting_fact_precision": 0.22142602495543673,
+      "mean_supporting_fact_recall": 0.5503875968992248,
+      "mean_evidence_f1": 0.26358234295415967,
+      "mean_citation_f1": 0.0,
+      "mean_end_to_end_ms": 819.5520333333334,
+      "p50_end_to_end_ms": 721.2658,
+      "p95_end_to_end_ms": 1092.2078000000001,
+      "mean_compression_ms": 8.9747,
+      "mean_prefill_ms": 327.73566666666665,
+      "mean_decode_ms": 482.8416666666667,
+      "mean_reused_evidence_count": 0.0,
+      "mean_historical_candidate_count": 0.0
+    },
+    {
+      "method": "no_compression",
+      "turn_index": 0,
+      "sequence_count": 3,
+      "n": 3,
+      "mean_input_tokens": 1967.0,
+      "mean_token_reduction_rate": 0.0,
+      "mean_token_f1": 0.13333333333333333,
+      "mean_exact_match": 0.0,
+      "mean_answer_context_support": 1.0,
+      "mean_supporting_fact_precision": 0.060191197691197684,
+      "mean_supporting_fact_recall": 1.0,
+      "mean_evidence_f1": 0.11292838429270213,
+      "mean_citation_f1": 0.0,
+      "mean_end_to_end_ms": 1045.2562333333333,
+      "p50_end_to_end_ms": 917.8842,
+      "p95_end_to_end_ms": 1325.2961,
+      "mean_compression_ms": 0.0032333333333333333,
+      "mean_prefill_ms": 652.0403333333333,
+      "mean_decode_ms": 393.2126666666666,
+      "mean_reused_evidence_count": 0.0,
+      "mean_historical_candidate_count": 0.0
+    },
+    {
+      "method": "no_compression",
+      "turn_index": 1,
+      "sequence_count": 3,
+      "n": 3,
+      "mean_input_tokens": 2693.6666666666665,
+      "mean_token_reduction_rate": 0.0,
+      "mean_token_f1": 0.12440838404327248,
+      "mean_exact_match": 0.0,
+      "mean_answer_context_support": 1.0,
+      "mean_supporting_fact_precision": 0.049115223012281835,
+      "mean_supporting_fact_recall": 1.0,
+      "mean_evidence_f1": 0.09188660801564026,
+      "mean_citation_f1": 0.0,
+      "mean_end_to_end_ms": 1266.4000333333333,
+      "p50_end_to_end_ms": 1354.3972,
+      "p95_end_to_end_ms": 1571.8526,
+      "mean_compression_ms": 0.0023666666666666667,
+      "mean_prefill_ms": 900.7023333333333,
+      "mean_decode_ms": 365.69533333333334,
+      "mean_reused_evidence_count": 0.0,
+      "mean_historical_candidate_count": 0.0
+    },
+    {
+      "method": "no_compression",
+      "turn_index": 2,
+      "sequence_count": 3,
+      "n": 3,
+      "mean_input_tokens": 1997.3333333333333,
+      "mean_token_reduction_rate": 0.0,
+      "mean_token_f1": 0.3333333333333333,
+      "mean_exact_match": 0.3333333333333333,
+      "mean_answer_context_support": 1.0,
+      "mean_supporting_fact_precision": 0.19120674379820723,
+      "mean_supporting_fact_recall": 1.0,
+      "mean_evidence_f1": 0.2848618115474398,
+      "mean_citation_f1": 0.0,
+      "mean_end_to_end_ms": 975.7297,
+      "p50_end_to_end_ms": 790.5071,
+      "p95_end_to_end_ms": 1635.9866,
+      "mean_compression_ms": 0.0023666666666666667,
+      "mean_prefill_ms": 688.5523333333334,
+      "mean_decode_ms": 287.175,
+      "mean_reused_evidence_count": 0.0,
+      "mean_historical_candidate_count": 0.0
+    }
+  ]
+}

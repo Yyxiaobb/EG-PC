@@ -1,0 +1,100 @@
+{
+  "rows": 904,
+  "fraction_per_dataset": 0.01,
+  "seed": 42,
+  "dataset_counts": {
+    "hotpotqa": {
+      "total": 7405,
+      "sampled": 75,
+      "fraction": 0.01012829169480081
+    },
+    "2wikimultihopqa": {
+      "total": 12576,
+      "sampled": 126,
+      "fraction": 0.010019083969465648
+    },
+    "musique": {
+      "total": 2417,
+      "sampled": 25,
+      "fraction": 0.01034340091021928
+    }
+  },
+  "methods": [
+    "no_compression",
+    "evidence_graph_dual_path",
+    "llmlingua2",
+    "evidence_graph_post_llmlingua2"
+  ],
+  "model": "D:\\HF_dl\\model\\Qwen2.5-7B-Instruct-GGUF\\qwen2.5-7b-instruct-q4_k_m-00001-of-00002.gguf",
+  "llmlingua_model": "D:\\HF_dl\\model\\llmlingua-2-bert-base-multilingual-cased-meetingbank",
+  "summaries": [
+    {
+      "method": "evidence_graph_dual_path",
+      "n": 226,
+      "mean_input_tokens": 989.5132743362832,
+      "mean_token_reduction_rate": 0.21501554380187432,
+      "mean_token_f1": 0.2461436499296378,
+      "mean_exact_match": 0.084070796460177,
+      "mean_evidence_f1": 0.18063647770021019,
+      "mean_compression_ms": 27.95958672566372,
+      "mean_prefill_ms": 478.9173053097345,
+      "mean_decode_ms": 407.2497787610619,
+      "mean_end_to_end_ms": 914.1266707964602,
+      "p50_end_to_end_ms": 807.8398,
+      "p95_end_to_end_ms": 2264.8035,
+      "mean_history_compression_ms": 0.0,
+      "history_pending_rate_at_record": 0.0
+    },
+    {
+      "method": "evidence_graph_post_llmlingua2",
+      "n": 226,
+      "mean_input_tokens": 989.5132743362832,
+      "mean_token_reduction_rate": 0.21501554380187432,
+      "mean_token_f1": 0.2461436499296378,
+      "mean_exact_match": 0.084070796460177,
+      "mean_evidence_f1": 0.18063647770021019,
+      "mean_compression_ms": 19.92881150442478,
+      "mean_prefill_ms": 385.8478761061947,
+      "mean_decode_ms": 407.4065486725664,
+      "mean_end_to_end_ms": 813.1832362831859,
+      "p50_end_to_end_ms": 830.3317,
+      "p95_end_to_end_ms": 1147.1209,
+      "mean_history_compression_ms": 1717.3179212377604,
+      "history_pending_rate_at_record": 0.0
+    },
+    {
+      "method": "llmlingua2",
+      "n": 226,
+      "mean_input_tokens": 522.9203539823009,
+      "mean_token_reduction_rate": 0.5999729835584543,
+      "mean_token_f1": 0.246761918731274,
+      "mean_exact_match": 0.09292035398230089,
+      "mean_evidence_f1": 0.0,
+      "mean_compression_ms": 1008.7532561953103,
+      "mean_prefill_ms": 210.9408185840708,
+      "mean_decode_ms": 343.64958407079644,
+      "mean_end_to_end_ms": 1563.3436588501775,
+      "p50_end_to_end_ms": 1494.0962999903095,
+      "p95_end_to_end_ms": 2541.631799996743,
+      "mean_history_compression_ms": 0.0,
+      "history_pending_rate_at_record": 0.0
+    },
+    {
+      "method": "no_compression",
+      "n": 226,
+      "mean_input_tokens": 1322.5088495575221,
+      "mean_token_reduction_rate": 0.0,
+      "mean_token_f1": 0.2390639352670327,
+      "mean_exact_match": 0.09292035398230089,
+      "mean_evidence_f1": 0.15576242175887975,
+      "mean_compression_ms": 0.002992477876106195,
+      "mean_prefill_ms": 773.4394424778761,
+      "mean_decode_ms": 504.68307522123894,
+      "mean_end_to_end_ms": 1278.1255101769912,
+      "p50_end_to_end_ms": 912.9601,
+      "p95_end_to_end_ms": 3247.4026000000003,
+      "mean_history_compression_ms": 0.0,
+      "history_pending_rate_at_record": 0.0
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+project:
+  name: ladc
+  seed: 42
+
+runtime:
+  backend: llama_cli
+  model_path: D:/HF_dl/model/Qwen2.5-7B-Instruct-GGUF/qwen2.5-7b-instruct-q4_k_m-00001-of-00002.gguf
+  tokenizer_path: artifacts/tokenizer/qwen2.5-7b-instruct
+  tokenizer_model_id: Qwen/Qwen2.5-7B-Instruct
+  llama_cli_path: artifacts/llama_cpp/runtime/llama-cli.exe
+
+experiment:
+  target_quality_drop: 0.03
+  budgets: [0.25, 0.50, 0.75]
+  max_new_tokens: 64
+  warmup_requests: 3
+  repeats: 5
+
+paths:
+  data_root: null
+  result_root: results

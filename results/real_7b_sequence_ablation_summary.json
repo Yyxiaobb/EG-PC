@@ -1,0 +1,759 @@
+{
+  "rows": 96,
+  "sequence_count": 8,
+  "sequence_length": 3,
+  "sequences": [
+    {
+      "sequence_id": "hotpotqa_related_0",
+      "dataset": "hotpotqa",
+      "kind": "related",
+      "request_ids": [
+        "5a70eee85542994082a3e3f0",
+        "5ab266b5554299340b5254b4",
+        "5a845d735542996488c2e52e"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [
+            "mohamed sillah"
+          ],
+          "shared_query_entities": []
+        },
+        {
+          "shared_titles": [
+            "samuel sam-sumana",
+            "willie mae reid"
+          ],
+          "shared_query_entities": []
+        }
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_0",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "0008d48808a011ebbd78ac1f6bf848b6",
+        "a6689af208b911ebbd88ac1f6bf848b6",
+        "02506a4208b611ebbd88ac1f6bf848b6"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [
+            "edgar mulder",
+            "list of people named o'grady",
+            "mulder and scully",
+            "mulder and scully (song)",
+            "mulder and scully meet the were-monster",
+            "syzygy (the x-files)"
+          ],
+          "shared_query_entities": []
+        },
+        {
+          "shared_titles": [
+            "list of people named o'grady"
+          ],
+          "shared_query_entities": []
+        }
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_1",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "0016373a0bda11eba7f7acde48001122",
+        "5352c0240baf11ebab90acde48001122",
+        "421512620bdc11eba7f7acde48001122"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [
+            "adelaide of hesse",
+            "william i, elector of hesse",
+            "william ii, landgrave of hesse-wanfried-rheinfels"
+          ],
+          "shared_query_entities": []
+        },
+        {
+          "shared_titles": [
+            "louis v, landgrave of hesse-darmstadt",
+            "louis vi, landgrave of hesse-darmstadt",
+            "louis viii, landgrave of hesse-darmstadt"
+          ],
+          "shared_query_entities": [
+            "landgrave of hesse-darmstadt's"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence_id": "musique_related_0",
+      "dataset": "musique",
+      "kind": "related",
+      "request_ids": [
+        "2hop__10017_18974",
+        "2hop__631024_18974",
+        "2hop__36747_18974"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [
+            "antarctica",
+            "hokkien",
+            "military history of indonesia",
+            "newton–jenney party",
+            "siege of germanicia"
+          ],
+          "shared_query_entities": []
+        },
+        {
+          "shared_titles": [
+            "battle of little blue river",
+            "hokkien",
+            "siege of germanicia"
+          ],
+          "shared_query_entities": []
+        }
+      ]
+    },
+    {
+      "sequence_id": "musique_related_1",
+      "dataset": "musique",
+      "kind": "related",
+      "request_ids": [
+        "2hop__10114_599630",
+        "2hop__671664_646310",
+        "3hop1__273571_834494_34053"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [
+            "australia",
+            "biłgoraj county",
+            "cyprus popular bank",
+            "federalism",
+            "list of territorial entities where english is an official language",
+            "pangi territory",
+            "states of nigeria",
+            "texas–indian wars"
+          ],
+          "shared_query_entities": []
+        },
+        {
+          "shared_titles": [
+            "australia",
+            "biłgoraj county",
+            "cyprus popular bank",
+            "federalism",
+            "gmina brzeziny, łódź voivodeship",
+            "gmina łowicz",
+            "kiri territory",
+            "list of territorial entities where english is an official language",
+            "minsk region",
+            "moorea-maiao",
+            "oblasts of the soviet union",
+            "pak tam chung",
+            "pangi territory",
+            "saulkrasti municipality",
+            "texas–indian wars",
+            "tumaraa"
+          ],
+          "shared_query_entities": []
+        }
+      ]
+    },
+    {
+      "sequence_id": "hotpotqa_unrelated_0",
+      "dataset": "hotpotqa",
+      "kind": "unrelated",
+      "request_ids": [
+        "5a70eee85542994082a3e3f0",
+        "5a70f0a75542994082a3e403",
+        "5a70f0e75542994082a3e408"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [],
+          "shared_query_entities": []
+        },
+        {
+          "shared_titles": [],
+          "shared_query_entities": []
+        }
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_unrelated_0",
+      "dataset": "2wikimultihopqa",
+      "kind": "unrelated",
+      "request_ids": [
+        "0008d48808a011ebbd78ac1f6bf848b6",
+        "0016373a0bda11eba7f7acde48001122",
+        "0017cac508be11ebbd8aac1f6bf848b6"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [],
+          "shared_query_entities": []
+        },
+        {
+          "shared_titles": [],
+          "shared_query_entities": []
+        }
+      ]
+    },
+    {
+      "sequence_id": "musique_unrelated_0",
+      "dataset": "musique",
+      "kind": "unrelated",
+      "request_ids": [
+        "2hop__10017_18974",
+        "2hop__103889_86452",
+        "2hop__104095_40501"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [],
+          "shared_query_entities": []
+        },
+        {
+          "shared_titles": [],
+          "shared_query_entities": []
+        }
+      ]
+    }
+  ],
+  "model": "D:\\HF_dl\\model\\Qwen2.5-7B-Instruct-GGUF\\qwen2.5-7b-instruct-q4_k_m-00001-of-00002.gguf",
+  "tokenizer": "artifacts\\tokenizer\\qwen2.5-7b-instruct",
+  "summaries": [
+    {
+      "sequence_kind": "related",
+      "method": "evidence_graph_current_only",
+      "turn_index": 0,
+      "n": 5,
+      "mean_input_tokens": 1226.2,
+      "mean_token_reduction_rate": 0.3231695498531802,
+      "mean_token_f1": 0.1836437246963563,
+      "mean_exact_match": 0.0,
+      "mean_supporting_fact_precision": 0.14260964912280702,
+      "mean_supporting_fact_recall": 0.655952380952381,
+      "mean_evidence_f1": 0.21316849816849817,
+      "mean_answer_context_support": 1.0,
+      "mean_compression_ms": 18.66378,
+      "mean_prefill_ms": 409.4928,
+      "mean_decode_ms": 307.6728,
+      "mean_end_to_end_ms": 735.8293799999999,
+      "p50_end_to_end_ms": 700.0236,
+      "p95_end_to_end_ms": 1041.9279999999999,
+      "mean_historical_candidate_count": 0.0,
+      "mean_reused_evidence_count": 0.0
+    },
+    {
+      "sequence_kind": "related",
+      "method": "evidence_graph_current_only",
+      "turn_index": 1,
+      "n": 5,
+      "mean_input_tokens": 1298.6,
+      "mean_token_reduction_rate": 0.405247927855623,
+      "mean_token_f1": 0.3047619047619048,
+      "mean_exact_match": 0.2,
+      "mean_supporting_fact_precision": 0.0789516129032258,
+      "mean_supporting_fact_recall": 0.675,
+      "mean_evidence_f1": 0.1371657754010695,
+      "mean_answer_context_support": 1.0,
+      "mean_compression_ms": 20.164920000000002,
+      "mean_prefill_ms": 424.971,
+      "mean_decode_ms": 373.4596,
+      "mean_end_to_end_ms": 818.59552,
+      "p50_end_to_end_ms": 816.1206,
+      "p95_end_to_end_ms": 964.4460999999999,
+      "mean_historical_candidate_count": 0.0,
+      "mean_reused_evidence_count": 0.0
+    },
+    {
+      "sequence_kind": "related",
+      "method": "evidence_graph_current_only",
+      "turn_index": 2,
+      "n": 5,
+      "mean_input_tokens": 1274.4,
+      "mean_token_reduction_rate": 0.29299115584658986,
+      "mean_token_f1": 0.10537240537240537,
+      "mean_exact_match": 0.0,
+      "mean_supporting_fact_precision": 0.1882153723558389,
+      "mean_supporting_fact_recall": 0.6713774597495528,
+      "mean_evidence_f1": 0.22524504810413126,
+      "mean_answer_context_support": 1.0,
+      "mean_compression_ms": 19.735120000000002,
+      "mean_prefill_ms": 413.925,
+      "mean_decode_ms": 418.4258,
+      "mean_end_to_end_ms": 852.0859200000001,
+      "p50_end_to_end_ms": 849.2372,
+      "p95_end_to_end_ms": 939.0776000000001,
+      "mean_historical_candidate_count": 0.0,
+      "mean_reused_evidence_count": 0.0
+    },
+    {
+      "sequence_kind": "related",
+      "method": "evidence_graph_history",
+      "turn_index": 0,
+      "n": 5,
+      "mean_input_tokens": 1226.2,
+      "mean_token_reduction_rate": 0.3231695498531802,
+      "mean_token_f1": 0.1836437246963563,
+      "mean_exact_match": 0.0,
+      "mean_supporting_fact_precision": 0.14260964912280702,
+      "mean_supporting_fact_recall": 0.655952380952381,
+      "mean_evidence_f1": 0.21316849816849817,
+      "mean_answer_context_support": 1.0,
+      "mean_compression_ms": 16.82016,
+      "mean_prefill_ms": 410.4134,
+      "mean_decode_ms": 299.428,
+      "mean_end_to_end_ms": 726.66156,
+      "p50_end_to_end_ms": 729.9364,
+      "p95_end_to_end_ms": 974.9605,
+      "mean_historical_candidate_count": 0.0,
+      "mean_reused_evidence_count": 0.0
+    },
+    {
+      "sequence_kind": "related",
+      "method": "evidence_graph_history",
+      "turn_index": 1,
+      "n": 5,
+      "mean_input_tokens": 1036.8,
+      "mean_token_reduction_rate": 0.5438305246914277,
+      "mean_token_f1": 0.31058823529411766,
+      "mean_exact_match": 0.2,
+      "mean_supporting_fact_precision": 0.12330086580086579,
+      "mean_supporting_fact_recall": 0.675,
+      "mean_evidence_f1": 0.19723474801061008,
+      "mean_answer_context_support": 1.0,
+      "mean_compression_ms": 20.3628,
+      "mean_prefill_ms": 337.6508,
+      "mean_decode_ms": 357.7966,
+      "mean_end_to_end_ms": 715.8102,
+      "p50_end_to_end_ms": 775.7831,
+      "p95_end_to_end_ms": 948.5792,
+      "mean_historical_candidate_count": 9.6,
+      "mean_reused_evidence_count": 6.8
+    },
+    {
+      "sequence_kind": "related",
+      "method": "evidence_graph_history",
+      "turn_index": 2,
+      "n": 5,
+      "mean_input_tokens": 976.2,
+      "mean_token_reduction_rate": 0.49538909224020866,
+      "mean_token_f1": 0.07660818713450293,
+      "mean_exact_match": 0.0,
+      "mean_supporting_fact_precision": 0.23367816091954025,
+      "mean_supporting_fact_recall": 0.4667262969588551,
+      "mean_evidence_f1": 0.2615463389656938,
+      "mean_answer_context_support": 1.0,
+      "mean_compression_ms": 21.51194,
+      "mean_prefill_ms": 310.74,
+      "mean_decode_ms": 436.8002,
+      "mean_end_to_end_ms": 769.05214,
+      "p50_end_to_end_ms": 678.8553,
+      "p95_end_to_end_ms": 1075.7987,
+      "mean_historical_candidate_count": 14.8,
+      "mean_reused_evidence_count": 8.2
+    },
+    {
+      "sequence_kind": "related",
+      "method": "no_compression",
+      "turn_index": 0,
+      "n": 5,
+      "mean_input_tokens": 1940.0,
+      "mean_token_reduction_rate": 0.0,
+      "mean_token_f1": 0.08,
+      "mean_exact_match": 0.0,
+      "mean_supporting_fact_precision": 0.09252497502497502,
+      "mean_supporting_fact_recall": 1.0,
+      "mean_evidence_f1": 0.16441356553002856,
+      "mean_answer_context_support": 1.0,
+      "mean_compression_ms": 0.0025399999999999997,
+      "mean_prefill_ms": 657.2042,
+      "mean_decode_ms": 310.7576,
+      "mean_end_to_end_ms": 967.9643400000001,
+      "p50_end_to_end_ms": 998.6302000000001,
+      "p95_end_to_end_ms": 1280.0311000000002,
+      "mean_historical_candidate_count": 0.0,
+      "mean_reused_evidence_count": 0.0
+    },
+    {
+      "sequence_kind": "related",
+      "method": "no_compression",
+      "turn_index": 1,
+      "n": 5,
+      "mean_input_tokens": 2319.4,
+      "mean_token_reduction_rate": 0.0,
+      "mean_token_f1": 0.3946450304259635,
+      "mean_exact_match": 0.2,
+      "mean_supporting_fact_precision": 0.054742765648165125,
+      "mean_supporting_fact_recall": 1.0,
+      "mean_evidence_f1": 0.1026671760769898,
+      "mean_answer_context_support": 1.0,
+      "mean_compression_ms": 0.00246,
+      "mean_prefill_ms": 779.6736,
+      "mean_decode_ms": 272.5532,
+      "mean_end_to_end_ms": 1052.22926,
+      "p50_end_to_end_ms": 860.5031000000001,
+      "p95_end_to_end_ms": 1620.7747,
+      "mean_historical_candidate_count": 0.0,
+      "mean_reused_evidence_count": 0.0
+    },
+    {
+      "sequence_kind": "related",
+      "method": "no_compression",
+      "turn_index": 2,
+      "n": 5,
+      "mean_input_tokens": 2014.8,
+      "mean_token_reduction_rate": 0.0,
+      "mean_token_f1": 0.28444444444444444,
+      "mean_exact_match": 0.2,
+      "mean_supporting_fact_precision": 0.15922937352397762,
+      "mean_supporting_fact_recall": 1.0,
+      "mean_evidence_f1": 0.24840347980327832,
+      "mean_answer_context_support": 1.0,
+      "mean_compression_ms": 0.0026,
+      "mean_prefill_ms": 682.8058,
+      "mean_decode_ms": 298.4892,
+      "mean_end_to_end_ms": 981.2976000000001,
+      "p50_end_to_end_ms": 815.7243,
+      "p95_end_to_end_ms": 1622.1446,
+      "mean_historical_candidate_count": 0.0,
+      "mean_reused_evidence_count": 0.0
+    },
+    {
+      "sequence_kind": "related",
+      "method": "query_aware_bm25_mmr",
+      "turn_index": 0,
+      "n": 5,
+      "mean_input_tokens": 962.8,
+      "mean_token_reduction_rate": 0.5031060683791978,
+      "mean_token_f1": 0.12210526315789474,
+      "mean_exact_match": 0.0,
+      "mean_supporting_fact_precision": 0.1521726639373698,
+      "mean_supporting_fact_recall": 0.6815476190476191,
+      "mean_evidence_f1": 0.23458201058201059,
+      "mean_answer_context_support": 1.0,
+      "mean_compression_ms": 175.51986,
+      "mean_prefill_ms": 312.915,
+      "mean_decode_ms": 373.1766,
+      "mean_end_to_end_ms": 861.6114600000001,
+      "p50_end_to_end_ms": 771.7827,
+      "p95_end_to_end_ms": 1178.2119000000002,
+      "mean_historical_candidate_count": 0.0,
+      "mean_reused_evidence_count": 0.0
+    },
+    {
+      "sequence_kind": "related",
+      "method": "query_aware_bm25_mmr",
+      "turn_index": 1,
+      "n": 5,
+      "mean_input_tokens": 1156.0,
+      "mean_token_reduction_rate": 0.5019021392800482,
+      "mean_token_f1": 0.3275862068965517,
+      "mean_exact_match": 0.2,
+      "mean_supporting_fact_precision": 0.0889157213753988,
+      "mean_supporting_fact_recall": 0.725,
+      "mean_evidence_f1": 0.1548997104127063,
+      "mean_answer_context_support": 1.0,
+      "mean_compression_ms": 263.15008,
+      "mean_prefill_ms": 371.1506,
+      "mean_decode_ms": 384.7196,
+      "mean_end_to_end_ms": 1019.02028,
+      "p50_end_to_end_ms": 1032.6545999999998,
+      "p95_end_to_end_ms": 1396.9503,
+      "mean_historical_candidate_count": 0.0,
+      "mean_reused_evidence_count": 0.0
+    },
+    {
+      "sequence_kind": "related",
+      "method": "query_aware_bm25_mmr",
+      "turn_index": 2,
+      "n": 5,
+      "mean_input_tokens": 1003.2,
+      "mean_token_reduction_rate": 0.5021186466471027,
+      "mean_token_f1": 0.2235294117647059,
+      "mean_exact_match": 0.2,
+      "mean_supporting_fact_precision": 0.21352941176470588,
+      "mean_supporting_fact_recall": 0.7053667262969588,
+      "mean_evidence_f1": 0.2813697469641022,
+      "mean_answer_context_support": 1.0,
+      "mean_compression_ms": 209.4801,
+      "mean_prefill_ms": 323.8772,
+      "mean_decode_ms": 352.518,
+      "mean_end_to_end_ms": 885.8753,
+      "p50_end_to_end_ms": 857.6843,
+      "p95_end_to_end_ms": 1463.7352,
+      "mean_historical_candidate_count": 0.0,
+      "mean_reused_evidence_count": 0.0
+    },
+    {
+      "sequence_kind": "unrelated",
+      "method": "evidence_graph_current_only",
+      "turn_index": 0,
+      "n": 3,
+      "mean_input_tokens": 1322.0,
+      "mean_token_reduction_rate": 0.30355844515759917,
+      "mean_token_f1": 0.20350877192982456,
+      "mean_exact_match": 0.0,
+      "mean_supporting_fact_precision": 0.07430555555555556,
+      "mean_supporting_fact_recall": 0.6349206349206349,
+      "mean_evidence_f1": 0.1290903540903541,
+      "mean_answer_context_support": 1.0,
+      "mean_compression_ms": 19.650233333333333,
+      "mean_prefill_ms": 435.891,
+      "mean_decode_ms": 375.0926666666667,
+      "mean_end_to_end_ms": 830.6338999999999,
+      "p50_end_to_end_ms": 889.5327,
+      "p95_end_to_end_ms": 959.7744,
+      "mean_historical_candidate_count": 0.0,
+      "mean_reused_evidence_count": 0.0
+    },
+    {
+      "sequence_kind": "unrelated",
+      "method": "evidence_graph_current_only",
+      "turn_index": 1,
+      "n": 3,
+      "mean_input_tokens": 1192.3333333333333,
+      "mean_token_reduction_rate": 0.24146138743504844,
+      "mean_token_f1": 0.07407407407407408,
+      "mean_exact_match": 0.0,
+      "mean_supporting_fact_precision": 0.06962719298245613,
+      "mean_supporting_fact_recall": 0.7222222222222222,
+      "mean_evidence_f1": 0.12698412698412698,
+      "mean_answer_context_support": 1.0,
+      "mean_compression_ms": 17.2158,
+      "mean_prefill_ms": 397.4873333333333,
+      "mean_decode_ms": 272.324,
+      "mean_end_to_end_ms": 687.0271333333334,
+      "p50_end_to_end_ms": 709.0019,
+      "p95_end_to_end_ms": 930.7301,
+      "mean_historical_candidate_count": 0.0,
+      "mean_reused_evidence_count": 0.0
+    },
+    {
+      "sequence_kind": "unrelated",
+      "method": "evidence_graph_current_only",
+      "turn_index": 2,
+      "n": 3,
+      "mean_input_tokens": 994.0,
+      "mean_token_reduction_rate": 0.32633957723254764,
+      "mean_token_f1": 0.12399860675722744,
+      "mean_exact_match": 0.0,
+      "mean_supporting_fact_precision": 0.0704656862745098,
+      "mean_supporting_fact_recall": 0.7777777777777778,
+      "mean_evidence_f1": 0.12843874391862006,
+      "mean_answer_context_support": 1.0,
+      "mean_compression_ms": 15.197966666666666,
+      "mean_prefill_ms": 332.38666666666666,
+      "mean_decode_ms": 478.77400000000006,
+      "mean_end_to_end_ms": 826.3586333333333,
+      "p50_end_to_end_ms": 888.075,
+      "p95_end_to_end_ms": 908.7573,
+      "mean_historical_candidate_count": 0.0,
+      "mean_reused_evidence_count": 0.0
+    },
+    {
+      "sequence_kind": "unrelated",
+      "method": "evidence_graph_history",
+      "turn_index": 0,
+      "n": 3,
+      "mean_input_tokens": 1322.0,
+      "mean_token_reduction_rate": 0.30355844515759917,
+      "mean_token_f1": 0.20350877192982456,
+      "mean_exact_match": 0.0,
+      "mean_supporting_fact_precision": 0.07430555555555556,
+      "mean_supporting_fact_recall": 0.6349206349206349,
+      "mean_evidence_f1": 0.1290903540903541,
+      "mean_answer_context_support": 1.0,
+      "mean_compression_ms": 18.654866666666667,
+      "mean_prefill_ms": 442.55199999999996,
+      "mean_decode_ms": 375.971,
+      "mean_end_to_end_ms": 837.1778666666665,
+      "p50_end_to_end_ms": 878.7118,
+      "p95_end_to_end_ms": 960.9757999999999,
+      "mean_historical_candidate_count": 0.0,
+      "mean_reused_evidence_count": 0.0
+    },
+    {
+      "sequence_kind": "unrelated",
+      "method": "evidence_graph_history",
+      "turn_index": 1,
+      "n": 3,
+      "mean_input_tokens": 943.0,
+      "mean_token_reduction_rate": 0.42271461946324823,
+      "mean_token_f1": 0.09696969696969697,
+      "mean_exact_match": 0.0,
+      "mean_supporting_fact_precision": 0.10408432147562581,
+      "mean_supporting_fact_recall": 0.7222222222222222,
+      "mean_evidence_f1": 0.18153846153846154,
+      "mean_answer_context_support": 1.0,
+      "mean_compression_ms": 20.319433333333333,
+      "mean_prefill_ms": 324.71066666666667,
+      "mean_decode_ms": 287.94666666666666,
+      "mean_end_to_end_ms": 632.9767666666667,
+      "p50_end_to_end_ms": 618.4118,
+      "p95_end_to_end_ms": 957.8258,
+      "mean_historical_candidate_count": 5.0,
+      "mean_reused_evidence_count": 3.0
+    },
+    {
+      "sequence_kind": "unrelated",
+      "method": "evidence_graph_history",
+      "turn_index": 2,
+      "n": 3,
+      "mean_input_tokens": 921.6666666666666,
+      "mean_token_reduction_rate": 0.4192752052270232,
+      "mean_token_f1": 0.14814814814814814,
+      "mean_exact_match": 0.0,
+      "mean_supporting_fact_precision": 0.10483870967741936,
+      "mean_supporting_fact_recall": 0.7777777777777778,
+      "mean_evidence_f1": 0.18050065876152835,
+      "mean_answer_context_support": 1.0,
+      "mean_compression_ms": 20.2335,
+      "mean_prefill_ms": 298.80366666666663,
+      "mean_decode_ms": 459.093,
+      "mean_end_to_end_ms": 778.1301666666667,
+      "p50_end_to_end_ms": 819.8852999999999,
+      "p95_end_to_end_ms": 894.2783,
+      "mean_historical_candidate_count": 7.333333333333333,
+      "mean_reused_evidence_count": 4.0
+    },
+    {
+      "sequence_kind": "unrelated",
+      "method": "no_compression",
+      "turn_index": 0,
+      "n": 3,
+      "mean_input_tokens": 1967.0,
+      "mean_token_reduction_rate": 0.0,
+      "mean_token_f1": 0.13333333333333333,
+      "mean_exact_match": 0.0,
+      "mean_supporting_fact_precision": 0.060191197691197684,
+      "mean_supporting_fact_recall": 1.0,
+      "mean_evidence_f1": 0.11292838429270213,
+      "mean_answer_context_support": 1.0,
+      "mean_compression_ms": 0.0021333333333333334,
+      "mean_prefill_ms": 638.167,
+      "mean_decode_ms": 382.13433333333336,
+      "mean_end_to_end_ms": 1020.3034666666666,
+      "p50_end_to_end_ms": 911.6402,
+      "p95_end_to_end_ms": 1314.0082,
+      "mean_historical_candidate_count": 0.0,
+      "mean_reused_evidence_count": 0.0
+    },
+    {
+      "sequence_kind": "unrelated",
+      "method": "no_compression",
+      "turn_index": 1,
+      "n": 3,
+      "mean_input_tokens": 1645.0,
+      "mean_token_reduction_rate": 0.0,
+      "mean_token_f1": 0.12554112554112554,
+      "mean_exact_match": 0.0,
+      "mean_supporting_fact_precision": 0.06452402316665307,
+      "mean_supporting_fact_recall": 1.0,
+      "mean_evidence_f1": 0.12085137085137086,
+      "mean_answer_context_support": 1.0,
+      "mean_compression_ms": 0.002433333333333333,
+      "mean_prefill_ms": 551.3963333333334,
+      "mean_decode_ms": 276.82266666666663,
+      "mean_end_to_end_ms": 828.2214333333333,
+      "p50_end_to_end_ms": 775.9628,
+      "p95_end_to_end_ms": 1269.0713999999998,
+      "mean_historical_candidate_count": 0.0,
+      "mean_reused_evidence_count": 0.0
+    },
+    {
+      "sequence_kind": "unrelated",
+      "method": "no_compression",
+      "turn_index": 2,
+      "n": 3,
+      "mean_input_tokens": 1676.0,
+      "mean_token_reduction_rate": 0.0,
+      "mean_token_f1": 0.15202076381164256,
+      "mean_exact_match": 0.0,
+      "mean_supporting_fact_precision": 0.047549247261890935,
+      "mean_supporting_fact_recall": 1.0,
+      "mean_evidence_f1": 0.09017725569449707,
+      "mean_answer_context_support": 1.0,
+      "mean_compression_ms": 0.002166666666666667,
+      "mean_prefill_ms": 583.071,
+      "mean_decode_ms": 495.174,
+      "mean_end_to_end_ms": 1078.2471666666668,
+      "p50_end_to_end_ms": 1044.0521,
+      "p95_end_to_end_ms": 1463.4382,
+      "mean_historical_candidate_count": 0.0,
+      "mean_reused_evidence_count": 0.0
+    },
+    {
+      "sequence_kind": "unrelated",
+      "method": "query_aware_bm25_mmr",
+      "turn_index": 0,
+      "n": 3,
+      "mean_input_tokens": 975.3333333333334,
+      "mean_token_reduction_rate": 0.5037242102139087,
+      "mean_token_f1": 0.20350877192982456,
+      "mean_exact_match": 0.0,
+      "mean_supporting_fact_precision": 0.10052910052910052,
+      "mean_supporting_fact_recall": 0.6984126984126985,
+      "mean_evidence_f1": 0.17319223985890653,
+      "mean_answer_context_support": 1.0,
+      "mean_compression_ms": 184.34573333333333,
+      "mean_prefill_ms": 314.95733333333334,
+      "mean_decode_ms": 365.3036666666667,
+      "mean_end_to_end_ms": 864.6067333333334,
+      "p50_end_to_end_ms": 782.4789000000001,
+      "p95_end_to_end_ms": 1110.7711,
+      "mean_historical_candidate_count": 0.0,
+      "mean_reused_evidence_count": 0.0
+    },
+    {
+      "sequence_kind": "unrelated",
+      "method": "query_aware_bm25_mmr",
+      "turn_index": 1,
+      "n": 3,
+      "mean_input_tokens": 820.3333333333334,
+      "mean_token_reduction_rate": 0.5012163661721939,
+      "mean_token_f1": 0.09393939393939393,
+      "mean_exact_match": 0.0,
+      "mean_supporting_fact_precision": 0.09971509971509972,
+      "mean_supporting_fact_recall": 0.7222222222222222,
+      "mean_evidence_f1": 0.17460317460317462,
+      "mean_answer_context_support": 1.0,
+      "mean_compression_ms": 125.3755,
+      "mean_prefill_ms": 276.70033333333333,
+      "mean_decode_ms": 427.73766666666666,
+      "mean_end_to_end_ms": 829.8135000000001,
+      "p50_end_to_end_ms": 699.857,
+      "p95_end_to_end_ms": 1095.4126,
+      "mean_historical_candidate_count": 0.0,
+      "mean_reused_evidence_count": 0.0
+    },
+    {
+      "sequence_kind": "unrelated",
+      "method": "query_aware_bm25_mmr",
+      "turn_index": 2,
+      "n": 3,
+      "mean_input_tokens": 832.3333333333334,
+      "mean_token_reduction_rate": 0.5027787515582761,
+      "mean_token_f1": 0.19969135802469137,
+      "mean_exact_match": 0.0,
+      "mean_supporting_fact_precision": 0.11051693404634581,
+      "mean_supporting_fact_recall": 0.8888888888888888,
+      "mean_evidence_f1": 0.1941556941556942,
+      "mean_answer_context_support": 1.0,
+      "mean_compression_ms": 195.55140000000003,
+      "mean_prefill_ms": 270.86766666666665,
+      "mean_decode_ms": 455.19399999999996,
+      "mean_end_to_end_ms": 921.6130666666667,
+      "p50_end_to_end_ms": 862.5047,
+      "p95_end_to_end_ms": 1370.2802,
+      "mean_historical_candidate_count": 0.0,
+      "mean_reused_evidence_count": 0.0
+    }
+  ]
+}

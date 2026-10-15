@@ -1,0 +1,6199 @@
+{
+  "rows": 1350,
+  "sequence_count": 90,
+  "sequence_length": 3,
+  "sequences": [
+    {
+      "sequence_id": "hotpotqa_related_0",
+      "dataset": "hotpotqa",
+      "kind": "related",
+      "request_ids": [
+        "5a70eee85542994082a3e3f0",
+        "5ab266b5554299340b5254b4",
+        "5a845d735542996488c2e52e"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [
+            "mohamed sillah"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "acting paramount chief",
+            "alhaji yahya sillah",
+            "all people's congress",
+            "apc",
+            "as leader",
+            "bbc's focus",
+            "dama chiefdom",
+            "ernest bai koroma",
+            "haja mamie zoe mansaray",
+            "kenema district",
+            "massam kpaka",
+            "mohamed sillah",
+            "mohamed yahya sillah",
+            "nadp",
+            "national alliance democratic party",
+            "national chairman",
+            "pujehun district",
+            "regent chief",
+            "sierra leone",
+            "sierra leone peoples party",
+            "sierra leone president siaka stevens",
+            "sierra leonean",
+            "sierra leoneans",
+            "slpp",
+            "vice president solomon berewa",
+            "when berewa"
+          ]
+        },
+        {
+          "shared_titles": [
+            "samuel sam-sumana",
+            "willie mae reid"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "alhaji samuel sidique sam-sumana",
+            "all people's congress",
+            "apc",
+            "ernest bai koroma",
+            "momodou koroma",
+            "peter camejo",
+            "richard j",
+            "samuel sam-sumana",
+            "sierra leone",
+            "sierra leone people's party",
+            "sierra leonean",
+            "slpp",
+            "socialist workers party",
+            "solomon berewa",
+            "the apc",
+            "united states",
+            "vice president",
+            "vice presidential",
+            "willie mae reid"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence_id": "hotpotqa_related_1",
+      "dataset": "hotpotqa",
+      "kind": "related",
+      "request_ids": [
+        "5a70f0a75542994082a3e403",
+        "5ae3f2895542995ad6573cc9",
+        "5ab29bdc554299545a2cf9d1"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "east central german",
+            "low saxon",
+            "upper saxon"
+          ]
+        },
+        {
+          "shared_titles": [
+            "south bergish"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "bergisches land region east",
+            "east bergish",
+            "east ripuarian",
+            "high german",
+            "low bergish",
+            "low franconian",
+            "middle german",
+            "oberbergische dialekte",
+            "ripuarian bergish",
+            "south bergish",
+            "upper bergish",
+            "west bergish"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence_id": "hotpotqa_related_2",
+      "dataset": "hotpotqa",
+      "kind": "related",
+      "request_ids": [
+        "5a70f0e75542994082a3e408",
+        "5a84e1095542997175ce1f25",
+        "5a8e8af55542990e94052b3f"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [
+            "johns hopkins university"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "daniel coit gilman",
+            "heidelberg university",
+            "jhu",
+            "johns hopkins",
+            "johns hopkins hospital",
+            "johns hopkins university",
+            "the johns hopkins university",
+            "united states",
+            "world report"
+          ]
+        },
+        {
+          "shared_titles": [
+            "hamdard university",
+            "university of southern california"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "hakim said",
+            "hamdard foundation",
+            "hamdard university",
+            "in karachi",
+            "los angeles",
+            "pacific rim",
+            "sc",
+            "southern california",
+            "the university",
+            "united states",
+            "university of southern california",
+            "usc"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence_id": "hotpotqa_related_3",
+      "dataset": "hotpotqa",
+      "kind": "related",
+      "request_ids": [
+        "5a70f11a5542994082a3e40b",
+        "5a7e689f55429934daa2fc1c",
+        "5a84b5ac5542991dd0999da4"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [
+            "american pit bull terrier",
+            "bull and terrier",
+            "chamuco",
+            "pit bull"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "american bully",
+            "american pit bull terrier",
+            "american staffordshire terrier",
+            "apbt",
+            "british isles",
+            "bull and terrier",
+            "chamuco",
+            "english bull terrier",
+            "english staffordshire bull terrier",
+            "mexican bulldog",
+            "mexican pitbull",
+            "north america",
+            "pit bull",
+            "pitbull blue",
+            "staffordshire bull terrier",
+            "the american bulldog",
+            "the american pit bull terrier",
+            "the bull",
+            "the chamuco",
+            "united states"
+          ]
+        },
+        {
+          "shared_titles": [
+            "pit bull"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "american bully",
+            "american pit bull terrier",
+            "american staffordshire terrier",
+            "david leavitt",
+            "north america",
+            "olde english bulldogge",
+            "pit bull",
+            "staffordshire bull terrier",
+            "the american bulldog",
+            "ukc",
+            "united states"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence_id": "hotpotqa_related_4",
+      "dataset": "hotpotqa",
+      "kind": "related",
+      "request_ids": [
+        "5a70f1685542994082a3e40f",
+        "5a7252db5542990c210a4104",
+        "5ae7308d5542991e8301cbb8"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "new york city",
+            "san francisco"
+          ]
+        },
+        {
+          "shared_titles": [
+            "domitia lepida the elder"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "ad",
+            "antonia major",
+            "bc",
+            "domitia lepida",
+            "domitia lepida the elder",
+            "domitius ahenobarbus",
+            "emperor caligula",
+            "emperor claudius",
+            "emperor nero",
+            "empress valeria messalina",
+            "lucius domitius ahenobarbus",
+            "octavia minor",
+            "roman emperor augustus",
+            "triumvir mark antony"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence_id": "hotpotqa_related_5",
+      "dataset": "hotpotqa",
+      "kind": "related",
+      "request_ids": [
+        "5a70f39c5542994082a3e429",
+        "5a848a685542997b5ce3feae",
+        "5adf51595542993344016c52"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [
+            "doug duncan"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "administrative affairs",
+            "baltimore mayor martin o'malley",
+            "college park",
+            "county executive",
+            "democratic party",
+            "doug duncan",
+            "douglas m",
+            "ike leggett",
+            "montgomery county",
+            "montgomery county executive",
+            "republican party",
+            "united states",
+            "vice president"
+          ]
+        },
+        {
+          "shared_titles": [],
+          "shared_query_entities": [
+            "vice president"
+          ],
+          "shared_context_entities": [
+            "democratic national convention",
+            "democratic party",
+            "united states",
+            "vice president"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence_id": "hotpotqa_related_6",
+      "dataset": "hotpotqa",
+      "kind": "related",
+      "request_ids": [
+        "5a70f4695542994082a3e435",
+        "5a8838885542994846c1ce39",
+        "5abe91895542993f32c2a168"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [
+            "pennsylvania canal (delaware division)"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "at easton",
+            "bull's island",
+            "cable ferry",
+            "delaware canal",
+            "delaware river",
+            "lehigh canal",
+            "lehigh river",
+            "main line",
+            "morris canal",
+            "new brunswick",
+            "new hope",
+            "new jersey",
+            "new york city",
+            "ohio river",
+            "pennsylvania canal",
+            "pennsylvania canal (delaware division",
+            "public works",
+            "raritan canal",
+            "the commonwealth",
+            "the delaware division",
+            "the national canal museum",
+            "united states"
+          ]
+        },
+        {
+          "shared_titles": [
+            "beaver creek state park",
+            "sandy and beaver canal"
+          ],
+          "shared_query_entities": [
+            "beaver canal",
+            "sandy"
+          ],
+          "shared_context_entities": [
+            "american civil war",
+            "beaver canal",
+            "beaver creek state park",
+            "cold run reservoir dam",
+            "columbiana county",
+            "confederate general john hunt morgan",
+            "east liverpool",
+            "erie canal",
+            "little beaver creek",
+            "ohio river",
+            "sandy and beaver canal",
+            "the sandy",
+            "united states"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence_id": "hotpotqa_related_7",
+      "dataset": "hotpotqa",
+      "kind": "related",
+      "request_ids": [
+        "5a70f4c45542994082a3e437",
+        "5a7bf3da5542996dd594b869",
+        "5ab298fb554299449642c922"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [],
+          "shared_query_entities": [
+            "english"
+          ],
+          "shared_context_entities": [
+            "united states",
+            "william shakespeare's"
+          ]
+        },
+        {
+          "shared_titles": [
+            "charles de batz de castelmore d'artagnan",
+            "curb your enthusiasm"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "alexandre dumas",
+            "artagnan romances",
+            "charles de batz de castelmore d'artagnan",
+            "charles ogier",
+            "cheryl hines",
+            "curb your enthusiasm",
+            "franco-dutch war",
+            "hbo",
+            "jeff garlin",
+            "larry david",
+            "los angeles",
+            "louis xiv",
+            "new york city",
+            "susie essman",
+            "the three musketeers",
+            "united states"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence_id": "hotpotqa_related_8",
+      "dataset": "hotpotqa",
+      "kind": "related",
+      "request_ids": [
+        "5a70f6425542994082a3e44c",
+        "5ae68a065542991bbc97611e",
+        "5a77767a55429967ab10519b"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "discovery channel",
+            "latin america",
+            "latin american",
+            "tv",
+            "us"
+          ]
+        },
+        {
+          "shared_titles": [],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "cnbc",
+            "cnn",
+            "itv",
+            "new york",
+            "new york city",
+            "united states"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence_id": "hotpotqa_related_9",
+      "dataset": "hotpotqa",
+      "kind": "related",
+      "request_ids": [
+        "5a70f9335542994082a3e46a",
+        "5a7bbb64554299042af8f7cc",
+        "5a7fb6625542994857a767cc"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "new orleans",
+            "rolling stone",
+            "united states"
+          ]
+        },
+        {
+          "shared_titles": [
+            "index magazine"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "bob nickas",
+            "brian eno",
+            "ducky doolittle",
+            "index magazine",
+            "juergen teller",
+            "marc jacobs",
+            "new york",
+            "new york city",
+            "peter halley",
+            "queen itchie",
+            "ryan mcginley",
+            "scarlett johansson",
+            "terry richardson",
+            "united states",
+            "wolfgang tillmans"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence_id": "hotpotqa_related_10",
+      "dataset": "hotpotqa",
+      "kind": "related",
+      "request_ids": [
+        "5a70ff335542994082a3e49c",
+        "5ae68e0055429908198fa607",
+        "5a76641e5542992d0ec060d8"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [
+            "priyanka chopra filmography",
+            "tabu filmography"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "best actress",
+            "best female debut",
+            "best performance",
+            "best supporting actress",
+            "coolie no",
+            "dev anand's",
+            "filmfare award",
+            "hum naujawan",
+            "karisma kapoor",
+            "mujhse shaadi karogi",
+            "national film award",
+            "negative role",
+            "ninne pelladata",
+            "pehla pehla pyar",
+            "priyanka chopra",
+            "priyanka chopra filmography",
+            "saajan chale sasural",
+            "saajan ki baahon mein",
+            "tabu filmography"
+          ]
+        },
+        {
+          "shared_titles": [
+            "sandra bullock filmography"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "a time",
+            "best actress",
+            "bionic showdown",
+            "bionic woman",
+            "demolition man",
+            "fortis films",
+            "golden globe award",
+            "hope floats",
+            "john grisham's",
+            "matthew mcconaughey",
+            "motion picture comedy",
+            "practical magic",
+            "sandra bullock",
+            "sandra bullock filmography",
+            "sylvester stallone",
+            "the prince",
+            "the six million dollar man",
+            "while you were sleeping",
+            "working girl"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence_id": "hotpotqa_related_11",
+      "dataset": "hotpotqa",
+      "kind": "related",
+      "request_ids": [
+        "5a7100435542994082a3e4a3",
+        "5ae0a6ea5542993d6555ebe9",
+        "5abb14a55542992ccd8e7f06"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [
+            "shikashika"
+          ],
+          "shared_query_entities": [
+            "shikashika"
+          ],
+          "shared_context_entities": [
+            "shikashika",
+            "united states",
+            "usd"
+          ]
+        },
+        {
+          "shared_titles": [
+            "chemical waste"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "chemical waste",
+            "clean water act",
+            "coshh",
+            "environmental protection agency",
+            "epa",
+            "hazardous characteristic",
+            "health administration",
+            "material safety data sheet",
+            "msds",
+            "occupational safety",
+            "osha",
+            "product data sheet",
+            "recovery act",
+            "resource conservation",
+            "united kingdom",
+            "united states"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence_id": "hotpotqa_related_12",
+      "dataset": "hotpotqa",
+      "kind": "related",
+      "request_ids": [
+        "5a7103b35542994082a3e4c0",
+        "5ab9be4f554299753720f843",
+        "5a74325055429979e28828b3"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [
+            "khunyang chhish",
+            "kunyang chhish east",
+            "pumari chhish",
+            "yukshin gardan sar"
+          ],
+          "shared_query_entities": [
+            "khunyang chhish"
+          ],
+          "shared_context_entities": [
+            "hispar glacier",
+            "hispar muztagh",
+            "kanjut sar",
+            "khiangyang kish",
+            "khunyang chhish",
+            "khunyang chhish east",
+            "kunyang chhish",
+            "kunyang chhish east",
+            "kunyang kish",
+            "matthias auer",
+            "on july",
+            "pumari chhish",
+            "shimshal river",
+            "simon anthamatten",
+            "yazghil glacier",
+            "yukshin gardan glacier",
+            "yukshin gardan sar"
+          ]
+        },
+        {
+          "shared_titles": [
+            "khunyang chhish",
+            "kunyang chhish east",
+            "pumari chhish"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "hispar glacier",
+            "hispar muztagh",
+            "khiangyang kish",
+            "khunyang chhish",
+            "khunyang chhish east",
+            "kunyang chhish",
+            "kunyang chhish east",
+            "kunyang kish",
+            "matthias auer",
+            "on july",
+            "pumari chhish",
+            "simon anthamatten"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence_id": "hotpotqa_related_13",
+      "dataset": "hotpotqa",
+      "kind": "related",
+      "request_ids": [
+        "5a7108fa5542994082a3e4ef",
+        "5aba85335542994dbf01992d",
+        "5a802b595542995d8a8ddf51"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [
+            "battle of cold harbor",
+            "cold harbor, virginia",
+            "terrence begley"
+          ],
+          "shared_query_entities": [
+            "battle",
+            "cold harbor"
+          ],
+          "shared_context_entities": [
+            "american civil war",
+            "battle of cold harbor",
+            "cold harbor",
+            "cold harbor, virginia",
+            "confederate gen",
+            "grant's overland campaign",
+            "hanover county",
+            "robert e",
+            "sergeant terrence begley",
+            "terrence begley",
+            "the battle",
+            "ulysses s",
+            "union lt",
+            "united states"
+          ]
+        },
+        {
+          "shared_titles": [
+            "operation dragoon"
+          ],
+          "shared_query_entities": [
+            "battle"
+          ],
+          "shared_context_entities": [
+            "by july",
+            "french high command",
+            "operation anvil",
+            "operation dragoon",
+            "operation overlord",
+            "second world war",
+            "southern france",
+            "the british",
+            "world war ii"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence_id": "hotpotqa_related_14",
+      "dataset": "hotpotqa",
+      "kind": "related",
+      "request_ids": [
+        "5a71095e5542994082a3e4f3",
+        "5a8b3af455429971feec467b",
+        "5a8ed10b5542995085b374a0"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [
+            "cop out (2010 film)",
+            "in country",
+            "unbreakable (film)"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "as dunn",
+            "bobbie ann mason",
+            "bruce willis",
+            "cop out",
+            "cop out (2010 film",
+            "cynthia cidre",
+            "david dunn",
+            "elijah price",
+            "emily lloyd",
+            "frank pierson",
+            "golden globe",
+            "in country",
+            "james horner",
+            "kevin pollak",
+            "kevin smith",
+            "kevin smith's",
+            "night shyamalan",
+            "norman jewison",
+            "nypd",
+            "robb cullen",
+            "robin wright",
+            "samuel l",
+            "seann william scott",
+            "spencer treat clark",
+            "tracy morgan",
+            "unbreakable (film"
+          ]
+        },
+        {
+          "shared_titles": [
+            "signs (film)"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "abigail breslin",
+            "blinding edge pictures",
+            "frank marshall",
+            "graham hess",
+            "joaquin phoenix",
+            "kathleen kennedy",
+            "marshall company",
+            "mel gibson",
+            "night shyamalan",
+            "rory culkin",
+            "sam mercer",
+            "signs (film",
+            "the kennedy",
+            "the village",
+            "the visit",
+            "touchstone home entertainment",
+            "touchstone pictures"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence_id": "hotpotqa_related_15",
+      "dataset": "hotpotqa",
+      "kind": "related",
+      "request_ids": [
+        "5a7109e95542994082a3e4fa",
+        "5a78b3f7554299148911f94c",
+        "5ab3c18b55429969a97a81b0"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [
+            "robert f. kennedy jr."
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "irish american",
+            "new york times best sellers",
+            "president john f",
+            "robert f. kennedy jr",
+            "robert francis",
+            "robert francis kennedy jr",
+            "waterkeeper alliance"
+          ]
+        },
+        {
+          "shared_titles": [
+            "kara kennedy"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "joan bennett kennedy",
+            "kara anne kennedy allen",
+            "kara kennedy",
+            "president john f",
+            "senator robert f",
+            "senator ted kennedy"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence_id": "hotpotqa_related_16",
+      "dataset": "hotpotqa",
+      "kind": "related",
+      "request_ids": [
+        "5a710a1e5542994082a3e4fd",
+        "5a8031d05542996402f6a47c",
+        "5a7b735c5542997c3ec9718a"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [
+            "west nile fever"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "hiv",
+            "west nile",
+            "west nile fever"
+          ]
+        },
+        {
+          "shared_titles": [],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "south africa",
+            "southeast asia",
+            "the company",
+            "united states"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence_id": "hotpotqa_related_17",
+      "dataset": "hotpotqa",
+      "kind": "related",
+      "request_ids": [
+        "5a710a915542994082a3e504",
+        "5a7b3b4f5542992d025e67ac",
+        "5abcf51c554299700f9d7949"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "henry iv",
+            "henry v",
+            "henry vi",
+            "richard ii"
+          ]
+        },
+        {
+          "shared_titles": [
+            "cody votolato",
+            "emil leeb",
+            "los debutantes",
+            "thomas fane, 6th earl of westmorland"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "academy award",
+            "academy awards",
+            "alejandro trejo",
+            "andres waissbluth",
+            "antonella rios",
+            "baron burghersh",
+            "bavarian military order",
+            "best foreign language film",
+            "blood brothers",
+            "cody votolato",
+            "cold cave",
+            "don pascual",
+            "dvd",
+            "emil leeb",
+            "field marshal wilhelm ritter",
+            "goya awards",
+            "head wound city",
+            "john fane",
+            "juan pablo miranda",
+            "los debutantes",
+            "mark gajadhar",
+            "max joseph",
+            "nestor castillana",
+            "on september",
+            "piano island",
+            "rachel bence",
+            "redmond high school",
+            "rocky votolato",
+            "rudy gajadhar",
+            "the blood brothers",
+            "the honourable thomas fane",
+            "thomas fane",
+            "thomas fane, 6th earl of westmorland",
+            "time out",
+            "uk",
+            "vere fane",
+            "world wars"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence_id": "hotpotqa_related_18",
+      "dataset": "hotpotqa",
+      "kind": "related",
+      "request_ids": [
+        "5a710bb15542994082a3e50d",
+        "5ae136375542997b2ef7d12f",
+        "5a88c68d55429938390d3fba"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [
+            "andy frankenberger",
+            "dag palovic",
+            "howard lederer"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "andy frankenberger",
+            "annie duke",
+            "bloomberg television",
+            "card player magazine",
+            "ceo",
+            "chairman of the board",
+            "czech republic",
+            "dag palovic",
+            "ept",
+            "european poker tour",
+            "fox business network",
+            "howard henry lederer",
+            "howard lederer",
+            "international n",
+            "main event",
+            "new york city",
+            "pokerstars team pro",
+            "season ix player",
+            "the professor",
+            "the wall street journal",
+            "tom mcevoy",
+            "tv",
+            "world poker tour",
+            "world series",
+            "world series of poker",
+            "wpt",
+            "wsop"
+          ]
+        },
+        {
+          "shared_titles": [
+            "the poker player's championship"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "doyle brunson's",
+            "main event",
+            "poker main event",
+            "the poker player's championship",
+            "world championship",
+            "world poker tour",
+            "world series",
+            "wpt",
+            "wsop"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence_id": "hotpotqa_related_19",
+      "dataset": "hotpotqa",
+      "kind": "related",
+      "request_ids": [
+        "5a710d155542994082a3e520",
+        "5a8fa32255429918e830d299",
+        "5a8182e255429938b614234d"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [],
+          "shared_query_entities": [
+            "german"
+          ],
+          "shared_context_entities": [
+            "air force"
+          ]
+        },
+        {
+          "shared_titles": [
+            "john j. pershing"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "aef",
+            "american expeditionary force",
+            "armies john joseph",
+            "black jack",
+            "general john j",
+            "john j. pershing",
+            "the battle",
+            "united states",
+            "united states army",
+            "western front",
+            "world war i"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_0",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "0008d48808a011ebbd78ac1f6bf848b6",
+        "a6689af208b911ebbd88ac1f6bf848b6",
+        "a391993708bf11ebbd8aac1f6bf848b6"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [
+            "edgar mulder",
+            "list of people named o'grady",
+            "mulder and scully",
+            "mulder and scully (song)",
+            "mulder and scully meet the were-monster",
+            "syzygy (the x-files)"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "cerys matthews",
+            "chris carter",
+            "dana scully",
+            "darin morgan",
+            "david duchovny",
+            "edgar mulder",
+            "fbi",
+            "fox mulder",
+            "frank spotnitz's",
+            "gillian anderson",
+            "guy mann",
+            "international velvet",
+            "kumail nanjiani",
+            "list of people named o'grady",
+            "mulder and scully",
+            "mulder and scully (song",
+            "mulder and scully meet the were-monster",
+            "night stalker",
+            "o' grady",
+            "rhys darby",
+            "rob bowman",
+            "rotten tomatoes",
+            "scully meet",
+            "syzygy (the x-files",
+            "the m word",
+            "the x- files",
+            "tv",
+            "tyler labine",
+            "uk",
+            "uk singles chart",
+            "united states",
+            "were- monster",
+            "x- files"
+          ]
+        },
+        {
+          "shared_titles": [
+            "list of people named o'grady"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "list of people named o'grady",
+            "new york",
+            "o' grady",
+            "united states"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_1",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "0016373a0bda11eba7f7acde48001122",
+        "5352c0240baf11ebab90acde48001122",
+        "421512620bdc11eba7f7acde48001122"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [
+            "adelaide of hesse",
+            "william i, elector of hesse",
+            "william ii, landgrave of hesse-wanfried-rheinfels"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "adelaide of hesse",
+            "frederick i",
+            "frederick ii",
+            "george ii",
+            "great britain",
+            "henry ii",
+            "hesse- cassel",
+            "hesse- homburg",
+            "hesse- kassel",
+            "hesse- rheinfels",
+            "hesse- wanfried",
+            "hesse- wanfried- rheinfels",
+            "landgrave charles",
+            "princess mary",
+            "salm- reifferscheid",
+            "sophie magdalene",
+            "william i",
+            "william i, elector of hesse",
+            "william ii",
+            "william ii, landgrave of hesse-wanfried-rheinfels"
+          ]
+        },
+        {
+          "shared_titles": [
+            "louis v, landgrave of hesse-darmstadt",
+            "louis vi, landgrave of hesse-darmstadt",
+            "louis viii, landgrave of hesse-darmstadt"
+          ],
+          "shared_query_entities": [
+            "landgrave of hesse-darmstadt's"
+          ],
+          "shared_context_entities": [
+            "ernest louis",
+            "george i",
+            "george ii",
+            "hesse- darmstadt",
+            "hesse- homburg",
+            "johann georg liebknecht",
+            "landgrave george ii",
+            "louis iv",
+            "louis v",
+            "louis v, landgrave of hesse-darmstadt",
+            "louis vi",
+            "louis vi, landgrave of hesse-darmstadt",
+            "louis viii",
+            "louis viii, landgrave of hesse-darmstadt",
+            "ludwig v",
+            "margravine dorothea charlotte",
+            "sidus ludoviciana",
+            "sophia eleonore",
+            "the landgrave",
+            "thirty years' war"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_2",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "0017cac508be11ebbd8aac1f6bf848b6",
+        "1453406e08bd11ebbd89ac1f6bf848b6",
+        "b9f3f47908c711ebbd91ac1f6bf848b6"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [
+            "sarajevo graduate school of business"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "international burch university",
+            "m university",
+            "mba",
+            "sarajevo graduate school",
+            "sarajevo graduate school of business",
+            "sgsb",
+            "texas a",
+            "united states"
+          ]
+        },
+        {
+          "shared_titles": [
+            "national kaohsiung normal university",
+            "sarajevo graduate school of business"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "ho- ping",
+            "international burch university",
+            "kaohsiung normal university",
+            "lingya district",
+            "m university",
+            "mba",
+            "national kaohsiung normal university",
+            "nknu",
+            "sarajevo graduate school",
+            "sarajevo graduate school of business",
+            "sgsb",
+            "texas a",
+            "the national kaohsiung normal university",
+            "the university",
+            "united states",
+            "yen- chao"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_3",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "00199e40098211ebbdb0ac1f6bf848b6",
+        "00b92f9d089e11ebbd78ac1f6bf848b6",
+        "1e11803208ce11ebbd94ac1f6bf848b6"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [
+            "at the movies",
+            "polly of the movies",
+            "the muppets go to the movies"
+          ],
+          "shared_query_entities": [
+            "did"
+          ],
+          "shared_context_entities": [
+            "abc",
+            "at the movies",
+            "corliss palmer",
+            "fozzie bear",
+            "gertrude short",
+            "harry leon wilson's",
+            "jason robards",
+            "polly of the movies",
+            "scott pembroke",
+            "the great muppet caper",
+            "the muffets go to the movies",
+            "the muppets go to the movies"
+          ]
+        },
+        {
+          "shared_titles": [
+            "a night at the movies",
+            "at the movies",
+            "polly of the movies",
+            "saturday night at the movies (disambiguation)",
+            "the muppets go to the movies"
+          ],
+          "shared_query_entities": [
+            "did"
+          ],
+          "shared_context_entities": [
+            "a night",
+            "a night at the movies",
+            "abc",
+            "american western",
+            "at the movies",
+            "corliss palmer",
+            "fozzie bear",
+            "gertrude short",
+            "harry leon wilson's",
+            "jason robards",
+            "polly of the movies",
+            "saturday night",
+            "saturday night at the movies (disambiguation",
+            "scott pembroke",
+            "the great muppet caper",
+            "the muffets go to the movies",
+            "the muppets go to the movies"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_4",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "001ad110086911ebbd5eac1f6bf848b6",
+        "2de7f0e00bda11eba7f7acde48001122",
+        "213f84960bdc11eba7f7acde48001122"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "aria albums chart",
+            "aria music awards"
+          ]
+        },
+        {
+          "shared_titles": [
+            "astrid north",
+            "bernie bonvoisin",
+            "billy milano",
+            "caspar babypants",
+            "dáithí sproule",
+            "jim bob",
+            "kristian leontiou",
+            "szilvia péter szabó"
+          ],
+          "shared_query_entities": [
+            "song"
+          ],
+          "shared_context_entities": [
+            "ac",
+            "astrid karina north radmann",
+            "astrid north",
+            "bernard bonvoisin",
+            "bernie bonvoisin",
+            "billy milano",
+            "bon scott",
+            "caspar babypants",
+            "chris ballew",
+            "claire sproule",
+            "dan lilker",
+            "dc",
+            "dáithí sproule",
+            "greek cypriot",
+            "james robert morrison",
+            "jim bob",
+            "kristian leontiou",
+            "nox",
+            "ride on",
+            "szilvia péter szabó",
+            "the presidents",
+            "tv",
+            "united forces",
+            "united states",
+            "unstoppable sex machine"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_5",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "00223e06084a11ebbd55ac1f6bf848b6",
+        "060505ae089211ebbd73ac1f6bf848b6",
+        "f9faf2ee08a211ebbd7bac1f6bf848b6"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [
+            "i want your love (film)",
+            "matt corboy"
+          ],
+          "shared_query_entities": [
+            "are"
+          ],
+          "shared_context_entities": [
+            "i want your love",
+            "i want your love (film",
+            "james franco",
+            "jesse metzger",
+            "leather bar",
+            "matt corboy",
+            "melbourne queer film festival",
+            "san francisco",
+            "travis mathews"
+          ]
+        },
+        {
+          "shared_titles": [
+            "jan prušinovský",
+            "lucie žáčková",
+            "the snake brothers"
+          ],
+          "shared_query_entities": [
+            "the snake brothers"
+          ],
+          "shared_context_entities": [
+            "academy award",
+            "best czech film",
+            "best director",
+            "best supporting actress",
+            "czech best film",
+            "czech lion",
+            "czech lion awards",
+            "czech republic",
+            "grass snakes",
+            "jan prušinovský",
+            "lucie žáčková",
+            "radok awards",
+            "thalia awards",
+            "the snake brothers",
+            "young talent"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_6",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "002e925e0bde11eba7f7acde48001122",
+        "c99fc05e0bd911eba7f7acde48001122",
+        "f47bff600bdc11eba7f7acde48001122"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [
+            "albert thompson (footballer, born 1912)",
+            "bill smith (footballer, born 1897)",
+            "etan boritzer",
+            "harry wainwright (footballer)",
+            "ian barry (director)",
+            "peter levin",
+            "theodred ii (bishop of elmham)",
+            "thomas scott (diver)"
+          ],
+          "shared_query_entities": [
+            "film"
+          ],
+          "shared_context_entities": [
+            "albert thompson",
+            "albert thompson (footballer, born 1912",
+            "bill smith (footballer, born 1897",
+            "etan boritzer",
+            "get your book published",
+            "harry wainwright",
+            "harry wainwright (footballer",
+            "ian barry",
+            "ian barry (director",
+            "john f",
+            "new york",
+            "new york city",
+            "new york city department",
+            "peter levin",
+            "the teachings",
+            "theodred ii",
+            "theodred ii (bishop of elmham",
+            "thomas scott",
+            "thomas scott (diver",
+            "tv",
+            "wade junior high school",
+            "william thomas smith"
+          ]
+        },
+        {
+          "shared_titles": [
+            "albert thompson (footballer, born 1912)",
+            "bill smith (footballer, born 1897)",
+            "etan boritzer",
+            "harry wainwright (footballer)",
+            "ian barry (director)",
+            "peter levin",
+            "rené clair",
+            "theodred ii (bishop of elmham)",
+            "thomas scott (diver)"
+          ],
+          "shared_query_entities": [
+            "film"
+          ],
+          "shared_context_entities": [
+            "albert thompson",
+            "albert thompson (footballer, born 1912",
+            "and then there were none",
+            "bill smith (footballer, born 1897",
+            "etan boritzer",
+            "get your book published",
+            "harry wainwright",
+            "harry wainwright (footballer",
+            "i married",
+            "ian barry",
+            "ian barry (director",
+            "john f",
+            "le million",
+            "lucien chomette",
+            "new york",
+            "new york city",
+            "new york city department",
+            "peter levin",
+            "rené clair",
+            "the italian straw hat",
+            "the teachings",
+            "theodred ii",
+            "theodred ii (bishop of elmham",
+            "thomas scott",
+            "thomas scott (diver",
+            "tv",
+            "uk",
+            "usa",
+            "wade junior high school",
+            "william thomas smith",
+            "world war ii"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_7",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "002f12240bde11eba7f7acde48001122",
+        "06d16e840bb011ebab90acde48001122",
+        "80cea3ec0baf11ebab90acde48001122"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [
+            "elisabeth of cleves, countess of schwarzburg-blankenburg",
+            "karl harst",
+            "mary of burgundy, duchess of cleves"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "adolph i",
+            "count henry xxvi",
+            "elisabeth of cleves, countess of schwarzburg-blankenburg",
+            "german duchy",
+            "henry viii",
+            "john iii",
+            "karl harst",
+            "king louis xii",
+            "mary of burgundy, duchess of cleves",
+            "schwarzburg- blankenburg",
+            "the duke",
+            "west flanders",
+            "wijnendale castle"
+          ]
+        },
+        {
+          "shared_titles": [
+            "adolph i, duke of cleves",
+            "adolph ii of the marck",
+            "dietrich viii, count of cleves",
+            "elisabeth of cleves, countess of schwarzburg-blankenburg",
+            "johann, count of cleves",
+            "john i, duke of cleves",
+            "karl harst",
+            "mary of burgundy, duchess of cleves"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "adolf iii",
+            "adolph i",
+            "adolph i, duke of cleves",
+            "adolph ii",
+            "adolph ii of the marck",
+            "adolph iii",
+            "count henry xxvi",
+            "dietrich vii",
+            "dietrich viii",
+            "dietrich viii, count of cleves",
+            "elisabeth of cleves, countess of schwarzburg-blankenburg",
+            "engelbert ii",
+            "german duchy",
+            "henry viii",
+            "johann, count of cleves",
+            "john i",
+            "john i, duke of cleves",
+            "john iii",
+            "karl harst",
+            "king louis xii",
+            "mary of burgundy, duchess of cleves",
+            "reginald ii",
+            "schwarzburg- blankenburg",
+            "the duke",
+            "west flanders",
+            "wijnendale castle"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_8",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "00310dc8094611ebbdaeac1f6bf848b6",
+        "058f0bd308ac11ebbd82ac1f6bf848b6",
+        "07fd4f9b088011ebbd6cac1f6bf848b6"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [
+            "coney island baby (film)",
+            "invasion of the neptune men",
+            "lloyd (film)",
+            "may lamok sa loob ng kulambo",
+            "rakka (film)",
+            "royal tramp ii",
+            "shirin farhad (1931 film)",
+            "the wonderful world of captain kuhio"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "alam ara",
+            "amy austria",
+            "amy hobby",
+            "best first time director",
+            "coney island",
+            "coney island baby",
+            "coney island baby (film",
+            "danny l",
+            "eddie garcia",
+            "essex films",
+            "gloria diaz",
+            "hirene lopez",
+            "hong kong",
+            "invasion of the neptune men",
+            "jehanara kajjan",
+            "jury award",
+            "karl geary",
+            "lloyd (film",
+            "louis cha's",
+            "may daga",
+            "may lamok",
+            "may lamok sa loob ng kulambo",
+            "mystery science theater",
+            "newport international film festival",
+            "nizami ganjavi",
+            "rakka (film",
+            "royal tramp",
+            "royal tramp ii",
+            "ryan shore",
+            "shirin farhad",
+            "shirin farhad (1931 film",
+            "sundance channel",
+            "tanya ryno",
+            "the deer",
+            "the wonderful world of captain kuhio",
+            "tommy abuel",
+            "united states"
+          ]
+        },
+        {
+          "shared_titles": [
+            "coney island baby (film)",
+            "invasion of the neptune men",
+            "lloyd (film)",
+            "may lamok sa loob ng kulambo",
+            "rakka (film)",
+            "royal tramp ii",
+            "shirin farhad (1931 film)",
+            "the wonderful world of captain kuhio"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "alam ara",
+            "amy austria",
+            "amy hobby",
+            "best first time director",
+            "coney island",
+            "coney island baby",
+            "coney island baby (film",
+            "danny l",
+            "eddie garcia",
+            "essex films",
+            "gloria diaz",
+            "hirene lopez",
+            "hong kong",
+            "invasion of the neptune men",
+            "jehanara kajjan",
+            "jury award",
+            "karl geary",
+            "lloyd (film",
+            "louis cha's",
+            "may daga",
+            "may lamok",
+            "may lamok sa loob ng kulambo",
+            "mystery science theater",
+            "newport international film festival",
+            "nizami ganjavi",
+            "rakka (film",
+            "royal tramp",
+            "royal tramp ii",
+            "ryan shore",
+            "shirin farhad",
+            "shirin farhad (1931 film",
+            "sundance channel",
+            "tanya ryno",
+            "the deer",
+            "the wonderful world of captain kuhio",
+            "tommy abuel",
+            "united states"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_9",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "003285a80bde11eba7f7acde48001122",
+        "27c9e0800bdd11eba7f7acde48001122",
+        "a6d861000bdb11eba7f7acde48001122"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [
+            "ali rahuma",
+            "baglan mailybayev",
+            "eleni gabre-madhin",
+            "khalid al-habib",
+            "nayelly hernández",
+            "roberto savio"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "al- ittihad",
+            "al- qaeda",
+            "ali khalifa rahuma",
+            "ali rahuma",
+            "baglan mailybayev",
+            "caribbean games",
+            "ce",
+            "central american",
+            "chief executive officer",
+            "chris walker",
+            "deputy head",
+            "development economics",
+            "ecx",
+            "eleni gabre-madhin",
+            "eleni zaude gabre- madhin",
+            "ethiopia commodity exchange",
+            "gunnar myrdal",
+            "inter press service",
+            "international food policy research institute",
+            "international law",
+            "ips",
+            "khalid al-habib",
+            "national academy",
+            "nayelly hernández",
+            "pablo piacentini",
+            "pan american games",
+            "political science",
+            "presidential administration",
+            "professor zimanov s",
+            "psa world tour",
+            "roberto savio",
+            "sub- saharan africa",
+            "tamil nadu",
+            "trinity college",
+            "united nations",
+            "us",
+            "women's world team squash championships",
+            "world bank"
+          ]
+        },
+        {
+          "shared_titles": [
+            "ali rahuma",
+            "ashoka",
+            "baglan mailybayev",
+            "eleni gabre-madhin",
+            "khalid al-habib",
+            "nayelly hernández",
+            "roberto savio",
+            "rumbold of mechelen"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "al- ittihad",
+            "al- qaeda",
+            "ali khalifa rahuma",
+            "ali rahuma",
+            "ashoka",
+            "baglan mailybayev",
+            "bce",
+            "caribbean games",
+            "ce",
+            "central american",
+            "central asia",
+            "chandragupta maurya",
+            "chief executive officer",
+            "chris walker",
+            "deputy head",
+            "development economics",
+            "ecx",
+            "eleni gabre-madhin",
+            "eleni zaude gabre- madhin",
+            "ethiopia commodity exchange",
+            "gautama buddha",
+            "great chronicle",
+            "gunnar myrdal",
+            "his sanskrit",
+            "iast",
+            "inter press service",
+            "international food policy research institute",
+            "international law",
+            "ips",
+            "kalinga war",
+            "khalid al-habib",
+            "lion capital",
+            "maurya dynasty",
+            "national academy",
+            "nayelly hernández",
+            "pablo piacentini",
+            "pan american games",
+            "political science",
+            "presidential administration",
+            "professor zimanov s",
+            "psa world tour",
+            "roberto savio",
+            "roman catholic church",
+            "rumbold of mechelen",
+            "rumbold's cathedral",
+            "saint rumbold",
+            "saint rumbold's",
+            "scottish christian",
+            "sri lanka",
+            "sri lankan",
+            "sub- saharan africa",
+            "tamil nadu",
+            "the outline",
+            "trinity college",
+            "united nations",
+            "us",
+            "western rite orthodox churches",
+            "women's world team squash championships",
+            "world bank"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_10",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "003f41f80bde11eba7f7acde48001122",
+        "3091e6da0bde11eba7f7acde48001122",
+        "918ef9340bdc11eba7f7acde48001122"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [
+            "brian kennedy (gallery director)",
+            "dana blankstein",
+            "haile gerima",
+            "ian barry (director)",
+            "john donatich",
+            "john farrell (businessman)",
+            "michael govan",
+            "olav aaraas",
+            "peter levin"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "black filmmakers",
+            "brian kennedy (gallery director",
+            "brian patrick kennedy",
+            "cultural history",
+            "dana blankstein",
+            "dana blankstein- cohen",
+            "dia art foundation",
+            "haile gerima",
+            "hood museum",
+            "howard university",
+            "ian barry",
+            "ian barry (director",
+            "israeli academy",
+            "john donatich",
+            "john farrell",
+            "john farrell (businessman",
+            "latin america",
+            "los angeles county museum",
+            "los angeles school",
+            "michael govan",
+            "national gallery",
+            "new york city",
+            "norwegian museum",
+            "olav aaraas",
+            "peabody essex museum",
+            "peter levin",
+            "royal norwegian order",
+            "sogn folk museum",
+            "toledo museum",
+            "tv",
+            "united states",
+            "yale university press"
+          ]
+        },
+        {
+          "shared_titles": [
+            "brian kennedy (gallery director)",
+            "dana blankstein",
+            "haile gerima",
+            "ian barry (director)",
+            "john donatich",
+            "john farrell (businessman)",
+            "michael govan",
+            "olav aaraas",
+            "peter levin"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "black filmmakers",
+            "brian kennedy (gallery director",
+            "brian patrick kennedy",
+            "cultural history",
+            "dana blankstein",
+            "dana blankstein- cohen",
+            "dia art foundation",
+            "haile gerima",
+            "hood museum",
+            "howard university",
+            "ian barry",
+            "ian barry (director",
+            "israeli academy",
+            "john donatich",
+            "john farrell",
+            "john farrell (businessman",
+            "latin america",
+            "los angeles county museum",
+            "los angeles school",
+            "michael govan",
+            "national gallery",
+            "new york city",
+            "norwegian museum",
+            "olav aaraas",
+            "peabody essex museum",
+            "peter levin",
+            "royal norwegian order",
+            "sogn folk museum",
+            "toledo museum",
+            "tv",
+            "united states",
+            "yale university press"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_11",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "004430780bde11eba7f7acde48001122",
+        "48cc4a520bdd11eba7f7acde48001122",
+        "6ec345340bde11eba7f7acde48001122"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [
+            "beaulieu-sur-loire",
+            "motherland (disambiguation)",
+            "place of birth",
+            "where was i"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "beaulieu-sur-loire",
+            "for us",
+            "great britain",
+            "jacques macdonald",
+            "motherland (disambiguation",
+            "napoleonic wars",
+            "place of birth",
+            "pob",
+            "us",
+            "us constitution",
+            "usa",
+            "where was i"
+          ]
+        },
+        {
+          "shared_titles": [
+            "beaulieu-sur-loire",
+            "dance of death (disambiguation)",
+            "motherland (disambiguation)",
+            "place of birth",
+            "place of origin",
+            "where was i",
+            "éléonore desmier d'olbreuse"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "beaulieu-sur-loire",
+            "dance of death (disambiguation",
+            "danse macabre",
+            "for us",
+            "george i",
+            "george ii",
+            "george william",
+            "great britain",
+            "in switzerland",
+            "jacques macdonald",
+            "marie desmier",
+            "motherland (disambiguation",
+            "napoleonic wars",
+            "place of birth",
+            "place of origin",
+            "pob",
+            "sophia dorothea",
+            "the dance",
+            "us",
+            "us constitution",
+            "usa",
+            "where was i",
+            "éléonore desmier d'olbreuse"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_12",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "0051fad20bde11eba7f7acde48001122",
+        "8031698e0bdb11eba7f7acde48001122",
+        "cc2cc61a0bdd11eba7f7acde48001122"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [
+            "agnes of leiningen",
+            "andreas, prince of leiningen",
+            "emich, 5th prince of leiningen",
+            "karl, prince of leiningen",
+            "princess margarita of leiningen"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "agnes of leiningen",
+            "alexander ii",
+            "andreas, prince of leiningen",
+            "british throne",
+            "carl friedrich wilhelm emich",
+            "duchess eilika",
+            "emich kyrill",
+            "emich, 5th prince of leiningen",
+            "ernst leopold",
+            "full german",
+            "grand duchess maria kirillovna",
+            "grand duke",
+            "grand duke kirill vladimirovich",
+            "karl, prince of leiningen",
+            "kirill vladimirovich",
+            "margarita ileana viktoria alexandra prinzessin",
+            "prince karl emich",
+            "princely house",
+            "princess alexandra",
+            "princess margarita",
+            "princess margarita of leiningen",
+            "princess victoria melita",
+            "queen victoria"
+          ]
+        },
+        {
+          "shared_titles": [
+            "agnes of leiningen",
+            "alexandra, princess of leiningen",
+            "andreas, prince of leiningen",
+            "emich, 5th prince of leiningen",
+            "karl, prince of leiningen",
+            "prince boris of leiningen",
+            "prince karl emich of leiningen",
+            "prince karl of leiningen",
+            "princess margarita of leiningen"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "agnes of leiningen",
+            "alexander ii",
+            "alexandra, princess of leiningen",
+            "andreas, prince of leiningen",
+            "british throne",
+            "carl friedrich wilhelm emich",
+            "cyril vladimirovich",
+            "duchess eilika",
+            "eastern orthodox christianity",
+            "emich kyrill",
+            "emich, 5th prince of leiningen",
+            "emperor alexander ii",
+            "emperor nicholas iii",
+            "ernest augustus",
+            "ernst august",
+            "ernst leopold",
+            "frank markwart",
+            "full german",
+            "grand duchess maria kirillovna",
+            "grand duke",
+            "grand duke kirill vladimirovich",
+            "grand duke vladimir kirillovich",
+            "great britain",
+            "imperial house",
+            "imperial throne",
+            "karl emich",
+            "karl, prince of leiningen",
+            "kirill vladimirovich",
+            "lower saxony",
+            "margarita ileana viktoria alexandra prinzessin",
+            "monarchist party",
+            "nikolai kirillovich romanov",
+            "orthodox russian",
+            "prince boris of leiningen",
+            "prince karl",
+            "prince karl emich",
+            "prince karl emich of leiningen",
+            "prince karl of leiningen",
+            "prince karl vladimir ernst heinrich",
+            "princely house",
+            "princess alexandra",
+            "princess caroline",
+            "princess margarita",
+            "princess margarita of leiningen",
+            "princess marie louise",
+            "princess ortrud",
+            "princess victoria melita",
+            "queen victoria",
+            "russian empire",
+            "schleswig- holstein- sonderburg",
+            "victoria melita"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_13",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "005238da0bde11eba7f7acde48001122",
+        "2c7d1dd00bde11eba7f7acde48001122",
+        "a33c6cf60bdd11eba7f7acde48001122"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [
+            "alexander courage",
+            "alonso mudarra",
+            "diane warren",
+            "petrus de domarto",
+            "walter robinson (composer)"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "academy awards",
+            "african american",
+            "alexander courage",
+            "alexander mair",
+            "alonso mudarra",
+            "british academy",
+            "courage jr",
+            "diane eve warren",
+            "diane warren",
+            "emi",
+            "emi music publishing peter reichardt",
+            "emmy award",
+            "franco- flemish",
+            "golden globe award",
+            "grammy award",
+            "harriet tubman",
+            "her uk",
+            "holly near",
+            "hollywood walk",
+            "ivor novello award",
+            "john mccutcheon",
+            "music awards",
+            "petrus de domarto",
+            "songwriters hall",
+            "special international award",
+            "star trek",
+            "uk",
+            "walter robinson",
+            "walter robinson (composer"
+          ]
+        },
+        {
+          "shared_titles": [
+            "alexander courage",
+            "alexandru cristea",
+            "alonso mudarra",
+            "diane warren",
+            "karl wilhelm (conductor)",
+            "michelangelo faggioli",
+            "petrus de domarto",
+            "pydimarri venkata subba rao",
+            "walter robinson (composer)"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "academy awards",
+            "african american",
+            "alexander courage",
+            "alexander mair",
+            "alexandru cristea",
+            "alonso mudarra",
+            "british academy",
+            "carl wilhelm",
+            "courage jr",
+            "diane eve warren",
+            "diane warren",
+            "die wacht",
+            "emi",
+            "emi music publishing peter reichardt",
+            "emmy award",
+            "franco- flemish",
+            "golden globe award",
+            "grammy award",
+            "harriet tubman",
+            "her uk",
+            "holly near",
+            "hollywood walk",
+            "ivor novello award",
+            "john mccutcheon",
+            "karl wilhelm",
+            "karl wilhelm (conductor",
+            "la cilla",
+            "michelangelo faggioli",
+            "music awards",
+            "national pledge",
+            "petrus de domarto",
+            "pydimarri venkata subba rao",
+            "songwriters hall",
+            "special international award",
+            "star trek",
+            "uk",
+            "walter robinson",
+            "walter robinson (composer"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_14",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "0056b9ff08e711ebbda5ac1f6bf848b6",
+        "aa69063e0baf11ebab90acde48001122",
+        "d5fed3820baf11ebab90acde48001122"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [
+            "dara shikoh",
+            "parviz mirza"
+          ],
+          "shared_query_entities": [
+            "dara shikoh"
+          ],
+          "shared_context_entities": [
+            "dara shikoh",
+            "dara shukoh",
+            "emperor aurangzeb",
+            "high rank",
+            "nadira banu begum",
+            "parviz mirza",
+            "prince muhiuddin",
+            "princess jahanara begum",
+            "sahib jamal",
+            "shah jahan",
+            "shah jahan's"
+          ]
+        },
+        {
+          "shared_titles": [
+            "abd al-muttalib",
+            "fujiwara no nagara",
+            "guillaume wittouck",
+            "john westley",
+            "kaya alp",
+            "lyon cohen",
+            "prithvipati shah",
+            "shah jahan"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "abd al-muttalib",
+            "agra fort",
+            "emperor jahangir's",
+            "fujiwara no nagara",
+            "gorkha kingdom",
+            "guillaume wittouck",
+            "high magistrate",
+            "in september",
+            "john wesley",
+            "john westley",
+            "kaya alp",
+            "leonard cohen",
+            "lyon cohen",
+            "mumtaz mahal",
+            "muttalib shaybah",
+            "nara bhupal shah",
+            "osman i",
+            "ottoman empire",
+            "paul wittouck",
+            "prithvipati shah",
+            "shah jahan",
+            "shah jahan's",
+            "shahab-ud-din muhammad khurram",
+            "suleyman shah",
+            "taj mahal",
+            "the mughal empire"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_15",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "0063e31f08eb11ebbda7ac1f6bf848b6",
+        "7d55f0e008d411ebbd96ac1f6bf848b6",
+        "1363635808d311ebbd96ac1f6bf848b6"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [],
+          "shared_query_entities": [
+            "are",
+            "river"
+          ],
+          "shared_context_entities": [
+            "mato grosso",
+            "the capivari river"
+          ]
+        },
+        {
+          "shared_titles": [],
+          "shared_query_entities": [
+            "are",
+            "river"
+          ],
+          "shared_context_entities": [
+            "the branco river",
+            "the capivari river"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_16",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "0069c0220bde11eba7f7acde48001122",
+        "71d367cc0bde11eba7f7acde48001122",
+        "c218f9d20bdd11eba7f7acde48001122"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [
+            "alonso mudarra",
+            "elwood edwards",
+            "george gershwin"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "alonso mudarra",
+            "america online",
+            "an american",
+            "aol",
+            "buddy desylva",
+            "charles hambitzer",
+            "dubose heyward",
+            "elwood edwards",
+            "fascinating rhythm",
+            "george gershwin",
+            "henry cowell",
+            "hot country singles",
+            "i got rhythm",
+            "in october",
+            "ira gershwin",
+            "jacob bruskin gershowitz",
+            "joanna lumley",
+            "joseph brody",
+            "nadia boulanger",
+            "new bern",
+            "new york city",
+            "north carolina",
+            "on sept",
+            "q- link ceo steve case",
+            "rubin goldmark",
+            "the simpsons",
+            "the tonight show starring jimmy fallon",
+            "twenty thousand hertz",
+            "uk",
+            "you've got mail"
+          ]
+        },
+        {
+          "shared_titles": [
+            "alexander courage",
+            "alexandru cristea",
+            "alonso mudarra",
+            "elwood edwards",
+            "george gershwin",
+            "petrus de domarto",
+            "walter robinson (composer)"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "african american",
+            "alexander courage",
+            "alexander mair",
+            "alexandru cristea",
+            "alonso mudarra",
+            "america online",
+            "an american",
+            "aol",
+            "buddy desylva",
+            "charles hambitzer",
+            "courage jr",
+            "dubose heyward",
+            "elwood edwards",
+            "fascinating rhythm",
+            "franco- flemish",
+            "george gershwin",
+            "harriet tubman",
+            "henry cowell",
+            "holly near",
+            "i got",
+            "i got rhythm",
+            "i've got",
+            "in october",
+            "ira gershwin",
+            "jacob bruskin gershowitz",
+            "joanna lumley",
+            "john mccutcheon",
+            "joseph brody",
+            "nadia boulanger",
+            "new bern",
+            "new york city",
+            "north carolina",
+            "on sept",
+            "petrus de domarto",
+            "q- link ceo steve case",
+            "rubin goldmark",
+            "star trek",
+            "the simpsons",
+            "the tonight show starring jimmy fallon",
+            "twenty thousand hertz",
+            "uk",
+            "walter robinson",
+            "walter robinson (composer",
+            "you've got mail"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_17",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "006b525c08e111ebbda2ac1f6bf848b6",
+        "0a576b1b08ab11ebbd81ac1f6bf848b6",
+        "08292515088411ebbd6dac1f6bf848b6"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [
+            "operation leopard"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "french guiana",
+            "los angeles",
+            "operation leopard",
+            "raoul coutard",
+            "rep captain pierre sergent",
+            "united states"
+          ]
+        },
+        {
+          "shared_titles": [
+            "kabani nadi chuvannappol",
+            "life is what you make it (film)",
+            "my little eye",
+            "operation leopard",
+            "the fabulous senorita",
+            "the night of nights"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "academy awards",
+            "best director",
+            "big brother",
+            "director milestone",
+            "donald ogden stewart",
+            "estelita rodriguez",
+            "french guiana",
+            "indian kannada",
+            "jhett tolentino",
+            "kabani nadi chuvannappol",
+            "kerala state film awards",
+            "latin american",
+            "lewis milestone",
+            "life is what you make it",
+            "life is what you make it (film",
+            "marc evans",
+            "my little eye",
+            "nestor paiva",
+            "new york",
+            "olympe bradna",
+            "operation leopard",
+            "original motion picture soundtrack",
+            "paramount pictures",
+            "pat o' brien",
+            "pork chop hill",
+            "raoul coutard",
+            "rep captain pierre sergent",
+            "rita moreno",
+            "river kabani turned red",
+            "robert clarke",
+            "roland young",
+            "second best film",
+            "the fabulous senorita",
+            "the new york times",
+            "the night",
+            "the night of nights",
+            "the seekers",
+            "touhou project",
+            "united states"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_18",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "006d81bc0bde11eba7f7acde48001122",
+        "361f73d80bde11eba7f7acde48001122",
+        "391186b00bdb11eba7f7acde48001122"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [
+            "astrid north",
+            "bernie bonvoisin",
+            "billy milano",
+            "caspar babypants",
+            "dáithí sproule",
+            "kristian leontiou",
+            "mike williams (singer)"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "ac",
+            "astrid karina north radmann",
+            "astrid north",
+            "bernard bonvoisin",
+            "bernie bonvoisin",
+            "billy milano",
+            "bon scott",
+            "caspar babypants",
+            "chris ballew",
+            "claire sproule",
+            "dan lilker",
+            "dc",
+            "dáithí sproule",
+            "greek cypriot",
+            "kristian leontiou",
+            "metal maniacs",
+            "michael ix williams",
+            "mike williams (singer",
+            "ride on",
+            "the presidents",
+            "uk",
+            "united forces",
+            "united states"
+          ]
+        },
+        {
+          "shared_titles": [
+            "astrid north",
+            "bernie bonvoisin",
+            "billy milano",
+            "caspar babypants",
+            "dáithí sproule",
+            "kristian leontiou",
+            "mike williams (singer)"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "ac",
+            "astrid karina north radmann",
+            "astrid north",
+            "bernard bonvoisin",
+            "bernie bonvoisin",
+            "billy milano",
+            "bon scott",
+            "caspar babypants",
+            "chris ballew",
+            "claire sproule",
+            "dan lilker",
+            "dc",
+            "dáithí sproule",
+            "greek cypriot",
+            "kristian leontiou",
+            "metal maniacs",
+            "michael ix williams",
+            "mike williams (singer",
+            "ride on",
+            "the presidents",
+            "united forces",
+            "united states"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_19",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "007b76e80bdc11eba7f7acde48001122",
+        "28942dc20bdd11eba7f7acde48001122",
+        "07f908b20bdd11eba7f7acde48001122"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [
+            "brian kennedy (gallery director)",
+            "edmond t. gréville",
+            "ian barry (director)",
+            "jesse e. hobson",
+            "olav aaraas",
+            "peter levin"
+          ],
+          "shared_query_entities": [
+            "film"
+          ],
+          "shared_context_entities": [
+            "armour research foundation",
+            "brian kennedy (gallery director",
+            "brian patrick kennedy",
+            "cultural history",
+            "edmond t",
+            "edmond t. gréville",
+            "hood museum",
+            "ian barry",
+            "ian barry (director",
+            "jesse e. hobson",
+            "jesse edward hobson",
+            "national gallery",
+            "norwegian museum",
+            "olav aaraas",
+            "peabody essex museum",
+            "peter levin",
+            "royal norwegian order",
+            "sogn folk museum",
+            "sri",
+            "sri international",
+            "toledo museum",
+            "tv",
+            "united states"
+          ]
+        },
+        {
+          "shared_titles": [
+            "brian kennedy (gallery director)",
+            "dana blankstein",
+            "ian barry (director)",
+            "jesse e. hobson",
+            "michael govan",
+            "olav aaraas",
+            "peter levin",
+            "s. n. mathur"
+          ],
+          "shared_query_entities": [
+            "film"
+          ],
+          "shared_context_entities": [
+            "armour research foundation",
+            "brian kennedy (gallery director",
+            "brian patrick kennedy",
+            "cultural history",
+            "dana blankstein",
+            "dana blankstein- cohen",
+            "dia art foundation",
+            "director general",
+            "hood museum",
+            "ian barry",
+            "ian barry (director",
+            "indian intelligence bureau",
+            "israeli academy",
+            "jesse e. hobson",
+            "jesse edward hobson",
+            "los angeles county museum",
+            "michael govan",
+            "national gallery",
+            "new york city",
+            "norwegian museum",
+            "olav aaraas",
+            "peabody essex museum",
+            "peter levin",
+            "royal norwegian order",
+            "s. n. mathur",
+            "sogn folk museum",
+            "sri",
+            "sri international",
+            "toledo museum",
+            "tv",
+            "united states"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence_id": "musique_related_0",
+      "dataset": "musique",
+      "kind": "related",
+      "request_ids": [
+        "2hop__10017_18974",
+        "2hop__631024_18974",
+        "2hop__36747_18974"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [
+            "antarctica",
+            "hokkien",
+            "military history of indonesia",
+            "newton–jenney party",
+            "siege of germanicia"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "antarctica",
+            "arab muslim",
+            "axel heiberg glacier",
+            "beardmore glacier",
+            "bhumi java",
+            "black hills",
+            "black hills gold rush",
+            "calamity jane",
+            "california joe milner",
+            "chen yuanguang",
+            "chen zheng",
+            "dapunta hyang sri jayanasa",
+            "douglas mawson",
+            "edgeworth david",
+            "emperor gaozong",
+            "emperor xizong",
+            "ernest shackleton",
+            "general george armstrong custer's",
+            "great sioux war",
+            "henry newton",
+            "hokkien",
+            "huang chao",
+            "jenney party",
+            "jenney-newton party",
+            "lieutenant colonel richard i",
+            "magnetic pole",
+            "middle chinese",
+            "military history of indonesia",
+            "mount erebus",
+            "newton–jenney party",
+            "nimrod expedition",
+            "northern china",
+            "rashidun caliphate",
+            "roald amundsen",
+            "ross ice shelf",
+            "scott expedition",
+            "siege of germanicia",
+            "south dakota",
+            "south magnetic pole",
+            "south polar plateau",
+            "south pole",
+            "the kedukan bukit",
+            "the kota kapur",
+            "the newton",
+            "the newton-jenney",
+            "the siege",
+            "the telaga batu",
+            "transantarctic mountains",
+            "united states geological survey",
+            "valentine mcgillycuddy",
+            "walter p",
+            "wang chao",
+            "wang shenzhi"
+          ]
+        },
+        {
+          "shared_titles": [
+            "battle of little blue river",
+            "hokkien",
+            "siege of germanicia"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "american civil war",
+            "arab muslim",
+            "battle of little blue river",
+            "chen yuanguang",
+            "chen zheng",
+            "emperor gaozong",
+            "emperor xizong",
+            "hokkien",
+            "huang chao",
+            "jackson county",
+            "little blue river",
+            "middle chinese",
+            "northern china",
+            "price's missouri expedition",
+            "rashidun caliphate",
+            "second battle",
+            "siege of germanicia",
+            "the battle",
+            "the siege",
+            "wang chao",
+            "wang shenzhi"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence_id": "musique_related_1",
+      "dataset": "musique",
+      "kind": "related",
+      "request_ids": [
+        "2hop__10114_599630",
+        "2hop__671664_646310",
+        "3hop1__516535_834494_34088"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [
+            "australia",
+            "biłgoraj county",
+            "cyprus popular bank",
+            "federalism",
+            "list of territorial entities where english is an official language",
+            "pangi territory",
+            "states of nigeria",
+            "texas–indian wars"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "a nigerian state",
+            "act",
+            "australia",
+            "australian antarctic territory",
+            "biłgoraj county",
+            "cartier islands",
+            "central bank",
+            "central bank board",
+            "chief minister",
+            "chris pavlou",
+            "christmas island",
+            "commonwealth parliament",
+            "coral sea islands",
+            "cyprus popular bank",
+            "democratic republic",
+            "fct",
+            "federal capital territory",
+            "federal government",
+            "federalism",
+            "fort sill",
+            "french polynesia",
+            "heard island",
+            "jervis bay territory",
+            "legislative assembly",
+            "legislative council",
+            "list of territorial entities where english is an official language",
+            "local government areas",
+            "lord howe island",
+            "lublin voivodeship",
+            "macquarie island",
+            "maniema province",
+            "marfin investment group",
+            "marfin popular bank",
+            "mcdonald islands",
+            "ms andri antoniadou",
+            "new south wales",
+            "nigerian constitution",
+            "norfolk island",
+            "norfolk island act",
+            "northern territory",
+            "pacific ocean",
+            "pangi territory",
+            "plains indians",
+            "quanah parker",
+            "south australia",
+            "special administrator",
+            "state government",
+            "states of nigeria",
+            "texas–indian wars",
+            "the commonwealth parliament",
+            "the queen",
+            "the states"
+          ]
+        },
+        {
+          "shared_titles": [
+            "australia",
+            "cyprus popular bank",
+            "federalism",
+            "gmina brzeziny, łódź voivodeship",
+            "gmina łowicz",
+            "kiri territory",
+            "list of territorial entities where english is an official language",
+            "minsk region",
+            "moorea-maiao",
+            "oblasts of the soviet union",
+            "pak tam chung",
+            "pangi territory",
+            "saulkrasti municipality",
+            "states of nigeria",
+            "texas–indian wars",
+            "tumaraa"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "a nigerian state",
+            "act",
+            "australia",
+            "australian antarctic territory",
+            "bandundu province",
+            "brzeziny county",
+            "cartier islands",
+            "central bank",
+            "central bank board",
+            "chief minister",
+            "chris pavlou",
+            "christmas island",
+            "commonwealth parliament",
+            "coral sea islands",
+            "cyprus popular bank",
+            "democratic republic",
+            "fct",
+            "federal capital territory",
+            "federal government",
+            "federalism",
+            "fort sill",
+            "french polynesia",
+            "gmina brzeziny",
+            "gmina brzeziny, łódź voivodeship",
+            "gmina łowicz",
+            "heard island",
+            "hong kong",
+            "jervis bay territory",
+            "kiri territory",
+            "leeward islands",
+            "legislative assembly",
+            "legislative council",
+            "list of territorial entities where english is an official language",
+            "local government areas",
+            "lord howe island",
+            "macquarie island",
+            "mai-ndombe district",
+            "maniema province",
+            "marfin investment group",
+            "marfin popular bank",
+            "mcdonald islands",
+            "minsk oblast",
+            "minsk region",
+            "moorea-maiao",
+            "ms andri antoniadou",
+            "new south wales",
+            "new territories",
+            "nigerian constitution",
+            "norfolk island",
+            "norfolk island act",
+            "northern territory",
+            "oblasts of the soviet union",
+            "pacific ocean",
+            "pak tam chung",
+            "pangi territory",
+            "plains indians",
+            "quanah parker",
+            "sai kung district",
+            "sai kung peninsula",
+            "saulkrasti municipality",
+            "society islands",
+            "south australia",
+            "soviet union",
+            "special administrator",
+            "state government",
+            "states of nigeria",
+            "texas–indian wars",
+            "the commonwealth parliament",
+            "the queen",
+            "the states",
+            "tumaraa",
+            "windward islands"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence_id": "musique_related_2",
+      "dataset": "musique",
+      "kind": "related",
+      "request_ids": [
+        "2hop__10122_18974",
+        "3hop1__8148_24918_24939",
+        "2hop__6744_6731"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [
+            "armenian wikipedia",
+            "catalan language",
+            "chukotkan languages",
+            "dialect",
+            "dutch language",
+            "greece",
+            "hokkien",
+            "punjab, pakistan"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "armenian diaspora",
+            "armenian wikipedia",
+            "asia minor",
+            "attock district",
+            "catalan language",
+            "chukotkan languages",
+            "dialect",
+            "doric greek",
+            "dutch language",
+            "dutch low saxon",
+            "eastern armenian",
+            "geert driessen",
+            "greater xiamen",
+            "greece",
+            "greek macedonia",
+            "henan luoyang",
+            "hokkien",
+            "in pakistani punjab",
+            "indigenous greek",
+            "ionic greek",
+            "mianwali district",
+            "northern greece",
+            "punjab, pakistan",
+            "the armenian",
+            "the cappadocian",
+            "the quanzhou",
+            "the tsakonian",
+            "western armenian",
+            "western catalonia"
+          ]
+        },
+        {
+          "shared_titles": [
+            "catalan language",
+            "dialect",
+            "dutch language",
+            "hokkien",
+            "russian language"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "catalan language",
+            "dialect",
+            "dutch language",
+            "greater xiamen",
+            "henan luoyang",
+            "hokkien",
+            "russian language",
+            "the quanzhou",
+            "vulgar latin"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence_id": "musique_related_3",
+      "dataset": "musique",
+      "kind": "related",
+      "request_ids": [
+        "2hop__103889_86452",
+        "3hop1__17192_78396_157843",
+        "3hop1__17192_78396_42428"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [
+            "british rule in burma",
+            "myanmar",
+            "myanmar airways international",
+            "myo min zaw",
+            "names of myanmar",
+            "restored hanthawaddy kingdom",
+            "third anglo-burmese war"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "abfsu",
+            "all burma federation",
+            "british burma",
+            "british empire",
+            "british india",
+            "british rule in burma",
+            "burma airways",
+            "burman toungoo dynasty",
+            "burmese bamar",
+            "chief commissionership",
+            "first anglo-burmese war",
+            "general saw maung",
+            "in december",
+            "in english",
+            "in march",
+            "lower burma",
+            "mon-speaking kingdom",
+            "myanma airways",
+            "myanmar",
+            "myanmar airways international",
+            "myo min zaw",
+            "names of myanmar",
+            "order restoration council",
+            "people's assembly",
+            "rakhine state",
+            "restored hanthawaddy kingdom",
+            "second anglo-burmese war",
+            "slorc",
+            "socialist republic",
+            "state law",
+            "student unions",
+            "the restored hanthawaddy kingdom",
+            "the third anglo-burmese war",
+            "third anglo-burmese war",
+            "third burma war",
+            "united states",
+            "upper burma"
+          ]
+        },
+        {
+          "shared_titles": [
+            "battle of maroun al-ras",
+            "fred astaire dance studios",
+            "history of israel",
+            "israel",
+            "northern region, nigeria"
+          ],
+          "shared_query_entities": [
+            "lebanon"
+          ],
+          "shared_context_entities": [
+            "a jewish",
+            "after world war i",
+            "although israeli",
+            "battle of maroun al-ras",
+            "british northern cameroons",
+            "chester casanave",
+            "coastal road massacre",
+            "fred astaire",
+            "fred astaire dance studios",
+            "history of israel",
+            "in december",
+            "israel",
+            "jewish national home",
+            "lebanon war",
+            "litani river",
+            "most plo",
+            "northern nigeria",
+            "northern region, nigeria",
+            "plo",
+            "south africa",
+            "the battle",
+            "the british",
+            "the plo",
+            "un",
+            "united states"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence_id": "musique_related_4",
+      "dataset": "musique",
+      "kind": "related",
+      "request_ids": [
+        "2hop__104095_40501",
+        "2hop__104095_40502",
+        "2hop__40485_40502"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [
+            "armenia",
+            "clara database",
+            "clara edwards",
+            "clara peeters",
+            "edgar lorch",
+            "huguenots",
+            "sri lankan passport",
+            "summer school teachers",
+            "switzerland",
+            "wim peeters"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "armenia",
+            "as seymour slive",
+            "barbara peeters",
+            "bertha edwards",
+            "bertha johnson",
+            "candice rialson",
+            "clara database",
+            "clara edwards",
+            "clara johnson",
+            "clara peeters",
+            "columbia university",
+            "dutch golden age",
+            "dutch republic",
+            "edgar lorch",
+            "edgar r",
+            "efta",
+            "european union",
+            "federal council",
+            "flemish baroque",
+            "ford award",
+            "genocide armenian",
+            "hope summers",
+            "huguenots",
+            "lester r",
+            "middle eastern",
+            "national museum",
+            "new zealand",
+            "reuben hersh",
+            "south african",
+            "sri lanka",
+            "sri lankan",
+            "sri lankan passport",
+            "summer olympics",
+            "summer school teachers",
+            "switzerland",
+            "the andy griffith show",
+            "the armenian genocide",
+            "the clara",
+            "the department",
+            "united states",
+            "west frisia",
+            "western armenia",
+            "wim peeters"
+          ]
+        },
+        {
+          "shared_titles": [
+            "alexander gerschenkron",
+            "armenia",
+            "bermuda",
+            "greeks",
+            "huguenots",
+            "sri lankan passport"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "alexander gerschenkron",
+            "american revolution",
+            "armenia",
+            "as great britain",
+            "bermuda",
+            "british empire",
+            "dutch republic",
+            "genocide armenian",
+            "greek cypriots",
+            "greeks",
+            "huguenots",
+            "middle east",
+            "middle eastern",
+            "russian civil war",
+            "russian empire",
+            "southern united states",
+            "sri lanka",
+            "sri lankan",
+            "sri lankan passport",
+            "the armenian genocide",
+            "the department",
+            "united states",
+            "west frisia",
+            "western armenia"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence_id": "musique_related_5",
+      "dataset": "musique",
+      "kind": "related",
+      "request_ids": [
+        "2hop__10515_21567",
+        "2hop__157602_21567",
+        "2hop__9930_21567"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [
+            "anno domini",
+            "c (musical note)",
+            "classical music",
+            "hampartsoum limondjian",
+            "late middle ages",
+            "valens aqueduct"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "ad",
+            "anno domini",
+            "armenian apostolic church",
+            "c (musical note",
+            "carolingian empire",
+            "carolingian renaissance",
+            "catholic encyclopedia",
+            "classical music",
+            "eastern orthodox",
+            "eastern roman",
+            "emperor charlemagne",
+            "francesco landini",
+            "grey falcon",
+            "hampartsoum limondjian",
+            "in italy",
+            "in midi",
+            "istanbul municipal conservatory library",
+            "john kukuzelis",
+            "late middle ages",
+            "middle c",
+            "orthodox church",
+            "roman catholic",
+            "roman emperor valens",
+            "selim iii",
+            "the valens aqueduct",
+            "valens aqueduct",
+            "western europe",
+            "western european"
+          ]
+        },
+        {
+          "shared_titles": [
+            "anno domini",
+            "bâton à feu",
+            "c (musical note)",
+            "classical music",
+            "gorleston psalter",
+            "hampartsoum limondjian",
+            "high-definition television",
+            "history of science",
+            "late middle ages",
+            "melodifestivalen 1973",
+            "toilet paper"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "ad",
+            "anno domini",
+            "armenian apostolic church",
+            "british library manuscript additional",
+            "bâton à feu",
+            "c (musical note",
+            "carolingian empire",
+            "carolingian renaissance",
+            "catholic encyclopedia",
+            "classical music",
+            "eastern orthodox",
+            "emperor charlemagne",
+            "eurovision song contest",
+            "francesco landini",
+            "gorleston psalter",
+            "hampartsoum limondjian",
+            "hdtv",
+            "high-definition television",
+            "history of science",
+            "in italy",
+            "in midi",
+            "islamic world",
+            "istanbul municipal conservatory library",
+            "john kukuzelis",
+            "late middle ages",
+            "melodifestivalen 1973",
+            "middle c",
+            "muse",
+            "orthodox church",
+            "roman catholic",
+            "selim iii",
+            "svt",
+            "the gorleston psalter",
+            "toilet paper",
+            "tv1",
+            "united states",
+            "us",
+            "us president ronald reagan",
+            "western europe",
+            "western european"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence_id": "musique_related_6",
+      "dataset": "musique",
+      "kind": "related",
+      "request_ids": [
+        "2hop__10620_49084",
+        "2hop__10620_79092",
+        "3hop2__90098_79978_10557"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [
+            "catellus",
+            "cherin",
+            "great britain",
+            "king arthur",
+            "middle ages",
+            "peredurus",
+            "porrex ii"
+          ],
+          "shared_query_entities": [
+            "historia regum britanniae"
+          ],
+          "shared_context_entities": [
+            "annales cambriae",
+            "catellus",
+            "cherin",
+            "edward iv",
+            "emperor frederick barbarossa",
+            "gesta friderici imperatoris",
+            "gesta regum",
+            "great britain",
+            "great brittaine",
+            "greater britain",
+            "gret britanee",
+            "historia brittonum",
+            "historia regum britanniae",
+            "james iii",
+            "king arthur",
+            "king gerennus",
+            "king james vi",
+            "king millus",
+            "king morvidus",
+            "king porrex ii",
+            "lesser britain",
+            "middle ages",
+            "nobill isle",
+            "peredurus",
+            "porrex ii",
+            "the historia brittonum",
+            "the song",
+            "welsh annals"
+          ]
+        },
+        {
+          "shared_titles": [
+            "historic eruptions of mount fuji",
+            "middle ages"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "historic eruptions of mount fuji",
+            "middle ages",
+            "new fuji"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence_id": "musique_related_7",
+      "dataset": "musique",
+      "kind": "related",
+      "request_ids": [
+        "2hop__106864_80460",
+        "3hop1__106864_160713_77246",
+        "3hop1__376309_160713_77246"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [
+            "bedari"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "bedari",
+            "pakistani urdu",
+            "rattan kumar",
+            "syed nazir ali",
+            "the censor board"
+          ]
+        },
+        {
+          "shared_titles": [
+            "2011 census of india",
+            "bihar province",
+            "casa verona's mosque",
+            "culture of india",
+            "hinduism in singapore",
+            "hindus",
+            "history of india",
+            "india–pakistan border",
+            "islam in india",
+            "list of governors-general of india",
+            "new delhi",
+            "partition of india",
+            "secretary of state for india",
+            "umayyad caliphate",
+            "vallabhbhai patel"
+          ],
+          "shared_query_entities": [
+            "british india",
+            "india"
+          ],
+          "shared_context_entities": [
+            "2011 census of india",
+            "abul kalam azad",
+            "ad",
+            "ah",
+            "arunachal pradesh",
+            "bce",
+            "berber revolt",
+            "bihar province",
+            "british cabinet",
+            "british east india company",
+            "british empire",
+            "british government-commissioned",
+            "british india",
+            "british india lord curzon",
+            "british indian army",
+            "british raj",
+            "casa verona",
+            "casa verona's mosque",
+            "ce",
+            "cheraman juma mosque",
+            "congress working committee",
+            "culture of india",
+            "darius i",
+            "delhi sultanate",
+            "deputy prime minister",
+            "east india company's",
+            "east pakistan",
+            "executive council",
+            "fatimid imam al-mustansir billah",
+            "foreign policy",
+            "gavin flood",
+            "governor general",
+            "hapta hindu",
+            "have i",
+            "hindu-buddhist srivijaya",
+            "hinduism in singapore",
+            "hindus",
+            "history of india",
+            "home minister",
+            "in india",
+            "india act",
+            "india census",
+            "india office",
+            "india secretary",
+            "indian chalukya",
+            "indian civil service",
+            "indian independence act",
+            "indian muslims",
+            "indian national congress",
+            "indian pratiharas dynasty",
+            "indian rebellion",
+            "india–pakistan border",
+            "indo-pakistani war",
+            "islam in india",
+            "islamic republic",
+            "ismaili shia islam",
+            "list of governors-general of india",
+            "little india",
+            "malik deenar",
+            "marj ardabil",
+            "marwan ii",
+            "national minority",
+            "new delhi",
+            "no religion",
+            "north africa",
+            "north india",
+            "orissa province",
+            "orp",
+            "partition of india",
+            "pbs",
+            "people's republic",
+            "persian gulf",
+            "pew research centre",
+            "princely states",
+            "quit india movement",
+            "radcliffe line",
+            "razia sultana",
+            "royal indian navy",
+            "sanskritic prakrits",
+            "sapta sindhava",
+            "sardar patel",
+            "secretary of state for india",
+            "sir cyril radcliffe",
+            "south arabia",
+            "the arabic",
+            "the council",
+            "the delhi sultanate",
+            "the dominion",
+            "the government",
+            "the partition",
+            "the punjab",
+            "the secretary",
+            "the sultanate",
+            "umayyad caliphate",
+            "united nations",
+            "vallabhbhai patel",
+            "visigothic kingdom",
+            "west pakistan",
+            "within british india",
+            "zend avesta"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence_id": "musique_related_8",
+      "dataset": "musique",
+      "kind": "related",
+      "request_ids": [
+        "2hop__107185_64006",
+        "2hop__691455_64006",
+        "2hop__62951_64006"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [
+            "black death",
+            "black people",
+            "bâton à feu",
+            "consequences of the black death",
+            "gastroenteritis",
+            "modern history",
+            "myanmar",
+            "nigeria",
+            "port-au-prince",
+            "saint-laurent-des-bâtons",
+            "solar energy",
+            "tuberculosis"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "arabian peninsula",
+            "black african",
+            "black death",
+            "black people",
+            "black plague",
+            "bâton à feu",
+            "central africa",
+            "central asia",
+            "central london",
+            "consequences of the black death",
+            "dna",
+            "gastroenteritis",
+            "great plague",
+            "hiv",
+            "in italy",
+            "kachin state",
+            "kayin state",
+            "los angeles",
+            "middle east",
+            "modern history",
+            "myanmar",
+            "myanmar census",
+            "nigeria",
+            "on june",
+            "port-au-prince",
+            "president goodluck jonathan",
+            "rakhine state",
+            "saharan black africans",
+            "saint-laurent-des-bâtons",
+            "silk road",
+            "solar energy",
+            "southeast asia",
+            "soviet union",
+            "tb",
+            "the black death",
+            "the united nations",
+            "tuberculosis",
+            "uhi",
+            "us",
+            "west african",
+            "western europe"
+          ]
+        },
+        {
+          "shared_titles": [
+            "black death",
+            "black people",
+            "consequences of the black death",
+            "gastroenteritis",
+            "history of europe",
+            "modern history",
+            "solar energy"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "black death",
+            "black people",
+            "black plague",
+            "central africa",
+            "central asia",
+            "central london",
+            "consequences of the black death",
+            "dna",
+            "gastroenteritis",
+            "great famine",
+            "great plague",
+            "history of europe",
+            "hiv",
+            "in italy",
+            "los angeles",
+            "middle east",
+            "modern history",
+            "silk road",
+            "solar energy",
+            "soviet union",
+            "the black death",
+            "the late middle ages",
+            "uhi",
+            "us",
+            "west african",
+            "western europe"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence_id": "musique_related_9",
+      "dataset": "musique",
+      "kind": "related",
+      "request_ids": [
+        "2hop__107238_64918",
+        "3hop1__145427_106426_77199",
+        "3hop1__145427_106426_157788"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [
+            "declaration of war by the united states",
+            "military history of the united states during world war ii",
+            "united states declaration of war on japan"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "adolf hitler",
+            "american revolutionary war",
+            "declaration of war by the united states",
+            "infamy speech",
+            "military history of the united states during world war ii",
+            "new mexico",
+            "on december",
+            "pearl harbor",
+            "president franklin roosevelt",
+            "public law",
+            "stat",
+            "united states",
+            "united states congress",
+            "united states declaration of war on japan",
+            "us president franklin d",
+            "vietnam war",
+            "world war i",
+            "world war ii"
+          ]
+        },
+        {
+          "shared_titles": [
+            "the longest night in shanghai",
+            "you wenhui"
+          ],
+          "shared_query_entities": [
+            "the longest night",
+            "you wenhui"
+          ],
+          "shared_context_entities": [
+            "japan's movie eye entertainment",
+            "summer olympics",
+            "the longest night",
+            "the longest night in shanghai",
+            "you wenhui",
+            "zhang yibai"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence_id": "musique_related_10",
+      "dataset": "musique",
+      "kind": "related",
+      "request_ids": [
+        "2hop__107548_124896",
+        "2hop__124807_135019",
+        "2hop__605207_135019"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [
+            "greeks",
+            "michael gerald ford",
+            "spencer family (the bold and the beautiful)"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "betty ford",
+            "bill spencer jr",
+            "caroline spencer",
+            "caroline spencer cancer foundation",
+            "darin brooks",
+            "douglas forrester",
+            "forrester creations",
+            "greeks",
+            "hope logan",
+            "in cyprus",
+            "karen spencer",
+            "katie logan",
+            "kelly hopkins",
+            "linsey godfrey",
+            "michael gerald ford",
+            "new york city",
+            "president gerald r",
+            "quinn artisan jewelers",
+            "quinn fuller",
+            "scott clifton",
+            "spencer family (the bold and the beautiful",
+            "spencer iii",
+            "spencer publications",
+            "steffy forrester",
+            "the fords",
+            "will'' spencer iv son",
+            "william logan",
+            "wyatt spencer"
+          ]
+        },
+        {
+          "shared_titles": [
+            "chris baldo",
+            "christian tanna",
+            "elizabeth medora leigh",
+            "marshall eriksen",
+            "minos",
+            "spencer family (the bold and the beautiful)"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "augusta leigh",
+            "bill spencer jr",
+            "blue green orange",
+            "caroline spencer",
+            "caroline spencer cancer foundation",
+            "carter bays craig thomas portrayed",
+            "children marvin waitforit eriksen daisy eriksen unnamed third child nationality american",
+            "chris baldo",
+            "christian baldauff",
+            "christian koshowski",
+            "christian tanna",
+            "colonel george leigh",
+            "darin brooks",
+            "douglas forrester",
+            "elizabeth medora leigh",
+            "family marvin eriksen",
+            "forrester creations",
+            "hope logan",
+            "i mother earth",
+            "i mother earth's",
+            "in greek",
+            "jagori tanna",
+            "jason segel",
+            "jason segel information gender male occupation lawyer",
+            "judy eriksen",
+            "karen spencer",
+            "katie logan",
+            "kelly hopkins",
+            "king aegeus",
+            "last forever'' created",
+            "lily aldrin",
+            "linsey godfrey",
+            "lord byron",
+            "marshall eriksen",
+            "marshall eriksen how i met your mother",
+            "minos",
+            "nationality american",
+            "new york",
+            "new york city",
+            "quinn artisan jewelers",
+            "quinn fuller",
+            "scott clifton",
+            "spencer family (the bold and the beautiful",
+            "spencer iii",
+            "spencer publications",
+            "steffy forrester",
+            "the quicksilver meat dream",
+            "will'' spencer iv son",
+            "william logan",
+            "wyatt spencer"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence_id": "musique_related_11",
+      "dataset": "musique",
+      "kind": "related",
+      "request_ids": [
+        "2hop__107601_110222",
+        "2hop__635544_110949",
+        "2hop__253612_110882"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [
+            "clara morris",
+            "conscription in australia",
+            "giovanni cifolelli",
+            "william shakespeare",
+            "švitrigaila"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "clara morris",
+            "conscription in australia",
+            "giovanni cifolelli",
+            "grand duke",
+            "john shakespeare",
+            "mary arden",
+            "national service",
+            "national service act",
+            "saint george's day",
+            "teutonic knights",
+            "united states",
+            "william shakespeare",
+            "švitrigaila"
+          ]
+        },
+        {
+          "shared_titles": [
+            "anno domini",
+            "australia day",
+            "clara morris",
+            "giovanni cifolelli",
+            "la naissance d'osiris",
+            "natural-born-citizen clause",
+            "pak nam-gi",
+            "pir syed muhammad binyamin rizvi",
+            "shirley abicair",
+            "william shakespeare"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "ad",
+            "ana day",
+            "anniversary day",
+            "anno domini",
+            "australia day",
+            "bc",
+            "blue note",
+            "clara morris",
+            "dionysius exiguus",
+            "finance department",
+            "foundation day",
+            "giovanni cifolelli",
+            "jean-philippe rameau",
+            "john shakespeare",
+            "king louis xvi",
+            "la naissance d'osiris",
+            "mary arden",
+            "natural-born-citizen clause",
+            "new holland",
+            "new south wales",
+            "north korea",
+            "on new year's day",
+            "pak nam-gi",
+            "park nam-ki",
+            "pir syed mohammad yaqoob shah",
+            "pir syed muhammad binyamin rizvi",
+            "raaf",
+            "saint george's day",
+            "scythia minor",
+            "shirley abicair",
+            "the birth",
+            "the festival",
+            "the u",
+            "united states",
+            "william shakespeare",
+            "wing commander"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence_id": "musique_related_12",
+      "dataset": "musique",
+      "kind": "related",
+      "request_ids": [
+        "2hop__107690_124896",
+        "2hop__697790_864352",
+        "2hop__499577_617190"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [
+            "george ii of great britain"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "celle religion protestant signature",
+            "cumberland mary",
+            "georg august house hanover father george i",
+            "george augustus german",
+            "george ii of great britain",
+            "george ii portrait",
+            "great britain",
+            "great britain mother sophia dorothea",
+            "herrenhausen palace",
+            "ireland elector",
+            "issue detail frederick",
+            "kassel louisa",
+            "kensington palace",
+            "leine palace",
+            "london burial",
+            "london spouse caroline",
+            "new york",
+            "newcastle the duke",
+            "norway full",
+            "orange princess amelia princess caroline prince george william william",
+            "predecessor george i successor george iii prime ministers see",
+            "robert walpole lord wilmington henry pelham the duke",
+            "thomas hudson",
+            "united states",
+            "wales anne",
+            "westminster abbey"
+          ]
+        },
+        {
+          "shared_titles": [
+            "margareta von ascheberg",
+            "marshall eriksen"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "carter bays craig thomas portrayed",
+            "children marvin waitforit eriksen daisy eriksen unnamed third child nationality american",
+            "countess ascheberg",
+            "family marvin eriksen",
+            "field marshal rutger",
+            "grevinnan ascheberg",
+            "jason segel",
+            "jason segel information gender male occupation lawyer",
+            "judy eriksen",
+            "kjell christopher barnekow",
+            "last forever'' created",
+            "lily aldrin",
+            "magdalena eleonora busseck",
+            "margareta von ascheberg",
+            "marshall eriksen",
+            "marshall eriksen how i met your mother",
+            "new york"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence_id": "musique_related_13",
+      "dataset": "musique",
+      "kind": "related",
+      "request_ids": [
+        "2hop__107905_110222",
+        "2hop__503085_110222",
+        "2hop__293131_110222"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [
+            "gustave courbet",
+            "maureen payne",
+            "meet the press",
+            "pak nam-gi",
+            "shirley abicair",
+            "william shakespeare",
+            "švitrigaila"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "chuck todd",
+            "finance department",
+            "grand duke",
+            "gustave courbet",
+            "john shakespeare",
+            "martha rountree",
+            "mary arden",
+            "maureen payne",
+            "meet the press",
+            "nbc news",
+            "new zealand",
+            "north korea",
+            "pak nam-gi",
+            "park nam-ki",
+            "raaf",
+            "saint george's day",
+            "shirley abicair",
+            "south africa",
+            "south africa test",
+            "teutonic knights",
+            "william shakespeare",
+            "wing commander",
+            "švitrigaila"
+          ]
+        },
+        {
+          "shared_titles": [
+            "gustave courbet",
+            "maureen payne",
+            "meet the press",
+            "shirley abicair",
+            "william shakespeare",
+            "švitrigaila"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "chuck todd",
+            "grand duke",
+            "gustave courbet",
+            "john shakespeare",
+            "martha rountree",
+            "mary arden",
+            "maureen payne",
+            "meet the press",
+            "metropolitan museum",
+            "nbc news",
+            "new zealand",
+            "raaf",
+            "saint george's day",
+            "shirley abicair",
+            "south africa",
+            "south africa test",
+            "teutonic knights",
+            "william shakespeare",
+            "wing commander",
+            "švitrigaila"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence_id": "musique_related_14",
+      "dataset": "musique",
+      "kind": "related",
+      "request_ids": [
+        "2hop__108158_83769",
+        "2hop__646573_83769",
+        "2hop__169443_83769"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [
+            "christin hinojosa",
+            "college of southern nevada",
+            "dazed and confused (film)",
+            "matthew mcconaughey",
+            "nevada, texas",
+            "push play (ep)",
+            "push, nevada",
+            "queen victoria",
+            "todd liebenstein"
+          ],
+          "shared_query_entities": [
+            "confused",
+            "dazed",
+            "nevada",
+            "push"
+          ],
+          "shared_context_entities": [
+            "a time",
+            "abc",
+            "adam goldberg",
+            "american friends service committee",
+            "anthony rapp",
+            "ben affleck",
+            "carl burnett",
+            "cd",
+            "chris moore",
+            "christin hinojosa",
+            "clark county",
+            "college of southern nevada",
+            "collin county",
+            "csn",
+            "cynthia dunn",
+            "david wooderson",
+            "dazed and confused (film",
+            "emmy award",
+            "emperor wilhelm ii",
+            "ep",
+            "esteban powell",
+            "eyes wide open",
+            "fred o'bannion",
+            "freshman mitch kramer",
+            "granville stinebaugh",
+            "higher education",
+            "john mcminn stambaugh",
+            "kevin pickford's",
+            "king edward vii",
+            "las vegas",
+            "latin america",
+            "louis southwestern railway",
+            "marissa ribisi",
+            "matt damon",
+            "matthew mcconaughey",
+            "mcminn chapel",
+            "mike newhouse",
+            "national football league",
+            "nevada assembly",
+            "nevada system",
+            "nevada territory",
+            "nevada, texas",
+            "nfl",
+            "osborne house",
+            "project greenlight",
+            "push play",
+            "push play (ep",
+            "push, nevada",
+            "queen victoria",
+            "sara niemietz",
+            "sean bailey",
+            "shawn andrews",
+            "snuffy walden",
+            "solidarity bridge",
+            "southern nevada",
+            "super bowl xviii",
+            "texas chainsaw massacre",
+            "the college",
+            "the newton boys",
+            "the next generation",
+            "todd e",
+            "todd liebenstein",
+            "tony olson",
+            "u-571",
+            "united states",
+            "washington redskins",
+            "wiley wiggins"
+          ]
+        },
+        {
+          "shared_titles": [
+            "christin hinojosa",
+            "dazed and confused (film)",
+            "matthew mcconaughey",
+            "my school daze",
+            "queen victoria",
+            "sadie plant"
+          ],
+          "shared_query_entities": [
+            "confused",
+            "dazed"
+          ],
+          "shared_context_entities": [
+            "a time",
+            "adam goldberg",
+            "american friends service committee",
+            "anthony rapp",
+            "ben affleck",
+            "carl burnett",
+            "christin hinojosa",
+            "cynthia dunn",
+            "david wooderson",
+            "dazed and confused (film",
+            "emperor wilhelm ii",
+            "esteban powell",
+            "eyes wide open",
+            "financial times",
+            "fred o'bannion",
+            "freshman mitch kramer",
+            "kevin pickford's",
+            "king edward vii",
+            "latin america",
+            "marissa ribisi",
+            "matt damon",
+            "matthew mcconaughey",
+            "mediacorp channel",
+            "mike newhouse",
+            "my school daze",
+            "osborne house",
+            "queen victoria",
+            "sadie plant",
+            "shawn andrews",
+            "singaporean chinese",
+            "solidarity bridge",
+            "texas chainsaw massacre",
+            "the newton boys",
+            "the next generation",
+            "tony olson",
+            "u-571",
+            "united states",
+            "wiley wiggins"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence_id": "musique_related_15",
+      "dataset": "musique",
+      "kind": "related",
+      "request_ids": [
+        "2hop__108336_772156",
+        "2hop__575282_114648",
+        "2hop__272714_113442"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [
+            "allegory of industry",
+            "allegory of isabella d'este's coronation",
+            "anatomical terms of location",
+            "holy allegory",
+            "john, king of england",
+            "lorenzo costa the younger",
+            "taddeo d'este",
+            "westminster abbey"
+          ],
+          "shared_query_entities": [
+            "allegory",
+            "isabella"
+          ],
+          "shared_context_entities": [
+            "allegory of industry",
+            "allegory of isabella d'este's coronation",
+            "anatomical terms of location",
+            "charles iv",
+            "este's coronation",
+            "giovanni bellini",
+            "gloucester cathedral",
+            "henry iii",
+            "holy allegory",
+            "italian renaissance",
+            "john, king of england",
+            "king harold",
+            "lorenzo costa",
+            "lorenzo costa the younger",
+            "louvre museum",
+            "manuel godoy",
+            "nicholas vincent",
+            "prime minister",
+            "taddeo d'este",
+            "the allegory",
+            "the archbishop",
+            "the holy allegory",
+            "westminster abbey",
+            "william chester jordan"
+          ]
+        },
+        {
+          "shared_titles": [
+            "ars nova (theater)",
+            "michael t. scott"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "alex timbers",
+            "amy herzog",
+            "animation world network",
+            "annie baker",
+            "ars nova (theater",
+            "beau willimon",
+            "billy eichner",
+            "bridget everett",
+            "circle mirror transformation",
+            "dave malloy",
+            "die's billy",
+            "great comet",
+            "happy fatties",
+            "in the heights",
+            "liz meriwether",
+            "manuel miranda",
+            "michael t",
+            "michael t. scott",
+            "musical theatre",
+            "netflix's house",
+            "new girl",
+            "obie award",
+            "pulitzer prize",
+            "richard rogers award",
+            "since ars nova's",
+            "the flick",
+            "thomas kail"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence_id": "musique_related_16",
+      "dataset": "musique",
+      "kind": "related",
+      "request_ids": [
+        "2hop__10900_21567",
+        "2hop__70490_21567",
+        "2hop__161872_21567"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [
+            "anno domini",
+            "bracket (mathematics)",
+            "c (musical note)",
+            "classical music",
+            "hampartsoum limondjian",
+            "history of science",
+            "late middle ages"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "ad",
+            "albert girard",
+            "anno domini",
+            "armenian apostolic church",
+            "bracket (mathematics",
+            "c (musical note",
+            "carolingian empire",
+            "carolingian renaissance",
+            "catholic encyclopedia",
+            "christopher clavius",
+            "classical music",
+            "eastern orthodox",
+            "emperor charlemagne",
+            "francesco landini",
+            "hampartsoum limondjian",
+            "history of science",
+            "in italy",
+            "in midi",
+            "islamic world",
+            "istanbul municipal conservatory library",
+            "john kukuzelis",
+            "late middle ages",
+            "middle c",
+            "orthodox church",
+            "ottoman empire",
+            "roman catholic",
+            "selim iii",
+            "western european"
+          ]
+        },
+        {
+          "shared_titles": [
+            "bracket (mathematics)",
+            "bâton à feu",
+            "classical music",
+            "gorleston psalter",
+            "hampartsoum limondjian",
+            "history of science",
+            "late middle ages",
+            "toilet paper"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "ad",
+            "albert girard",
+            "armenian apostolic church",
+            "bracket (mathematics",
+            "british library manuscript additional",
+            "bâton à feu",
+            "christopher clavius",
+            "classical music",
+            "francesco landini",
+            "gorleston psalter",
+            "hampartsoum limondjian",
+            "history of science",
+            "in italy",
+            "islamic world",
+            "istanbul municipal conservatory library",
+            "john kukuzelis",
+            "late middle ages",
+            "orthodox church",
+            "selim iii",
+            "the gorleston psalter",
+            "toilet paper",
+            "western europe"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence_id": "musique_related_17",
+      "dataset": "musique",
+      "kind": "related",
+      "request_ids": [
+        "2hop__109131_343058",
+        "2hop__96177_121319",
+        "2hop__96177_62765"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [
+            "the fabulous texan"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "albert dekker",
+            "american western",
+            "andy devine",
+            "catherine mcleod",
+            "edward ludwig",
+            "horace mccoy",
+            "john carroll",
+            "lawrence hazard",
+            "patricia knight",
+            "republic pictures",
+            "the fabulous texan",
+            "united states",
+            "wild bill elliott"
+          ]
+        },
+        {
+          "shared_titles": [
+            "a hazard of hearts",
+            "a sawmill hazard",
+            "anton yelchin",
+            "dark hazard",
+            "olbers' paradox",
+            "the dark tower (2017 film)"
+          ],
+          "shared_query_entities": [
+            "dark hazard"
+          ],
+          "shared_context_entities": [
+            "a hazard",
+            "a hazard of hearts",
+            "a sawmill hazard",
+            "alfred e",
+            "alice hollister",
+            "anton viktorovich yelchin",
+            "anton yelchin",
+            "barbara cartland",
+            "big bang",
+            "dark hazard",
+            "dark tower",
+            "earle foxe",
+            "edward g",
+            "first national pictures",
+            "heinrich wilhelm olbers",
+            "helena bonham carter",
+            "idris elba",
+            "jake chambers",
+            "matthew mcconaughey",
+            "new york",
+            "nikolaj arcel",
+            "olbers' paradox",
+            "pavel chekov",
+            "roland deschain",
+            "star trek",
+            "star trek beyond",
+            "star trek into darkness",
+            "stephen king's",
+            "the dark tower",
+            "the dark tower (2017 film",
+            "tom taylor",
+            "walter padick",
+            "warner bros"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence_id": "musique_related_18",
+      "dataset": "musique",
+      "kind": "related",
+      "request_ids": [
+        "2hop__109242_113442",
+        "2hop__540035_113442",
+        "2hop__794999_113442"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [
+            "city lights",
+            "h2o: footprints in the sand",
+            "international day of the girl child",
+            "john everett millais",
+            "john tucker must die",
+            "keats and his nightingale: a blind date",
+            "love on a saturday night",
+            "no rain",
+            "only the good die young",
+            "perkins school for the blind",
+            "the amazing race 26",
+            "the blind girl"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "a blind date",
+            "academy award",
+            "arielle kebbel",
+            "bee girl",
+            "best documentary short",
+            "billy joel's",
+            "blind date",
+            "blind melon",
+            "blindness effect",
+            "brittany snow",
+            "chaplin's tramp",
+            "charlie chaplin",
+            "city lights",
+            "dvd",
+            "girl child also",
+            "girl type international significance raise",
+            "girls type international significance raising",
+            "good die young",
+            "gower street",
+            "h2o: footprints in the sand",
+            "harry myers",
+            "his nightingale",
+            "his parents",
+            "ho",
+            "international day",
+            "international day of the girl child",
+            "itv",
+            "jenny mccarthy",
+            "jesse metcalfe",
+            "jim wolpaw",
+            "john dix fisher",
+            "john everett millais",
+            "john tucker",
+            "john tucker must die",
+            "keats and his nightingale: a blind date",
+            "laura pierson",
+            "london weekend television",
+            "love on a saturday night",
+            "mtv",
+            "national institute",
+            "new england asylum",
+            "no rain",
+            "normal effect",
+            "october frequency",
+            "only the good die young",
+            "perkins school for",
+            "perkins school for the blind",
+            "pre-raphaelite brotherhood",
+            "root after",
+            "royal academy schools",
+            "samuel bayer",
+            "saturday night",
+            "sir john everett millais",
+            "sophia bush",
+            "team socal",
+            "the amazing race",
+            "the amazing race 26",
+            "the blind girl",
+            "the pre-raphaelite brotherhood",
+            "the stranger",
+            "tyler adams",
+            "united states",
+            "virginia cherrill"
+          ]
+        },
+        {
+          "shared_titles": [
+            "ars nova (theater)",
+            "john everett millais",
+            "meet the press",
+            "michael t. scott"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "alex timbers",
+            "amy herzog",
+            "animation world network",
+            "annie baker",
+            "ars nova (theater",
+            "beau willimon",
+            "billy eichner",
+            "bridget everett",
+            "chuck todd",
+            "circle mirror transformation",
+            "dave malloy",
+            "die's billy",
+            "gower street",
+            "great comet",
+            "happy fatties",
+            "his parents",
+            "in the heights",
+            "john everett millais",
+            "liz meriwether",
+            "manuel miranda",
+            "martha rountree",
+            "meet the press",
+            "michael t",
+            "michael t. scott",
+            "musical theatre",
+            "nbc news",
+            "netflix's house",
+            "new girl",
+            "obie award",
+            "pre-raphaelite brotherhood",
+            "pulitzer prize",
+            "richard rogers award",
+            "royal academy schools",
+            "since ars nova's",
+            "sir john everett millais",
+            "the flick",
+            "the pre-raphaelite brotherhood",
+            "thomas kail",
+            "united states"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence_id": "musique_related_19",
+      "dataset": "musique",
+      "kind": "related",
+      "request_ids": [
+        "2hop__115515_779396",
+        "2hop__119423_779396",
+        "2hop__14092_8311"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [
+            "1963 mexican grand prix",
+            "2018 french grand prix",
+            "2018 indianapolis 500",
+            "andré milhoux",
+            "injured engine",
+            "institute of technology",
+            "j. david irwin",
+            "james watt",
+            "lap engine",
+            "malaviya regional engineering college",
+            "marvin r. sambur",
+            "thiruvalluvar college of engineering and technology"
+          ],
+          "shared_query_entities": [
+            "lap engine"
+          ],
+          "shared_context_entities": [
+            "1963 mexican grand prix",
+            "2018 french grand prix",
+            "2018 indianapolis 500",
+            "alexander rossi",
+            "andré milhoux",
+            "auburn university",
+            "bell labs",
+            "brendon hartley scuderia toro rosso",
+            "carlos sainz jr",
+            "charles leclerc sauber",
+            "city college",
+            "computer engineering",
+            "computer engineering department head",
+            "consumer electronics show",
+            "daniel ricciardo red bull racing",
+            "david irwin",
+            "department heads",
+            "driver constructor laps time",
+            "earle c",
+            "ece",
+            "electrical engineering",
+            "engineering sciences",
+            "esteban ocon force india",
+            "eta kappa nu",
+            "fernando alonso mclaren",
+            "force india",
+            "formula one",
+            "formula one world championship grand prix",
+            "german grand prix",
+            "ieee",
+            "indian institute",
+            "industrial electronics",
+            "indycar grand prix",
+            "injured engine",
+            "institute of technology",
+            "j. david irwin",
+            "jack harvey",
+            "james watt",
+            "jim clark",
+            "kevin magnussen haas",
+            "lance stroll williams",
+            "lap engine",
+            "lewis hamilton mercedes",
+            "malaviya national institute",
+            "malaviya regional engineering college",
+            "marcus ericsson sauber",
+            "marvin r. sambur",
+            "massachusetts institute",
+            "max verstappen red bull racing",
+            "mit",
+            "murray hill",
+            "new jersey",
+            "new york",
+            "pierre gasly scuderia toro rosso",
+            "polesitter ed carpenter",
+            "retired grid points",
+            "romain grosjean haas",
+            "science museum",
+            "sebastian vettel ferrari",
+            "sergey sirotkin williams",
+            "stefan wilson",
+            "stoffel vandoorne mclaren",
+            "tag heuer",
+            "tamil nadu",
+            "tcet",
+            "the bachelor",
+            "the lap engine",
+            "thiruvalluvar college",
+            "thiruvalluvar college of engineering and technology",
+            "us national electrical engineering department head association",
+            "valtteri bottas mercedes",
+            "will power",
+            "williams eminent scholar"
+          ]
+        },
+        {
+          "shared_titles": [
+            "eric penn"
+          ],
+          "shared_query_entities": [],
+          "shared_context_entities": [
+            "eric penn",
+            "eton college",
+            "john penn",
+            "trinity college",
+            "william penn"
+          ]
+        }
+      ]
+    },
+    {
+      "sequence_id": "hotpotqa_unrelated_0",
+      "dataset": "hotpotqa",
+      "kind": "unrelated",
+      "request_ids": [
+        "5a70eee85542994082a3e3f0",
+        "5a70f0a75542994082a3e403",
+        "5a70f1685542994082a3e40f"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [],
+          "shared_query_entities": [],
+          "shared_context_entities": []
+        },
+        {
+          "shared_titles": [],
+          "shared_query_entities": [],
+          "shared_context_entities": []
+        }
+      ]
+    },
+    {
+      "sequence_id": "hotpotqa_unrelated_1",
+      "dataset": "hotpotqa",
+      "kind": "unrelated",
+      "request_ids": [
+        "5a70f0e75542994082a3e408",
+        "5a70f6425542994082a3e44c",
+        "5a70ff335542994082a3e49c"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [],
+          "shared_query_entities": [],
+          "shared_context_entities": []
+        },
+        {
+          "shared_titles": [],
+          "shared_query_entities": [],
+          "shared_context_entities": []
+        }
+      ]
+    },
+    {
+      "sequence_id": "hotpotqa_unrelated_2",
+      "dataset": "hotpotqa",
+      "kind": "unrelated",
+      "request_ids": [
+        "5a70f11a5542994082a3e40b",
+        "5a71095e5542994082a3e4f3",
+        "5a7109e95542994082a3e4fa"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [],
+          "shared_query_entities": [],
+          "shared_context_entities": []
+        },
+        {
+          "shared_titles": [],
+          "shared_query_entities": [],
+          "shared_context_entities": []
+        }
+      ]
+    },
+    {
+      "sequence_id": "hotpotqa_unrelated_3",
+      "dataset": "hotpotqa",
+      "kind": "unrelated",
+      "request_ids": [
+        "5a70f39c5542994082a3e429",
+        "5a710a1e5542994082a3e4fd",
+        "5a710a915542994082a3e504"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [],
+          "shared_query_entities": [],
+          "shared_context_entities": []
+        },
+        {
+          "shared_titles": [],
+          "shared_query_entities": [],
+          "shared_context_entities": []
+        }
+      ]
+    },
+    {
+      "sequence_id": "hotpotqa_unrelated_4",
+      "dataset": "hotpotqa",
+      "kind": "unrelated",
+      "request_ids": [
+        "5a70f4695542994082a3e435",
+        "5a710d155542994082a3e520",
+        "5a71166d5542994082a3e576"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [],
+          "shared_query_entities": [],
+          "shared_context_entities": []
+        },
+        {
+          "shared_titles": [],
+          "shared_query_entities": [],
+          "shared_context_entities": []
+        }
+      ]
+    },
+    {
+      "sequence_id": "hotpotqa_unrelated_5",
+      "dataset": "hotpotqa",
+      "kind": "unrelated",
+      "request_ids": [
+        "5a70f4c45542994082a3e437",
+        "5a7119095542994082a3e589",
+        "5a7119f75542994082a3e58e"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [],
+          "shared_query_entities": [],
+          "shared_context_entities": []
+        },
+        {
+          "shared_titles": [],
+          "shared_query_entities": [],
+          "shared_context_entities": []
+        }
+      ]
+    },
+    {
+      "sequence_id": "hotpotqa_unrelated_6",
+      "dataset": "hotpotqa",
+      "kind": "unrelated",
+      "request_ids": [
+        "5a70f9335542994082a3e46a",
+        "5a711c535542994082a3e59b",
+        "5a71231a5542994082a3e5c4"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [],
+          "shared_query_entities": [],
+          "shared_context_entities": []
+        },
+        {
+          "shared_titles": [],
+          "shared_query_entities": [],
+          "shared_context_entities": []
+        }
+      ]
+    },
+    {
+      "sequence_id": "hotpotqa_unrelated_7",
+      "dataset": "hotpotqa",
+      "kind": "unrelated",
+      "request_ids": [
+        "5a7100435542994082a3e4a3",
+        "5a711bb55542994082a3e597",
+        "5a71224f5542994082a3e5c1"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [],
+          "shared_query_entities": [],
+          "shared_context_entities": []
+        },
+        {
+          "shared_titles": [],
+          "shared_query_entities": [],
+          "shared_context_entities": []
+        }
+      ]
+    },
+    {
+      "sequence_id": "hotpotqa_unrelated_8",
+      "dataset": "hotpotqa",
+      "kind": "unrelated",
+      "request_ids": [
+        "5a7103b35542994082a3e4c0",
+        "5a7128b05542994082a3e5f2",
+        "5a7129685542994082a3e5fa"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [],
+          "shared_query_entities": [],
+          "shared_context_entities": []
+        },
+        {
+          "shared_titles": [],
+          "shared_query_entities": [],
+          "shared_context_entities": []
+        }
+      ]
+    },
+    {
+      "sequence_id": "hotpotqa_unrelated_9",
+      "dataset": "hotpotqa",
+      "kind": "unrelated",
+      "request_ids": [
+        "5a7108fa5542994082a3e4ef",
+        "5a712af15542994082a3e614",
+        "5a712fca5542994082a3e641"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [],
+          "shared_query_entities": [],
+          "shared_context_entities": []
+        },
+        {
+          "shared_titles": [],
+          "shared_query_entities": [],
+          "shared_context_entities": []
+        }
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_unrelated_0",
+      "dataset": "2wikimultihopqa",
+      "kind": "unrelated",
+      "request_ids": [
+        "0008d48808a011ebbd78ac1f6bf848b6",
+        "0016373a0bda11eba7f7acde48001122",
+        "00199e40098211ebbdb0ac1f6bf848b6"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [],
+          "shared_query_entities": [],
+          "shared_context_entities": []
+        },
+        {
+          "shared_titles": [],
+          "shared_query_entities": [],
+          "shared_context_entities": []
+        }
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_unrelated_1",
+      "dataset": "2wikimultihopqa",
+      "kind": "unrelated",
+      "request_ids": [
+        "0017cac508be11ebbd8aac1f6bf848b6",
+        "001ad110086911ebbd5eac1f6bf848b6",
+        "002e925e0bde11eba7f7acde48001122"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [],
+          "shared_query_entities": [],
+          "shared_context_entities": []
+        },
+        {
+          "shared_titles": [],
+          "shared_query_entities": [],
+          "shared_context_entities": []
+        }
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_unrelated_2",
+      "dataset": "2wikimultihopqa",
+      "kind": "unrelated",
+      "request_ids": [
+        "00223e06084a11ebbd55ac1f6bf848b6",
+        "002f12240bde11eba7f7acde48001122",
+        "00310dc8094611ebbdaeac1f6bf848b6"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [],
+          "shared_query_entities": [],
+          "shared_context_entities": []
+        },
+        {
+          "shared_titles": [],
+          "shared_query_entities": [],
+          "shared_context_entities": []
+        }
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_unrelated_3",
+      "dataset": "2wikimultihopqa",
+      "kind": "unrelated",
+      "request_ids": [
+        "003285a80bde11eba7f7acde48001122",
+        "003f41f80bde11eba7f7acde48001122",
+        "0051fad20bde11eba7f7acde48001122"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [],
+          "shared_query_entities": [],
+          "shared_context_entities": []
+        },
+        {
+          "shared_titles": [],
+          "shared_query_entities": [],
+          "shared_context_entities": []
+        }
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_unrelated_4",
+      "dataset": "2wikimultihopqa",
+      "kind": "unrelated",
+      "request_ids": [
+        "004430780bde11eba7f7acde48001122",
+        "005238da0bde11eba7f7acde48001122",
+        "0056b9ff08e711ebbda5ac1f6bf848b6"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [],
+          "shared_query_entities": [],
+          "shared_context_entities": []
+        },
+        {
+          "shared_titles": [],
+          "shared_query_entities": [],
+          "shared_context_entities": []
+        }
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_unrelated_5",
+      "dataset": "2wikimultihopqa",
+      "kind": "unrelated",
+      "request_ids": [
+        "0063e31f08eb11ebbda7ac1f6bf848b6",
+        "0069c0220bde11eba7f7acde48001122",
+        "006b525c08e111ebbda2ac1f6bf848b6"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [],
+          "shared_query_entities": [],
+          "shared_context_entities": []
+        },
+        {
+          "shared_titles": [],
+          "shared_query_entities": [],
+          "shared_context_entities": []
+        }
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_unrelated_6",
+      "dataset": "2wikimultihopqa",
+      "kind": "unrelated",
+      "request_ids": [
+        "006d81bc0bde11eba7f7acde48001122",
+        "0083038e0bde11eba7f7acde48001122",
+        "008af56e0bdc11eba7f7acde48001122"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [],
+          "shared_query_entities": [],
+          "shared_context_entities": []
+        },
+        {
+          "shared_titles": [],
+          "shared_query_entities": [],
+          "shared_context_entities": []
+        }
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_unrelated_7",
+      "dataset": "2wikimultihopqa",
+      "kind": "unrelated",
+      "request_ids": [
+        "007b76e80bdc11eba7f7acde48001122",
+        "008b58060baf11ebab90acde48001122",
+        "008c393e088411ebbd6dac1f6bf848b6"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [],
+          "shared_query_entities": [],
+          "shared_context_entities": []
+        },
+        {
+          "shared_titles": [],
+          "shared_query_entities": [],
+          "shared_context_entities": []
+        }
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_unrelated_8",
+      "dataset": "2wikimultihopqa",
+      "kind": "unrelated",
+      "request_ids": [
+        "009177c60bdd11eba7f7acde48001122",
+        "0098436208e011ebbda1ac1f6bf848b6",
+        "00989dbe08a711ebbd7fac1f6bf848b6"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [],
+          "shared_query_entities": [],
+          "shared_context_entities": []
+        },
+        {
+          "shared_titles": [],
+          "shared_query_entities": [],
+          "shared_context_entities": []
+        }
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_unrelated_9",
+      "dataset": "2wikimultihopqa",
+      "kind": "unrelated",
+      "request_ids": [
+        "009d55460bdd11eba7f7acde48001122",
+        "00a1b60e0bdd11eba7f7acde48001122",
+        "00a6129c085611ebbd59ac1f6bf848b6"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [],
+          "shared_query_entities": [],
+          "shared_context_entities": []
+        },
+        {
+          "shared_titles": [],
+          "shared_query_entities": [],
+          "shared_context_entities": []
+        }
+      ]
+    },
+    {
+      "sequence_id": "musique_unrelated_0",
+      "dataset": "musique",
+      "kind": "unrelated",
+      "request_ids": [
+        "2hop__10017_18974",
+        "2hop__103889_86452",
+        "2hop__10620_49084"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [],
+          "shared_query_entities": [],
+          "shared_context_entities": []
+        },
+        {
+          "shared_titles": [],
+          "shared_query_entities": [],
+          "shared_context_entities": []
+        }
+      ]
+    },
+    {
+      "sequence_id": "musique_unrelated_1",
+      "dataset": "musique",
+      "kind": "unrelated",
+      "request_ids": [
+        "2hop__10114_599630",
+        "2hop__104095_40502",
+        "2hop__10620_79092"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [],
+          "shared_query_entities": [],
+          "shared_context_entities": []
+        },
+        {
+          "shared_titles": [],
+          "shared_query_entities": [],
+          "shared_context_entities": []
+        }
+      ]
+    },
+    {
+      "sequence_id": "musique_unrelated_2",
+      "dataset": "musique",
+      "kind": "unrelated",
+      "request_ids": [
+        "2hop__10122_18974",
+        "2hop__107905_110222",
+        "2hop__124412_402641"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [],
+          "shared_query_entities": [],
+          "shared_context_entities": []
+        },
+        {
+          "shared_titles": [],
+          "shared_query_entities": [],
+          "shared_context_entities": []
+        }
+      ]
+    },
+    {
+      "sequence_id": "musique_unrelated_3",
+      "dataset": "musique",
+      "kind": "unrelated",
+      "request_ids": [
+        "2hop__104095_40501",
+        "2hop__10515_21567",
+        "2hop__124592_402641"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [],
+          "shared_query_entities": [],
+          "shared_context_entities": []
+        },
+        {
+          "shared_titles": [],
+          "shared_query_entities": [],
+          "shared_context_entities": []
+        }
+      ]
+    },
+    {
+      "sequence_id": "musique_unrelated_4",
+      "dataset": "musique",
+      "kind": "unrelated",
+      "request_ids": [
+        "2hop__106864_80460",
+        "2hop__10900_21567",
+        "2hop__115515_779396"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [],
+          "shared_query_entities": [],
+          "shared_context_entities": []
+        },
+        {
+          "shared_titles": [],
+          "shared_query_entities": [],
+          "shared_context_entities": []
+        }
+      ]
+    },
+    {
+      "sequence_id": "musique_unrelated_5",
+      "dataset": "musique",
+      "kind": "unrelated",
+      "request_ids": [
+        "2hop__107185_64006",
+        "2hop__107548_124896",
+        "2hop__119423_779396"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [],
+          "shared_query_entities": [],
+          "shared_context_entities": []
+        },
+        {
+          "shared_titles": [],
+          "shared_query_entities": [],
+          "shared_context_entities": []
+        }
+      ]
+    },
+    {
+      "sequence_id": "musique_unrelated_6",
+      "dataset": "musique",
+      "kind": "unrelated",
+      "request_ids": [
+        "2hop__107238_64918",
+        "2hop__122651_141338",
+        "2hop__123104_77615"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [],
+          "shared_query_entities": [],
+          "shared_context_entities": []
+        },
+        {
+          "shared_titles": [],
+          "shared_query_entities": [],
+          "shared_context_entities": []
+        }
+      ]
+    },
+    {
+      "sequence_id": "musique_unrelated_7",
+      "dataset": "musique",
+      "kind": "unrelated",
+      "request_ids": [
+        "2hop__107601_110222",
+        "2hop__123545_47134",
+        "2hop__124807_135019"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [],
+          "shared_query_entities": [],
+          "shared_context_entities": []
+        },
+        {
+          "shared_titles": [],
+          "shared_query_entities": [],
+          "shared_context_entities": []
+        }
+      ]
+    },
+    {
+      "sequence_id": "musique_unrelated_8",
+      "dataset": "musique",
+      "kind": "unrelated",
+      "request_ids": [
+        "2hop__107690_124896",
+        "2hop__124932_278133",
+        "2hop__133116_533882"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [],
+          "shared_query_entities": [],
+          "shared_context_entities": []
+        },
+        {
+          "shared_titles": [],
+          "shared_query_entities": [],
+          "shared_context_entities": []
+        }
+      ]
+    },
+    {
+      "sequence_id": "musique_unrelated_9",
+      "dataset": "musique",
+      "kind": "unrelated",
+      "request_ids": [
+        "2hop__108158_83769",
+        "2hop__126188_396277",
+        "2hop__13106_158105"
+      ],
+      "adjacent_relations": [
+        {
+          "shared_titles": [],
+          "shared_query_entities": [],
+          "shared_context_entities": []
+        },
+        {
+          "shared_titles": [],
+          "shared_query_entities": [],
+          "shared_context_entities": []
+        }
+      ]
+    }
+  ],
+  "model": "D:\\HF_dl\\model\\Qwen2.5-7B-Instruct-GGUF\\qwen2.5-7b-instruct-q4_k_m-00001-of-00002.gguf",
+  "tokenizer": "artifacts\\tokenizer\\qwen2.5-7b-instruct",
+  "summaries": [
+    {
+      "sequence_kind": "related",
+      "method": "evidence_graph_current_only",
+      "turn_index": 0,
+      "n": 60,
+      "mean_input_tokens": 1164.9833333333333,
+      "mean_token_reduction_rate": 0.28236665906943986,
+      "mean_token_f1": 0.1643775425242455,
+      "mean_exact_match": 0.03333333333333333,
+      "mean_supporting_fact_precision": 0.09660959031979065,
+      "mean_supporting_fact_recall": 0.721237922705314,
+      "mean_evidence_f1": 0.15999128983562894,
+      "mean_answer_context_support": 1.0,
+      "mean_compression_ms": 11.628051666666666,
+      "mean_prefill_ms": 432.8393,
+      "mean_decode_ms": 419.22138333333334,
+      "mean_end_to_end_ms": 863.688735,
+      "p50_end_to_end_ms": 927.1605,
+      "p95_end_to_end_ms": 1083.002,
+      "mean_historical_candidate_count": 0.0,
+      "mean_reused_evidence_count": 0.0
+    },
+    {
+      "sequence_kind": "related",
+      "method": "evidence_graph_current_only",
+      "turn_index": 1,
+      "n": 60,
+      "mean_input_tokens": 1174.9666666666667,
+      "mean_token_reduction_rate": 0.28120426826546674,
+      "mean_token_f1": 0.18314250413964375,
+      "mean_exact_match": 0.06666666666666667,
+      "mean_supporting_fact_precision": 0.08345065462976754,
+      "mean_supporting_fact_recall": 0.7331313131313131,
+      "mean_evidence_f1": 0.14455957582808973,
+      "mean_answer_context_support": 1.0,
+      "mean_compression_ms": 12.013148333333334,
+      "mean_prefill_ms": 440.7874166666667,
+      "mean_decode_ms": 381.2194666666667,
+      "mean_end_to_end_ms": 834.0200316666667,
+      "p50_end_to_end_ms": 896.1487,
+      "p95_end_to_end_ms": 1098.707,
+      "mean_historical_candidate_count": 0.0,
+      "mean_reused_evidence_count": 0.0
+    },
+    {
+      "sequence_kind": "related",
+      "method": "evidence_graph_current_only",
+      "turn_index": 2,
+      "n": 60,
+      "mean_input_tokens": 1151.4666666666667,
+      "mean_token_reduction_rate": 0.2896582978841982,
+      "mean_token_f1": 0.18909069442652923,
+      "mean_exact_match": 0.06666666666666667,
+      "mean_supporting_fact_precision": 0.10412866054071933,
+      "mean_supporting_fact_recall": 0.7317857562334306,
+      "mean_evidence_f1": 0.16441002246645153,
+      "mean_answer_context_support": 1.0,
+      "mean_compression_ms": 12.704516666666667,
+      "mean_prefill_ms": 427.11446666666666,
+      "mean_decode_ms": 404.19896666666665,
+      "mean_end_to_end_ms": 844.0179499999999,
+      "p50_end_to_end_ms": 908.8,
+      "p95_end_to_end_ms": 1085.1723,
+      "mean_historical_candidate_count": 0.0,
+      "mean_reused_evidence_count": 0.0
+    },
+    {
+      "sequence_kind": "related",
+      "method": "evidence_graph_history",
+      "turn_index": 0,
+      "n": 60,
+      "mean_input_tokens": 1164.9833333333333,
+      "mean_token_reduction_rate": 0.28236665906943986,
+      "mean_token_f1": 0.1643775425242455,
+      "mean_exact_match": 0.03333333333333333,
+      "mean_supporting_fact_precision": 0.09660959031979065,
+      "mean_supporting_fact_recall": 0.721237922705314,
+      "mean_evidence_f1": 0.15999128983562894,
+      "mean_answer_context_support": 1.0,
+      "mean_compression_ms": 11.61205,
+      "mean_prefill_ms": 425.53186666666664,
+      "mean_decode_ms": 414.79828333333336,
+      "mean_end_to_end_ms": 851.9422,
+      "p50_end_to_end_ms": 912.0452,
+      "p95_end_to_end_ms": 1072.3788,
+      "mean_historical_candidate_count": 0.0,
+      "mean_reused_evidence_count": 0.0
+    },
+    {
+      "sequence_kind": "related",
+      "method": "evidence_graph_history",
+      "turn_index": 1,
+      "n": 60,
+      "mean_input_tokens": 929.7166666666667,
+      "mean_token_reduction_rate": 0.4588875567559008,
+      "mean_token_f1": 0.13022113566387752,
+      "mean_exact_match": 0.03333333333333333,
+      "mean_supporting_fact_precision": 0.11667402451239858,
+      "mean_supporting_fact_recall": 0.6280050505050505,
+      "mean_evidence_f1": 0.18591587328476777,
+      "mean_answer_context_support": 1.0,
+      "mean_compression_ms": 12.511303333333334,
+      "mean_prefill_ms": 343.71555,
+      "mean_decode_ms": 375.00068333333337,
+      "mean_end_to_end_ms": 731.2275366666667,
+      "p50_end_to_end_ms": 790.1987,
+      "p95_end_to_end_ms": 1013.3151,
+      "mean_historical_candidate_count": 9.2,
+      "mean_reused_evidence_count": 7.216666666666667
+    },
+    {
+      "sequence_kind": "related",
+      "method": "evidence_graph_history",
+      "turn_index": 2,
+      "n": 60,
+      "mean_input_tokens": 891.4666666666667,
+      "mean_token_reduction_rate": 0.47563501041475564,
+      "mean_token_f1": 0.1700144577063521,
+      "mean_exact_match": 0.06666666666666667,
+      "mean_supporting_fact_precision": 0.13713804021917467,
+      "mean_supporting_fact_recall": 0.5989354368714834,
+      "mean_evidence_f1": 0.20545292688411307,
+      "mean_answer_context_support": 0.9833333333333333,
+      "mean_compression_ms": 13.711388333333334,
+      "mean_prefill_ms": 329.90635000000003,
+      "mean_decode_ms": 403.93145,
+      "mean_end_to_end_ms": 747.5491883333333,
+      "p50_end_to_end_ms": 755.9908,
+      "p95_end_to_end_ms": 1073.6904,
+      "mean_historical_candidate_count": 11.0,
+      "mean_reused_evidence_count": 8.0
+    },
+    {
+      "sequence_kind": "related",
+      "method": "no_compression",
+      "turn_index": 0,
+      "n": 60,
+      "mean_input_tokens": 1760.2833333333333,
+      "mean_token_reduction_rate": 0.0,
+      "mean_token_f1": 0.18056597446560949,
+      "mean_exact_match": 0.05,
+      "mean_supporting_fact_precision": 0.07638760101885729,
+      "mean_supporting_fact_recall": 1.0,
+      "mean_evidence_f1": 0.13845138896855816,
+      "mean_answer_context_support": 1.0,
+      "mean_compression_ms": 0.00242,
+      "mean_prefill_ms": 657.5036333333334,
+      "mean_decode_ms": 403.5928666666667,
+      "mean_end_to_end_ms": 1061.09892,
+      "p50_end_to_end_ms": 1052.0861,
+      "p95_end_to_end_ms": 1757.9928,
+      "mean_historical_candidate_count": 0.0,
+      "mean_reused_evidence_count": 0.0
+    },
+    {
+      "sequence_kind": "related",
+      "method": "no_compression",
+      "turn_index": 1,
+      "n": 60,
+      "mean_input_tokens": 1756.2,
+      "mean_token_reduction_rate": 0.0,
+      "mean_token_f1": 0.21723908696202326,
+      "mean_exact_match": 0.06666666666666667,
+      "mean_supporting_fact_precision": 0.07080444654297371,
+      "mean_supporting_fact_recall": 1.0,
+      "mean_evidence_f1": 0.1298938013903417,
+      "mean_answer_context_support": 1.0,
+      "mean_compression_ms": 0.001835,
+      "mean_prefill_ms": 642.97165,
+      "mean_decode_ms": 374.78625,
+      "mean_end_to_end_ms": 1017.759735,
+      "p50_end_to_end_ms": 1001.7935,
+      "p95_end_to_end_ms": 1593.572,
+      "mean_historical_candidate_count": 0.0,
+      "mean_reused_evidence_count": 0.0
+    },
+    {
+      "sequence_kind": "related",
+      "method": "no_compression",
+      "turn_index": 2,
+      "n": 60,
+      "mean_input_tokens": 1740.25,
+      "mean_token_reduction_rate": 0.0,
+      "mean_token_f1": 0.25669348447429025,
+      "mean_exact_match": 0.1,
+      "mean_supporting_fact_precision": 0.08325546689726823,
+      "mean_supporting_fact_recall": 1.0,
+      "mean_evidence_f1": 0.14799070522137808,
+      "mean_answer_context_support": 1.0,
+      "mean_compression_ms": 0.0018733333333333334,
+      "mean_prefill_ms": 642.7960833333333,
+      "mean_decode_ms": 376.41003333333333,
+      "mean_end_to_end_ms": 1019.20799,
+      "p50_end_to_end_ms": 977.1173,
+      "p95_end_to_end_ms": 1511.2268,
+      "mean_historical_candidate_count": 0.0,
+      "mean_reused_evidence_count": 0.0
+    },
+    {
+      "sequence_kind": "related",
+      "method": "query_aware_bm25_mmr",
+      "turn_index": 0,
+      "n": 60,
+      "mean_input_tokens": 875.2,
+      "mean_token_reduction_rate": 0.5034565562698402,
+      "mean_token_f1": 0.16122733779070744,
+      "mean_exact_match": 0.05,
+      "mean_supporting_fact_precision": 0.12765784697302213,
+      "mean_supporting_fact_recall": 0.7238016160570508,
+      "mean_evidence_f1": 0.2086057701104966,
+      "mean_answer_context_support": 1.0,
+      "mean_compression_ms": 118.02589833333333,
+      "mean_prefill_ms": 306.42289999999997,
+      "mean_decode_ms": 406.16055,
+      "mean_end_to_end_ms": 830.6093483333334,
+      "p50_end_to_end_ms": 797.6607,
+      "p95_end_to_end_ms": 1367.1848,
+      "mean_historical_candidate_count": 0.0,
+      "mean_reused_evidence_count": 0.0
+    },
+    {
+      "sequence_kind": "related",
+      "method": "query_aware_bm25_mmr",
+      "turn_index": 1,
+      "n": 60,
+      "mean_input_tokens": 872.3833333333333,
+      "mean_token_reduction_rate": 0.5046213263741721,
+      "mean_token_f1": 0.16543936504035497,
+      "mean_exact_match": 0.06666666666666667,
+      "mean_supporting_fact_precision": 0.11506419844838603,
+      "mean_supporting_fact_recall": 0.7274368686868687,
+      "mean_evidence_f1": 0.19278443834269277,
+      "mean_answer_context_support": 1.0,
+      "mean_compression_ms": 110.91026833333333,
+      "mean_prefill_ms": 304.41451666666666,
+      "mean_decode_ms": 374.44763333333333,
+      "mean_end_to_end_ms": 789.7724183333333,
+      "p50_end_to_end_ms": 778.3416,
+      "p95_end_to_end_ms": 1280.449,
+      "mean_historical_candidate_count": 0.0,
+      "mean_reused_evidence_count": 0.0
+    },
+    {
+      "sequence_kind": "related",
+      "method": "query_aware_bm25_mmr",
+      "turn_index": 2,
+      "n": 60,
+      "mean_input_tokens": 865.5166666666667,
+      "mean_token_reduction_rate": 0.5031433687106291,
+      "mean_token_f1": 0.21621587663452876,
+      "mean_exact_match": 0.06666666666666667,
+      "mean_supporting_fact_precision": 0.13744763850151304,
+      "mean_supporting_fact_recall": 0.7382662419126018,
+      "mean_evidence_f1": 0.2200727492931427,
+      "mean_answer_context_support": 0.9833333333333333,
+      "mean_compression_ms": 112.04469333333333,
+      "mean_prefill_ms": 303.62579999999997,
+      "mean_decode_ms": 354.70480000000003,
+      "mean_end_to_end_ms": 770.3752933333333,
+      "p50_end_to_end_ms": 770.6706999999999,
+      "p95_end_to_end_ms": 1327.6397000000002,
+      "mean_historical_candidate_count": 0.0,
+      "mean_reused_evidence_count": 0.0
+    },
+    {
+      "sequence_kind": "related",
+      "method": "risk_aware_evidence_graph",
+      "turn_index": 0,
+      "n": 60,
+      "mean_input_tokens": 1164.9833333333333,
+      "mean_token_reduction_rate": 0.28236665906943986,
+      "mean_token_f1": 0.1643775425242455,
+      "mean_exact_match": 0.03333333333333333,
+      "mean_supporting_fact_precision": 0.09660959031979065,
+      "mean_supporting_fact_recall": 0.721237922705314,
+      "mean_evidence_f1": 0.15999128983562894,
+      "mean_answer_context_support": 1.0,
+      "mean_compression_ms": 11.89818,
+      "mean_prefill_ms": 428.9196,
+      "mean_decode_ms": 418.06940000000003,
+      "mean_end_to_end_ms": 858.88718,
+      "p50_end_to_end_ms": 921.3156,
+      "p95_end_to_end_ms": 1062.0263,
+      "mean_historical_candidate_count": 0.0,
+      "mean_reused_evidence_count": 0.0
+    },
+    {
+      "sequence_kind": "related",
+      "method": "risk_aware_evidence_graph",
+      "turn_index": 1,
+      "n": 60,
+      "mean_input_tokens": 868.3333333333334,
+      "mean_token_reduction_rate": 0.47545827138195546,
+      "mean_token_f1": 0.1321064637660972,
+      "mean_exact_match": 0.03333333333333333,
+      "mean_supporting_fact_precision": 0.12463841460274061,
+      "mean_supporting_fact_recall": 0.6216666666666666,
+      "mean_evidence_f1": 0.1808154177751277,
+      "mean_answer_context_support": 1.0,
+      "mean_compression_ms": 11.100403333333333,
+      "mean_prefill_ms": 315.53636666666665,
+      "mean_decode_ms": 394.2746333333333,
+      "mean_end_to_end_ms": 720.9114033333333,
+      "p50_end_to_end_ms": 780.6821,
+      "p95_end_to_end_ms": 983.7438,
+      "mean_historical_candidate_count": 3.783333333333333,
+      "mean_reused_evidence_count": 3.2333333333333334
+    },
+    {
+      "sequence_kind": "related",
+      "method": "risk_aware_evidence_graph",
+      "turn_index": 2,
+      "n": 60,
+      "mean_input_tokens": 800.7666666666667,
+      "mean_token_reduction_rate": 0.511746659670268,
+      "mean_token_f1": 0.17820671245359407,
+      "mean_exact_match": 0.06666666666666667,
+      "mean_supporting_fact_precision": 0.17093281836112453,
+      "mean_supporting_fact_recall": 0.6295292906920814,
+      "mean_evidence_f1": 0.2288711963641239,
+      "mean_answer_context_support": 0.9833333333333333,
+      "mean_compression_ms": 11.80391,
+      "mean_prefill_ms": 293.08208333333334,
+      "mean_decode_ms": 391.23501666666664,
+      "mean_end_to_end_ms": 696.1210100000001,
+      "p50_end_to_end_ms": 724.7058,
+      "p95_end_to_end_ms": 985.3648000000001,
+      "mean_historical_candidate_count": 4.0,
+      "mean_reused_evidence_count": 3.4166666666666665
+    },
+    {
+      "sequence_kind": "unrelated",
+      "method": "evidence_graph_current_only",
+      "turn_index": 0,
+      "n": 30,
+      "mean_input_tokens": 1180.5666666666666,
+      "mean_token_reduction_rate": 0.2885762115983256,
+      "mean_token_f1": 0.18265617810747878,
+      "mean_exact_match": 0.03333333333333333,
+      "mean_supporting_fact_precision": 0.11419222054896497,
+      "mean_supporting_fact_recall": 0.7548590982286635,
+      "mean_evidence_f1": 0.1830873156649018,
+      "mean_answer_context_support": 1.0,
+      "mean_compression_ms": 12.538366666666667,
+      "mean_prefill_ms": 442.08183333333335,
+      "mean_decode_ms": 443.0066666666667,
+      "mean_end_to_end_ms": 897.6268666666667,
+      "p50_end_to_end_ms": 946.2293999999999,
+      "p95_end_to_end_ms": 1142.9501,
+      "mean_historical_candidate_count": 0.0,
+      "mean_reused_evidence_count": 0.0
+    },
+    {
+      "sequence_kind": "unrelated",
+      "method": "evidence_graph_current_only",
+      "turn_index": 1,
+      "n": 30,
+      "mean_input_tokens": 1186.3,
+      "mean_token_reduction_rate": 0.2830623862939893,
+      "mean_token_f1": 0.2224313198853514,
+      "mean_exact_match": 0.13333333333333333,
+      "mean_supporting_fact_precision": 0.08629476498371937,
+      "mean_supporting_fact_recall": 0.7022127067779241,
+      "mean_evidence_f1": 0.14757939092266692,
+      "mean_answer_context_support": 1.0,
+      "mean_compression_ms": 12.733766666666668,
+      "mean_prefill_ms": 441.53706666666665,
+      "mean_decode_ms": 369.79066666666665,
+      "mean_end_to_end_ms": 824.0615,
+      "p50_end_to_end_ms": 852.5758000000001,
+      "p95_end_to_end_ms": 1141.4205,
+      "mean_historical_candidate_count": 0.0,
+      "mean_reused_evidence_count": 0.0
+    },
+    {
+      "sequence_kind": "unrelated",
+      "method": "evidence_graph_current_only",
+      "turn_index": 2,
+      "n": 30,
+      "mean_input_tokens": 1150.2666666666667,
+      "mean_token_reduction_rate": 0.2529918897207047,
+      "mean_token_f1": 0.2445621575295825,
+      "mean_exact_match": 0.03333333333333333,
+      "mean_supporting_fact_precision": 0.10028722124308391,
+      "mean_supporting_fact_recall": 0.7958333333333333,
+      "mean_evidence_f1": 0.1735574369518846,
+      "mean_answer_context_support": 1.0,
+      "mean_compression_ms": 12.730176666666667,
+      "mean_prefill_ms": 423.4879333333334,
+      "mean_decode_ms": 418.1653333333333,
+      "mean_end_to_end_ms": 854.3834433333334,
+      "p50_end_to_end_ms": 839.9929,
+      "p95_end_to_end_ms": 1191.9482,
+      "mean_historical_candidate_count": 0.0,
+      "mean_reused_evidence_count": 0.0
+    },
+    {
+      "sequence_kind": "unrelated",
+      "method": "evidence_graph_history",
+      "turn_index": 0,
+      "n": 30,
+      "mean_input_tokens": 1180.5666666666666,
+      "mean_token_reduction_rate": 0.2885762115983256,
+      "mean_token_f1": 0.18265617810747878,
+      "mean_exact_match": 0.03333333333333333,
+      "mean_supporting_fact_precision": 0.11419222054896497,
+      "mean_supporting_fact_recall": 0.7548590982286635,
+      "mean_evidence_f1": 0.1830873156649018,
+      "mean_answer_context_support": 1.0,
+      "mean_compression_ms": 11.861626666666666,
+      "mean_prefill_ms": 436.88573333333335,
+      "mean_decode_ms": 441.3557333333334,
+      "mean_end_to_end_ms": 890.1030933333333,
+      "p50_end_to_end_ms": 940.7019,
+      "p95_end_to_end_ms": 1140.0034,
+      "mean_historical_candidate_count": 0.0,
+      "mean_reused_evidence_count": 0.0
+    },
+    {
+      "sequence_kind": "unrelated",
+      "method": "evidence_graph_history",
+      "turn_index": 1,
+      "n": 30,
+      "mean_input_tokens": 1003.4666666666667,
+      "mean_token_reduction_rate": 0.42427355926385535,
+      "mean_token_f1": 0.188229933510052,
+      "mean_exact_match": 0.1,
+      "mean_supporting_fact_precision": 0.11578688755581676,
+      "mean_supporting_fact_recall": 0.6688793734445908,
+      "mean_evidence_f1": 0.18990029377759804,
+      "mean_answer_context_support": 1.0,
+      "mean_compression_ms": 13.924393333333335,
+      "mean_prefill_ms": 363.68223333333333,
+      "mean_decode_ms": 375.6521333333333,
+      "mean_end_to_end_ms": 753.25876,
+      "p50_end_to_end_ms": 764.4389,
+      "p95_end_to_end_ms": 1080.1002,
+      "mean_historical_candidate_count": 5.633333333333334,
+      "mean_reused_evidence_count": 2.933333333333333
+    },
+    {
+      "sequence_kind": "unrelated",
+      "method": "evidence_graph_history",
+      "turn_index": 2,
+      "n": 30,
+      "mean_input_tokens": 939.0333333333333,
+      "mean_token_reduction_rate": 0.4185478826526618,
+      "mean_token_f1": 0.22470647038906563,
+      "mean_exact_match": 0.03333333333333333,
+      "mean_supporting_fact_precision": 0.1259136978257122,
+      "mean_supporting_fact_recall": 0.6675,
+      "mean_evidence_f1": 0.20364950825519765,
+      "mean_answer_context_support": 1.0,
+      "mean_compression_ms": 16.084243333333333,
+      "mean_prefill_ms": 342.14293333333336,
+      "mean_decode_ms": 439.014,
+      "mean_end_to_end_ms": 797.2411766666667,
+      "p50_end_to_end_ms": 788.2002,
+      "p95_end_to_end_ms": 1064.0009,
+      "mean_historical_candidate_count": 7.133333333333334,
+      "mean_reused_evidence_count": 3.0
+    },
+    {
+      "sequence_kind": "unrelated",
+      "method": "no_compression",
+      "turn_index": 0,
+      "n": 30,
+      "mean_input_tokens": 1804.6666666666667,
+      "mean_token_reduction_rate": 0.0,
+      "mean_token_f1": 0.15593988093729338,
+      "mean_exact_match": 0.0,
+      "mean_supporting_fact_precision": 0.08573783453875611,
+      "mean_supporting_fact_recall": 1.0,
+      "mean_evidence_f1": 0.15271197879370552,
+      "mean_answer_context_support": 1.0,
+      "mean_compression_ms": 0.0020466666666666667,
+      "mean_prefill_ms": 675.8055,
+      "mean_decode_ms": 441.85513333333336,
+      "mean_end_to_end_ms": 1117.6626800000001,
+      "p50_end_to_end_ms": 1093.8486,
+      "p95_end_to_end_ms": 1827.0771,
+      "mean_historical_candidate_count": 0.0,
+      "mean_reused_evidence_count": 0.0
+    },
+    {
+      "sequence_kind": "unrelated",
+      "method": "no_compression",
+      "turn_index": 1,
+      "n": 30,
+      "mean_input_tokens": 1779.9333333333334,
+      "mean_token_reduction_rate": 0.0,
+      "mean_token_f1": 0.18502165533125284,
+      "mean_exact_match": 0.03333333333333333,
+      "mean_supporting_fact_precision": 0.07198627881729953,
+      "mean_supporting_fact_recall": 1.0,
+      "mean_evidence_f1": 0.1318000899313817,
+      "mean_answer_context_support": 1.0,
+      "mean_compression_ms": 0.0018366666666666666,
+      "mean_prefill_ms": 656.1424000000001,
+      "mean_decode_ms": 367.9515,
+      "mean_end_to_end_ms": 1024.0957366666667,
+      "p50_end_to_end_ms": 937.3995,
+      "p95_end_to_end_ms": 1759.1068,
+      "mean_historical_candidate_count": 0.0,
+      "mean_reused_evidence_count": 0.0
+    },
+    {
+      "sequence_kind": "unrelated",
+      "method": "no_compression",
+      "turn_index": 2,
+      "n": 30,
+      "mean_input_tokens": 1639.0666666666666,
+      "mean_token_reduction_rate": 0.0,
+      "mean_token_f1": 0.26935906388408465,
+      "mean_exact_match": 0.06666666666666667,
+      "mean_supporting_fact_precision": 0.07920695740024755,
+      "mean_supporting_fact_recall": 1.0,
+      "mean_evidence_f1": 0.1441816523602887,
+      "mean_answer_context_support": 1.0,
+      "mean_compression_ms": 0.0018966666666666667,
+      "mean_prefill_ms": 610.8101333333333,
+      "mean_decode_ms": 414.5063333333334,
+      "mean_end_to_end_ms": 1025.3183633333333,
+      "p50_end_to_end_ms": 1018.5064,
+      "p95_end_to_end_ms": 1469.6508,
+      "mean_historical_candidate_count": 0.0,
+      "mean_reused_evidence_count": 0.0
+    },
+    {
+      "sequence_kind": "unrelated",
+      "method": "query_aware_bm25_mmr",
+      "turn_index": 0,
+      "n": 30,
+      "mean_input_tokens": 897.2666666666667,
+      "mean_token_reduction_rate": 0.5032425084775614,
+      "mean_token_f1": 0.19481523966611686,
+      "mean_exact_match": 0.06666666666666667,
+      "mean_supporting_fact_precision": 0.15098202399278354,
+      "mean_supporting_fact_recall": 0.8053004945939729,
+      "mean_evidence_f1": 0.24133902467439886,
+      "mean_answer_context_support": 1.0,
+      "mean_compression_ms": 129.67087,
+      "mean_prefill_ms": 317.6050666666667,
+      "mean_decode_ms": 421.8272666666666,
+      "mean_end_to_end_ms": 869.1032033333333,
+      "p50_end_to_end_ms": 822.0479,
+      "p95_end_to_end_ms": 1636.9622,
+      "mean_historical_candidate_count": 0.0,
+      "mean_reused_evidence_count": 0.0
+    },
+    {
+      "sequence_kind": "unrelated",
+      "method": "query_aware_bm25_mmr",
+      "turn_index": 1,
+      "n": 30,
+      "mean_input_tokens": 885.5666666666667,
+      "mean_token_reduction_rate": 0.5035491504889211,
+      "mean_token_f1": 0.192208331544716,
+      "mean_exact_match": 0.06666666666666667,
+      "mean_supporting_fact_precision": 0.11810869628325041,
+      "mean_supporting_fact_recall": 0.7107875860049774,
+      "mean_evidence_f1": 0.1970446583419328,
+      "mean_answer_context_support": 1.0,
+      "mean_compression_ms": 121.50880000000001,
+      "mean_prefill_ms": 312.8555,
+      "mean_decode_ms": 386.01050000000004,
+      "mean_end_to_end_ms": 820.3747999999999,
+      "p50_end_to_end_ms": 769.3942999999999,
+      "p95_end_to_end_ms": 1313.1200000000001,
+      "mean_historical_candidate_count": 0.0,
+      "mean_reused_evidence_count": 0.0
+    },
+    {
+      "sequence_kind": "unrelated",
+      "method": "query_aware_bm25_mmr",
+      "turn_index": 2,
+      "n": 30,
+      "mean_input_tokens": 813.8666666666667,
+      "mean_token_reduction_rate": 0.5043254855842344,
+      "mean_token_f1": 0.20264066275863007,
+      "mean_exact_match": 0.06666666666666667,
+      "mean_supporting_fact_precision": 0.12494169059492183,
+      "mean_supporting_fact_recall": 0.6933333333333334,
+      "mean_evidence_f1": 0.20751095310647852,
+      "mean_answer_context_support": 1.0,
+      "mean_compression_ms": 98.19699333333332,
+      "mean_prefill_ms": 290.58,
+      "mean_decode_ms": 379.0363,
+      "mean_end_to_end_ms": 767.8132933333333,
+      "p50_end_to_end_ms": 696.7265,
+      "p95_end_to_end_ms": 1304.0621,
+      "mean_historical_candidate_count": 0.0,
+      "mean_reused_evidence_count": 0.0
+    },
+    {
+      "sequence_kind": "unrelated",
+      "method": "risk_aware_evidence_graph",
+      "turn_index": 0,
+      "n": 30,
+      "mean_input_tokens": 1180.5666666666666,
+      "mean_token_reduction_rate": 0.2885762115983256,
+      "mean_token_f1": 0.18265617810747878,
+      "mean_exact_match": 0.03333333333333333,
+      "mean_supporting_fact_precision": 0.11419222054896497,
+      "mean_supporting_fact_recall": 0.7548590982286635,
+      "mean_evidence_f1": 0.1830873156649018,
+      "mean_answer_context_support": 1.0,
+      "mean_compression_ms": 12.226283333333333,
+      "mean_prefill_ms": 439.2533666666667,
+      "mean_decode_ms": 445.9406,
+      "mean_end_to_end_ms": 897.42025,
+      "p50_end_to_end_ms": 939.5413,
+      "p95_end_to_end_ms": 1161.2800000000002,
+      "mean_historical_candidate_count": 0.0,
+      "mean_reused_evidence_count": 0.0
+    },
+    {
+      "sequence_kind": "unrelated",
+      "method": "risk_aware_evidence_graph",
+      "turn_index": 1,
+      "n": 30,
+      "mean_input_tokens": 1068.5333333333333,
+      "mean_token_reduction_rate": 0.34745238827047,
+      "mean_token_f1": 0.20034692719208358,
+      "mean_exact_match": 0.06666666666666667,
+      "mean_supporting_fact_precision": 0.10078647257643064,
+      "mean_supporting_fact_recall": 0.6855460401112574,
+      "mean_evidence_f1": 0.16760627133838504,
+      "mean_answer_context_support": 1.0,
+      "mean_compression_ms": 13.208256666666667,
+      "mean_prefill_ms": 386.1537666666666,
+      "mean_decode_ms": 372.74989999999997,
+      "mean_end_to_end_ms": 772.1119233333334,
+      "p50_end_to_end_ms": 781.6632,
+      "p95_end_to_end_ms": 1106.3980999999999,
+      "mean_historical_candidate_count": 0.7666666666666667,
+      "mean_reused_evidence_count": 0.6666666666666666
+    },
+    {
+      "sequence_kind": "unrelated",
+      "method": "risk_aware_evidence_graph",
+      "turn_index": 2,
+      "n": 30,
+      "mean_input_tokens": 1007.1,
+      "mean_token_reduction_rate": 0.3251153409369031,
+      "mean_token_f1": 0.23993687586250517,
+      "mean_exact_match": 0.03333333333333333,
+      "mean_supporting_fact_precision": 0.1095481102268496,
+      "mean_supporting_fact_recall": 0.7197222222222222,
+      "mean_evidence_f1": 0.18167898725566486,
+      "mean_answer_context_support": 1.0,
+      "mean_compression_ms": 14.094713333333335,
+      "mean_prefill_ms": 361.9481666666667,
+      "mean_decode_ms": 416.07556666666665,
+      "mean_end_to_end_ms": 792.1184466666667,
+      "p50_end_to_end_ms": 782.0025,
+      "p95_end_to_end_ms": 1036.3653,
+      "mean_historical_candidate_count": 0.2,
+      "mean_reused_evidence_count": 0.1
+    }
+  ]
+}

@@ -1,0 +1,187 @@
+{
+  "seed": 42,
+  "max_per_bucket": 2,
+  "tokenizer_model_id": "Qwen/Qwen2.5-7B-Instruct",
+  "summary": {
+    "hotpotqa": {
+      "status": "ok",
+      "split": "validation",
+      "loaded": 7405,
+      "selected": 4
+    },
+    "2wikimultihopqa": {
+      "status": "ok",
+      "split": "validation",
+      "loaded": 12576,
+      "selected": 6
+    },
+    "musique": {
+      "status": "ok",
+      "split": "dev",
+      "loaded": 2417,
+      "selected": 6
+    }
+  },
+  "rows": [
+    {
+      "request_id": "5a7521c55542993748c897c6",
+      "dataset": "hotpotqa",
+      "split": "validation",
+      "prompt_tokens": 1696,
+      "length_bucket": "<2K",
+      "reference_count": 1,
+      "supporting_fact_count": 5,
+      "context_document_count": 10
+    },
+    {
+      "request_id": "5a8bde565542995d1e6f1454",
+      "dataset": "hotpotqa",
+      "split": "validation",
+      "prompt_tokens": 1524,
+      "length_bucket": "<2K",
+      "reference_count": 1,
+      "supporting_fact_count": 2,
+      "context_document_count": 10
+    },
+    {
+      "request_id": "5a716ec85542994082a3e82d",
+      "dataset": "hotpotqa",
+      "split": "validation",
+      "prompt_tokens": 2365,
+      "length_bucket": "2K-4K",
+      "reference_count": 1,
+      "supporting_fact_count": 2,
+      "context_document_count": 10
+    },
+    {
+      "request_id": "5ab2be71554299166977408c",
+      "dataset": "hotpotqa",
+      "split": "validation",
+      "prompt_tokens": 2457,
+      "length_bucket": "2K-4K",
+      "reference_count": 1,
+      "supporting_fact_count": 4,
+      "context_document_count": 10
+    },
+    {
+      "request_id": "55dc0b7a088f11ebbd72ac1f6bf848b6",
+      "dataset": "2wikimultihopqa",
+      "split": "validation",
+      "prompt_tokens": 587,
+      "length_bucket": "<2K",
+      "reference_count": 1,
+      "supporting_fact_count": 4,
+      "context_document_count": 10
+    },
+    {
+      "request_id": "216229960bdd11eba7f7acde48001122",
+      "dataset": "2wikimultihopqa",
+      "split": "validation",
+      "prompt_tokens": 1946,
+      "length_bucket": "<2K",
+      "reference_count": 1,
+      "supporting_fact_count": 2,
+      "context_document_count": 10
+    },
+    {
+      "request_id": "6e88d85e0bde11eba7f7acde48001122",
+      "dataset": "2wikimultihopqa",
+      "split": "validation",
+      "prompt_tokens": 2850,
+      "length_bucket": "2K-4K",
+      "reference_count": 1,
+      "supporting_fact_count": 2,
+      "context_document_count": 10
+    },
+    {
+      "request_id": "6dde2d36085b11ebbd5cac1f6bf848b6",
+      "dataset": "2wikimultihopqa",
+      "split": "validation",
+      "prompt_tokens": 2522,
+      "length_bucket": "2K-4K",
+      "reference_count": 1,
+      "supporting_fact_count": 4,
+      "context_document_count": 10
+    },
+    {
+      "request_id": "0788eaa40bde11eba7f7acde48001122",
+      "dataset": "2wikimultihopqa",
+      "split": "validation",
+      "prompt_tokens": 4386,
+      "length_bucket": "4K-8K",
+      "reference_count": 1,
+      "supporting_fact_count": 2,
+      "context_document_count": 10
+    },
+    {
+      "request_id": "75acd1b4086411ebbd5eac1f6bf848b6",
+      "dataset": "2wikimultihopqa",
+      "split": "validation",
+      "prompt_tokens": 4177,
+      "length_bucket": "4K-8K",
+      "reference_count": 1,
+      "supporting_fact_count": 2,
+      "context_document_count": 10
+    },
+    {
+      "request_id": "3hop1__540585_568433_51423",
+      "dataset": "musique",
+      "split": "dev",
+      "prompt_tokens": 1993,
+      "length_bucket": "<2K",
+      "reference_count": 1,
+      "supporting_fact_count": 3,
+      "context_document_count": 20
+    },
+    {
+      "request_id": "2hop__96410_47902",
+      "dataset": "musique",
+      "split": "dev",
+      "prompt_tokens": 1898,
+      "length_bucket": "<2K",
+      "reference_count": 1,
+      "supporting_fact_count": 2,
+      "context_document_count": 20
+    },
+    {
+      "request_id": "2hop__511296_577502",
+      "dataset": "musique",
+      "split": "dev",
+      "prompt_tokens": 2221,
+      "length_bucket": "2K-4K",
+      "reference_count": 1,
+      "supporting_fact_count": 2,
+      "context_document_count": 20
+    },
+    {
+      "request_id": "2hop__753260_71701",
+      "dataset": "musique",
+      "split": "dev",
+      "prompt_tokens": 2261,
+      "length_bucket": "2K-4K",
+      "reference_count": 1,
+      "supporting_fact_count": 2,
+      "context_document_count": 20
+    },
+    {
+      "request_id": "4hop1__88342_75218_128008_54974",
+      "dataset": "musique",
+      "split": "dev",
+      "prompt_tokens": 4202,
+      "length_bucket": "4K-8K",
+      "reference_count": 1,
+      "supporting_fact_count": 4,
+      "context_document_count": 20
+    },
+    {
+      "request_id": "2hop__132469_533882",
+      "dataset": "musique",
+      "split": "dev",
+      "prompt_tokens": 4696,
+      "length_bucket": "4K-8K",
+      "reference_count": 1,
+      "supporting_fact_count": 2,
+      "context_document_count": 20
+    }
+  ]
+}

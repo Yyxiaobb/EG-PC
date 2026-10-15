@@ -1,0 +1,396 @@
+{
+  "rows": 72,
+  "sequence_count": 8,
+  "sequence_length": 3,
+  "sequences": [
+    {
+      "sequence_id": "hotpotqa_sequence_0",
+      "dataset": "hotpotqa",
+      "request_ids": [
+        "5a70eee85542994082a3e3f0",
+        "5ab266b5554299340b5254b4",
+        "5a845d735542996488c2e52e"
+      ],
+      "adjacent_shared_titles": [
+        [
+          "mohamed sillah"
+        ],
+        [
+          "samuel sam-sumana",
+          "willie mae reid"
+        ]
+      ]
+    },
+    {
+      "sequence_id": "hotpotqa_sequence_2",
+      "dataset": "hotpotqa",
+      "request_ids": [
+        "5a70f0e75542994082a3e408",
+        "5a84e1095542997175ce1f25",
+        "5a8e8af55542990e94052b3f"
+      ],
+      "adjacent_shared_titles": [
+        [
+          "johns hopkins university"
+        ],
+        [
+          "hamdard university",
+          "university of southern california"
+        ]
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_sequence_0",
+      "dataset": "2wikimultihopqa",
+      "request_ids": [
+        "0008d48808a011ebbd78ac1f6bf848b6",
+        "a6689af208b911ebbd88ac1f6bf848b6",
+        "02506a4208b611ebbd88ac1f6bf848b6"
+      ],
+      "adjacent_shared_titles": [
+        [
+          "edgar mulder",
+          "list of people named o'grady",
+          "mulder and scully",
+          "mulder and scully (song)",
+          "mulder and scully meet the were-monster",
+          "syzygy (the x-files)"
+        ],
+        [
+          "list of people named o'grady"
+        ]
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_sequence_1",
+      "dataset": "2wikimultihopqa",
+      "request_ids": [
+        "0016373a0bda11eba7f7acde48001122",
+        "5352c0240baf11ebab90acde48001122",
+        "421512620bdc11eba7f7acde48001122"
+      ],
+      "adjacent_shared_titles": [
+        [
+          "adelaide of hesse",
+          "william i, elector of hesse",
+          "william ii, landgrave of hesse-wanfried-rheinfels"
+        ],
+        [
+          "louis v, landgrave of hesse-darmstadt",
+          "louis vi, landgrave of hesse-darmstadt",
+          "louis viii, landgrave of hesse-darmstadt"
+        ]
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_sequence_2",
+      "dataset": "2wikimultihopqa",
+      "request_ids": [
+        "0017cac508be11ebbd8aac1f6bf848b6",
+        "1453406e08bd11ebbd89ac1f6bf848b6",
+        "b9f3f47908c711ebbd91ac1f6bf848b6"
+      ],
+      "adjacent_shared_titles": [
+        [
+          "sarajevo graduate school of business"
+        ],
+        [
+          "national kaohsiung normal university",
+          "sarajevo graduate school of business"
+        ]
+      ]
+    },
+    {
+      "sequence_id": "musique_sequence_0",
+      "dataset": "musique",
+      "request_ids": [
+        "2hop__10017_18974",
+        "2hop__631024_18974",
+        "2hop__36747_18974"
+      ],
+      "adjacent_shared_titles": [
+        [
+          "antarctica",
+          "hokkien",
+          "military history of indonesia",
+          "newton–jenney party",
+          "siege of germanicia"
+        ],
+        [
+          "battle of little blue river",
+          "hokkien",
+          "siege of germanicia"
+        ]
+      ]
+    },
+    {
+      "sequence_id": "musique_sequence_1",
+      "dataset": "musique",
+      "request_ids": [
+        "2hop__10114_599630",
+        "2hop__671664_646310",
+        "3hop1__273571_834494_34053"
+      ],
+      "adjacent_shared_titles": [
+        [
+          "australia",
+          "biłgoraj county",
+          "cyprus popular bank",
+          "federalism",
+          "list of territorial entities where english is an official language",
+          "pangi territory",
+          "states of nigeria",
+          "texas–indian wars"
+        ],
+        [
+          "australia",
+          "biłgoraj county",
+          "cyprus popular bank",
+          "federalism",
+          "gmina brzeziny, łódź voivodeship",
+          "gmina łowicz",
+          "kiri territory",
+          "list of territorial entities where english is an official language",
+          "minsk region",
+          "moorea-maiao",
+          "oblasts of the soviet union",
+          "pak tam chung",
+          "pangi territory",
+          "saulkrasti municipality",
+          "texas–indian wars",
+          "tumaraa"
+        ]
+      ]
+    },
+    {
+      "sequence_id": "musique_sequence_2",
+      "dataset": "musique",
+      "request_ids": [
+        "2hop__10122_18974",
+        "3hop1__8148_24918_24939",
+        "2hop__6744_6731"
+      ],
+      "adjacent_shared_titles": [
+        [
+          "armenian wikipedia",
+          "catalan language",
+          "chukotkan languages",
+          "dialect",
+          "dutch language",
+          "greece",
+          "hokkien",
+          "punjab, pakistan"
+        ],
+        [
+          "catalan language",
+          "dialect",
+          "dutch language",
+          "hokkien",
+          "russian language"
+        ]
+      ]
+    }
+  ],
+  "model": "D:\\HF_dl\\model\\Qwen2.5-7B-Instruct-GGUF\\qwen2.5-7b-instruct-q4_k_m-00001-of-00002.gguf",
+  "tokenizer": "artifacts\\tokenizer\\qwen2.5-7b-instruct",
+  "summaries": [
+    {
+      "method": "evidence_graph_dynamic",
+      "turn_index": 0,
+      "sequence_count": 8,
+      "n": 8,
+      "mean_input_tokens": 1175.375,
+      "mean_token_reduction_rate": 0.3149001813131474,
+      "mean_token_f1": 0.1854618517447465,
+      "mean_exact_match": 0.0,
+      "mean_answer_context_support": 1.0,
+      "mean_supporting_fact_precision": 0.15816929941833194,
+      "mean_supporting_fact_recall": 0.7127652691511387,
+      "mean_evidence_f1": 0.2264518666318202,
+      "mean_end_to_end_ms": 810.139525,
+      "p50_end_to_end_ms": 932.6796,
+      "p95_end_to_end_ms": 1038.3763,
+      "mean_compression_ms": 18.904525,
+      "mean_prefill_ms": 411.52775,
+      "mean_decode_ms": 379.70725,
+      "mean_reused_evidence_count": 0.0,
+      "mean_historical_candidate_count": 0.0
+    },
+    {
+      "method": "evidence_graph_dynamic",
+      "turn_index": 1,
+      "sequence_count": 8,
+      "n": 8,
+      "mean_input_tokens": 1115.0,
+      "mean_token_reduction_rate": 0.48095083584363857,
+      "mean_token_f1": 0.09768907563025211,
+      "mean_exact_match": 0.0,
+      "mean_answer_context_support": 1.0,
+      "mean_supporting_fact_precision": 0.11806598230604977,
+      "mean_supporting_fact_recall": 0.6666666666666666,
+      "mean_evidence_f1": 0.18840449484819455,
+      "mean_end_to_end_ms": 809.93935,
+      "p50_end_to_end_ms": 898.4938,
+      "p95_end_to_end_ms": 1048.2497,
+      "mean_compression_ms": 21.319725,
+      "mean_prefill_ms": 387.089375,
+      "mean_decode_ms": 401.53024999999997,
+      "mean_reused_evidence_count": 10.5,
+      "mean_historical_candidate_count": 13.625
+    },
+    {
+      "method": "evidence_graph_dynamic",
+      "turn_index": 2,
+      "sequence_count": 8,
+      "n": 8,
+      "mean_input_tokens": 975.625,
+      "mean_token_reduction_rate": 0.46022933410750066,
+      "mean_token_f1": 0.1831377378537622,
+      "mean_exact_match": 0.125,
+      "mean_answer_context_support": 0.875,
+      "mean_supporting_fact_precision": 0.20389498981410747,
+      "mean_supporting_fact_recall": 0.5784375508212718,
+      "mean_evidence_f1": 0.2533891761832938,
+      "mean_end_to_end_ms": 770.902525,
+      "p50_end_to_end_ms": 858.0897,
+      "p95_end_to_end_ms": 1028.692,
+      "mean_compression_ms": 21.872775,
+      "mean_prefill_ms": 344.42025,
+      "mean_decode_ms": 404.6095,
+      "mean_reused_evidence_count": 10.375,
+      "mean_historical_candidate_count": 17.375
+    },
+    {
+      "method": "no_compression",
+      "turn_index": 0,
+      "sequence_count": 8,
+      "n": 8,
+      "mean_input_tokens": 1887.125,
+      "mean_token_reduction_rate": 0.0,
+      "mean_token_f1": 0.11922043010752689,
+      "mean_exact_match": 0.0,
+      "mean_answer_context_support": 1.0,
+      "mean_supporting_fact_precision": 0.1040681680229094,
+      "mean_supporting_fact_recall": 1.0,
+      "mean_evidence_f1": 0.18013499290174784,
+      "mean_end_to_end_ms": 1112.8551375,
+      "p50_end_to_end_ms": 1161.6577,
+      "p95_end_to_end_ms": 1693.3783,
+      "mean_compression_ms": 0.0023875,
+      "mean_prefill_ms": 713.519125,
+      "mean_decode_ms": 399.333625,
+      "mean_reused_evidence_count": 0.0,
+      "mean_historical_candidate_count": 0.0
+    },
+    {
+      "method": "no_compression",
+      "turn_index": 1,
+      "sequence_count": 8,
+      "n": 8,
+      "mean_input_tokens": 2185.875,
+      "mean_token_reduction_rate": 0.0,
+      "mean_token_f1": 0.37186217411656164,
+      "mean_exact_match": 0.125,
+      "mean_answer_context_support": 1.0,
+      "mean_supporting_fact_precision": 0.0635552918785195,
+      "mean_supporting_fact_recall": 1.0,
+      "mean_evidence_f1": 0.1169342806456029,
+      "mean_end_to_end_ms": 1059.874075,
+      "p50_end_to_end_ms": 907.2015,
+      "p95_end_to_end_ms": 1660.3449,
+      "mean_compression_ms": 0.002575,
+      "mean_prefill_ms": 781.86075,
+      "mean_decode_ms": 278.01075,
+      "mean_reused_evidence_count": 0.0,
+      "mean_historical_candidate_count": 0.0
+    },
+    {
+      "method": "no_compression",
+      "turn_index": 2,
+      "sequence_count": 8,
+      "n": 8,
+      "mean_input_tokens": 1867.5,
+      "mean_token_reduction_rate": 0.0,
+      "mean_token_f1": 0.21581023213883255,
+      "mean_exact_match": 0.125,
+      "mean_answer_context_support": 1.0,
+      "mean_supporting_fact_precision": 0.13063442988105745,
+      "mean_supporting_fact_recall": 1.0,
+      "mean_evidence_f1": 0.21175400637888045,
+      "mean_end_to_end_ms": 1046.3463875,
+      "p50_end_to_end_ms": 887.3131000000001,
+      "p95_end_to_end_ms": 1697.2015,
+      "mean_compression_ms": 0.0023875,
+      "mean_prefill_ms": 686.495375,
+      "mean_decode_ms": 359.84862499999997,
+      "mean_reused_evidence_count": 0.0,
+      "mean_historical_candidate_count": 0.0
+    },
+    {
+      "method": "query_aware_bm25_mmr",
+      "turn_index": 0,
+      "sequence_count": 8,
+      "n": 8,
+      "mean_input_tokens": 936.625,
+      "mean_token_reduction_rate": 0.5030191518116488,
+      "mean_token_f1": 0.16825657894736842,
+      "mean_exact_match": 0.0,
+      "mean_answer_context_support": 1.0,
+      "mean_supporting_fact_precision": 0.16739326849620967,
+      "mean_supporting_fact_recall": 0.7357498706004141,
+      "mean_evidence_f1": 0.25251879790015386,
+      "mean_end_to_end_ms": 926.648925,
+      "p50_end_to_end_ms": 893.1293000000001,
+      "p95_end_to_end_ms": 1471.0066,
+      "mean_compression_ms": 193.5788,
+      "mean_prefill_ms": 320.77375,
+      "mean_decode_ms": 412.296375,
+      "mean_reused_evidence_count": 0.0,
+      "mean_historical_candidate_count": 0.0
+    },
+    {
+      "method": "query_aware_bm25_mmr",
+      "turn_index": 1,
+      "sequence_count": 8,
+      "n": 8,
+      "mean_input_tokens": 1088.375,
+      "mean_token_reduction_rate": 0.5021759577101456,
+      "mean_token_f1": 0.20474137931034483,
+      "mean_exact_match": 0.125,
+      "mean_answer_context_support": 1.0,
+      "mean_supporting_fact_precision": 0.10002917109771949,
+      "mean_supporting_fact_recall": 0.7135416666666666,
+      "mean_evidence_f1": 0.16793956133083596,
+      "mean_end_to_end_ms": 995.669175,
+      "p50_end_to_end_ms": 1057.2531,
+      "p95_end_to_end_ms": 1442.7919000000002,
+      "mean_compression_ms": 245.594425,
+      "mean_prefill_ms": 366.91725,
+      "mean_decode_ms": 383.1575,
+      "mean_reused_evidence_count": 0.0,
+      "mean_historical_candidate_count": 0.0
+    },
+    {
+      "method": "query_aware_bm25_mmr",
+      "turn_index": 2,
+      "sequence_count": 8,
+      "n": 8,
+      "mean_input_tokens": 929.75,
+      "mean_token_reduction_rate": 0.5024041981019856,
+      "mean_token_f1": 0.18470588235294116,
+      "mean_exact_match": 0.125,
+      "mean_answer_context_support": 1.0,
+      "mean_supporting_fact_precision": 0.1895914134884723,
+      "mean_supporting_fact_recall": 0.7703996584810539,
+      "mean_evidence_f1": 0.2689720338815494,
+      "mean_end_to_end_ms": 907.9721125,
+      "p50_end_to_end_ms": 888.6579999999999,
+      "p95_end_to_end_ms": 1572.4485,
+      "mean_compression_ms": 206.5582375,
+      "mean_prefill_ms": 318.0665,
+      "mean_decode_ms": 383.347375,
+      "mean_reused_evidence_count": 0.0,
+      "mean_historical_candidate_count": 0.0
+    }
+  ]
+}
