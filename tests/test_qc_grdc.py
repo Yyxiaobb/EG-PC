@@ -33,10 +33,11 @@ def test_qc_grdc_keeps_high_distortion_features_and_question_delimiter():
         "The archive contains unrelated background material.",
     )
     try:
-        row = compressor.compress_request(sample, tokenizer=tokenizer, target_budget_ratio=0.80)
+        row = compressor.compress_request(sample, tokenizer=tokenizer, target_budget_ratio=0.55)
         assert row.compressed_prompt.endswith("Question: Where did Alice live in 1999 and was it not Paris?\nAnswer:")
         assert "1999" in row.compressed_prompt
         assert row.metadata["quality_proxy_ratio"] >= 0.90
+        assert row.metadata["budget_expanded_for_quality"] is True
         assert row.compressed_prompt_tokens <= row.metadata["budget_tokens"]
     finally:
         compressor.close()

@@ -72,6 +72,7 @@ class QualityConstrainedGraphRateDistortionCompressor(EvidenceGraphCompressor):
         top_k_candidates: int = 64,
         max_hops: int = 3,
         max_historical_fraction: float = 0.45,
+        adaptive_quality_budget: bool = True,
         name: str | None = None,
     ) -> None:
         super().__init__(
@@ -88,6 +89,7 @@ class QualityConstrainedGraphRateDistortionCompressor(EvidenceGraphCompressor):
             raise ValueError("max_historical_fraction must be in (0, 1]")
         self.quality_floor = quality_floor
         self.max_historical_fraction = max_historical_fraction
+        self.adaptive_quality_budget = adaptive_quality_budget
 
     @staticmethod
     def _query_features(question: str, hits: Iterable[EvidenceHit]) -> set[str]:
@@ -394,6 +396,40 @@ class QualityConstrainedGraphRateDistortionCompressor(EvidenceGraphCompressor):
             prompt, selected_hits, audit = self._pack_qc(
                 request, hits, current_ids, tokenizer=tokenizer, budget=budget
             )
+            requested_budget = budget
+            budget_expanded = False
+            # A hard budget can leave no room for the question's fixed prompt
+            # wrapper or a protected answer-bearing sentence.  Since this is a
+            # quality-constrained method, expand only that request's budget
+            # until the observable floor is met (or the original prompt is the
+            # only feasible representation).  The expansion is audited rather
+            # than silently violating the caller's requested ratio.
+            if (
+                self.adaptive_quality_budget
+                and hits
+                and (
+                    not audit.get("quality_core_complete", False)
+                    or float(audit.get("quality_proxy_ratio", 0.0)) < self.quality_floor
+                )
+                and budget < original_tokens
+            ):
+                prefix = "Answer the question using only the retrieved context.\nContext:\n"
+                suffix = f"\nQuestion: {request.question}\nAnswer:"
+                fixed = tokenizer.count_tokens(prefix + suffix)
+                smallest = min(
+                    tokenizer.count_tokens((f"[{hit.title}] " if hit.title else "") + hit.text + "\n")
+                    for hit in hits
+                )
+                expanded_budget = min(
+                    original_tokens,
+                    max(budget + 1, int(original_tokens * max(ratio, self.quality_floor)), fixed + smallest),
+                )
+                if expanded_budget > budget:
+                    prompt, selected_hits, audit = self._pack_qc(
+                        request, hits, current_ids, tokenizer=tokenizer, budget=expanded_budget
+                    )
+                    budget = expanded_budget
+                    budget_expanded = True
 
         selected_ids = {hit.node_id for hit in selected_hits}
         reused_ids = selected_ids - current_ids
@@ -407,6 +443,8 @@ class QualityConstrainedGraphRateDistortionCompressor(EvidenceGraphCompressor):
             "evidence_reuse_rate": len(reused_ids) / max(1, len(selected_hits)),
             "dynamic_budget_ratio": ratio,
             "budget_tokens": budget,
+            "requested_budget_tokens": requested_budget,
+            "budget_expanded_for_quality": budget_expanded,
             "packed_evidence_tokens": tokenizer.count_tokens("\n".join(hit.text for hit in selected_hits)),
             "selected_sentence_ids": [hit.node_id for hit in selected_hits],
             "selected_source_document_ids": sorted({hit.source_document_id for hit in selected_hits if hit.source_document_id}),

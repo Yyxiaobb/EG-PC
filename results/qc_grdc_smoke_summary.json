@@ -8,7 +8,7 @@
       "avg_input_tokens": 172.66666666666666,
       "token_reduction_rate": 0.0,
       "avg_end_to_end_ms": 14.813705555555556,
-      "avg_compression_wallclock_ms": 0.04056666997106125,
+      "avg_compression_wallclock_ms": 0.03860000773177793,
       "quality_proxy_ratio": 1.0
     },
     {
@@ -17,8 +17,8 @@
       "oracle_evidence_recall": 1.0,
       "avg_input_tokens": 86.66666666666667,
       "token_reduction_rate": 0.4982182930975858,
-      "avg_end_to_end_ms": 9.897372222222224,
-      "avg_compression_wallclock_ms": 1.9976222231182166,
+      "avg_end_to_end_ms": 9.773652777777777,
+      "avg_compression_wallclock_ms": 1.8723250007800136,
       "quality_proxy_ratio": 1.0
     },
     {
@@ -27,8 +27,8 @@
       "oracle_evidence_recall": 1.0,
       "avg_input_tokens": 41.666666666666664,
       "token_reduction_rate": 0.7584828613526335,
-      "avg_end_to_end_ms": 5.547252777777778,
-      "avg_compression_wallclock_ms": 1.2645750021975901,
+      "avg_end_to_end_ms": 5.561711111111111,
+      "avg_compression_wallclock_ms": 1.2790805647253163,
       "quality_proxy_ratio": 1.0
     }
   ]
