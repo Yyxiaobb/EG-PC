@@ -170,7 +170,8 @@ class QualityConstrainedGraphRateDistortionCompressor(EvidenceGraphCompressor):
             lexical = len(query_terms & _feature_tokens(hit.text)) / max(1, len(query_terms))
             # Historical evidence needs either a graph bridge or a meaningful
             # lexical link.  This avoids importing unrelated session material.
-            if hit.hops <= self.max_hops and (hit.path or lexical >= 0.10):
+            has_bridge = len(hit.path) > 1
+            if hit.hops <= self.max_hops and (has_bridge or lexical >= 0.10):
                 historical.append(hit)
         historical.sort(key=lambda h: (-h.score, h.hops, h.node_id))
         max_history = max(1, int(self.top_k_candidates * self.max_historical_fraction))
