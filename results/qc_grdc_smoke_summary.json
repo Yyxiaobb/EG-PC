@@ -1,0 +1,35 @@
+{
+  "protocol": "12 synthetic 3-turn sessions; oracle evidence retention",
+  "summary": [
+    {
+      "method": "no_compression",
+      "requests": 36,
+      "oracle_evidence_recall": 1.0,
+      "avg_input_tokens": 172.66666666666666,
+      "token_reduction_rate": 0.0,
+      "avg_end_to_end_ms": 14.813705555555556,
+      "avg_compression_wallclock_ms": 0.04056666997106125,
+      "quality_proxy_ratio": 1.0
+    },
+    {
+      "method": "evidence_graph_fused_v2",
+      "requests": 36,
+      "oracle_evidence_recall": 1.0,
+      "avg_input_tokens": 86.66666666666667,
+      "token_reduction_rate": 0.4982182930975858,
+      "avg_end_to_end_ms": 9.897372222222224,
+      "avg_compression_wallclock_ms": 1.9976222231182166,
+      "quality_proxy_ratio": 1.0
+    },
+    {
+      "method": "evidence_graph_qc_grdc_v4",
+      "requests": 36,
+      "oracle_evidence_recall": 1.0,
+      "avg_input_tokens": 41.666666666666664,
+      "token_reduction_rate": 0.7584828613526335,
+      "avg_end_to_end_ms": 5.547252777777778,
+      "avg_compression_wallclock_ms": 1.2645750021975901,
+      "quality_proxy_ratio": 1.0
+    }
+  ]
+}

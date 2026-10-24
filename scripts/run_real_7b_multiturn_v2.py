@@ -18,7 +18,8 @@ sys.path.insert(0, str(ROOT))
 
 from ladc.compressors import (FusedEvidenceGraphCompressor, LLMLingua2Compressor,
     AsyncAbstractiveEvidenceMemoryCompressor, LocalAbstractiveSummarizer,
-    NoCompressionCompressor, PostGenerationLLMLingua2MemoryCompressor, SessionEvidenceGraphCompressor)
+    NoCompressionCompressor, PostGenerationLLMLingua2MemoryCompressor, SessionEvidenceGraphCompressor,
+    QualityConstrainedGraphRateDistortionCompressor)
 from ladc.experiments.runner import run_request
 from ladc.inference import LlamaServerInferenceBackend
 from ladc.quality import evaluate_real_request
@@ -28,7 +29,7 @@ from scripts.run_real_7b_multiturn_fraction import _annotate, _build_sequences, 
 
 ALL_METHODS = ["no_compression", "evidence_graph_dual_path_v1", "llmlingua2",
                "evidence_graph_fused_v2", "evidence_graph_fused_post_llmlingua2_v2",
-               "evidence_graph_abstractive_async_v3"]
+               "evidence_graph_abstractive_async_v3", "evidence_graph_qc_grdc_v4"]
 
 
 def percentile(values, fraction):
@@ -99,7 +100,7 @@ def main():
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--max-sequences-per-dataset", type=int, default=10000)
     parser.add_argument("--methods", nargs="+", choices=ALL_METHODS, default=ALL_METHODS,
-                        help="methods to compare; default runs all five")
+                        help="methods to compare; default runs all registered methods")
     parser.add_argument("--budget-ratio", type=float, default=0.50)
     parser.add_argument("--inter-turn-wait-ms", type=float, default=1000)
     parser.add_argument("--max-new-tokens", type=int, default=32)
@@ -135,6 +136,7 @@ def main():
         "abstractive_model": str(args.abstractive_model), "abstractive_device": args.abstractive_device,
         "abstractive_max_new_tokens": args.abstractive_max_new_tokens,
         "v3_protocol": "turn 1 sends the original prompt unchanged; after each answer, an asynchronous worker summarizes only that turn's raw source evidence and stores a source-only memory node with provenance IDs; later turns fuse current raw evidence with completed session summaries; a pending summary never blocks a request",
+        "qc_grdc_protocol": "quality-constrained graph rate-distortion coding; protect query variables, numeric/negation features, graph bridge paths and provenance anchors, then select remaining evidence by marginal observable quality gain per native token cost",
         "code_sha256": {str(p): sha256(p.read_bytes()).hexdigest() for p in code_files},
         "sequences": [{"sequence_id": s.sequence_id, "dataset": s.dataset, "kind": s.kind,
                        "request_ids": [r.request_id for r in s.requests]} for s in specs]}
@@ -186,6 +188,11 @@ def main():
                 elif method == "evidence_graph_abstractive_async_v3":
                     compressor = AsyncAbstractiveEvidenceMemoryCompressor(
                         abstractive_summarizer, retain_ratio=args.budget_ratio)
+                elif method == "evidence_graph_qc_grdc_v4":
+                    compressor = SessionEvidenceGraphCompressor(
+                        compressor_class=QualityConstrainedGraphRateDistortionCompressor,
+                        compressor_kwargs={"name": method, "quality_floor": 0.92},
+                    )
                 else:
                     session = SessionEvidenceGraphCompressor(compressor_class=FusedEvidenceGraphCompressor)
                     compressor = (PostGenerationLLMLingua2MemoryCompressor("unused", name=method,

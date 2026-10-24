@@ -14,6 +14,10 @@ from ladc.compressors.query_aware import QueryAwareMMRCompressor
 from ladc.compressors.post_generation import PostGenerationLLMLingua2MemoryCompressor
 from ladc.compressors.abstractive_fused import AbstractiveFusedEvidenceGraphCompressor, LocalAbstractiveSummarizer
 from ladc.compressors.async_abstractive_memory import AsyncAbstractiveEvidenceMemoryCompressor
+from ladc.compressors.qc_grdc import (
+    QCGRDCCompressor,
+    QualityConstrainedGraphRateDistortionCompressor,
+)
 
 __all__ = [
     "FixedBudgetCompressor",
@@ -31,4 +35,6 @@ __all__ = [
     "AbstractiveFusedEvidenceGraphCompressor",
     "LocalAbstractiveSummarizer",
     "AsyncAbstractiveEvidenceMemoryCompressor",
+    "QCGRDCCompressor",
+    "QualityConstrainedGraphRateDistortionCompressor",
 ]

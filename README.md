@@ -112,3 +112,20 @@ python -u scripts/run_real_7b_multiturn_v2.py
 
 完整执行协议、抽样与指标限制见 [V2 实验协议](docs/multiturn_v2_protocol.md)。
 本轮完整结果与配对会话 bootstrap 见 [V2 3% 实验报告](docs/multiturn_v2_3pct_results.md)。
+
+## QC-GRDC 质量约束图率失真编码
+
+`QualityConstrainedGraphRateDistortionCompressor`（实验方法名
+`evidence_graph_qc_grdc_v4`）把证据句的原生 Token 成本和图结构质量放进同一个
+选择问题：先保留问题变量、数字/否定词、多跳桥接路径和当前来源锚点，再按边际质量
+增益除以 Token 成本选择剩余证据。它不调用额外生成模型，适合降低关键路径延迟；
+生成后历史持久化仍通过异步 hook 完成。方法设计、质量代理和接入示例见
+[QC-GRDC 设计说明](docs/qc_grdc_design.md)。
+
+只比较无压缩、请求前 LLMLingua-2 和 QC-GRDC 时，可使用：
+
+```powershell
+python -u scripts/run_real_7b_multiturn_v2.py `
+  --methods no_compression llmlingua2 evidence_graph_qc_grdc_v4 `
+  --fraction 0.01 --output-prefix results/qc_grdc_1pct
+```
