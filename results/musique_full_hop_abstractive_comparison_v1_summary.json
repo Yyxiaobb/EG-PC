@@ -1,0 +1,171 @@
+{
+  "dataset": "MuSiQue",
+  "split": "dev",
+  "dataset_size": 2417,
+  "native_hop_annotation": "leading Nhop prefix of MuSiQue question id (the dataset's native hop label)",
+  "hop_counts": {
+    "2": 100,
+    "3": 0,
+    "4": 0
+  },
+  "methods": [
+    "no_compression",
+    "llmlingua2",
+    "evidence_graph_fused_v2",
+    "evidence_graph_abstractive_v3"
+  ],
+  "budget_ratio": 0.5,
+  "model": "D:\\HF_dl\\model\\Qwen2.5-7B-Instruct-GGUF\\qwen2.5-7b-instruct-q4_k_m-00001-of-00002.gguf",
+  "llmlingua_model": "D:\\HF_dl\\model\\llmlingua-2-bert-base-multilingual-cased-meetingbank",
+  "abstractive_model": "D:\\HF_dl\\model\\Qwen2.5-0.5B-Instruct",
+  "max_new_tokens": -1,
+  "generation_stop": "EOS or 8192-token llama.cpp context limit",
+  "latency_definition": "compressor invocation through complete generation return; evaluation excluded",
+  "protocol": "standalone per-question inference; fresh graph for V2/V3 each request; method order rotates by request; no cross-question history reuse",
+  "note": "V3 uses graph-selected source sentences followed by a local Qwen2.5-0.5B abstractive summary; raw source sentence IDs remain provenance anchors. Summary latency is included because this standalone question has no previous-turn idle window.",
+  "complete": false,
+  "expected_questions": 2417,
+  "completed_questions": 100,
+  "row_count": 400,
+  "summaries": {
+    "2_hop/no_compression": {
+      "n": 100,
+      "token_f1": 0.21421880094650433,
+      "exact_match": 0.06,
+      "answer_context_support": 1.0,
+      "supporting_fact_precision": 0.10155622235975434,
+      "supporting_fact_recall": 1.0,
+      "evidence_f1": 0.17896242450047872,
+      "mean_original_tokens": 2268.29,
+      "mean_compressed_tokens": 2268.29,
+      "token_reduction_rate": 0.0,
+      "compression_wallclock_ms": 6.480288000020664,
+      "prefill_ms": 781.28182,
+      "decode_ms": 433.81548000000004,
+      "mean_end_to_end_ms": 1215.098934,
+      "p50_end_to_end_ms": 1135.0213,
+      "p95_end_to_end_ms": 1862.2170999999998
+    },
+    "2_hop/llmlingua2": {
+      "n": 100,
+      "token_f1": 0.21597775086943494,
+      "exact_match": 0.05,
+      "answer_context_support": 1.0,
+      "supporting_fact_precision": 0.0,
+      "supporting_fact_recall": 0.0,
+      "evidence_f1": 0.0,
+      "mean_original_tokens": 2268.29,
+      "mean_compressed_tokens": 1128.25,
+      "token_reduction_rate": 0.502346312365165,
+      "compression_wallclock_ms": 762.746221999987,
+      "prefill_ms": 394.18877,
+      "decode_ms": 305.00445,
+      "mean_end_to_end_ms": 1456.6346859998728,
+      "p50_end_to_end_ms": 1341.4451999974078,
+      "p95_end_to_end_ms": 2341.5914999995475
+    },
+    "2_hop/evidence_graph_fused_v2": {
+      "n": 100,
+      "token_f1": 0.2057880186490654,
+      "exact_match": 0.06,
+      "answer_context_support": 1.0,
+      "supporting_fact_precision": 0.14199484339728916,
+      "supporting_fact_recall": 0.6375515734265734,
+      "evidence_f1": 0.2224704052954519,
+      "mean_original_tokens": 2268.29,
+      "mean_compressed_tokens": 1129.57,
+      "token_reduction_rate": 0.5021824651120292,
+      "compression_wallclock_ms": 44.882943999618874,
+      "prefill_ms": 381.44417,
+      "decode_ms": 449.58392,
+      "mean_end_to_end_ms": 874.47709,
+      "p50_end_to_end_ms": 799.8184,
+      "p95_end_to_end_ms": 1507.1665
+    },
+    "2_hop/evidence_graph_abstractive_v3": {
+      "n": 100,
+      "token_f1": 0.12040298521678727,
+      "exact_match": 0.02,
+      "answer_context_support": 1.0,
+      "supporting_fact_precision": 0.0,
+      "supporting_fact_recall": 0.0,
+      "evidence_f1": 0.0,
+      "mean_original_tokens": 2268.29,
+      "mean_compressed_tokens": 70.72,
+      "token_reduction_rate": 0.9681687569647498,
+      "compression_wallclock_ms": 1278.7524580004538,
+      "prefill_ms": 51.83738,
+      "decode_ms": 249.41355,
+      "mean_end_to_end_ms": 1266.0504209996488,
+      "p50_end_to_end_ms": 966.4966999962509,
+      "p95_end_to_end_ms": 3105.0451000011712
+    },
+    "2_hop/paired_no_compression_minus_llmlingua2": {
+      "token_f1": {
+        "mean_difference_a_minus_b": -0.0017589499229306118,
+        "ci95_low": -0.05009425288801173,
+        "ci95_high": 0.04636498540454098,
+        "paired_n": 100
+      },
+      "exact_match": {
+        "mean_difference_a_minus_b": 0.01,
+        "ci95_low": -0.04,
+        "ci95_high": 0.06,
+        "paired_n": 100
+      }
+    },
+    "2_hop/paired_no_compression_minus_evidence_graph_fused_v2": {
+      "token_f1": {
+        "mean_difference_a_minus_b": 0.008430782297438915,
+        "ci95_low": -0.032014918359262665,
+        "ci95_high": 0.04465269407554458,
+        "paired_n": 100
+      },
+      "exact_match": {
+        "mean_difference_a_minus_b": 0.0,
+        "ci95_low": -0.04,
+        "ci95_high": 0.04,
+        "paired_n": 100
+      }
+    },
+    "2_hop/paired_no_compression_minus_evidence_graph_abstractive_v3": {
+      "token_f1": {
+        "mean_difference_a_minus_b": 0.09381581572971705,
+        "ci95_low": 0.04381751434521493,
+        "ci95_high": 0.14250893366500772,
+        "paired_n": 100
+      },
+      "exact_match": {
+        "mean_difference_a_minus_b": 0.04,
+        "ci95_low": -0.01,
+        "ci95_high": 0.1,
+        "paired_n": 100
+      }
+    },
+    "3_hop/paired_no_compression_minus_llmlingua2": {
+      "token_f1": null,
+      "exact_match": null
+    },
+    "3_hop/paired_no_compression_minus_evidence_graph_fused_v2": {
+      "token_f1": null,
+      "exact_match": null
+    },
+    "3_hop/paired_no_compression_minus_evidence_graph_abstractive_v3": {
+      "token_f1": null,
+      "exact_match": null
+    },
+    "4_hop/paired_no_compression_minus_llmlingua2": {
+      "token_f1": null,
+      "exact_match": null
+    },
+    "4_hop/paired_no_compression_minus_evidence_graph_fused_v2": {
+      "token_f1": null,
+      "exact_match": null
+    },
+    "4_hop/paired_no_compression_minus_evidence_graph_abstractive_v3": {
+      "token_f1": null,
+      "exact_match": null
+    }
+  },
+  "elapsed_s": 698.2316701000018
+}

@@ -1,0 +1,136 @@
+{
+  "version": 3,
+  "fraction_per_dataset": 0.01,
+  "seed": 42,
+  "dataset_counts": {
+    "hotpotqa": {
+      "available": 7405,
+      "target_turns": 75,
+      "target_fraction": 0.01012829169480081
+    },
+    "2wikimultihopqa": {
+      "available": 12576,
+      "target_turns": 126,
+      "target_fraction": 0.010019083969465648
+    },
+    "musique": {
+      "available": 2417,
+      "target_turns": 25,
+      "target_fraction": 0.01034340091021928
+    }
+  },
+  "coverage": {
+    "hotpotqa": {
+      "target_questions": 75,
+      "used_in_multiturn_sessions": 3,
+      "unused_target_questions": 72
+    },
+    "2wikimultihopqa": {
+      "target_questions": 126,
+      "used_in_multiturn_sessions": 3,
+      "unused_target_questions": 123
+    },
+    "musique": {
+      "target_questions": 25,
+      "used_in_multiturn_sessions": 3,
+      "unused_target_questions": 22
+    }
+  },
+  "sequence_length": 3,
+  "sequence_count": 3,
+  "request_count": 9,
+  "methods": [
+    "no_compression",
+    "llmlingua2",
+    "evidence_graph_fused_v2",
+    "evidence_graph_abstractive_async_v3"
+  ],
+  "expected_generation_count": 36,
+  "budget_ratio": 0.5,
+  "budget_policy": "same maximum native prompt token budget; actual usage reported",
+  "sequence_sampling": "three-turn chains selected from full split using visible titles/entities; deterministic mixed fallback fills requested fraction when linked turns run out; not natural dialogue",
+  "inter_turn_wait_ms": 1000.0,
+  "method_schedule": "rotate method order across sessions; finish background work before changing methods",
+  "latency_definition": "client compression start to complete generation return, excluding evaluation and post-generation work",
+  "history_readiness_definition": "measured immediately before actual next combo request; final turns excluded",
+  "raw_source_anchors_retained": true,
+  "max_new_tokens": -1,
+  "model": "D:\\HF_dl\\model\\Qwen2.5-7B-Instruct-GGUF\\qwen2.5-7b-instruct-q4_k_m-00001-of-00002.gguf",
+  "llmlingua_model": "D:\\HF_dl\\model\\llmlingua-2-bert-base-multilingual-cased-meetingbank",
+  "abstractive_model": "D:\\HF_dl\\model\\Qwen2.5-0.5B-Instruct",
+  "abstractive_device": "cpu",
+  "abstractive_max_new_tokens": 64,
+  "v3_protocol": "turn 1 sends the original prompt unchanged; after each answer, an asynchronous worker summarizes only that turn's raw source evidence and stores a source-only memory node with provenance IDs; later turns fuse current raw evidence with completed session summaries; a pending summary never blocks a request",
+  "code_sha256": {
+    "C:\\Users\\12777\\Documents\\ChatGPT\\new_compress\\scripts\\run_real_7b_multiturn_v2.py": "9606a35c150d7b3f1155fd65685cb95bd389bfb7789779e3a3a64bae071bdd90",
+    "scripts\\run_real_7b_multiturn_fraction.py": "ec151dd2915c8239cac012f41a27a3ec95be65efb30673d223bf70de9eb40178",
+    "src\\ladc\\__init__.py": "3e388cdeeda23c84c2b1e12820500ca7262ed70ccd94344ddfacac56141dc3e4",
+    "src\\ladc\\analysis\\__init__.py": "e9bb38aabdad9a8a010259642b2aeb7426a8e03fd6d6020523e2468a66a5d443",
+    "src\\ladc\\analysis\\summary.py": "6d38ef3d42313dcf16eec2ac26cfbc753139c3ff62355bef53e89a3d0288c4a9",
+    "src\\ladc\\calibration.py": "bb54e418d6eea825a70eab183d09ce6f1737dc9ec51900313331b7fe4acfc6d5",
+    "src\\ladc\\calibration_metrics.py": "35e10ddfdb080c4f344e46f1f347eb37053ec701b10b8cf6ab0c8aa283713d8d",
+    "src\\ladc\\compressors\\__init__.py": "67b2ec800a46c9a4f1d7ee1c00a3d561834c93d890ec80b14b414fbf7ce992ce",
+    "src\\ladc\\compressors\\abstractive_fused.py": "8202f300490d8bedaeae6e4e140614729e50a10de85b11104f0cfaa5eaf10274",
+    "src\\ladc\\compressors\\async_abstractive_memory.py": "be1dbc7b46092cb837160e1e6cc979c8ad812af23a5693ad0106bea6c6c01f56",
+    "src\\ladc\\compressors\\baselines.py": "b79efd33068197bf6acf1fc74e852b75206492d13a0de6668e2b81845263b390",
+    "src\\ladc\\compressors\\dual_path.py": "c996cf7effdfd351da09a769948207157c3ed846104f5e4f5d9a4c81195f076c",
+    "src\\ladc\\compressors\\evidence_graph.py": "f89b7c2b04c063a97673ff5c67978a281470374f437cfe2f1f80eb485bc242b3",
+    "src\\ladc\\compressors\\fused_graph.py": "87dae4b6ff02f2609b30ac4d910e320f7de6698967b70a40fdabcec663e2babb",
+    "src\\ladc\\compressors\\llmlingua2.py": "abaa725222dbc43c8e2b0dbea61cb1de1d3bf8da02e4739a230bd5b8fbf40b90",
+    "src\\ladc\\compressors\\post_generation.py": "ccbbd58ad01f9914dc9ce05ecd8b5a5be884484cb89eb9474fab6b1871f8c50a",
+    "src\\ladc\\compressors\\query_aware.py": "741a73dbc53d868f08b8e775b6d86f0a9e35b21692788ea0d2c72e8a786bcecf",
+    "src\\ladc\\compressors\\session_graph.py": "3bb6300b5f4024a508e6933ef40d67a67c92a658a58df33e9bea7316006f92cc",
+    "src\\ladc\\controller.py": "a5a1f2f8e7dc308a962499256428ce53bce722b41552dc2fcd61fd6d91045be0",
+    "src\\ladc\\datasets.py": "96c15cd5fcc867eddca16400a80cfa33121062adbb6c50305926ae83c8a6396b",
+    "src\\ladc\\evidence_builder.py": "cd54ffd035f04f795b95702dd0849ac65b30c7252894471b3476e1afb869acf4",
+    "src\\ladc\\evidence_graph.py": "73e69ff6704934e10b082c42c7285125672962e45a867751604e5dc703e76ac9",
+    "src\\ladc\\experiments\\__init__.py": "eb4391f7ca90e0b202ecc6f7484edba04f435cf18c2c140f155465ed817e72be",
+    "src\\ladc\\experiments\\runner.py": "af5550f738747c49b052070a3c8dc52f5c16a7bcf4c347d374d0570b8681a07f",
+    "src\\ladc\\features.py": "d59e44ae5a8fb3d9dd9e38cdd3a449453b06ea8c69370f0fe9b838cdbd1a0fed",
+    "src\\ladc\\inference\\__init__.py": "d27a8b9d0a27622356d31d5b8a362484e968a239336dea67e1511b0fccb40207",
+    "src\\ladc\\inference\\llama_cli.py": "d543c49b5a1368a589f0d722dcde0b3389ef336858c4fdcc5f58ba97c91d3779",
+    "src\\ladc\\inference\\llama_server.py": "57443b73675f542de3d9b4304c5bec616a9b14e78d1956ba447f5eba3f30c127",
+    "src\\ladc\\inference\\simulated.py": "8c768dc77b84c1dd6f70183dbe912e5ac12f4587a20ea5c8a9aa832869ddba4c",
+    "src\\ladc\\inference\\transformers_backend.py": "63b41ea2a792402ceea29032f358a012fa60dddd712fa931f388d0d46c6c60e5",
+    "src\\ladc\\interfaces.py": "96f1d3f2107a1470e812cdabdba5c4e050d9455fb22ee98e247b0a7fdf04fa57",
+    "src\\ladc\\predictor.py": "95b6308a843aa273447957dec8fd31ae8751254c4ac4a2bc9c40cda66e6e0cc4",
+    "src\\ladc\\quality.py": "ce4041ba070ee235214446d8fdb4325f5c51ee42b17d9c39586017ba5ebe0e28",
+    "src\\ladc\\records.py": "0e6e7e4fbc3161a874cd7bc9175aa3d7b9fcd18ef067080d9a0dbfa95a8f8087",
+    "src\\ladc\\sequences.py": "2a57d4d0a84dabe43ebe4aa376107523d0c4d9fd5a5953efdf4a41306ea2cd2c",
+    "src\\ladc\\timing.py": "2284aeb19cd0eb71fabca478242f0b42a91470deb5eb42ed206656f7f70941fe",
+    "src\\ladc\\tokenizers.py": "12b27257079f51e02a6477afe02c458abcf3d8c73cf7a54becc3a78fe8f8361e",
+    "src\\ladc\\workloads.py": "6ef337a1e32a0006304b23f07a758595e623dbeb2f518b52a4c8dfc548596ab7"
+  },
+  "sequences": [
+    {
+      "sequence_id": "musique_related_0",
+      "dataset": "musique",
+      "kind": "related",
+      "request_ids": [
+        "2hop__66_59409",
+        "2hop__69_59409",
+        "2hop__9_59409"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_0",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "4afe64800bde11eba7f7acde48001122",
+        "1c8c6a080bdd11eba7f7acde48001122",
+        "0c65fe180bde11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "hotpotqa_related_0",
+      "dataset": "hotpotqa",
+      "kind": "related",
+      "request_ids": [
+        "5ae0ae4555429945ae959419",
+        "5ae56fb85542993aec5ec1a9",
+        "5a7c68575542996dd594b91c"
+      ]
+    }
+  ]
+}

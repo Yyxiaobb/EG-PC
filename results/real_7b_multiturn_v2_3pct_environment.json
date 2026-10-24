@@ -1,0 +1,12 @@
+{
+  "python": "3.13.5",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "packages": {
+    "llmlingua": "0.2.2",
+    "torch": "2.11.0+cu128",
+    "transformers": "4.57.3",
+    "datasets": "4.4.1",
+    "numpy": "2.1.3"
+  },
+  "gpu": "NVIDIA GeForce RTX 5070 Laptop GPU, 8151 MiB, 573.24"
+}

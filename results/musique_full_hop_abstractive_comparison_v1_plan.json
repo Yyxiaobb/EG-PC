@@ -1,0 +1,26 @@
+{
+  "dataset": "MuSiQue",
+  "split": "dev",
+  "dataset_size": 2417,
+  "native_hop_annotation": "leading Nhop prefix of MuSiQue question id (the dataset's native hop label)",
+  "hop_counts": {
+    "2": 1252,
+    "3": 760,
+    "4": 405
+  },
+  "methods": [
+    "no_compression",
+    "llmlingua2",
+    "evidence_graph_fused_v2",
+    "evidence_graph_abstractive_v3"
+  ],
+  "budget_ratio": 0.5,
+  "model": "D:\\HF_dl\\model\\Qwen2.5-7B-Instruct-GGUF\\qwen2.5-7b-instruct-q4_k_m-00001-of-00002.gguf",
+  "llmlingua_model": "D:\\HF_dl\\model\\llmlingua-2-bert-base-multilingual-cased-meetingbank",
+  "abstractive_model": "D:\\HF_dl\\model\\Qwen2.5-0.5B-Instruct",
+  "max_new_tokens": -1,
+  "generation_stop": "EOS or 8192-token llama.cpp context limit",
+  "latency_definition": "compressor invocation through complete generation return; evaluation excluded",
+  "protocol": "standalone per-question inference; fresh graph for V2/V3 each request; method order rotates by request; no cross-question history reuse",
+  "note": "V3 uses graph-selected source sentences followed by a local Qwen2.5-0.5B abstractive summary; raw source sentence IDs remain provenance anchors. Summary latency is included because this standalone question has no previous-turn idle window."
+}

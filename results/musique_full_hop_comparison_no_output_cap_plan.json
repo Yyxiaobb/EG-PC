@@ -1,0 +1,24 @@
+{
+  "dataset": "MuSiQue",
+  "split": "dev",
+  "dataset_size": 2417,
+  "native_hop_annotation": "leading Nhop prefix of MuSiQue question id (the dataset's native hop label)",
+  "hop_counts": {
+    "2": 1252,
+    "3": 760,
+    "4": 405
+  },
+  "methods": [
+    "no_compression",
+    "llmlingua2",
+    "evidence_graph_fused_v2"
+  ],
+  "budget_ratio": 0.5,
+  "model": "D:\\HF_dl\\model\\Qwen2.5-7B-Instruct-GGUF\\qwen2.5-7b-instruct-q4_k_m-00001-of-00002.gguf",
+  "llmlingua_model": "D:\\HF_dl\\model\\llmlingua-2-bert-base-multilingual-cased-meetingbank",
+  "max_new_tokens": -1,
+  "generation_stop": "EOS or 8192-token llama.cpp context limit",
+  "latency_definition": "compressor invocation through complete generation return; evaluation excluded",
+  "protocol": "standalone per-question inference; fresh V2 graph for each request; method order rotates by request; no session-history reuse",
+  "note": "LLMLingua-2 uses local official implementation wrapper; evidence retention metrics are source-aligned against prompt text and will be reported as not comparable if parser yields no attributable selected spans."
+}

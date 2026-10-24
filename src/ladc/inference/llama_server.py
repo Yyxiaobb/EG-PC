@@ -41,8 +41,11 @@ class LlamaServerInferenceBackend:
         extra_args: Sequence[str] = (),
         log_path: str | Path = "results/llama_server.log",
     ) -> None:
-        if max_new_tokens <= 0:
-            raise ValueError("max_new_tokens must be positive")
+        # llama.cpp uses -1 for generation until EOS (or the context limit).
+        # Keep positive values available for bounded runs, but reject zero and
+        # values below the supported unlimited sentinel.
+        if max_new_tokens == 0 or max_new_tokens < -1:
+            raise ValueError("max_new_tokens must be positive or -1 for no fixed generation limit")
         if not 1 <= port <= 65535:
             raise ValueError("port must be between 1 and 65535")
         self.server_path = str(server_path)

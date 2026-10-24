@@ -1,0 +1,47 @@
+{
+  "dataset": "MuSiQue dev",
+  "protocol": "Pilot stopped after 12 fully matched questions because V3 failed its grounding check in every matched case; the planned full run of 2,417 questions was not completed.",
+  "matched_questions": 12,
+  "raw_rows": 51,
+  "methods": {
+    "no_compression": {
+      "n": 12,
+      "token_f1": 0.09650178253119429,
+      "exact_match": 0.0,
+      "token_reduction_rate": 0.0,
+      "mean_end_to_end_ms": 1334.7101416666667,
+      "mean_compression_wallclock_ms": 5.048266667775654
+    },
+    "llmlingua2": {
+      "n": 12,
+      "token_f1": 0.15563700918964077,
+      "exact_match": 0.0,
+      "token_reduction_rate": 0.5009997604989717,
+      "mean_end_to_end_ms": 1366.563616666411,
+      "mean_compression_wallclock_ms": 636.5518083330244
+    },
+    "evidence_graph_fused_v2": {
+      "n": 12,
+      "token_f1": 0.0896780303030303,
+      "exact_match": 0.0,
+      "token_reduction_rate": 0.5031510650643181,
+      "mean_end_to_end_ms": 1097.5368416666668,
+      "mean_compression_wallclock_ms": 64.56005000169777
+    },
+    "evidence_graph_abstractive_v3": {
+      "n": 12,
+      "token_f1": 0.0896780303030303,
+      "exact_match": 0.0,
+      "token_reduction_rate": 0.5031510650643181,
+      "mean_end_to_end_ms": 8903.23052499922,
+      "mean_compression_wallclock_ms": 7874.322116666614
+    }
+  },
+  "v3_diagnostics": {
+    "fallback_count": 12,
+    "fallback_rate": 1.0,
+    "mean_summary_model_ms": 7833.1223749992205,
+    "mean_generated_tokens": 361.3333333333333,
+    "interpretation": "V3 fell back to the same V2 extractive prompt for every matched request. Its F1 and token reduction therefore match V2 while its synchronous summary step adds substantial latency."
+  }
+}

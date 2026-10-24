@@ -30,6 +30,8 @@ class LLMLingua2Compressor:
         model_config: dict[str, Any] | None = None,
         llmlingua2_config: dict[str, Any] | None = None,
         name: str | None = None,
+        return_segments: bool = False,
+        enforce_budget: bool = False,
     ) -> None:
         if not 0.0 < retain_ratio <= 1.0:
             raise ValueError("retain_ratio must be in the interval (0, 1]")
@@ -39,6 +41,8 @@ class LLMLingua2Compressor:
             raise RuntimeError("LLMLingua-2 requires the optional llmlingua package") from exc
 
         self.retain_ratio = retain_ratio
+        self.return_segments = return_segments
+        self.enforce_budget = enforce_budget
         self.model_path = str(model_path)
         self._compressor = PromptCompressor(
             self.model_path,
@@ -97,13 +101,22 @@ class LLMLingua2Compressor:
             rate=ratio,
             keep_split=True,
             strict_preserve_uncompressed=True,
+            # The public wrapper defaults to dropping entire contexts, unlike
+            # compress_prompt_llmlingua2 itself. Source-aligned memory requires
+            # one returned segment per input (empty segments remain allowed).
+            use_context_level_filter=not self.return_segments,
         )
         compressed_context = str(result.get("compressed_prompt", "")).strip()
-        compressed_prompt = (
-            "Answer the question using only the retrieved context.\n"
-            f"Context:\n{compressed_context}\n"
-            f"Question: {request.question}\nAnswer:"
-        )
+        prefix = "Answer the question using only the retrieved context.\nContext:\n"
+        suffix = f"\nQuestion: {request.question}\nAnswer:"
+        budget = max(tokenizer.count_tokens(prefix + suffix), int(original_tokens * ratio))
+        if self.enforce_budget:
+            available = max(0, budget - tokenizer.count_tokens(prefix + suffix))
+            compressed_context = tokenizer.truncate_to_tokens(compressed_context, available)
+            while compressed_context and tokenizer.count_tokens(prefix + compressed_context + suffix) > budget:
+                available -= 1
+                compressed_context = tokenizer.truncate_to_tokens(compressed_context, max(0, available))
+        compressed_prompt = prefix + compressed_context + suffix
         elapsed_ms = (perf_counter() - started) * 1000.0
         return CompressionRecord(
             method=self.name,
@@ -115,10 +128,14 @@ class LLMLingua2Compressor:
             metadata={
                 "llmlingua2_model": self.model_path,
                 "llmlingua2_rate": ratio,
+                "llmlingua2_context_filter": not self.return_segments,
                 "llmlingua2_origin_tokens": result.get("origin_tokens"),
                 "llmlingua2_compressed_tokens": result.get("compressed_tokens"),
                 "llmlingua2_ratio": result.get("ratio"),
                 "llmlingua2_rate_reported": result.get("rate"),
                 "llmlingua2_saving": result.get("saving"),
+                "budget_tokens": budget if self.enforce_budget else None,
+                **({"compressed_context_segments": list(result.get("compressed_prompt_list", ())),
+                     "original_context_segments": context_segments} if self.return_segments else {}),
             },
         )

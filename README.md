@@ -92,3 +92,23 @@ python scripts/run_real_7b_multiturn_fraction.py --fraction 0.10 --sequence-leng
 - 较早的 `real_7b_post_generation_combo_10pct_summary.json` 实际是 18 个问题的试验，文件名中的 10pct 不代表完整的 10% 抽样。
 
 逐请求输出和服务日志仍保留在本地，Git 仅跟踪 JSON 汇总、分析和实验清单。
+
+## V2 融合会话证据图实验
+
+新版 `FusedEvidenceGraphCompressor` 对新材料融合当前与历史证据，限制历史独有
+材料占比，保留完整问题；组合方法在生成后以 LLMLingua-2 压缩两路来源并集，
+将生成答案与事实来源分开保存。每种方法、每个会话独立建图。
+
+```powershell
+python scripts/run_real_7b_multiturn_v2.py --plan-only
+python -u scripts/run_real_7b_multiturn_v2.py
+```
+
+默认运行三个数据集约 3% 的三轮相关问答序列，并比较无压缩、旧双路图、
+请求前 LLMLingua-2、V2 融合图、V2 图加生成后 LLMLingua-2 五种方法。
+结果前缀为 `results/real_7b_multiturn_v2_3pct`；只有汇总的 `complete=true`
+才表示全量完成。该入口使用客户端完整请求墙钟延迟，后台时间与下一轮前就绪率
+分别统计；共同 token 上限不保证各方法实际输入长度相同。
+
+完整执行协议、抽样与指标限制见 [V2 实验协议](docs/multiturn_v2_protocol.md)。
+本轮完整结果与配对会话 bootstrap 见 [V2 3% 实验报告](docs/multiturn_v2_3pct_results.md)。

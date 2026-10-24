@@ -138,7 +138,7 @@ def _build_sequences(sampled: dict[str, list], sequence_length: int, max_sequenc
         }
         by_key: dict[str, list] = defaultdict(list)
         for request in requests:
-            for key in relation_keys[request.request_id]:
+            for key in sorted(relation_keys[request.request_id]):
                 by_key[key].append(request)
         unused = {request.request_id: request for request in requests}
         sequence_number = 0
@@ -151,22 +151,30 @@ def _build_sequences(sampled: dict[str, list], sequence_length: int, max_sequenc
             del unused[seed_request.request_id]
             chain = [seed_request]
             relations = []
+            all_edges_related = True
             while len(chain) < sequence_length:
                 candidates = {
                     candidate.request_id: candidate
-                    for key in relation_keys[chain[-1].request_id]
+                    for key in sorted(relation_keys[chain[-1].request_id])
                     for candidate in by_key.get(key, ())
                     if candidate.request_id in unused
                 }
                 if not candidates:
-                    break
-                next_request = min(
-                    candidates.values(),
-                    key=lambda candidate: (
-                        -len(relation_keys[chain[-1].request_id] & relation_keys[candidate.request_id]),
-                        rng.random(),
-                    ),
-                )
+                    # Preserve the requested sample size with a mixed chain
+                    # when the remaining pool has no title/entity-linked turn.
+                    # The sequence manifest marks this fallback explicitly.
+                    if not unused:
+                        break
+                    next_request = unused[sorted(unused)[rng.randrange(len(unused))]]
+                    all_edges_related = False
+                else:
+                    next_request = min(
+                        sorted(candidates.values(), key=lambda candidate: candidate.request_id),
+                        key=lambda candidate: (
+                            -len(relation_keys[chain[-1].request_id] & relation_keys[candidate.request_id]),
+                            rng.random(),
+                        ),
+                    )
                 relations.append(relation_features(chain[-1], next_request))
                 chain.append(next_request)
                 del unused[next_request.request_id]
@@ -174,7 +182,7 @@ def _build_sequences(sampled: dict[str, list], sequence_length: int, max_sequenc
                 specs.append(SequenceSpec(
                     sequence_id=f"{dataset}_related_{sequence_number}",
                     dataset=dataset,
-                    kind="related",
+                    kind="related" if all_edges_related else "mixed",
                     requests=tuple(chain),
                     adjacent_relations=tuple(relations),
                 ))

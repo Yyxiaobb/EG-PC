@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from collections.abc import Callable, Iterable
+from time import perf_counter
 
 from ladc.controller import BudgetCandidate, BudgetDecision, DynamicBudgetController
 from ladc.interfaces import InferenceBackend, PromptCompressor, Tokenizer
@@ -26,6 +27,7 @@ def run_request(
 ) -> RequestRecord:
     """Run one request and include compressor overhead in end-to-end latency."""
 
+    request_started = perf_counter()
     request_compressor = getattr(compressor, "compress_request", None)
     if callable(request_compressor):
         compressed = request_compressor(
@@ -39,7 +41,9 @@ def run_request(
             tokenizer=tokenizer,
             target_budget_ratio=target_budget_ratio,
         )
+    compression_wallclock_ms = (perf_counter() - request_started) * 1000
     inference = backend.generate(compressed.compressed_prompt, tokenizer=tokenizer)
+    request_wallclock_ms = (perf_counter() - request_started) * 1000
     # Evidence-graph compressors persist a compact Q&A memory after the model
     # has produced its answer.  The hook is non-blocking, so this work is not
     # included in the user-visible inference timing below.
@@ -77,6 +81,10 @@ def run_request(
             "request_metadata": request.metadata,
             "compression_metadata": compressed.metadata,
             "inference_metadata": inference.metadata,
+            "request_wallclock_ms": request_wallclock_ms,
+            "compression_wallclock_ms": compression_wallclock_ms,
+            "output_text": inference.output_text,
+            "compressed_prompt": compressed.compressed_prompt,
         },
     )
 

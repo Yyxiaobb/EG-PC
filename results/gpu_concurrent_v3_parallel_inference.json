@@ -1,0 +1,69 @@
+{
+  "success": true,
+  "samples": [
+    {
+      "used_mib": 6025,
+      "total_mib": 8151,
+      "utilization_pct": 20
+    },
+    {
+      "used_mib": 6027,
+      "total_mib": 8151,
+      "utilization_pct": 20
+    },
+    {
+      "used_mib": 6063,
+      "total_mib": 8151,
+      "utilization_pct": 17
+    },
+    {
+      "used_mib": 6065,
+      "total_mib": 8151,
+      "utilization_pct": 17
+    },
+    {
+      "used_mib": 6127,
+      "total_mib": 8151,
+      "utilization_pct": 17
+    },
+    {
+      "used_mib": 6137,
+      "total_mib": 8151,
+      "utilization_pct": 17
+    },
+    {
+      "used_mib": 6137,
+      "total_mib": 8151,
+      "utilization_pct": 17
+    },
+    {
+      "used_mib": 6139,
+      "total_mib": 8151,
+      "utilization_pct": 17
+    },
+    {
+      "used_mib": 6139,
+      "total_mib": 8151,
+      "utilization_pct": 33
+    },
+    {
+      "used_mib": 6139,
+      "total_mib": 8151,
+      "utilization_pct": 33
+    },
+    {
+      "used_mib": 6139,
+      "total_mib": 8151,
+      "utilization_pct": 33
+    }
+  ],
+  "before_parallel": {
+    "used_mib": 6003,
+    "total_mib": 8151,
+    "utilization_pct": 20
+  },
+  "answer_output_tokens": 7,
+  "summary_output_tokens": 22,
+  "summary_latency_ms": 1482.1658000000753,
+  "summary_text": "Nile is a major river in northeastern Africa. It flows through Egypt and drains into the Mediterranean Sea."
+}

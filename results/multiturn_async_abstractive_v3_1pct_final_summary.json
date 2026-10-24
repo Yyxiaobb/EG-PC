@@ -1,0 +1,1522 @@
+{
+  "version": 3,
+  "fraction_per_dataset": 0.01,
+  "seed": 42,
+  "dataset_counts": {
+    "hotpotqa": {
+      "available": 7405,
+      "target_turns": 75,
+      "target_fraction": 0.01012829169480081
+    },
+    "2wikimultihopqa": {
+      "available": 12576,
+      "target_turns": 126,
+      "target_fraction": 0.010019083969465648
+    },
+    "musique": {
+      "available": 2417,
+      "target_turns": 25,
+      "target_fraction": 0.01034340091021928
+    }
+  },
+  "coverage": {
+    "hotpotqa": {
+      "target_questions": 75,
+      "used_in_multiturn_sessions": 75,
+      "unused_target_questions": 0
+    },
+    "2wikimultihopqa": {
+      "target_questions": 126,
+      "used_in_multiturn_sessions": 126,
+      "unused_target_questions": 0
+    },
+    "musique": {
+      "target_questions": 25,
+      "used_in_multiturn_sessions": 24,
+      "unused_target_questions": 1
+    }
+  },
+  "sequence_length": 3,
+  "sequence_count": 75,
+  "request_count": 225,
+  "methods": [
+    "no_compression",
+    "llmlingua2",
+    "evidence_graph_fused_v2",
+    "evidence_graph_abstractive_async_v3"
+  ],
+  "expected_generation_count": 900,
+  "budget_ratio": 0.5,
+  "budget_policy": "same maximum native prompt token budget; actual usage reported",
+  "sequence_sampling": "three-turn chains selected from full split using visible titles/entities; deterministic mixed fallback fills requested fraction when linked turns run out; not natural dialogue",
+  "inter_turn_wait_ms": 1000.0,
+  "method_schedule": "rotate method order across sessions; finish background work before changing methods",
+  "latency_definition": "client compression start to complete generation return, excluding evaluation and post-generation work",
+  "history_readiness_definition": "measured immediately before actual next combo request; final turns excluded",
+  "raw_source_anchors_retained": true,
+  "max_new_tokens": -1,
+  "model": "D:\\HF_dl\\model\\Qwen2.5-7B-Instruct-GGUF\\qwen2.5-7b-instruct-q4_k_m-00001-of-00002.gguf",
+  "llmlingua_model": "D:\\HF_dl\\model\\llmlingua-2-bert-base-multilingual-cased-meetingbank",
+  "abstractive_model": "D:\\HF_dl\\model\\Qwen2.5-0.5B-Instruct",
+  "abstractive_device": "cpu",
+  "v3_protocol": "turn 1 sends the original prompt unchanged; after each answer, an asynchronous worker summarizes only that turn's raw source evidence and stores a source-only memory node with provenance IDs; later turns fuse current raw evidence with completed session summaries; a pending summary never blocks a request",
+  "code_sha256": {
+    "C:\\Users\\12777\\Documents\\ChatGPT\\new_compress\\scripts\\run_real_7b_multiturn_v2.py": "764ae47f380709b8168facf3ab87dab15078c8da2590aa4abdaf2ad70d5ffea3",
+    "scripts\\run_real_7b_multiturn_fraction.py": "ec151dd2915c8239cac012f41a27a3ec95be65efb30673d223bf70de9eb40178",
+    "src\\ladc\\__init__.py": "3e388cdeeda23c84c2b1e12820500ca7262ed70ccd94344ddfacac56141dc3e4",
+    "src\\ladc\\analysis\\__init__.py": "e9bb38aabdad9a8a010259642b2aeb7426a8e03fd6d6020523e2468a66a5d443",
+    "src\\ladc\\analysis\\summary.py": "6d38ef3d42313dcf16eec2ac26cfbc753139c3ff62355bef53e89a3d0288c4a9",
+    "src\\ladc\\calibration.py": "bb54e418d6eea825a70eab183d09ce6f1737dc9ec51900313331b7fe4acfc6d5",
+    "src\\ladc\\calibration_metrics.py": "35e10ddfdb080c4f344e46f1f347eb37053ec701b10b8cf6ab0c8aa283713d8d",
+    "src\\ladc\\compressors\\__init__.py": "67b2ec800a46c9a4f1d7ee1c00a3d561834c93d890ec80b14b414fbf7ce992ce",
+    "src\\ladc\\compressors\\abstractive_fused.py": "8202f300490d8bedaeae6e4e140614729e50a10de85b11104f0cfaa5eaf10274",
+    "src\\ladc\\compressors\\async_abstractive_memory.py": "13118b9e89d6dfcd9dc8d62bc4d2a7d887625b54defa0bcc0bf05c2e0db0fc37",
+    "src\\ladc\\compressors\\baselines.py": "b79efd33068197bf6acf1fc74e852b75206492d13a0de6668e2b81845263b390",
+    "src\\ladc\\compressors\\dual_path.py": "c996cf7effdfd351da09a769948207157c3ed846104f5e4f5d9a4c81195f076c",
+    "src\\ladc\\compressors\\evidence_graph.py": "f89b7c2b04c063a97673ff5c67978a281470374f437cfe2f1f80eb485bc242b3",
+    "src\\ladc\\compressors\\fused_graph.py": "c3f9ae22767e75ec3dad15d5d65582baf05d5c3bd15cff344d158f51ac2c8b10",
+    "src\\ladc\\compressors\\llmlingua2.py": "abaa725222dbc43c8e2b0dbea61cb1de1d3bf8da02e4739a230bd5b8fbf40b90",
+    "src\\ladc\\compressors\\post_generation.py": "ccbbd58ad01f9914dc9ce05ecd8b5a5be884484cb89eb9474fab6b1871f8c50a",
+    "src\\ladc\\compressors\\query_aware.py": "741a73dbc53d868f08b8e775b6d86f0a9e35b21692788ea0d2c72e8a786bcecf",
+    "src\\ladc\\compressors\\session_graph.py": "3bb6300b5f4024a508e6933ef40d67a67c92a658a58df33e9bea7316006f92cc",
+    "src\\ladc\\controller.py": "a5a1f2f8e7dc308a962499256428ce53bce722b41552dc2fcd61fd6d91045be0",
+    "src\\ladc\\datasets.py": "96c15cd5fcc867eddca16400a80cfa33121062adbb6c50305926ae83c8a6396b",
+    "src\\ladc\\evidence_builder.py": "cd54ffd035f04f795b95702dd0849ac65b30c7252894471b3476e1afb869acf4",
+    "src\\ladc\\evidence_graph.py": "82b855a991e9b2b41189eb4c3e113b6e29af7f70da66fca87904cc80e8d11200",
+    "src\\ladc\\experiments\\__init__.py": "eb4391f7ca90e0b202ecc6f7484edba04f435cf18c2c140f155465ed817e72be",
+    "src\\ladc\\experiments\\runner.py": "af5550f738747c49b052070a3c8dc52f5c16a7bcf4c347d374d0570b8681a07f",
+    "src\\ladc\\features.py": "d59e44ae5a8fb3d9dd9e38cdd3a449453b06ea8c69370f0fe9b838cdbd1a0fed",
+    "src\\ladc\\inference\\__init__.py": "d27a8b9d0a27622356d31d5b8a362484e968a239336dea67e1511b0fccb40207",
+    "src\\ladc\\inference\\llama_cli.py": "d543c49b5a1368a589f0d722dcde0b3389ef336858c4fdcc5f58ba97c91d3779",
+    "src\\ladc\\inference\\llama_server.py": "57443b73675f542de3d9b4304c5bec616a9b14e78d1956ba447f5eba3f30c127",
+    "src\\ladc\\inference\\simulated.py": "8c768dc77b84c1dd6f70183dbe912e5ac12f4587a20ea5c8a9aa832869ddba4c",
+    "src\\ladc\\inference\\transformers_backend.py": "63b41ea2a792402ceea29032f358a012fa60dddd712fa931f388d0d46c6c60e5",
+    "src\\ladc\\interfaces.py": "96f1d3f2107a1470e812cdabdba5c4e050d9455fb22ee98e247b0a7fdf04fa57",
+    "src\\ladc\\predictor.py": "95b6308a843aa273447957dec8fd31ae8751254c4ac4a2bc9c40cda66e6e0cc4",
+    "src\\ladc\\quality.py": "ce4041ba070ee235214446d8fdb4325f5c51ee42b17d9c39586017ba5ebe0e28",
+    "src\\ladc\\records.py": "0e6e7e4fbc3161a874cd7bc9175aa3d7b9fcd18ef067080d9a0dbfa95a8f8087",
+    "src\\ladc\\sequences.py": "2a57d4d0a84dabe43ebe4aa376107523d0c4d9fd5a5953efdf4a41306ea2cd2c",
+    "src\\ladc\\timing.py": "2284aeb19cd0eb71fabca478242f0b42a91470deb5eb42ed206656f7f70941fe",
+    "src\\ladc\\tokenizers.py": "12b27257079f51e02a6477afe02c458abcf3d8c73cf7a54becc3a78fe8f8361e",
+    "src\\ladc\\workloads.py": "6ef337a1e32a0006304b23f07a758595e623dbeb2f518b52a4c8dfc548596ab7"
+  },
+  "sequences": [
+    {
+      "sequence_id": "2wikimultihopqa_related_32",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "0545d2dc0bdb11eba7f7acde48001122",
+        "4f35d7640bdd11eba7f7acde48001122",
+        "45ef93580bdc11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_39",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "9e0a6c700baf11ebab90acde48001122",
+        "91e7e3780baf11ebab90acde48001122",
+        "29a735160baf11ebab90acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "hotpotqa_related_13",
+      "dataset": "hotpotqa",
+      "kind": "related",
+      "request_ids": [
+        "5a7d1d825542995ed0d165f5",
+        "5a87191155429960ec39b73d",
+        "5ab46a0f5542990594ba9c1b"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_1",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "1bc055ed097a11ebbdb0ac1f6bf848b6",
+        "8e2ffbf0099211ebbdb0ac1f6bf848b6",
+        "8ba63ce8098f11ebbdb0ac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_4",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "b0a71583086b11ebbd60ac1f6bf848b6",
+        "05ca361608a511ebbd7dac1f6bf848b6",
+        "843ef89008fa11ebbdacac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "musique_related_2",
+      "dataset": "musique",
+      "kind": "related",
+      "request_ids": [
+        "3hop2__87184_38738_76291",
+        "3hop2__89854_38738_76291",
+        "3hop2__89854_92991_76291"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_26",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "6a94f9180bb011ebab90acde48001122",
+        "c43dabfa0baf11ebab90acde48001122",
+        "8ccb38ea0baf11ebab90acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_8",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "52b9c68408db11ebbd9cac1f6bf848b6",
+        "69b6261308c611ebbd90ac1f6bf848b6",
+        "ee559aaa08c211ebbd8cac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_37",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "3f8aca640bdc11eba7f7acde48001122",
+        "514f733c0bda11eba7f7acde48001122",
+        "9a93aae20bdd11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_5",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "83346a8e0bd911eba7f7acde48001122",
+        "61ad4c640bde11eba7f7acde48001122",
+        "ea9250b20bdc11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "hotpotqa_related_0",
+      "dataset": "hotpotqa",
+      "kind": "related",
+      "request_ids": [
+        "5ae0ae4555429945ae959419",
+        "5ae56fb85542993aec5ec1a9",
+        "5a7c68575542996dd594b91c"
+      ]
+    },
+    {
+      "sequence_id": "hotpotqa_related_5",
+      "dataset": "hotpotqa",
+      "kind": "related",
+      "request_ids": [
+        "5addcfd65542997dc790703e",
+        "5ab65e1e55429954757d3261",
+        "5a8750945542996432c57264"
+      ]
+    },
+    {
+      "sequence_id": "hotpotqa_related_21",
+      "dataset": "hotpotqa",
+      "kind": "related",
+      "request_ids": [
+        "5a7a098d5542996c55b2dce3",
+        "5add5f395542990dbb2f7e50",
+        "5a7385c45542992d56e7e359"
+      ]
+    },
+    {
+      "sequence_id": "hotpotqa_related_15",
+      "dataset": "hotpotqa",
+      "kind": "related",
+      "request_ids": [
+        "5adf4b335542993a75d264a5",
+        "5a8b515e55429971feec46bb",
+        "5a7b43735542992d025e67cb"
+      ]
+    },
+    {
+      "sequence_id": "musique_related_1",
+      "dataset": "musique",
+      "kind": "related",
+      "request_ids": [
+        "3hop1__79039_131926_13165",
+        "3hop1__635099_131926_13165",
+        "4hop1__525129_315334_131926_13165"
+      ]
+    },
+    {
+      "sequence_id": "hotpotqa_related_23",
+      "dataset": "hotpotqa",
+      "kind": "related",
+      "request_ids": [
+        "5abaee665542992ccd8e7e5f",
+        "5ae48e7e55429913cc20449d",
+        "5ae5e1985542996de7b71a54"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_15",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "37a485c308c311ebbd8dac1f6bf848b6",
+        "cec6b1ec0bdd11eba7f7acde48001122",
+        "29c78fd20bdc11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_20",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "210a08c0088511ebbd6dac1f6bf848b6",
+        "c6c2d01c087111ebbd63ac1f6bf848b6",
+        "b1395d3e089311ebbd75ac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "hotpotqa_related_14",
+      "dataset": "hotpotqa",
+      "kind": "related",
+      "request_ids": [
+        "5ae20427554299234fd04397",
+        "5ab56ed0554299637185c597",
+        "5a8d0e305542994ba4e3dbbe"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_12",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "ddd0bb3e08bc11ebbd89ac1f6bf848b6",
+        "40600a2e08d711ebbd99ac1f6bf848b6",
+        "a91c363708e711ebbda6ac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "hotpotqa_related_1",
+      "dataset": "hotpotqa",
+      "kind": "related",
+      "request_ids": [
+        "5a8f5a185542992414482a71",
+        "5adff056554299603e4183cc",
+        "5a793ea55542994bb9456fce"
+      ]
+    },
+    {
+      "sequence_id": "hotpotqa_related_22",
+      "dataset": "hotpotqa",
+      "kind": "related",
+      "request_ids": [
+        "5a8f23555542997ba9cb31e3",
+        "5ab8cd3d5542991b5579f009",
+        "5a8aa5835542996c9b8d5f4e"
+      ]
+    },
+    {
+      "sequence_id": "hotpotqa_related_20",
+      "dataset": "hotpotqa",
+      "kind": "related",
+      "request_ids": [
+        "5ae2120e5542997283cd23ad",
+        "5ae73d415542991e8301cc2b",
+        "5abdd30c5542991f66106052"
+      ]
+    },
+    {
+      "sequence_id": "musique_related_5",
+      "dataset": "musique",
+      "kind": "related",
+      "request_ids": [
+        "2hop__390947_232243",
+        "2hop__231805_514393",
+        "2hop__13731_801817"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_16",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "abc451060bdb11eba7f7acde48001122",
+        "b678eea20bdd11eba7f7acde48001122",
+        "246a2cd60bda11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "hotpotqa_related_19",
+      "dataset": "hotpotqa",
+      "kind": "related",
+      "request_ids": [
+        "5ab822ef55429916710eafff",
+        "5a80ddc555429938b6142224",
+        "5ae75c395542991bbc9761f7"
+      ]
+    },
+    {
+      "sequence_id": "hotpotqa_related_16",
+      "dataset": "hotpotqa",
+      "kind": "related",
+      "request_ids": [
+        "5a79fc8b5542994f819ef114",
+        "5a7af1a955429931da12c98f",
+        "5a7e3117554299495941991b"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_41",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "7a81f2720bdd11eba7f7acde48001122",
+        "92ad0f080bdd11eba7f7acde48001122",
+        "9c944f8e08e711ebbda6ac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_3",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "3b0b8f75086611ebbd5eac1f6bf848b6",
+        "a52e9e1908b711ebbd88ac1f6bf848b6",
+        "d8273174087411ebbd67ac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_19",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "d14fc3cc0bdd11eba7f7acde48001122",
+        "c9c3137e0bd911eba7f7acde48001122",
+        "f1045c020bdb11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_24",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "767209c008a811ebbd7fac1f6bf848b6",
+        "7718a55a08a811ebbd7fac1f6bf848b6",
+        "2efc2c3b08bf11ebbd8aac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "musique_related_0",
+      "dataset": "musique",
+      "kind": "related",
+      "request_ids": [
+        "4hop2__9988_158985_70784_61381",
+        "4hop2__9988_729371_70784_61381",
+        "4hop2__9988_729371_70784_79935"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_9",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "279379df092411ebbdaeac1f6bf848b6",
+        "32c45810094511ebbdaeac1f6bf848b6",
+        "3dafdc26089f11ebbd78ac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_17",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "2fd031c00bde11eba7f7acde48001122",
+        "e86a03a60bdd11eba7f7acde48001122",
+        "a00f22640bdb11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "musique_related_4",
+      "dataset": "musique",
+      "kind": "related",
+      "request_ids": [
+        "2hop__124932_278133",
+        "2hop__46213_494136",
+        "2hop__50936_90973"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_28",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "e6fadaaa08d511ebbd98ac1f6bf848b6",
+        "f18d54ec087911ebbd67ac1f6bf848b6",
+        "cd814a34088811ebbd6eac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "musique_related_7",
+      "dataset": "musique",
+      "kind": "related",
+      "request_ids": [
+        "3hop1__390673_228453_86925",
+        "3hop1__640171_228453_86925",
+        "3hop1__786067_228453_86925"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_18",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "1a1c0bd40bdd11eba7f7acde48001122",
+        "fd0b3fca0bdb11eba7f7acde48001122",
+        "36a3fe2a0baf11ebab90acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_36",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "8e37080608b911ebbd88ac1f6bf848b6",
+        "bf576cb8086011ebbd5dac1f6bf848b6",
+        "28946ecc089011ebbd72ac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "musique_related_6",
+      "dataset": "musique",
+      "kind": "related",
+      "request_ids": [
+        "3hop2__49541_140875_51068",
+        "3hop2__140194_49541_51068",
+        "3hop2__140194_16797_51068"
+      ]
+    },
+    {
+      "sequence_id": "hotpotqa_related_17",
+      "dataset": "hotpotqa",
+      "kind": "related",
+      "request_ids": [
+        "5a73551e5542991f29ee2d84",
+        "5ae34a225542992e3233c370",
+        "5ab30d1155429976abd1bc3d"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_21",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "6b8c9bb60bdb11eba7f7acde48001122",
+        "1924a1240bdc11eba7f7acde48001122",
+        "8dfa2e9e0bda11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_13",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "1a3bb74508dc11ebbd9cac1f6bf848b6",
+        "3c36eba2084b11ebbd56ac1f6bf848b6",
+        "ca8a1872084911ebbd55ac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_25",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "fb8db05e0bdd11eba7f7acde48001122",
+        "dad9bf420bdd11eba7f7acde48001122",
+        "d6efd86c0bdd11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "hotpotqa_related_8",
+      "dataset": "hotpotqa",
+      "kind": "related",
+      "request_ids": [
+        "5adc94dc5542990d50227cad",
+        "5a9094ba55429933b8a2056d",
+        "5a778a8e5542992a6e59deca"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_6",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "d667e18e08d911ebbd9cac1f6bf848b6",
+        "d667e18f08d911ebbd9cac1f6bf848b6",
+        "410fbb40087f11ebbd6bac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_7",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "02912df60baf11ebab90acde48001122",
+        "df77d6d40baf11ebab90acde48001122",
+        "9078fcca0baf11ebab90acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "hotpotqa_related_10",
+      "dataset": "hotpotqa",
+      "kind": "related",
+      "request_ids": [
+        "5ae0f2bf5542997b2ef7d09e",
+        "5a71166d5542994082a3e576",
+        "5ab510cb5542996a3a96a00f"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_27",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "aeade7d408c911ebbd92ac1f6bf848b6",
+        "015d47a908a811ebbd7fac1f6bf848b6",
+        "51e8895608d711ebbd9aac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "hotpotqa_related_9",
+      "dataset": "hotpotqa",
+      "kind": "related",
+      "request_ids": [
+        "5a875b755542996e4f308796",
+        "5ae0c1be5542993d6555ec42",
+        "5ab234c65542993be8fa98c6"
+      ]
+    },
+    {
+      "sequence_id": "hotpotqa_related_24",
+      "dataset": "hotpotqa",
+      "kind": "related",
+      "request_ids": [
+        "5ae3263455429928c4239634",
+        "5a8c52685542995e66a475bb",
+        "5adc7b855542994650320d1e"
+      ]
+    },
+    {
+      "sequence_id": "hotpotqa_related_7",
+      "dataset": "hotpotqa",
+      "kind": "related",
+      "request_ids": [
+        "5ae552bb55429908b63265d9",
+        "5ae5d06a55429929b08079b4",
+        "5ae738f75542991bbc9761c4"
+      ]
+    },
+    {
+      "sequence_id": "hotpotqa_related_6",
+      "dataset": "hotpotqa",
+      "kind": "related",
+      "request_ids": [
+        "5a8838885542994846c1ce39",
+        "5a70f4695542994082a3e435",
+        "5a74c1c05542996c70cfadd8"
+      ]
+    },
+    {
+      "sequence_id": "hotpotqa_related_3",
+      "dataset": "hotpotqa",
+      "kind": "related",
+      "request_ids": [
+        "5adbf81a554299438c868cfd",
+        "5ae02b6c55429924de1b7044",
+        "5a806e01554299485f5985e5"
+      ]
+    },
+    {
+      "sequence_id": "hotpotqa_related_11",
+      "dataset": "hotpotqa",
+      "kind": "related",
+      "request_ids": [
+        "5a90843c5542995651fb517e",
+        "5a88a8f4554299206df2b320",
+        "5a7a27ce5542996c55b2dd28"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_0",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "ef87d9180bda11eba7f7acde48001122",
+        "18dadca00bb011ebab90acde48001122",
+        "30170c900bb011ebab90acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_2",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "612d63f00bde11eba7f7acde48001122",
+        "03fbfaa80bb011ebab90acde48001122",
+        "4cc4963c0bb011ebab90acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_23",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "887f71380bb011ebab90acde48001122",
+        "140b2d380bb011ebab90acde48001122",
+        "c5ae29fc0bdb11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_31",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "3685f31a0bde11eba7f7acde48001122",
+        "0822a7200bde11eba7f7acde48001122",
+        "fb4101280bdd11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_10",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "404937860bde11eba7f7acde48001122",
+        "f299dd600bdd11eba7f7acde48001122",
+        "1a25fd560bb011ebab90acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_35",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "f33eda240bae11ebab90acde48001122",
+        "09bf63b20bb011ebab90acde48001122",
+        "87b3bafc0bb011ebab90acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_29",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "49e3c4e008c911ebbd92ac1f6bf848b6",
+        "4bce007208c911ebbd92ac1f6bf848b6",
+        "49aaa2fa08ab11ebbd82ac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_14",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "b89c3024086611ebbd5eac1f6bf848b6",
+        "9aa497b808d511ebbd98ac1f6bf848b6",
+        "26b866e6085c11ebbd5cac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "musique_related_3",
+      "dataset": "musique",
+      "kind": "related",
+      "request_ids": [
+        "3hop2__156850_90098_10557",
+        "3hop2__90098_156850_10557",
+        "3hop2__127483_156850_10557"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_30",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "5d3c575a0bda11eba7f7acde48001122",
+        "e3fe2a600bdb11eba7f7acde48001122",
+        "397c730e0bda11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_40",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "b270bb19085a11ebbd5cac1f6bf848b6",
+        "431831d808af11ebbd83ac1f6bf848b6",
+        "fbef09ef089511ebbd75ac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "hotpotqa_related_2",
+      "dataset": "hotpotqa",
+      "kind": "related",
+      "request_ids": [
+        "5ae3b30f5542994393b9e74f",
+        "5a8cb4b2554299585d9e372a",
+        "5ae1452c554299422ee99654"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_38",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "dd1995e40baf11ebab90acde48001122",
+        "3d4662300bb011ebab90acde48001122",
+        "eb305dfc0baf11ebab90acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_33",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "416ee34a0bde11eba7f7acde48001122",
+        "1c7876600bb011ebab90acde48001122",
+        "ec9b2bf40bdc11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "hotpotqa_related_12",
+      "dataset": "hotpotqa",
+      "kind": "related",
+      "request_ids": [
+        "5ae2979a554299495565dade",
+        "5ae3f1bb5542995ad6573cbe",
+        "5a85f2f55542997b5ce40036"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_22",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "f4033b7c091611ebbdaeac1f6bf848b6",
+        "26f1c43608ea11ebbda7ac1f6bf848b6",
+        "6e765ee508f611ebbdaaac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_34",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "6eba24b8096c11ebbdafac1f6bf848b6",
+        "2f74627b090c11ebbdadac1f6bf848b6",
+        "b4a5545c096311ebbdafac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "hotpotqa_related_18",
+      "dataset": "hotpotqa",
+      "kind": "related",
+      "request_ids": [
+        "5a821c95554299676cceb219",
+        "5ac0d5a1554299294b219025",
+        "5a8a0ed55542992e4fca84e8"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_11",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "5ff45ef00baf11ebab90acde48001122",
+        "dd04b44e0baf11ebab90acde48001122",
+        "3472a2680bb011ebab90acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "hotpotqa_related_4",
+      "dataset": "hotpotqa",
+      "kind": "related",
+      "request_ids": [
+        "5ae72fc5554299572ea54770",
+        "5ae49bb755429970de88d9d7",
+        "5ae601e45542992663a4f23b"
+      ]
+    }
+  ],
+  "complete": false,
+  "rows": 12,
+  "elapsed_this_run_s": 137.45569519999844,
+  "summaries": [
+    {
+      "group": "dataset",
+      "value": "2wikimultihopqa",
+      "method": "evidence_graph_abstractive_async_v3",
+      "n": 3,
+      "token_f1": 0.5555555555555555,
+      "exact_match": 0.3333333333333333,
+      "evidence_f1_extractive_only": 0.17138009049773753,
+      "input_tokens": 612.3333333333334,
+      "token_reduction_rate": 0.33802057420786236,
+      "compression_wallclock_ms": 28.71936666876233,
+      "prefill_ms": 214.44466666666668,
+      "decode_ms": 342.2046666666667,
+      "end_to_end_wallclock_ms": 661.719100001695,
+      "p50_end_to_end_ms": 392.8047999943374,
+      "p95_end_to_end_ms": 1204.7378999996,
+      "component_sum_ms": 583.0098666666667,
+      "reused_evidence_count": 0.0,
+      "compressed_memory_selected_count": 0,
+      "retrieval_winners": {
+        "n/a": 1,
+        "fused": 2
+      },
+      "history_compute_ms": 34392.243166662716,
+      "history_queue_ms": 30499.629100003705,
+      "history_total_ms": 64908.51616667351,
+      "history_supplemented_source_count": 0,
+      "history_ready_numerator": 0,
+      "history_ready_denominator": 2,
+      "history_ready_rate": 0.0,
+      "history_errors": [],
+      "history_summary_fallback_count": 0,
+      "history_mean_reduction_rate": 0.8076592510404383
+    },
+    {
+      "group": "dataset",
+      "value": "2wikimultihopqa",
+      "method": "evidence_graph_fused_v2",
+      "n": 3,
+      "token_f1": 0.2222222222222222,
+      "exact_match": 0.0,
+      "evidence_f1_extractive_only": 0.16454248366013072,
+      "input_tokens": 467.3333333333333,
+      "token_reduction_rate": 0.5092130181275789,
+      "compression_wallclock_ms": 32.11123332827507,
+      "prefill_ms": 161.47366666666667,
+      "decode_ms": 588.388,
+      "end_to_end_wallclock_ms": 816.2797333303994,
+      "p50_end_to_end_ms": 957.6237000001129,
+      "p95_end_to_end_ms": 1191.1161999887554,
+      "component_sum_ms": 780.7599,
+      "reused_evidence_count": 0.0,
+      "compressed_memory_selected_count": 0,
+      "retrieval_winners": {
+        "fused": 3
+      },
+      "history_compute_ms": null,
+      "history_queue_ms": null,
+      "history_total_ms": null,
+      "history_supplemented_source_count": 0,
+      "history_ready_numerator": 0,
+      "history_ready_denominator": 0,
+      "history_ready_rate": null,
+      "history_errors": [],
+      "history_summary_fallback_count": 0,
+      "history_mean_reduction_rate": 0.0
+    },
+    {
+      "group": "dataset",
+      "value": "2wikimultihopqa",
+      "method": "llmlingua2",
+      "n": 3,
+      "token_f1": 0.08111111111111112,
+      "exact_match": 0.0,
+      "evidence_f1_extractive_only": 0.0,
+      "input_tokens": 475.0,
+      "token_reduction_rate": 0.5005314566712623,
+      "compression_wallclock_ms": 173.33656666839184,
+      "prefill_ms": 169.36633333333333,
+      "decode_ms": 770.746,
+      "end_to_end_wallclock_ms": 1149.0009666643648,
+      "p50_end_to_end_ms": 1053.5145000030752,
+      "p95_end_to_end_ms": 1475.9000999911223,
+      "component_sum_ms": 1110.3974666629804,
+      "reused_evidence_count": 0.0,
+      "compressed_memory_selected_count": 0,
+      "retrieval_winners": {
+        "n/a": 3
+      },
+      "history_compute_ms": null,
+      "history_queue_ms": null,
+      "history_total_ms": null,
+      "history_supplemented_source_count": 0,
+      "history_ready_numerator": 0,
+      "history_ready_denominator": 0,
+      "history_ready_rate": null,
+      "history_errors": [],
+      "history_summary_fallback_count": 0,
+      "history_mean_reduction_rate": 0.0
+    },
+    {
+      "group": "dataset",
+      "value": "2wikimultihopqa",
+      "method": "no_compression",
+      "n": 3,
+      "token_f1": 1.0,
+      "exact_match": 1.0,
+      "evidence_f1_extractive_only": 0.13595947063688998,
+      "input_tokens": 951.0,
+      "token_reduction_rate": 0.0,
+      "compression_wallclock_ms": 5.364800003007986,
+      "prefill_ms": 352.00333333333333,
+      "decode_ms": 65.14166666666667,
+      "end_to_end_wallclock_ms": 487.98516666768893,
+      "p50_end_to_end_ms": 488.9485000021523,
+      "p95_end_to_end_ms": 524.8894000105793,
+      "component_sum_ms": 417.1501333333333,
+      "reused_evidence_count": 0.0,
+      "compressed_memory_selected_count": 0,
+      "retrieval_winners": {
+        "n/a": 3
+      },
+      "history_compute_ms": null,
+      "history_queue_ms": null,
+      "history_total_ms": null,
+      "history_supplemented_source_count": 0,
+      "history_ready_numerator": 0,
+      "history_ready_denominator": 0,
+      "history_ready_rate": null,
+      "history_errors": [],
+      "history_summary_fallback_count": 0,
+      "history_mean_reduction_rate": 0.0
+    },
+    {
+      "group": "overall",
+      "value": "all",
+      "method": "evidence_graph_abstractive_async_v3",
+      "n": 3,
+      "token_f1": 0.5555555555555555,
+      "exact_match": 0.3333333333333333,
+      "evidence_f1_extractive_only": 0.17138009049773753,
+      "input_tokens": 612.3333333333334,
+      "token_reduction_rate": 0.33802057420786236,
+      "compression_wallclock_ms": 28.71936666876233,
+      "prefill_ms": 214.44466666666668,
+      "decode_ms": 342.2046666666667,
+      "end_to_end_wallclock_ms": 661.719100001695,
+      "p50_end_to_end_ms": 392.8047999943374,
+      "p95_end_to_end_ms": 1204.7378999996,
+      "component_sum_ms": 583.0098666666667,
+      "reused_evidence_count": 0.0,
+      "compressed_memory_selected_count": 0,
+      "retrieval_winners": {
+        "n/a": 1,
+        "fused": 2
+      },
+      "history_compute_ms": 34392.243166662716,
+      "history_queue_ms": 30499.629100003705,
+      "history_total_ms": 64908.51616667351,
+      "history_supplemented_source_count": 0,
+      "history_ready_numerator": 0,
+      "history_ready_denominator": 2,
+      "history_ready_rate": 0.0,
+      "history_errors": [],
+      "history_summary_fallback_count": 0,
+      "history_mean_reduction_rate": 0.8076592510404383
+    },
+    {
+      "group": "overall",
+      "value": "all",
+      "method": "evidence_graph_fused_v2",
+      "n": 3,
+      "token_f1": 0.2222222222222222,
+      "exact_match": 0.0,
+      "evidence_f1_extractive_only": 0.16454248366013072,
+      "input_tokens": 467.3333333333333,
+      "token_reduction_rate": 0.5092130181275789,
+      "compression_wallclock_ms": 32.11123332827507,
+      "prefill_ms": 161.47366666666667,
+      "decode_ms": 588.388,
+      "end_to_end_wallclock_ms": 816.2797333303994,
+      "p50_end_to_end_ms": 957.6237000001129,
+      "p95_end_to_end_ms": 1191.1161999887554,
+      "component_sum_ms": 780.7599,
+      "reused_evidence_count": 0.0,
+      "compressed_memory_selected_count": 0,
+      "retrieval_winners": {
+        "fused": 3
+      },
+      "history_compute_ms": null,
+      "history_queue_ms": null,
+      "history_total_ms": null,
+      "history_supplemented_source_count": 0,
+      "history_ready_numerator": 0,
+      "history_ready_denominator": 0,
+      "history_ready_rate": null,
+      "history_errors": [],
+      "history_summary_fallback_count": 0,
+      "history_mean_reduction_rate": 0.0
+    },
+    {
+      "group": "overall",
+      "value": "all",
+      "method": "llmlingua2",
+      "n": 3,
+      "token_f1": 0.08111111111111112,
+      "exact_match": 0.0,
+      "evidence_f1_extractive_only": 0.0,
+      "input_tokens": 475.0,
+      "token_reduction_rate": 0.5005314566712623,
+      "compression_wallclock_ms": 173.33656666839184,
+      "prefill_ms": 169.36633333333333,
+      "decode_ms": 770.746,
+      "end_to_end_wallclock_ms": 1149.0009666643648,
+      "p50_end_to_end_ms": 1053.5145000030752,
+      "p95_end_to_end_ms": 1475.9000999911223,
+      "component_sum_ms": 1110.3974666629804,
+      "reused_evidence_count": 0.0,
+      "compressed_memory_selected_count": 0,
+      "retrieval_winners": {
+        "n/a": 3
+      },
+      "history_compute_ms": null,
+      "history_queue_ms": null,
+      "history_total_ms": null,
+      "history_supplemented_source_count": 0,
+      "history_ready_numerator": 0,
+      "history_ready_denominator": 0,
+      "history_ready_rate": null,
+      "history_errors": [],
+      "history_summary_fallback_count": 0,
+      "history_mean_reduction_rate": 0.0
+    },
+    {
+      "group": "overall",
+      "value": "all",
+      "method": "no_compression",
+      "n": 3,
+      "token_f1": 1.0,
+      "exact_match": 1.0,
+      "evidence_f1_extractive_only": 0.13595947063688998,
+      "input_tokens": 951.0,
+      "token_reduction_rate": 0.0,
+      "compression_wallclock_ms": 5.364800003007986,
+      "prefill_ms": 352.00333333333333,
+      "decode_ms": 65.14166666666667,
+      "end_to_end_wallclock_ms": 487.98516666768893,
+      "p50_end_to_end_ms": 488.9485000021523,
+      "p95_end_to_end_ms": 524.8894000105793,
+      "component_sum_ms": 417.1501333333333,
+      "reused_evidence_count": 0.0,
+      "compressed_memory_selected_count": 0,
+      "retrieval_winners": {
+        "n/a": 3
+      },
+      "history_compute_ms": null,
+      "history_queue_ms": null,
+      "history_total_ms": null,
+      "history_supplemented_source_count": 0,
+      "history_ready_numerator": 0,
+      "history_ready_denominator": 0,
+      "history_ready_rate": null,
+      "history_errors": [],
+      "history_summary_fallback_count": 0,
+      "history_mean_reduction_rate": 0.0
+    },
+    {
+      "group": "turn",
+      "value": "1",
+      "method": "evidence_graph_abstractive_async_v3",
+      "n": 1,
+      "token_f1": 1.0,
+      "exact_match": 1.0,
+      "evidence_f1_extractive_only": 0.15384615384615385,
+      "input_tokens": 847.0,
+      "token_reduction_rate": 0.0,
+      "compression_wallclock_ms": 3.2412000000476837,
+      "prefill_ms": 273.113,
+      "decode_ms": 66.564,
+      "end_to_end_wallclock_ms": 392.8047999943374,
+      "p50_end_to_end_ms": 392.8047999943374,
+      "p95_end_to_end_ms": 392.8047999943374,
+      "component_sum_ms": 339.6794,
+      "reused_evidence_count": 0.0,
+      "compressed_memory_selected_count": 0,
+      "retrieval_winners": {
+        "n/a": 1
+      },
+      "history_compute_ms": 29385.658500003046,
+      "history_queue_ms": 0.7814999989932403,
+      "history_total_ms": 29412.624100004905,
+      "history_supplemented_source_count": 0,
+      "history_ready_numerator": 0,
+      "history_ready_denominator": 1,
+      "history_ready_rate": 0.0,
+      "history_errors": [],
+      "history_summary_fallback_count": 0,
+      "history_mean_reduction_rate": 0.7813211845102506
+    },
+    {
+      "group": "turn",
+      "value": "1",
+      "method": "evidence_graph_fused_v2",
+      "n": 1,
+      "token_f1": 0.0,
+      "exact_match": 0.0,
+      "evidence_f1_extractive_only": 0.13333333333333336,
+      "input_tokens": 412.0,
+      "token_reduction_rate": 0.5135773317591499,
+      "compression_wallclock_ms": 57.20929999370128,
+      "prefill_ms": 146.278,
+      "decode_ms": 709.13,
+      "end_to_end_wallclock_ms": 957.6237000001129,
+      "p50_end_to_end_ms": 957.6237000001129,
+      "p95_end_to_end_ms": 957.6237000001129,
+      "component_sum_ms": 911.3263999999999,
+      "reused_evidence_count": 0.0,
+      "compressed_memory_selected_count": 0,
+      "retrieval_winners": {
+        "fused": 1
+      },
+      "history_compute_ms": null,
+      "history_queue_ms": null,
+      "history_total_ms": null,
+      "history_supplemented_source_count": 0,
+      "history_ready_numerator": 0,
+      "history_ready_denominator": 0,
+      "history_ready_rate": null,
+      "history_errors": [],
+      "history_summary_fallback_count": 0,
+      "history_mean_reduction_rate": 0.0
+    },
+    {
+      "group": "turn",
+      "value": "1",
+      "method": "llmlingua2",
+      "n": 1,
+      "token_f1": 0.16,
+      "exact_match": 0.0,
+      "evidence_f1_extractive_only": 0.0,
+      "input_tokens": 423.0,
+      "token_reduction_rate": 0.500590318772137,
+      "compression_wallclock_ms": 172.93230000359472,
+      "prefill_ms": 155.527,
+      "decode_ms": 545.876,
+      "end_to_end_wallclock_ms": 917.5882999988971,
+      "p50_end_to_end_ms": 917.5882999988971,
+      "p95_end_to_end_ms": 917.5882999988971,
+      "component_sum_ms": 871.5914999929462,
+      "reused_evidence_count": 0.0,
+      "compressed_memory_selected_count": 0,
+      "retrieval_winners": {
+        "n/a": 1
+      },
+      "history_compute_ms": null,
+      "history_queue_ms": null,
+      "history_total_ms": null,
+      "history_supplemented_source_count": 0,
+      "history_ready_numerator": 0,
+      "history_ready_denominator": 0,
+      "history_ready_rate": null,
+      "history_errors": [],
+      "history_summary_fallback_count": 0,
+      "history_mean_reduction_rate": 0.0
+    },
+    {
+      "group": "turn",
+      "value": "1",
+      "method": "no_compression",
+      "n": 1,
+      "token_f1": 1.0,
+      "exact_match": 1.0,
+      "evidence_f1_extractive_only": 0.15384615384615385,
+      "input_tokens": 847.0,
+      "token_reduction_rate": 0.0,
+      "compression_wallclock_ms": 5.359900009352714,
+      "prefill_ms": 342.356,
+      "decode_ms": 76.745,
+      "end_to_end_wallclock_ms": 488.9485000021523,
+      "p50_end_to_end_ms": 488.9485000021523,
+      "p95_end_to_end_ms": 488.9485000021523,
+      "component_sum_ms": 419.1111,
+      "reused_evidence_count": 0.0,
+      "compressed_memory_selected_count": 0,
+      "retrieval_winners": {
+        "n/a": 1
+      },
+      "history_compute_ms": null,
+      "history_queue_ms": null,
+      "history_total_ms": null,
+      "history_supplemented_source_count": 0,
+      "history_ready_numerator": 0,
+      "history_ready_denominator": 0,
+      "history_ready_rate": null,
+      "history_errors": [],
+      "history_summary_fallback_count": 0,
+      "history_mean_reduction_rate": 0.0
+    },
+    {
+      "group": "turn",
+      "value": "2",
+      "method": "evidence_graph_abstractive_async_v3",
+      "n": 1,
+      "token_f1": 0.0,
+      "exact_match": 0.0,
+      "evidence_f1_extractive_only": 0.125,
+      "input_tokens": 543.0,
+      "token_reduction_rate": 0.500459981600736,
+      "compression_wallclock_ms": 47.48269999981858,
+      "prefill_ms": 206.978,
+      "decode_ms": 855.243,
+      "end_to_end_wallclock_ms": 1204.7378999996,
+      "p50_end_to_end_ms": 1204.7378999996,
+      "p95_end_to_end_ms": 1204.7378999996,
+      "component_sum_ms": 1108.1987000000001,
+      "reused_evidence_count": 0.0,
+      "compressed_memory_selected_count": 0,
+      "retrieval_winners": {
+        "fused": 1
+      },
+      "history_compute_ms": 38480.90979999688,
+      "history_queue_ms": 27195.691500004614,
+      "history_total_ms": 65691.95960000798,
+      "history_supplemented_source_count": 0,
+      "history_ready_numerator": 0,
+      "history_ready_denominator": 1,
+      "history_ready_rate": 0.0,
+      "history_errors": [],
+      "history_summary_fallback_count": 0,
+      "history_mean_reduction_rate": 0.8341968911917098
+    },
+    {
+      "group": "turn",
+      "value": "2",
+      "method": "evidence_graph_fused_v2",
+      "n": 1,
+      "token_f1": 0.0,
+      "exact_match": 0.0,
+      "evidence_f1_extractive_only": 0.125,
+      "input_tokens": 543.0,
+      "token_reduction_rate": 0.500459981600736,
+      "compression_wallclock_ms": 21.68849999725353,
+      "prefill_ms": 181.693,
+      "decode_ms": 959.925,
+      "end_to_end_wallclock_ms": 1191.1161999887554,
+      "p50_end_to_end_ms": 1191.1161999887554,
+      "p95_end_to_end_ms": 1191.1161999887554,
+      "component_sum_ms": 1161.9607,
+      "reused_evidence_count": 0.0,
+      "compressed_memory_selected_count": 0,
+      "retrieval_winners": {
+        "fused": 1
+      },
+      "history_compute_ms": null,
+      "history_queue_ms": null,
+      "history_total_ms": null,
+      "history_supplemented_source_count": 0,
+      "history_ready_numerator": 0,
+      "history_ready_denominator": 0,
+      "history_ready_rate": null,
+      "history_errors": [],
+      "history_summary_fallback_count": 0,
+      "history_mean_reduction_rate": 0.0
+    },
+    {
+      "group": "turn",
+      "value": "2",
+      "method": "llmlingua2",
+      "n": 1,
+      "token_f1": 0.08333333333333333,
+      "exact_match": 0.0,
+      "evidence_f1_extractive_only": 0.0,
+      "input_tokens": 543.0,
+      "token_reduction_rate": 0.500459981600736,
+      "compression_wallclock_ms": 175.45359999348875,
+      "prefill_ms": 198.345,
+      "decode_ms": 1072.437,
+      "end_to_end_wallclock_ms": 1475.9000999911223,
+      "p50_end_to_end_ms": 1475.9000999911223,
+      "p95_end_to_end_ms": 1475.9000999911223,
+      "component_sum_ms": 1443.1749999861865,
+      "reused_evidence_count": 0.0,
+      "compressed_memory_selected_count": 0,
+      "retrieval_winners": {
+        "n/a": 1
+      },
+      "history_compute_ms": null,
+      "history_queue_ms": null,
+      "history_total_ms": null,
+      "history_supplemented_source_count": 0,
+      "history_ready_numerator": 0,
+      "history_ready_denominator": 0,
+      "history_ready_rate": null,
+      "history_errors": [],
+      "history_summary_fallback_count": 0,
+      "history_mean_reduction_rate": 0.0
+    },
+    {
+      "group": "turn",
+      "value": "2",
+      "method": "no_compression",
+      "n": 1,
+      "token_f1": 1.0,
+      "exact_match": 1.0,
+      "evidence_f1_extractive_only": 0.125,
+      "input_tokens": 1087.0,
+      "token_reduction_rate": 0.0,
+      "compression_wallclock_ms": 7.3453000077279285,
+      "prefill_ms": 394.871,
+      "decode_ms": 66.905,
+      "end_to_end_wallclock_ms": 524.8894000105793,
+      "p50_end_to_end_ms": 524.8894000105793,
+      "p95_end_to_end_ms": 524.8894000105793,
+      "component_sum_ms": 461.779,
+      "reused_evidence_count": 0.0,
+      "compressed_memory_selected_count": 0,
+      "retrieval_winners": {
+        "n/a": 1
+      },
+      "history_compute_ms": null,
+      "history_queue_ms": null,
+      "history_total_ms": null,
+      "history_supplemented_source_count": 0,
+      "history_ready_numerator": 0,
+      "history_ready_denominator": 0,
+      "history_ready_rate": null,
+      "history_errors": [],
+      "history_summary_fallback_count": 0,
+      "history_mean_reduction_rate": 0.0
+    },
+    {
+      "group": "turn",
+      "value": "3",
+      "method": "evidence_graph_abstractive_async_v3",
+      "n": 1,
+      "token_f1": 0.6666666666666666,
+      "exact_match": 0.0,
+      "evidence_f1_extractive_only": 0.23529411764705882,
+      "input_tokens": 447.0,
+      "token_reduction_rate": 0.5136017410228509,
+      "compression_wallclock_ms": 35.434200006420724,
+      "prefill_ms": 163.243,
+      "decode_ms": 104.807,
+      "end_to_end_wallclock_ms": 387.61460001114756,
+      "p50_end_to_end_ms": 387.61460001114756,
+      "p95_end_to_end_ms": 387.61460001114756,
+      "component_sum_ms": 301.1515,
+      "reused_evidence_count": 0.0,
+      "compressed_memory_selected_count": 0,
+      "retrieval_winners": {
+        "fused": 1
+      },
+      "history_compute_ms": 35310.161199988215,
+      "history_queue_ms": 64302.41430000751,
+      "history_total_ms": 99620.96480000764,
+      "history_supplemented_source_count": 0,
+      "history_ready_numerator": 0,
+      "history_ready_denominator": 0,
+      "history_ready_rate": null,
+      "history_errors": [],
+      "history_summary_fallback_count": 0,
+      "history_mean_reduction_rate": 0.8074596774193549
+    },
+    {
+      "group": "turn",
+      "value": "3",
+      "method": "evidence_graph_fused_v2",
+      "n": 1,
+      "token_f1": 0.6666666666666666,
+      "exact_match": 0.0,
+      "evidence_f1_extractive_only": 0.23529411764705882,
+      "input_tokens": 447.0,
+      "token_reduction_rate": 0.5136017410228509,
+      "compression_wallclock_ms": 17.435899993870407,
+      "prefill_ms": 156.45,
+      "decode_ms": 96.109,
+      "end_to_end_wallclock_ms": 300.09930000233,
+      "p50_end_to_end_ms": 300.09930000233,
+      "p95_end_to_end_ms": 300.09930000233,
+      "component_sum_ms": 268.9926,
+      "reused_evidence_count": 0.0,
+      "compressed_memory_selected_count": 0,
+      "retrieval_winners": {
+        "fused": 1
+      },
+      "history_compute_ms": null,
+      "history_queue_ms": null,
+      "history_total_ms": null,
+      "history_supplemented_source_count": 0,
+      "history_ready_numerator": 0,
+      "history_ready_denominator": 0,
+      "history_ready_rate": null,
+      "history_errors": [],
+      "history_summary_fallback_count": 0,
+      "history_mean_reduction_rate": 0.0
+    },
+    {
+      "group": "turn",
+      "value": "3",
+      "method": "llmlingua2",
+      "n": 1,
+      "token_f1": 0.0,
+      "exact_match": 0.0,
+      "evidence_f1_extractive_only": 0.0,
+      "input_tokens": 459.0,
+      "token_reduction_rate": 0.500544069640914,
+      "compression_wallclock_ms": 171.62380000809208,
+      "prefill_ms": 154.227,
+      "decode_ms": 693.925,
+      "end_to_end_wallclock_ms": 1053.5145000030752,
+      "p50_end_to_end_ms": 1053.5145000030752,
+      "p95_end_to_end_ms": 1053.5145000030752,
+      "component_sum_ms": 1016.4259000098081,
+      "reused_evidence_count": 0.0,
+      "compressed_memory_selected_count": 0,
+      "retrieval_winners": {
+        "n/a": 1
+      },
+      "history_compute_ms": null,
+      "history_queue_ms": null,
+      "history_total_ms": null,
+      "history_supplemented_source_count": 0,
+      "history_ready_numerator": 0,
+      "history_ready_denominator": 0,
+      "history_ready_rate": null,
+      "history_errors": [],
+      "history_summary_fallback_count": 0,
+      "history_mean_reduction_rate": 0.0
+    },
+    {
+      "group": "turn",
+      "value": "3",
+      "method": "no_compression",
+      "n": 1,
+      "token_f1": 1.0,
+      "exact_match": 1.0,
+      "evidence_f1_extractive_only": 0.12903225806451613,
+      "input_tokens": 919.0,
+      "token_reduction_rate": 0.0,
+      "compression_wallclock_ms": 3.3891999919433147,
+      "prefill_ms": 318.783,
+      "decode_ms": 51.775,
+      "end_to_end_wallclock_ms": 450.1175999903353,
+      "p50_end_to_end_ms": 450.1175999903353,
+      "p95_end_to_end_ms": 450.1175999903353,
+      "component_sum_ms": 370.5603,
+      "reused_evidence_count": 0.0,
+      "compressed_memory_selected_count": 0,
+      "retrieval_winners": {
+        "n/a": 1
+      },
+      "history_compute_ms": null,
+      "history_queue_ms": null,
+      "history_total_ms": null,
+      "history_supplemented_source_count": 0,
+      "history_ready_numerator": 0,
+      "history_ready_denominator": 0,
+      "history_ready_rate": null,
+      "history_errors": [],
+      "history_summary_fallback_count": 0,
+      "history_mean_reduction_rate": 0.0
+    }
+  ]
+}

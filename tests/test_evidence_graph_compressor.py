@@ -1,3 +1,5 @@
+from dataclasses import replace
+
 from ladc.compressors import EvidenceGraphCompressor, RiskAwareEvidenceGraphCompressor
 from ladc.evidence_builder import build_evidence_graph
 from ladc.experiments import run_request
@@ -45,6 +47,9 @@ def test_second_request_can_reuse_persistent_graph_evidence():
     tokenizer = WhitespaceTokenizer()
     first = _request("q1", "Who directed Blue Horizon?")
     second = _request("q2", "Where did Blue Horizon premiere?")
+    # Paris must be historical-only; repeated current sources are not reuse.
+    context = second.context.replace("[City] Blue Horizon premiered in Paris.\n", "")
+    second = replace(second, context=context, prompt=second.prompt.replace(second.context, context))
     compressor = EvidenceGraphCompressor()
     build_evidence_graph([first], graph=compressor.graph)
 

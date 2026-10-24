@@ -28,8 +28,10 @@ class SessionEvidenceGraphCompressor:
 
     name = "evidence_graph_session"
 
-    def __init__(self, *, compressor_kwargs: dict[str, Any] | None = None) -> None:
+    def __init__(self, *, compressor_kwargs: dict[str, Any] | None = None,
+                 compressor_class: type = DualPathEvidenceGraphCompressor) -> None:
         self._compressor_kwargs = dict(compressor_kwargs or {})
+        self._compressor_class = compressor_class
         self._compressors: dict[str, DualPathEvidenceGraphCompressor] = {}
         self._lock = RLock()
 
@@ -37,7 +39,7 @@ class SessionEvidenceGraphCompressor:
         with self._lock:
             compressor = self._compressors.get(session_id)
             if compressor is None:
-                compressor = DualPathEvidenceGraphCompressor(
+                compressor = self._compressor_class(
                     graph=EvidenceGraph(),
                     **self._compressor_kwargs,
                 )

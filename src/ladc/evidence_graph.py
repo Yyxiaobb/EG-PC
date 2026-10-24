@@ -157,6 +157,8 @@ class EvidenceGraph:
         answer_tokens: int = 96,
         memory_text: str | None = None,
         memory_provenance: Iterable[str] = (),
+        memory_source_only: bool = False,
+        memory_entities: Iterable[str] = (),
     ) -> str:
         """Store a post-generation, memory-sized interaction.
 
@@ -193,6 +195,7 @@ class EvidenceGraph:
                         sentence_index=0,
                         text=memory_text.strip(),
                         title="compressed history",
+                        entities=tuple(memory_entities),
                         confidence=0.7,
                         status="uncertain",
                     ),
@@ -212,6 +215,7 @@ class EvidenceGraph:
                         metadata={
                             **memory_node.metadata,
                             "memory_representation": True,
+                            "source_only_memory": memory_source_only,
                             "provenance_sentence_ids": list(memory_provenance),
                         },
                     )

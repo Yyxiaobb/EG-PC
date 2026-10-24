@@ -1,0 +1,55 @@
+{
+  "gpu": "RTX 5070 8GB",
+  "steps": [
+    {
+      "label": "before",
+      "nvidia_smi_mib_util": "372, 8151, 19",
+      "torch_free_mib": 6912.0,
+      "torch_total_mib": 8150.6,
+      "torch_allocated_mib": 0.0,
+      "torch_reserved_mib": 0.0
+    },
+    {
+      "label": "7b_server_started"
+    },
+    {
+      "label": "7b_loaded",
+      "nvidia_smi_mib_util": "5017, 8151, 11",
+      "torch_free_mib": 6912.0,
+      "torch_total_mib": 8150.6,
+      "torch_allocated_mib": 0.0,
+      "torch_reserved_mib": 0.0
+    },
+    {
+      "label": "7b_inference_before_summarizer",
+      "output_tokens": 1
+    },
+    {
+      "label": "both_models_loaded",
+      "nvidia_smi_mib_util": "6005, 8151, 14",
+      "torch_free_mib": 4867.1,
+      "torch_total_mib": 8150.6,
+      "torch_allocated_mib": 950.2,
+      "torch_reserved_mib": 992.0
+    },
+    {
+      "label": "summarizer_inference",
+      "generated_tokens": 13,
+      "latency_ms": 1166.2263999896822,
+      "text": "Nile River - A river in Africa flowing through Egypt."
+    },
+    {
+      "label": "7b_inference_with_summarizer_resident",
+      "output_tokens": 1
+    },
+    {
+      "label": "both_inferred",
+      "nvidia_smi_mib_util": "6065, 8151, 7",
+      "torch_free_mib": 4747.1,
+      "torch_total_mib": 8150.6,
+      "torch_allocated_mib": 959.3,
+      "torch_reserved_mib": 1018.0
+    }
+  ],
+  "success": true
+}

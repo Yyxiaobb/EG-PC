@@ -6,7 +6,7 @@ from hashlib import sha1
 import re
 from typing import Iterable
 
-from ladc.evidence_graph import EvidenceGraph, EvidenceSpan, EvidenceStatus
+from ladc.evidence_graph import EvidenceGraph, EvidenceSpan, EvidenceStatus, _stable_id
 from ladc.workloads import WorkloadRequest
 
 
@@ -126,11 +126,10 @@ def ingest_request_context(
                 )
             )
     graph.add_turn(turn_id or request.request_id, request.question, spans)
-    sentence_ids = tuple(
-        node_id
-        for node_id, node in graph.nodes.items()
-        if node.node_type == "sentence" and node.turn_id == (turn_id or request.request_id)
-    )
+    # A repeated source retains its first turn_id when nodes merge. Identify
+    # current sources by immutable provenance, not by their insertion turn.
+    sentence_ids = tuple(_stable_id("sentence", span.document_id, span.sentence_index, span.text)
+                         for span in spans)
     return graph, sentence_ids
 
 

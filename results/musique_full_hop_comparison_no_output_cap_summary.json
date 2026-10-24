@@ -1,0 +1,277 @@
+{
+  "dataset": "MuSiQue",
+  "split": "dev",
+  "dataset_size": 2417,
+  "native_hop_annotation": "leading Nhop prefix of MuSiQue question id (the dataset's native hop label)",
+  "hop_counts": {
+    "2": 1252,
+    "3": 760,
+    "4": 405
+  },
+  "methods": [
+    "no_compression",
+    "llmlingua2",
+    "evidence_graph_fused_v2"
+  ],
+  "budget_ratio": 0.5,
+  "model": "D:\\HF_dl\\model\\Qwen2.5-7B-Instruct-GGUF\\qwen2.5-7b-instruct-q4_k_m-00001-of-00002.gguf",
+  "llmlingua_model": "D:\\HF_dl\\model\\llmlingua-2-bert-base-multilingual-cased-meetingbank",
+  "max_new_tokens": -1,
+  "generation_stop": "EOS or 8192-token llama.cpp context limit",
+  "latency_definition": "compressor invocation through complete generation return; evaluation excluded",
+  "protocol": "standalone per-question inference; fresh V2 graph for each request; method order rotates by request; no session-history reuse",
+  "note": "LLMLingua-2 uses local official implementation wrapper; evidence retention metrics are source-aligned against prompt text and will be reported as not comparable if parser yields no attributable selected spans.",
+  "complete": true,
+  "expected_questions": 2417,
+  "completed_questions": 2417,
+  "row_count": 7251,
+  "summaries": {
+    "2_hop/no_compression": {
+      "n": 1252,
+      "token_f1": 0.1806506755296245,
+      "exact_match": 0.05511182108626198,
+      "answer_context_support": 0.9928115015974441,
+      "supporting_fact_precision": 0.11246500253338676,
+      "supporting_fact_recall": 0.9986011580250962,
+      "evidence_f1": 0.1918975418816885,
+      "mean_original_tokens": 2455.1461661341855,
+      "mean_compressed_tokens": 2455.1461661341855,
+      "token_reduction_rate": 0.0,
+      "compression_wallclock_ms": 14.753850958439175,
+      "prefill_ms": 857.8540071884984,
+      "decode_ms": 588.1074440894569,
+      "mean_end_to_end_ms": 1445.9654959265174,
+      "p50_end_to_end_ms": 1381.0045,
+      "p95_end_to_end_ms": 2329.0883
+    },
+    "2_hop/llmlingua2": {
+      "n": 1252,
+      "token_f1": 0.1831689180156347,
+      "exact_match": 0.06469648562300319,
+      "answer_context_support": 0.9896166134185304,
+      "supporting_fact_precision": 0.0,
+      "supporting_fact_recall": 0.0,
+      "evidence_f1": 0.0,
+      "mean_original_tokens": 2455.1461661341855,
+      "mean_compressed_tokens": 1223.247603833866,
+      "token_reduction_rate": 0.5016242141753412,
+      "compression_wallclock_ms": 1306.644413099058,
+      "prefill_ms": 433.942946485623,
+      "decode_ms": 551.3693115015975,
+      "mean_end_to_end_ms": 2279.4948733226533,
+      "p50_end_to_end_ms": 2175.943799999011,
+      "p95_end_to_end_ms": 3401.9724999976406
+    },
+    "2_hop/evidence_graph_fused_v2": {
+      "n": 1252,
+      "token_f1": 0.14965483887466052,
+      "exact_match": 0.038338658146964855,
+      "answer_context_support": 0.994408945686901,
+      "supporting_fact_precision": 0.1517498872326816,
+      "supporting_fact_recall": 0.6106713025035586,
+      "evidence_f1": 0.22608647057274878,
+      "mean_original_tokens": 2455.1461661341855,
+      "mean_compressed_tokens": 1223.3777955271566,
+      "token_reduction_rate": 0.5018351901926036,
+      "compression_wallclock_ms": 90.27713985628166,
+      "prefill_ms": 420.0205838658147,
+      "decode_ms": 610.7794864217252,
+      "mean_end_to_end_ms": 1118.268444169329,
+      "p50_end_to_end_ms": 1044.9625,
+      "p95_end_to_end_ms": 1986.9953999999998
+    },
+    "2_hop/paired_no_compression_minus_llmlingua2": {
+      "token_f1": {
+        "mean_difference_a_minus_b": -0.002518242486010217,
+        "ci95_low": -0.018131475163098924,
+        "ci95_high": 0.01347834584294436,
+        "paired_n": 1252
+      },
+      "exact_match": {
+        "mean_difference_a_minus_b": -0.009584664536741214,
+        "ci95_low": -0.02476038338658147,
+        "ci95_high": 0.005591054313099041,
+        "paired_n": 1252
+      }
+    },
+    "2_hop/paired_no_compression_minus_evidence_graph_fused_v2": {
+      "token_f1": {
+        "mean_difference_a_minus_b": 0.030995836654963978,
+        "ci95_low": 0.017318535193072408,
+        "ci95_high": 0.0459335286402797,
+        "paired_n": 1252
+      },
+      "exact_match": {
+        "mean_difference_a_minus_b": 0.016773162939297124,
+        "ci95_low": 0.003194888178913738,
+        "ci95_high": 0.03035143769968051,
+        "paired_n": 1252
+      }
+    },
+    "3_hop/no_compression": {
+      "n": 760,
+      "token_f1": 0.15739429391778428,
+      "exact_match": 0.06315789473684211,
+      "answer_context_support": 0.9960526315789474,
+      "supporting_fact_precision": 0.1565741614811528,
+      "supporting_fact_recall": 0.9984902360066834,
+      "evidence_f1": 0.2601187919558705,
+      "mean_original_tokens": 2677.5131578947367,
+      "mean_compressed_tokens": 2677.5131578947367,
+      "token_reduction_rate": 0.0,
+      "compression_wallclock_ms": 12.954486184279583,
+      "prefill_ms": 905.4361855263159,
+      "decode_ms": 748.0253078947369,
+      "mean_end_to_end_ms": 1653.4641402631578,
+      "p50_end_to_end_ms": 1597.4516,
+      "p95_end_to_end_ms": 2595.6827000000003
+    },
+    "3_hop/llmlingua2": {
+      "n": 760,
+      "token_f1": 0.16218228375699908,
+      "exact_match": 0.07105263157894737,
+      "answer_context_support": 0.9855263157894737,
+      "supporting_fact_precision": 0.0,
+      "supporting_fact_recall": 0.0,
+      "evidence_f1": 0.0,
+      "mean_original_tokens": 2677.5131578947367,
+      "mean_compressed_tokens": 1334.25,
+      "token_reduction_rate": 0.5015099409891907,
+      "compression_wallclock_ms": 1323.8052335525936,
+      "prefill_ms": 459.64885,
+      "decode_ms": 591.1170763157895,
+      "mean_end_to_end_ms": 2363.599675789521,
+      "p50_end_to_end_ms": 2358.8260999992895,
+      "p95_end_to_end_ms": 3324.6161999990227
+    },
+    "3_hop/evidence_graph_fused_v2": {
+      "n": 760,
+      "token_f1": 0.1221473729859199,
+      "exact_match": 0.046052631578947366,
+      "answer_context_support": 0.9960526315789474,
+      "supporting_fact_precision": 0.20527380252984379,
+      "supporting_fact_recall": 0.5898784916998372,
+      "evidence_f1": 0.28721161271323736,
+      "mean_original_tokens": 2677.5131578947367,
+      "mean_compressed_tokens": 1335.0118421052632,
+      "token_reduction_rate": 0.5014556792910958,
+      "compression_wallclock_ms": 91.96906092111021,
+      "prefill_ms": 441.3350513157895,
+      "decode_ms": 785.3518789473684,
+      "mean_end_to_end_ms": 1316.2227944736842,
+      "p50_end_to_end_ms": 1275.1711,
+      "p95_end_to_end_ms": 2242.5526
+    },
+    "3_hop/paired_no_compression_minus_llmlingua2": {
+      "token_f1": {
+        "mean_difference_a_minus_b": -0.004787989839214795,
+        "ci95_low": -0.024863039466285212,
+        "ci95_high": 0.015510307749841726,
+        "paired_n": 760
+      },
+      "exact_match": {
+        "mean_difference_a_minus_b": -0.007894736842105263,
+        "ci95_low": -0.02763157894736842,
+        "ci95_high": 0.011842105263157895,
+        "paired_n": 760
+      }
+    },
+    "3_hop/paired_no_compression_minus_evidence_graph_fused_v2": {
+      "token_f1": {
+        "mean_difference_a_minus_b": 0.0352469209318644,
+        "ci95_low": 0.017329362188222824,
+        "ci95_high": 0.05300508706745786,
+        "paired_n": 760
+      },
+      "exact_match": {
+        "mean_difference_a_minus_b": 0.017105263157894738,
+        "ci95_low": 0.0,
+        "ci95_high": 0.034210526315789476,
+        "paired_n": 760
+      }
+    },
+    "4_hop/no_compression": {
+      "n": 405,
+      "token_f1": 0.145065200832405,
+      "exact_match": 0.056790123456790124,
+      "answer_context_support": 0.9975308641975309,
+      "supporting_fact_precision": 0.17905555370288734,
+      "supporting_fact_recall": 0.9970338156558199,
+      "evidence_f1": 0.2973630441285062,
+      "mean_original_tokens": 2605.501234567901,
+      "mean_compressed_tokens": 2605.501234567901,
+      "token_reduction_rate": 0.0,
+      "compression_wallclock_ms": 16.42883259242179,
+      "prefill_ms": 889.4535530864198,
+      "decode_ms": 859.9076814814814,
+      "mean_end_to_end_ms": 1749.3645372839508,
+      "p50_end_to_end_ms": 1664.0857999999998,
+      "p95_end_to_end_ms": 2816.1951
+    },
+    "4_hop/llmlingua2": {
+      "n": 405,
+      "token_f1": 0.15167504064847437,
+      "exact_match": 0.07901234567901234,
+      "answer_context_support": 0.9950617283950617,
+      "supporting_fact_precision": 0.0,
+      "supporting_fact_recall": 0.0,
+      "evidence_f1": 0.0,
+      "mean_original_tokens": 2605.501234567901,
+      "mean_compressed_tokens": 1298.6395061728394,
+      "token_reduction_rate": 0.501583842305223,
+      "compression_wallclock_ms": 1470.3194958024894,
+      "prefill_ms": 457.0050641975309,
+      "decode_ms": 694.3606172839505,
+      "mean_end_to_end_ms": 2608.239558024893,
+      "p50_end_to_end_ms": 2541.731799995605,
+      "p95_end_to_end_ms": 3798.5509000028246
+    },
+    "4_hop/evidence_graph_fused_v2": {
+      "n": 405,
+      "token_f1": 0.11729553349635591,
+      "exact_match": 0.04938271604938271,
+      "answer_context_support": 0.9975308641975309,
+      "supporting_fact_precision": 0.21268130370499586,
+      "supporting_fact_recall": 0.5147672313179206,
+      "evidence_f1": 0.29121372131424605,
+      "mean_original_tokens": 2605.501234567901,
+      "mean_compressed_tokens": 1298.9382716049383,
+      "token_reduction_rate": 0.5015276616206079,
+      "compression_wallclock_ms": 101.36856691352017,
+      "prefill_ms": 437.846212345679,
+      "decode_ms": 870.5331654320988,
+      "mean_end_to_end_ms": 1406.6314207407406,
+      "p50_end_to_end_ms": 1322.0248,
+      "p95_end_to_end_ms": 2601.8230999999996
+    },
+    "4_hop/paired_no_compression_minus_llmlingua2": {
+      "token_f1": {
+        "mean_difference_a_minus_b": -0.006609839816069351,
+        "ci95_low": -0.031060733602604817,
+        "ci95_high": 0.017563780896598043,
+        "paired_n": 405
+      },
+      "exact_match": {
+        "mean_difference_a_minus_b": -0.022222222222222223,
+        "ci95_low": -0.04938271604938271,
+        "ci95_high": 0.0024691358024691358,
+        "paired_n": 405
+      }
+    },
+    "4_hop/paired_no_compression_minus_evidence_graph_fused_v2": {
+      "token_f1": {
+        "mean_difference_a_minus_b": 0.027769667336049103,
+        "ci95_low": 0.006182709223512423,
+        "ci95_high": 0.050574250732685615,
+        "paired_n": 405
+      },
+      "exact_match": {
+        "mean_difference_a_minus_b": 0.007407407407407408,
+        "ci95_low": -0.01728395061728395,
+        "ci95_high": 0.02962962962962963,
+        "paired_n": 405
+      }
+    }
+  },
+  "elapsed_s": 10048.924668900003
+}

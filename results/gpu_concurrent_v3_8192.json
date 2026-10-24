@@ -1,0 +1,60 @@
+{
+  "context_size": 8192,
+  "success": true,
+  "samples": [
+    {
+      "used_mib": 6367,
+      "total_mib": 8151,
+      "utilization_pct": 9
+    },
+    {
+      "used_mib": 6375,
+      "total_mib": 8151,
+      "utilization_pct": 9
+    },
+    {
+      "used_mib": 6405,
+      "total_mib": 8151,
+      "utilization_pct": 91
+    },
+    {
+      "used_mib": 6407,
+      "total_mib": 8151,
+      "utilization_pct": 91
+    },
+    {
+      "used_mib": 6479,
+      "total_mib": 8151,
+      "utilization_pct": 91
+    },
+    {
+      "used_mib": 6479,
+      "total_mib": 8151,
+      "utilization_pct": 91
+    },
+    {
+      "used_mib": 6479,
+      "total_mib": 8151,
+      "utilization_pct": 91
+    },
+    {
+      "used_mib": 6481,
+      "total_mib": 8151,
+      "utilization_pct": 91
+    },
+    {
+      "used_mib": 6481,
+      "total_mib": 8151,
+      "utilization_pct": 91
+    }
+  ],
+  "before_parallel": {
+    "used_mib": 6345,
+    "total_mib": 8151,
+    "utilization_pct": 9
+  },
+  "answer_output_tokens": 7,
+  "summary_output_tokens": 22,
+  "summary_latency_ms": 1210.5061000038404,
+  "summary_text": "Nile is a major river in northeastern Africa. It flows through Egypt and drains into the Mediterranean Sea."
+}

@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from concurrent.futures import Future, ThreadPoolExecutor
+from dataclasses import replace
 from threading import Lock
 from time import perf_counter
 from typing import Any
@@ -13,6 +14,7 @@ from ladc.interfaces import Tokenizer
 from ladc.records import CompressionRecord
 from ladc.workloads import WorkloadRequest
 from ladc.evidence_graph import EvidenceSpan
+from ladc.evidence_builder import _extract_entities
 
 
 class PostGenerationLLMLingua2MemoryCompressor:
@@ -37,15 +39,21 @@ class PostGenerationLLMLingua2MemoryCompressor:
         llmlingua2_config: dict[str, Any] | None = None,
         compressor_kwargs: dict[str, Any] | None = None,
         name: str | None = None,
+        session_compressor: SessionEvidenceGraphCompressor | None = None,
+        memory_compressor: LLMLingua2Compressor | None = None,
+        reconcile_sources: bool = False,
     ) -> None:
         self.name = name or self.name
-        self._session = SessionEvidenceGraphCompressor(compressor_kwargs=compressor_kwargs)
-        self._memory = LLMLingua2Compressor(
+        self._session = session_compressor or SessionEvidenceGraphCompressor(compressor_kwargs=compressor_kwargs)
+        self.reconcile_sources = reconcile_sources
+        self._last_session_request: dict[str, str] = {}
+        self._memory = memory_compressor or LLMLingua2Compressor(
             model_path,
             retain_ratio=retain_ratio,
             device_map=device_map,
             model_config=model_config,
             llmlingua2_config=llmlingua2_config,
+            return_segments=reconcile_sources,
         )
         self._executor = ThreadPoolExecutor(max_workers=1, thread_name_prefix="ladc-post-memory")
         self._futures: set[Future[Any]] = set()
@@ -60,6 +68,10 @@ class PostGenerationLLMLingua2MemoryCompressor:
         tokenizer: Tokenizer,
         target_budget_ratio: float | None = None,
     ) -> CompressionRecord:
+        if self.reconcile_sources:
+            previous = self._last_session_request.get(request_session_id(request))
+            if previous is not None:
+                self.mark_completed_before_next_request(previous)
         record = self._session.compress_request(
             request,
             tokenizer=tokenizer,
@@ -91,6 +103,9 @@ class PostGenerationLLMLingua2MemoryCompressor:
         tokenizer: Tokenizer,
         started_at: float,
     ) -> None:
+        if self.reconcile_sources:
+            self._persist_reconciled(request, output_text, compression, tokenizer, started_at)
+            return
         request_id = request.request_id
         with self._audits_lock:
             audit = self._audits.setdefault(
@@ -181,12 +196,14 @@ class PostGenerationLLMLingua2MemoryCompressor:
         tokenizer: Tokenizer,
     ) -> None:
         submitted = perf_counter()
+        self._last_session_request[request_session_id(request)] = request.request_id
         with self._audits_lock:
             self._audits[request.request_id] = {
                 "history_compression_pending": True,
                 "history_compression_completed_before_next_request": False,
                 "history_compression_ms": 0.0,
                 "history_submitted_at": submitted,
+                "has_next_request": False,
             }
         future = self._executor.submit(
             self._persist, request, output_text, compression, tokenizer, submitted
@@ -203,9 +220,92 @@ class PostGenerationLLMLingua2MemoryCompressor:
         with self._audits_lock:
             audit = self._audits.get(request_id)
             if audit is not None:
-                audit["history_compression_completed_before_next_request"] = not audit.get(
-                    "history_compression_pending", True
+                audit["has_next_request"] = True
+                audit["next_request_started_at"] = perf_counter()
+                audit["history_compression_completed_before_next_request"] = (
+                    not audit.get("history_compression_pending", True)
+                    and not audit.get("history_compression_error")
                 )
+
+    def _persist_reconciled(self, request, output_text, compression, tokenizer, submitted):
+        """Compress both paths' source evidence and keep generated text separate."""
+        started = perf_counter()
+        compute_ms = 0.0
+        try:
+            graph = self._session.graph_for_session(request_session_id(request))
+            ids = tuple(compression.metadata.get("reconciliation_sentence_ids", ()))
+            with graph._lock:
+                nodes = [graph.nodes[node_id] for node_id in ids if node_id in graph.nodes
+                         and graph.nodes[node_id].node_type == "sentence"
+                         and not graph.nodes[node_id].metadata.get("memory_representation")]
+            segments, owners = [], []
+            for node in nodes:
+                title = str(node.metadata.get("title", ""))
+                # Match LLMLingua2Compressor's word chunk size exactly; preserve
+                # segment-to-source mapping even when the classifier drops a title.
+                words = ((f"[{title}] " if title else "") + node.text).split()
+                for index in range(0, len(words), 120):
+                    segments.append(" ".join(words[index:index + 120]))
+                    owners.append(node)
+            evidence_context = "\n".join(segments)
+            evidence_request = WorkloadRequest(
+                request_id=f"source-memory:{request.request_id}", prompt=evidence_context,
+                context=evidence_context, question=request.question, references=())
+            clock = perf_counter()
+            evidence = self._memory.compress_request(evidence_request, tokenizer=tokenizer)
+            compute_ms += (perf_counter() - clock) * 1000
+            compressed_segments = evidence.metadata["compressed_context_segments"]
+            if len(compressed_segments) != len(owners):
+                raise ValueError("compressed segment provenance mismatch")
+            interaction = f"Question: {request.question}\nUnverified generated answer: {output_text.strip()}"
+            qa_request = WorkloadRequest(request_id=f"qa-memory:{request.request_id}",
+                prompt=interaction, context=interaction, question=request.question, references=())
+            clock = perf_counter()
+            qa = self._memory.compress_request(qa_request, tokenizer=tokenizer)
+            compute_ms += (perf_counter() - clock) * 1000
+            # This representation is indexed as an interaction, but the fused
+            # retriever explicitly rejects it as source evidence.
+            graph.add_compressed_turn(f"history:{request.request_id}", request.question,
+                output_text, (), tokenizer=tokenizer,
+                memory_text="\n".join(qa.metadata["compressed_context_segments"]),
+                memory_provenance=ids)
+            added = 0
+            with graph._lock:
+                for index, (text, owner) in enumerate(zip(compressed_segments, owners)):
+                    text = text.strip()
+                    if not text:
+                        continue
+                    title = str(owner.metadata.get("title", ""))
+                    node_id = graph.add_span(EvidenceSpan(
+                        document_id=f"history:source:{request.request_id}", sentence_index=index,
+                        text=text, title=title, entities=_extract_entities(text, title),
+                        confidence=0.7, status="uncertain"), turn_id=f"history:{request.request_id}")
+                    node = graph.nodes[node_id]
+                    graph.nodes[node_id] = replace(node, metadata={**node.metadata,
+                        "memory_representation": True, "source_only_memory": True,
+                        "provenance_sentence_ids": [owner.node_id],
+                        "source_document_id": owner.source_document_id})
+                    added += 1
+            completed = perf_counter()
+            with self._audits_lock:
+                self._audits[request.request_id].update({
+                    "history_compression_pending": False,
+                    "history_compression_ms": compute_ms,
+                    "history_queue_ms": (started - submitted) * 1000,
+                    "history_persist_ms": (completed - started) * 1000 - compute_ms,
+                    "history_total_ms": (completed - submitted) * 1000,
+                    "history_compression_completed_at": completed,
+                    "history_original_tokens": evidence.original_prompt_tokens + qa.original_prompt_tokens,
+                    "history_compressed_tokens": tokenizer.count_tokens("\n".join(compressed_segments))
+                        + tokenizer.count_tokens("\n".join(qa.metadata["compressed_context_segments"])),
+                    "history_memory_provenance_count": len(nodes),
+                    "history_supplemented_source_count": len(set(ids) - set(compression.metadata.get("selected_sentence_ids", ()))),
+                    "history_source_memory_count": added,
+                })
+        except Exception as exc:
+            with self._audits_lock:
+                self._audits[request.request_id].update({"history_compression_pending": False,
+                    "history_compression_error": f"{type(exc).__name__}: {exc}"})
 
     def wait_for_history(self, timeout: float | None = None) -> None:
         with self._futures_lock:
