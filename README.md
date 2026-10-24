@@ -129,3 +129,9 @@ python -u scripts/run_real_7b_multiturn_v2.py `
   --methods no_compression llmlingua2 evidence_graph_qc_grdc_v4 `
   --fraction 0.01 --output-prefix results/qc_grdc_1pct
 ```
+
+一次 1% 数据、15 个三轮会话的真实 7B 验证记录在
+[QC-GRDC 1% 实验报告](docs/qc_grdc_1pct_real_7b_results.md)：QC-GRDC 的 F1 为
+19.57%、平均完整请求延迟 571.10 ms，分别比同批无压缩高 3.64 个百分点、低
+46.8%。MuSiQue 子集仍有 1.37 个百分点的 F1 下降，需要在更大样本中继续做跳数
+分层和路径闭包分析。

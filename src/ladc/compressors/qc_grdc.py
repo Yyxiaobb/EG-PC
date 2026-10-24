@@ -20,6 +20,7 @@ import re
 from typing import Any, Iterable
 
 from ladc.compressors.evidence_graph import EvidenceGraphCompressor, _validate_ratio
+from ladc.compressors.query_aware import QueryAwareMMRCompressor
 from ladc.evidence_builder import _extract_entities, ingest_request_context
 from ladc.evidence_graph import EvidenceGraph, EvidenceHit, _normalize, _tokens
 from ladc.interfaces import Tokenizer
@@ -90,6 +91,7 @@ class QualityConstrainedGraphRateDistortionCompressor(EvidenceGraphCompressor):
         self.quality_floor = quality_floor
         self.max_historical_fraction = max_historical_fraction
         self.adaptive_quality_budget = adaptive_quality_budget
+        self._ranker = QueryAwareMMRCompressor(mmr_lambda=0.80)
 
     @staticmethod
     def _query_features(question: str, hits: Iterable[EvidenceHit]) -> set[str]:
@@ -118,6 +120,8 @@ class QualityConstrainedGraphRateDistortionCompressor(EvidenceGraphCompressor):
         # allows a downstream audit to verify that multi-hop support survived.
         for node_id in hit.path:
             features.add("path:" + node_id)
+        if hit.hops >= 2 and any(node_id.startswith("entity:") for node_id in hit.path):
+            features.add(f"hop:{min(hit.hops, 4)}")
         features.add("sentence:" + hit.node_id)
         return features
 
@@ -144,6 +148,8 @@ class QualityConstrainedGraphRateDistortionCompressor(EvidenceGraphCompressor):
             # signal.  Lexical answer anchors receive higher weight so an
             # extra bridge entity cannot make the quality floor unattainable.
             return 0.20
+        if feature.startswith("hop:"):
+            return 1.0
         if feature.startswith("doc:"):
             return 0.55 if current else 0.35
         if feature.startswith("sentence:"):
@@ -165,12 +171,20 @@ class QualityConstrainedGraphRateDistortionCompressor(EvidenceGraphCompressor):
         historical: list[EvidenceHit] = []
         for hit in hits:
             if hit.node_id in current_ids:
-                accepted.append(hit)
+                # Question/answer nodes are contextual bookkeeping, not source
+                # evidence.  A path that crosses one is flattened for current
+                # material so it cannot create a fake bridge feature.
+                if any(part.startswith(("question:", "answer:")) for part in hit.path):
+                    accepted.append(replace(hit, path=(hit.node_id,), hops=0))
+                else:
+                    accepted.append(hit)
                 continue
             lexical = len(query_terms & _feature_tokens(hit.text)) / max(1, len(query_terms))
             # Historical evidence needs either a graph bridge or a meaningful
             # lexical link.  This avoids importing unrelated session material.
-            has_bridge = len(hit.path) > 1
+            if any(part.startswith(("question:", "answer:")) for part in hit.path):
+                continue
+            has_bridge = any(part.startswith("entity:") for part in hit.path[::2])
             if hit.hops <= self.max_hops and (has_bridge or lexical >= 0.10):
                 historical.append(hit)
         historical.sort(key=lambda h: (-h.score, h.hops, h.node_id))
@@ -225,6 +239,11 @@ class QualityConstrainedGraphRateDistortionCompressor(EvidenceGraphCompressor):
 
         query_features = self._query_features(request.question, hits)
         feature_sets = [self._candidate_features(hit, query_features) for hit in hits]
+        rank_candidates = [
+            (hit.title, hit.source_sentence_index or 0, hit.text, _feature_tokens(hit.title + " " + hit.text))
+            for hit in hits
+        ]
+        bm25_scores = self._ranker._bm25_scores(rank_candidates, request.question)
         candidate_costs = [tokenizer.count_tokens((f"[{h.title}] " if h.title else "") + h.text + "\n") for h in hits]
         current_flags = [h.node_id in current_ids for h in hits]
         weights = {
@@ -244,10 +263,14 @@ class QualityConstrainedGraphRateDistortionCompressor(EvidenceGraphCompressor):
         def score(i: int, *, core: bool = False) -> tuple[float, float, float, int]:
             new = feature_sets[i] - selected_features
             gain = sum(weights.get(feature, 0.4) for feature in new)
+            # The graph search score is the answer-bearing relevance signal;
+            # include it in the rate term so generic feature overlap cannot
+            # outrank a high-scoring supporting sentence.
+            relevance_gain = 1.50 * max(0.0, hits[i].score) + 1.50 * bm25_scores[i]
             current_bonus = 0.22 if current_flags[i] else 0.0
             bridge_bonus = 0.18 * max(0, len(hits[i].path) - 1)
             cost = max(1, candidate_costs[i])
-            return (gain / cost + current_bonus / cost + bridge_bonus / cost,
+            return ((gain + relevance_gain) / cost + current_bonus / cost + bridge_bonus / cost,
                     gain if core else 0.0, -float(cost), -i)
 
         # Core pass: cover query-bearing terms and bridge paths with the best
@@ -259,6 +282,10 @@ class QualityConstrainedGraphRateDistortionCompressor(EvidenceGraphCompressor):
                 _NUMBER_OR_DATE.fullmatch(feature) or feature in _NEGATIONS
             )
         }
+        # A multi-hop candidate contributes a structural depth feature.  Keep
+        # one compact high-confidence sentence for every observed depth so the
+        # selector cannot satisfy lexical coverage with only direct matches.
+        mandatory.update(feature for feature in full_features if feature.startswith("hop:"))
         for feature in sorted(mandatory):
             options = [i for i, fs in enumerate(feature_sets)
                        if feature in fs and i not in selected]

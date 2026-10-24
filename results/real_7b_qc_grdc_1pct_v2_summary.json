@@ -1,0 +1,723 @@
+{
+  "version": 3,
+  "fraction_per_dataset": 0.01,
+  "seed": 42,
+  "dataset_counts": {
+    "hotpotqa": {
+      "available": 7405,
+      "target_turns": 75,
+      "target_fraction": 0.01012829169480081
+    },
+    "2wikimultihopqa": {
+      "available": 12576,
+      "target_turns": 126,
+      "target_fraction": 0.010019083969465648
+    },
+    "musique": {
+      "available": 2417,
+      "target_turns": 25,
+      "target_fraction": 0.01034340091021928
+    }
+  },
+  "coverage": {
+    "hotpotqa": {
+      "target_questions": 75,
+      "used_in_multiturn_sessions": 15,
+      "unused_target_questions": 60
+    },
+    "2wikimultihopqa": {
+      "target_questions": 126,
+      "used_in_multiturn_sessions": 15,
+      "unused_target_questions": 111
+    },
+    "musique": {
+      "target_questions": 25,
+      "used_in_multiturn_sessions": 15,
+      "unused_target_questions": 10
+    }
+  },
+  "sequence_length": 3,
+  "sequence_count": 15,
+  "request_count": 45,
+  "methods": [
+    "no_compression",
+    "evidence_graph_qc_grdc_v4"
+  ],
+  "expected_generation_count": 90,
+  "budget_ratio": 0.5,
+  "budget_policy": "same maximum native prompt token budget; actual usage reported",
+  "sequence_sampling": "three-turn chains selected from full split using visible titles/entities; deterministic mixed fallback fills requested fraction when linked turns run out; not natural dialogue",
+  "inter_turn_wait_ms": 200.0,
+  "method_schedule": "rotate method order across sessions; finish background work before changing methods",
+  "latency_definition": "client compression start to complete generation return, excluding evaluation and post-generation work",
+  "history_readiness_definition": "measured immediately before actual next combo request; final turns excluded",
+  "raw_source_anchors_retained": true,
+  "max_new_tokens": 32,
+  "model": "D:\\HF_dl\\model\\Qwen2.5-7B-Instruct-GGUF\\qwen2.5-7b-instruct-q4_k_m-00001-of-00002.gguf",
+  "llmlingua_model": "D:\\HF_dl\\model\\llmlingua-2-bert-base-multilingual-cased-meetingbank",
+  "abstractive_model": "D:\\HF_dl\\model\\Qwen2.5-0.5B-Instruct",
+  "abstractive_device": "cpu",
+  "abstractive_max_new_tokens": 64,
+  "v3_protocol": "turn 1 sends the original prompt unchanged; after each answer, an asynchronous worker summarizes only that turn's raw source evidence and stores a source-only memory node with provenance IDs; later turns fuse current raw evidence with completed session summaries; a pending summary never blocks a request",
+  "qc_grdc_protocol": "quality-constrained graph rate-distortion coding; protect query variables, numeric/negation features, graph bridge paths and provenance anchors, then select remaining evidence by marginal observable quality gain per native token cost",
+  "code_sha256": {
+    "C:\\Users\\12777\\Documents\\ChatGPT\\new_compress\\scripts\\run_real_7b_multiturn_v2.py": "3dd8302b9ba8994d250e637e44eeab21d9c2ac909befe976dcb2ac071f65bf9c",
+    "scripts\\run_real_7b_multiturn_fraction.py": "ec151dd2915c8239cac012f41a27a3ec95be65efb30673d223bf70de9eb40178",
+    "src\\ladc\\__init__.py": "3e388cdeeda23c84c2b1e12820500ca7262ed70ccd94344ddfacac56141dc3e4",
+    "src\\ladc\\analysis\\__init__.py": "e9bb38aabdad9a8a010259642b2aeb7426a8e03fd6d6020523e2468a66a5d443",
+    "src\\ladc\\analysis\\summary.py": "6d38ef3d42313dcf16eec2ac26cfbc753139c3ff62355bef53e89a3d0288c4a9",
+    "src\\ladc\\calibration.py": "bb54e418d6eea825a70eab183d09ce6f1737dc9ec51900313331b7fe4acfc6d5",
+    "src\\ladc\\calibration_metrics.py": "35e10ddfdb080c4f344e46f1f347eb37053ec701b10b8cf6ab0c8aa283713d8d",
+    "src\\ladc\\compressors\\__init__.py": "620fa850d92803b6c3a3c06d5b41d8384c415797cff34f5b6dd23f82f782e2ce",
+    "src\\ladc\\compressors\\abstractive_fused.py": "8202f300490d8bedaeae6e4e140614729e50a10de85b11104f0cfaa5eaf10274",
+    "src\\ladc\\compressors\\async_abstractive_memory.py": "be1dbc7b46092cb837160e1e6cc979c8ad812af23a5693ad0106bea6c6c01f56",
+    "src\\ladc\\compressors\\baselines.py": "b79efd33068197bf6acf1fc74e852b75206492d13a0de6668e2b81845263b390",
+    "src\\ladc\\compressors\\dual_path.py": "c996cf7effdfd351da09a769948207157c3ed846104f5e4f5d9a4c81195f076c",
+    "src\\ladc\\compressors\\evidence_graph.py": "f89b7c2b04c063a97673ff5c67978a281470374f437cfe2f1f80eb485bc242b3",
+    "src\\ladc\\compressors\\fused_graph.py": "87dae4b6ff02f2609b30ac4d910e320f7de6698967b70a40fdabcec663e2babb",
+    "src\\ladc\\compressors\\llmlingua2.py": "abaa725222dbc43c8e2b0dbea61cb1de1d3bf8da02e4739a230bd5b8fbf40b90",
+    "src\\ladc\\compressors\\post_generation.py": "ccbbd58ad01f9914dc9ce05ecd8b5a5be884484cb89eb9474fab6b1871f8c50a",
+    "src\\ladc\\compressors\\qc_grdc.py": "9e536066a439e0309859d66aa48a86672ec75bdd03807a75ac2e93f6157e8145",
+    "src\\ladc\\compressors\\query_aware.py": "741a73dbc53d868f08b8e775b6d86f0a9e35b21692788ea0d2c72e8a786bcecf",
+    "src\\ladc\\compressors\\session_graph.py": "3bb6300b5f4024a508e6933ef40d67a67c92a658a58df33e9bea7316006f92cc",
+    "src\\ladc\\controller.py": "a5a1f2f8e7dc308a962499256428ce53bce722b41552dc2fcd61fd6d91045be0",
+    "src\\ladc\\datasets.py": "96c15cd5fcc867eddca16400a80cfa33121062adbb6c50305926ae83c8a6396b",
+    "src\\ladc\\evidence_builder.py": "cd54ffd035f04f795b95702dd0849ac65b30c7252894471b3476e1afb869acf4",
+    "src\\ladc\\evidence_graph.py": "73e69ff6704934e10b082c42c7285125672962e45a867751604e5dc703e76ac9",
+    "src\\ladc\\experiments\\__init__.py": "eb4391f7ca90e0b202ecc6f7484edba04f435cf18c2c140f155465ed817e72be",
+    "src\\ladc\\experiments\\runner.py": "af5550f738747c49b052070a3c8dc52f5c16a7bcf4c347d374d0570b8681a07f",
+    "src\\ladc\\features.py": "d59e44ae5a8fb3d9dd9e38cdd3a449453b06ea8c69370f0fe9b838cdbd1a0fed",
+    "src\\ladc\\inference\\__init__.py": "d27a8b9d0a27622356d31d5b8a362484e968a239336dea67e1511b0fccb40207",
+    "src\\ladc\\inference\\llama_cli.py": "d543c49b5a1368a589f0d722dcde0b3389ef336858c4fdcc5f58ba97c91d3779",
+    "src\\ladc\\inference\\llama_server.py": "57443b73675f542de3d9b4304c5bec616a9b14e78d1956ba447f5eba3f30c127",
+    "src\\ladc\\inference\\simulated.py": "8c768dc77b84c1dd6f70183dbe912e5ac12f4587a20ea5c8a9aa832869ddba4c",
+    "src\\ladc\\inference\\transformers_backend.py": "63b41ea2a792402ceea29032f358a012fa60dddd712fa931f388d0d46c6c60e5",
+    "src\\ladc\\interfaces.py": "96f1d3f2107a1470e812cdabdba5c4e050d9455fb22ee98e247b0a7fdf04fa57",
+    "src\\ladc\\predictor.py": "95b6308a843aa273447957dec8fd31ae8751254c4ac4a2bc9c40cda66e6e0cc4",
+    "src\\ladc\\quality.py": "ce4041ba070ee235214446d8fdb4325f5c51ee42b17d9c39586017ba5ebe0e28",
+    "src\\ladc\\records.py": "0e6e7e4fbc3161a874cd7bc9175aa3d7b9fcd18ef067080d9a0dbfa95a8f8087",
+    "src\\ladc\\sequences.py": "2a57d4d0a84dabe43ebe4aa376107523d0c4d9fd5a5953efdf4a41306ea2cd2c",
+    "src\\ladc\\timing.py": "2284aeb19cd0eb71fabca478242f0b42a91470deb5eb42ed206656f7f70941fe",
+    "src\\ladc\\tokenizers.py": "12b27257079f51e02a6477afe02c458abcf3d8c73cf7a54becc3a78fe8f8361e",
+    "src\\ladc\\workloads.py": "6ef337a1e32a0006304b23f07a758595e623dbeb2f518b52a4c8dfc548596ab7"
+  },
+  "sequences": [
+    {
+      "sequence_id": "2wikimultihopqa_related_4",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "d85864ee0bdd11eba7f7acde48001122",
+        "49e5edb60bde11eba7f7acde48001122",
+        "1199d7560bde11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_3",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "1453102a09b011ebbdb0ac1f6bf848b6",
+        "61b28c2609a411ebbdb0ac1f6bf848b6",
+        "cce33f4e09a811ebbdb0ac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "musique_related_2",
+      "dataset": "musique",
+      "kind": "related",
+      "request_ids": [
+        "4hop1__88342_49853_128008_67954",
+        "4hop1__88342_75218_128008_67954",
+        "4hop1__88342_49853_128008_80487"
+      ]
+    },
+    {
+      "sequence_id": "musique_related_4",
+      "dataset": "musique",
+      "kind": "related",
+      "request_ids": [
+        "2hop__82051_7298",
+        "2hop__70930_7298",
+        "2hop__53147_7298"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_1",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "98c2d5f0086811ebbd5eac1f6bf848b6",
+        "a4ad03b2086211ebbd5dac1f6bf848b6",
+        "45af359408ab11ebbd82ac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "hotpotqa_related_3",
+      "dataset": "hotpotqa",
+      "kind": "related",
+      "request_ids": [
+        "5adbf81a554299438c868cfd",
+        "5ae02b6c55429924de1b7044",
+        "5a806e01554299485f5985e5"
+      ]
+    },
+    {
+      "sequence_id": "musique_related_3",
+      "dataset": "musique",
+      "kind": "related",
+      "request_ids": [
+        "3hop1__765847_831637_91775",
+        "3hop1__754160_831637_91775",
+        "3hop1__699454_831637_91775"
+      ]
+    },
+    {
+      "sequence_id": "musique_related_0",
+      "dataset": "musique",
+      "kind": "related",
+      "request_ids": [
+        "3hop1__813285_774554_124169",
+        "3hop1__497845_629431_124169",
+        "3hop1__404541_629431_124169"
+      ]
+    },
+    {
+      "sequence_id": "hotpotqa_related_1",
+      "dataset": "hotpotqa",
+      "kind": "related",
+      "request_ids": [
+        "5a8f5a185542992414482a71",
+        "5adff056554299603e4183cc",
+        "5a793ea55542994bb9456fce"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_0",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "aac8784d087d11ebbd6bac1f6bf848b6",
+        "aac8784c087d11ebbd6bac1f6bf848b6",
+        "2f54952f087811ebbd67ac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_2",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "f2987f240bdd11eba7f7acde48001122",
+        "955dd72a0bdb11eba7f7acde48001122",
+        "4912efa60bde11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "hotpotqa_related_2",
+      "dataset": "hotpotqa",
+      "kind": "related",
+      "request_ids": [
+        "5ae3b30f5542994393b9e74f",
+        "5a8cb4b2554299585d9e372a",
+        "5ae1452c554299422ee99654"
+      ]
+    },
+    {
+      "sequence_id": "musique_related_1",
+      "dataset": "musique",
+      "kind": "related",
+      "request_ids": [
+        "2hop__66167_90991",
+        "2hop__66167_88526",
+        "2hop__57638_88526"
+      ]
+    },
+    {
+      "sequence_id": "hotpotqa_related_4",
+      "dataset": "hotpotqa",
+      "kind": "related",
+      "request_ids": [
+        "5ae72fc5554299572ea54770",
+        "5ae49bb755429970de88d9d7",
+        "5ae601e45542992663a4f23b"
+      ]
+    },
+    {
+      "sequence_id": "hotpotqa_related_0",
+      "dataset": "hotpotqa",
+      "kind": "related",
+      "request_ids": [
+        "5ae0ae4555429945ae959419",
+        "5ae56fb85542993aec5ec1a9",
+        "5a7c68575542996dd594b91c"
+      ]
+    }
+  ],
+  "complete": true,
+  "rows": 90,
+  "elapsed_this_run_s": 97.65138589998242,
+  "summaries": [
+    {
+      "group": "dataset",
+      "value": "2wikimultihopqa",
+      "method": "evidence_graph_qc_grdc_v4",
+      "n": 15,
+      "token_f1": 0.18308641975308643,
+      "exact_match": 0.06666666666666667,
+      "evidence_f1_extractive_only": 0.12791486291486293,
+      "input_tokens": 189.26666666666668,
+      "token_reduction_rate": 0.7863269103480065,
+      "compression_wallclock_ms": 8.332980008951077,
+      "prefill_ms": 76.99866666666667,
+      "decode_ms": 354.77773333333334,
+      "end_to_end_wallclock_ms": 468.21276001088944,
+      "p50_end_to_end_ms": 547.2861000453122,
+      "p95_end_to_end_ms": 616.3192000240088,
+      "component_sum_ms": 438.10422,
+      "reused_evidence_count": 1.2,
+      "compressed_memory_selected_count": 0,
+      "retrieval_winners": {
+        "n/a": 15
+      },
+      "history_compute_ms": null,
+      "history_queue_ms": null,
+      "history_total_ms": null,
+      "history_supplemented_source_count": 0,
+      "history_ready_numerator": 0,
+      "history_ready_denominator": 0,
+      "history_ready_rate": null,
+      "history_errors": [],
+      "history_summary_fallback_count": 0,
+      "history_mean_reduction_rate": 0.0
+    },
+    {
+      "group": "dataset",
+      "value": "2wikimultihopqa",
+      "method": "no_compression",
+      "n": 15,
+      "token_f1": 0.2194925308609519,
+      "exact_match": 0.0,
+      "evidence_f1_extractive_only": 0.15845628782236473,
+      "input_tokens": 947.2666666666667,
+      "token_reduction_rate": 0.0,
+      "compression_wallclock_ms": 2.900853337875257,
+      "prefill_ms": 323.7428,
+      "decode_ms": 420.64706666666666,
+      "end_to_end_wallclock_ms": 784.8263999951693,
+      "p50_end_to_end_ms": 805.4736000485718,
+      "p95_end_to_end_ms": 1016.9017000007443,
+      "component_sum_ms": 744.3919066666666,
+      "reused_evidence_count": 0.0,
+      "compressed_memory_selected_count": 0,
+      "retrieval_winners": {
+        "n/a": 15
+      },
+      "history_compute_ms": null,
+      "history_queue_ms": null,
+      "history_total_ms": null,
+      "history_supplemented_source_count": 0,
+      "history_ready_numerator": 0,
+      "history_ready_denominator": 0,
+      "history_ready_rate": null,
+      "history_errors": [],
+      "history_summary_fallback_count": 0,
+      "history_mean_reduction_rate": 0.0
+    },
+    {
+      "group": "dataset",
+      "value": "hotpotqa",
+      "method": "evidence_graph_qc_grdc_v4",
+      "n": 15,
+      "token_f1": 0.12139742704960096,
+      "exact_match": 0.0,
+      "evidence_f1_extractive_only": 0.2194885537877865,
+      "input_tokens": 348.46666666666664,
+      "token_reduction_rate": 0.7401498963243379,
+      "compression_wallclock_ms": 14.604373342202356,
+      "prefill_ms": 128.60046666666668,
+      "decode_ms": 373.85426666666666,
+      "end_to_end_wallclock_ms": 548.0428533434557,
+      "p50_end_to_end_ms": 562.6654000370763,
+      "p95_end_to_end_ms": 720.1035000034608,
+      "component_sum_ms": 513.0868866666666,
+      "reused_evidence_count": 2.8,
+      "compressed_memory_selected_count": 0,
+      "retrieval_winners": {
+        "n/a": 15
+      },
+      "history_compute_ms": null,
+      "history_queue_ms": null,
+      "history_total_ms": null,
+      "history_supplemented_source_count": 0,
+      "history_ready_numerator": 0,
+      "history_ready_denominator": 0,
+      "history_ready_rate": null,
+      "history_errors": [],
+      "history_summary_fallback_count": 0,
+      "history_mean_reduction_rate": 0.0
+    },
+    {
+      "group": "dataset",
+      "value": "hotpotqa",
+      "method": "no_compression",
+      "n": 15,
+      "token_f1": 0.16626805653727178,
+      "exact_match": 0.0,
+      "evidence_f1_extractive_only": 0.1225107145930689,
+      "input_tokens": 1437.0666666666666,
+      "token_reduction_rate": 0.0,
+      "compression_wallclock_ms": 4.07928666099906,
+      "prefill_ms": 477.6530666666667,
+      "decode_ms": 440.58146666666664,
+      "end_to_end_wallclock_ms": 978.600219990282,
+      "p50_end_to_end_ms": 979.3561000260524,
+      "p95_end_to_end_ms": 1188.9425999834202,
+      "component_sum_ms": 918.2365133333334,
+      "reused_evidence_count": 0.0,
+      "compressed_memory_selected_count": 0,
+      "retrieval_winners": {
+        "n/a": 15
+      },
+      "history_compute_ms": null,
+      "history_queue_ms": null,
+      "history_total_ms": null,
+      "history_supplemented_source_count": 0,
+      "history_ready_numerator": 0,
+      "history_ready_denominator": 0,
+      "history_ready_rate": null,
+      "history_errors": [],
+      "history_summary_fallback_count": 0,
+      "history_mean_reduction_rate": 0.0
+    },
+    {
+      "group": "dataset",
+      "value": "musique",
+      "method": "evidence_graph_qc_grdc_v4",
+      "n": 15,
+      "token_f1": 0.07712820512820513,
+      "exact_match": 0.06666666666666667,
+      "evidence_f1_extractive_only": 0.22082807258015674,
+      "input_tokens": 898.7333333333333,
+      "token_reduction_rate": 0.6831736100452679,
+      "compression_wallclock_ms": 26.646793342661113,
+      "prefill_ms": 317.7908,
+      "decode_ms": 385.0848,
+      "end_to_end_wallclock_ms": 783.1613933357099,
+      "p50_end_to_end_ms": 703.4251999575645,
+      "p95_end_to_end_ms": 1524.3134999764152,
+      "component_sum_ms": 723.4389066666666,
+      "reused_evidence_count": 3.4,
+      "compressed_memory_selected_count": 0,
+      "retrieval_winners": {
+        "n/a": 15
+      },
+      "history_compute_ms": null,
+      "history_queue_ms": null,
+      "history_total_ms": null,
+      "history_supplemented_source_count": 0,
+      "history_ready_numerator": 0,
+      "history_ready_denominator": 0,
+      "history_ready_rate": null,
+      "history_errors": [],
+      "history_summary_fallback_count": 0,
+      "history_mean_reduction_rate": 0.0
+    },
+    {
+      "group": "dataset",
+      "value": "musique",
+      "method": "no_compression",
+      "n": 15,
+      "token_f1": 0.092316782293899,
+      "exact_match": 0.0,
+      "evidence_f1_extractive_only": 0.26420888190010744,
+      "input_tokens": 2793.733333333333,
+      "token_reduction_rate": 0.0,
+      "compression_wallclock_ms": 7.0414666590901716,
+      "prefill_ms": 930.1877333333334,
+      "decode_ms": 453.5801333333333,
+      "end_to_end_wallclock_ms": 1469.112999997257,
+      "p50_end_to_end_ms": 1432.472099957522,
+      "p95_end_to_end_ms": 2039.0206000301987,
+      "component_sum_ms": 1383.7695466666667,
+      "reused_evidence_count": 0.0,
+      "compressed_memory_selected_count": 0,
+      "retrieval_winners": {
+        "n/a": 15
+      },
+      "history_compute_ms": null,
+      "history_queue_ms": null,
+      "history_total_ms": null,
+      "history_supplemented_source_count": 0,
+      "history_ready_numerator": 0,
+      "history_ready_denominator": 0,
+      "history_ready_rate": null,
+      "history_errors": [],
+      "history_summary_fallback_count": 0,
+      "history_mean_reduction_rate": 0.0
+    },
+    {
+      "group": "overall",
+      "value": "all",
+      "method": "evidence_graph_qc_grdc_v4",
+      "n": 45,
+      "token_f1": 0.1272040173102975,
+      "exact_match": 0.044444444444444446,
+      "evidence_f1_extractive_only": 0.18941049642760205,
+      "input_tokens": 478.8222222222222,
+      "token_reduction_rate": 0.7365501389058707,
+      "compression_wallclock_ms": 16.52804889793818,
+      "prefill_ms": 174.46331111111112,
+      "decode_ms": 371.23893333333336,
+      "end_to_end_wallclock_ms": 599.805668896685,
+      "p50_end_to_end_ms": 565.268800011836,
+      "p95_end_to_end_ms": 1502.5417999713682,
+      "component_sum_ms": 558.2100044444444,
+      "reused_evidence_count": 2.466666666666667,
+      "compressed_memory_selected_count": 0,
+      "retrieval_winners": {
+        "n/a": 45
+      },
+      "history_compute_ms": null,
+      "history_queue_ms": null,
+      "history_total_ms": null,
+      "history_supplemented_source_count": 0,
+      "history_ready_numerator": 0,
+      "history_ready_denominator": 0,
+      "history_ready_rate": null,
+      "history_errors": [],
+      "history_summary_fallback_count": 0,
+      "history_mean_reduction_rate": 0.0
+    },
+    {
+      "group": "overall",
+      "value": "all",
+      "method": "no_compression",
+      "n": 45,
+      "token_f1": 0.15935912323070756,
+      "exact_match": 0.0,
+      "evidence_f1_extractive_only": 0.18172529477184704,
+      "input_tokens": 1726.0222222222221,
+      "token_reduction_rate": 0.0,
+      "compression_wallclock_ms": 4.6738688859881625,
+      "prefill_ms": 577.1945333333333,
+      "decode_ms": 438.2695555555556,
+      "end_to_end_wallclock_ms": 1077.5132066609028,
+      "p50_end_to_end_ms": 981.590999988839,
+      "p95_end_to_end_ms": 1837.0894999825396,
+      "component_sum_ms": 1015.4659888888889,
+      "reused_evidence_count": 0.0,
+      "compressed_memory_selected_count": 0,
+      "retrieval_winners": {
+        "n/a": 45
+      },
+      "history_compute_ms": null,
+      "history_queue_ms": null,
+      "history_total_ms": null,
+      "history_supplemented_source_count": 0,
+      "history_ready_numerator": 0,
+      "history_ready_denominator": 0,
+      "history_ready_rate": null,
+      "history_errors": [],
+      "history_summary_fallback_count": 0,
+      "history_mean_reduction_rate": 0.0
+    },
+    {
+      "group": "turn",
+      "value": "1",
+      "method": "evidence_graph_qc_grdc_v4",
+      "n": 15,
+      "token_f1": 0.13161259459810185,
+      "exact_match": 0.06666666666666667,
+      "evidence_f1_extractive_only": 0.2267173060356906,
+      "input_tokens": 398.6,
+      "token_reduction_rate": 0.7947179168354328,
+      "compression_wallclock_ms": 13.578060013242066,
+      "prefill_ms": 150.85320000000002,
+      "decode_ms": 367.7393333333333,
+      "end_to_end_wallclock_ms": 585.2484400034882,
+      "p50_end_to_end_ms": 563.7232000008225,
+      "p95_end_to_end_ms": 798.9205999765545,
+      "component_sum_ms": 528.9769933333333,
+      "reused_evidence_count": 0.0,
+      "compressed_memory_selected_count": 0,
+      "retrieval_winners": {
+        "n/a": 15
+      },
+      "history_compute_ms": null,
+      "history_queue_ms": null,
+      "history_total_ms": null,
+      "history_supplemented_source_count": 0,
+      "history_ready_numerator": 0,
+      "history_ready_denominator": 0,
+      "history_ready_rate": null,
+      "history_errors": [],
+      "history_summary_fallback_count": 0,
+      "history_mean_reduction_rate": 0.0
+    },
+    {
+      "group": "turn",
+      "value": "1",
+      "method": "no_compression",
+      "n": 15,
+      "token_f1": 0.15840636945900105,
+      "exact_match": 0.0,
+      "evidence_f1_extractive_only": 0.19809524104194215,
+      "input_tokens": 1637.1333333333334,
+      "token_reduction_rate": 0.0,
+      "compression_wallclock_ms": 4.481693326185147,
+      "prefill_ms": 566.0848000000001,
+      "decode_ms": 397.4438,
+      "end_to_end_wallclock_ms": 1012.5360866620516,
+      "p50_end_to_end_ms": 959.8188999807462,
+      "p95_end_to_end_ms": 1451.4538999646902,
+      "component_sum_ms": 963.5303133333333,
+      "reused_evidence_count": 0.0,
+      "compressed_memory_selected_count": 0,
+      "retrieval_winners": {
+        "n/a": 15
+      },
+      "history_compute_ms": null,
+      "history_queue_ms": null,
+      "history_total_ms": null,
+      "history_supplemented_source_count": 0,
+      "history_ready_numerator": 0,
+      "history_ready_denominator": 0,
+      "history_ready_rate": null,
+      "history_errors": [],
+      "history_summary_fallback_count": 0,
+      "history_mean_reduction_rate": 0.0
+    },
+    {
+      "group": "turn",
+      "value": "2",
+      "method": "evidence_graph_qc_grdc_v4",
+      "n": 15,
+      "token_f1": 0.1768395061728395,
+      "exact_match": 0.06666666666666667,
+      "evidence_f1_extractive_only": 0.171720476263682,
+      "input_tokens": 444.53333333333336,
+      "token_reduction_rate": 0.7517632491199772,
+      "compression_wallclock_ms": 16.625066675866645,
+      "prefill_ms": 159.02079999999998,
+      "decode_ms": 357.8688666666667,
+      "end_to_end_wallclock_ms": 562.8702266723849,
+      "p50_end_to_end_ms": 539.1731000272557,
+      "p95_end_to_end_ms": 722.1360999974422,
+      "component_sum_ms": 529.1311066666666,
+      "reused_evidence_count": 2.3333333333333335,
+      "compressed_memory_selected_count": 0,
+      "retrieval_winners": {
+        "n/a": 15
+      },
+      "history_compute_ms": null,
+      "history_queue_ms": null,
+      "history_total_ms": null,
+      "history_supplemented_source_count": 0,
+      "history_ready_numerator": 0,
+      "history_ready_denominator": 0,
+      "history_ready_rate": null,
+      "history_errors": [],
+      "history_summary_fallback_count": 0,
+      "history_mean_reduction_rate": 0.0
+    },
+    {
+      "group": "turn",
+      "value": "2",
+      "method": "no_compression",
+      "n": 15,
+      "token_f1": 0.1390920736183894,
+      "exact_match": 0.0,
+      "evidence_f1_extractive_only": 0.16876728924267237,
+      "input_tokens": 1662.8666666666666,
+      "token_reduction_rate": 0.0,
+      "compression_wallclock_ms": 4.604113338670383,
+      "prefill_ms": 549.1787333333334,
+      "decode_ms": 450.07873333333333,
+      "end_to_end_wallclock_ms": 1066.8612000066787,
+      "p50_end_to_end_ms": 965.5855000019073,
+      "p95_end_to_end_ms": 1553.0509000527672,
+      "component_sum_ms": 999.2594533333333,
+      "reused_evidence_count": 0.0,
+      "compressed_memory_selected_count": 0,
+      "retrieval_winners": {
+        "n/a": 15
+      },
+      "history_compute_ms": null,
+      "history_queue_ms": null,
+      "history_total_ms": null,
+      "history_supplemented_source_count": 0,
+      "history_ready_numerator": 0,
+      "history_ready_denominator": 0,
+      "history_ready_rate": null,
+      "history_errors": [],
+      "history_summary_fallback_count": 0,
+      "history_mean_reduction_rate": 0.0
+    },
+    {
+      "group": "turn",
+      "value": "3",
+      "method": "evidence_graph_qc_grdc_v4",
+      "n": 15,
+      "token_f1": 0.07315995115995116,
+      "exact_match": 0.0,
+      "evidence_f1_extractive_only": 0.16979370698343357,
+      "input_tokens": 593.3333333333334,
+      "token_reduction_rate": 0.6631692507622022,
+      "compression_wallclock_ms": 19.381020004705835,
+      "prefill_ms": 213.51593333333332,
+      "decode_ms": 388.10859999999997,
+      "end_to_end_wallclock_ms": 651.298340014182,
+      "p50_end_to_end_ms": 616.3192000240088,
+      "p95_end_to_end_ms": 823.9366000052541,
+      "component_sum_ms": 616.5219133333334,
+      "reused_evidence_count": 5.066666666666666,
+      "compressed_memory_selected_count": 0,
+      "retrieval_winners": {
+        "n/a": 15
+      },
+      "history_compute_ms": null,
+      "history_queue_ms": null,
+      "history_total_ms": null,
+      "history_supplemented_source_count": 0,
+      "history_ready_numerator": 0,
+      "history_ready_denominator": 0,
+      "history_ready_rate": null,
+      "history_errors": [],
+      "history_summary_fallback_count": 0,
+      "history_mean_reduction_rate": 0.0
+    },
+    {
+      "group": "turn",
+      "value": "3",
+      "method": "no_compression",
+      "n": 15,
+      "token_f1": 0.18057892661473224,
+      "exact_match": 0.0,
+      "evidence_f1_extractive_only": 0.1783133540309266,
+      "input_tokens": 1878.0666666666666,
+      "token_reduction_rate": 0.0,
+      "compression_wallclock_ms": 4.935799993108958,
+      "prefill_ms": 616.3200666666667,
+      "decode_ms": 467.28613333333334,
+      "end_to_end_wallclock_ms": 1153.142333313978,
+      "p50_end_to_end_ms": 1118.4052999597043,
+      "p95_end_to_end_ms": 1756.1488999635912,
+      "component_sum_ms": 1083.6082,
+      "reused_evidence_count": 0.0,
+      "compressed_memory_selected_count": 0,
+      "retrieval_winners": {
+        "n/a": 15
+      },
+      "history_compute_ms": null,
+      "history_queue_ms": null,
+      "history_total_ms": null,
+      "history_supplemented_source_count": 0,
+      "history_ready_numerator": 0,
+      "history_ready_denominator": 0,
+      "history_ready_rate": null,
+      "history_errors": [],
+      "history_summary_fallback_count": 0,
+      "history_mean_reduction_rate": 0.0
+    }
+  ]
+}
