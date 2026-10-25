@@ -20,6 +20,8 @@ from ladc.compressors import (FusedEvidenceGraphCompressor, LLMLingua2Compressor
     AsyncAbstractiveEvidenceMemoryCompressor, LocalAbstractiveSummarizer,
     NoCompressionCompressor, PostGenerationLLMLingua2MemoryCompressor, SessionEvidenceGraphCompressor,
     QualityConstrainedGraphRateDistortionCompressor)
+from ladc.compressors import (RelationAwareQCGRDCCompressor,
+    TripleAwareQCGRDCCompressor, ChainAwareQCGRDCCompressor)
 from ladc.experiments.runner import run_request
 from ladc.inference import LlamaServerInferenceBackend
 from ladc.quality import evaluate_real_request
@@ -29,7 +31,9 @@ from scripts.run_real_7b_multiturn_fraction import _annotate, _build_sequences, 
 
 ALL_METHODS = ["no_compression", "evidence_graph_dual_path_v1", "llmlingua2",
                "evidence_graph_fused_v2", "evidence_graph_fused_post_llmlingua2_v2",
-               "evidence_graph_abstractive_async_v3", "evidence_graph_qc_grdc_v4"]
+               "evidence_graph_abstractive_async_v3", "evidence_graph_qc_grdc_v4",
+               "evidence_graph_qc_grdc_relation_v1", "evidence_graph_qc_grdc_triple_v1",
+               "evidence_graph_qc_grdc_chain_v1"]
 
 
 def percentile(values, fraction):
@@ -101,6 +105,9 @@ def main():
     parser.add_argument("--max-sequences-per-dataset", type=int, default=10000)
     parser.add_argument("--methods", nargs="+", choices=ALL_METHODS, default=ALL_METHODS,
                         help="methods to compare; default runs all registered methods")
+    parser.add_argument("--datasets", nargs="+", choices=("hotpotqa", "2wikimultihopqa", "musique"),
+                        default=("hotpotqa", "2wikimultihopqa", "musique"),
+                        help="optional dataset subset; defaults to all three datasets")
     parser.add_argument("--budget-ratio", type=float, default=0.50)
     parser.add_argument("--inter-turn-wait-ms", type=float, default=1000)
     parser.add_argument("--max-new-tokens", type=int, default=32)
@@ -115,10 +122,16 @@ def main():
         parser.error("methods must be a non-empty list without duplicates")
     methods = list(args.methods)
     sampled, dataset_counts = _sample_requests(args.data_root, args.fraction, args.seed)
-    if len(sampled) != 3:
-        raise RuntimeError(f"expected all 3 datasets, found {sorted(sampled)}")
     specs, coverage = _build_sequences(sampled, 3, args.max_sequences_per_dataset, args.fraction, args.seed)
     random.Random(args.seed + 1).shuffle(specs)
+    missing_datasets = set(args.datasets) - set(sampled)
+    if missing_datasets:
+        raise RuntimeError(f"requested datasets unavailable: {sorted(missing_datasets)}")
+    # Filter only after building and shuffling with all datasets so a dataset
+    # subset reuses the exact same sequence sample as the full paired run.
+    specs = [spec for spec in specs if spec.dataset in args.datasets]
+    coverage = {key: value for key, value in coverage.items() if key in args.datasets}
+    dataset_counts = {key: value for key, value in dataset_counts.items() if key in args.datasets}
     code_files = sorted([*Path("src/ladc").rglob("*.py"), Path(__file__),
                          Path("scripts/run_real_7b_multiturn_fraction.py")])
     plan = {"version": 3, "fraction_per_dataset": args.fraction, "seed": args.seed,
@@ -137,6 +150,7 @@ def main():
         "abstractive_max_new_tokens": args.abstractive_max_new_tokens,
         "v3_protocol": "turn 1 sends the original prompt unchanged; after each answer, an asynchronous worker summarizes only that turn's raw source evidence and stores a source-only memory node with provenance IDs; later turns fuse current raw evidence with completed session summaries; a pending summary never blocks a request",
         "qc_grdc_protocol": "quality-constrained graph rate-distortion coding; protect query variables, numeric/negation features, graph bridge paths and provenance anchors, then select remaining evidence by marginal observable quality gain per native token cost",
+        "datasets": list(args.datasets),
         "code_sha256": {str(p): sha256(p.read_bytes()).hexdigest() for p in code_files},
         "sequences": [{"sequence_id": s.sequence_id, "dataset": s.dataset, "kind": s.kind,
                        "request_ids": [r.request_id for r in s.requests]} for s in specs]}
@@ -191,6 +205,21 @@ def main():
                 elif method == "evidence_graph_qc_grdc_v4":
                     compressor = SessionEvidenceGraphCompressor(
                         compressor_class=QualityConstrainedGraphRateDistortionCompressor,
+                        compressor_kwargs={"name": method, "quality_floor": 0.92},
+                    )
+                elif method == "evidence_graph_qc_grdc_relation_v1":
+                    compressor = SessionEvidenceGraphCompressor(
+                        compressor_class=RelationAwareQCGRDCCompressor,
+                        compressor_kwargs={"name": method, "quality_floor": 0.92},
+                    )
+                elif method == "evidence_graph_qc_grdc_triple_v1":
+                    compressor = SessionEvidenceGraphCompressor(
+                        compressor_class=TripleAwareQCGRDCCompressor,
+                        compressor_kwargs={"name": method, "quality_floor": 0.92},
+                    )
+                elif method == "evidence_graph_qc_grdc_chain_v1":
+                    compressor = SessionEvidenceGraphCompressor(
+                        compressor_class=ChainAwareQCGRDCCompressor,
                         compressor_kwargs={"name": method, "quality_floor": 0.92},
                     )
                 else:

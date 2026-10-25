@@ -16,6 +16,7 @@ facts or an extra LLM call on the critical path.
 from __future__ import annotations
 
 from dataclasses import replace
+from functools import lru_cache
 import re
 from typing import Any, Iterable
 
@@ -34,6 +35,71 @@ _NEGATIONS = {"no", "not", "never", "none", "without", "neither", "nor", "didnâ€
 _QUESTION_WORDS = {
     "who", "what", "which", "when", "where", "why", "how", "whose", "whom",
 }
+
+# Lightweight, deterministic relation vocabulary for relation-aware evidence
+# selection. This is deliberately a prototype rather than a general-purpose
+# open IE system; source sentences remain the authority and retain provenance.
+_RELATION_PATTERNS = {
+    "directed": (r"\bdirected\s+by\b", r"\bdirect(?:s|ed)?\b", r"\bdirector\b"),
+    "written": (r"\bwritten\s+by\b", r"\bwrote\b", r"\bwriter\b", r"\bauthor\b"),
+    "born_in": (r"\bborn\s+in\b",),
+    "located_in": (r"\blocated\s+in\b", r"\bbased\s+in\b", r"\bsituated\s+in\b"),
+    "capital_of": (r"\bcapital\s+of\b",),
+    "released_in": (r"\breleased\s+in\b", r"\bcame\s+out\s+in\b"),
+    "starred_in": (r"\bstarr?ed\s+in\b", r"\bappeared\s+in\b"),
+    "produced": (r"\bproduced\s+by\b", r"\bproducer\b"),
+    "founded": (r"\bfounded\s+by\b", r"\bfounded\b"),
+    "member_of": (r"\bmember\s+of\b", r"\bbelongs\s+to\b"),
+    "spouse_of": (r"\bmarried\s+to\b", r"\bspouse\b", r"\bwife\b", r"\bhusband\b"),
+    "parent_of": (r"\bson\s+of\b", r"\bdaughter\s+of\b", r"\bfather\s+of\b", r"\bmother\s+of\b"),
+    "died_in": (r"\bdied\s+in\b", r"\bkilled\s+in\b"),
+    "educated_at": (r"\beducated\s+at\b", r"\bgraduated\s+from\b"),
+    "played_for": (r"\bplayed\s+for\b", r"\bplays\s+for\b"),
+    "competed_in": (r"\bcompeted\s+in\b", r"\bparticipated\s+in\b"),
+}
+_RELATION_REGEX = {label: tuple(re.compile(p, re.IGNORECASE) for p in patterns)
+                   for label, patterns in _RELATION_PATTERNS.items()}
+
+
+def _relation_labels(text: str) -> set[str]:
+    return {label for label, patterns in _RELATION_REGEX.items()
+            if any(pattern.search(text) for pattern in patterns)}
+
+_TRIPLE_PATTERNS = {
+    "directed": re.compile(r"^(?P<subj>.+?)\s+(?:was\s+)?directed\s+by\s+(?P<obj>[^,.!?;]+)", re.I),
+    "directed_active": re.compile(r"^(?P<subj>.+?)\s+directed\s+(?!by\b)(?P<obj>[^,.!?;]+)", re.I),
+    "written": re.compile(r"^(?P<subj>.+?)\s+(?:was\s+)?written\s+by\s+(?P<obj>[^,.!?;]+)", re.I),
+    "born_in": re.compile(r"^(?P<subj>.+?)\s+was\s+born\s+in\s+(?P<obj>[^,.!?;]+)", re.I),
+    "located_in": re.compile(r"^(?P<subj>.+?)\s+(?:is|was)\s+(?:located|based|situated)\s+in\s+(?P<obj>[^,.!?;]+)", re.I),
+    "capital_of": re.compile(r"^(?P<subj>.+?)\s+is\s+the\s+capital\s+of\s+(?P<obj>[^,.!?;]+)", re.I),
+    "released_in": re.compile(r"^(?P<subj>.+?)\s+was\s+released\s+in\s+(?P<obj>\d{3,4})", re.I),
+    "starred_in": re.compile(r"^(?P<subj>.+?)\s+starred\s+in\s+(?P<obj>[^,.!?;]+)", re.I),
+    "produced": re.compile(r"^(?P<subj>.+?)\s+was\s+produced\s+by\s+(?P<obj>[^,.!?;]+)", re.I),
+    "founded": re.compile(r"^(?P<subj>.+?)\s+was\s+founded\s+by\s+(?P<obj>[^,.!?;]+)", re.I),
+    "member_of": re.compile(r"^(?P<subj>.+?)\s+is\s+a?\s*member\s+of\s+(?P<obj>[^,.!?;]+)", re.I),
+    "educated_at": re.compile(r"^(?P<subj>.+?)\s+was\s+educated\s+at\s+(?P<obj>[^,.!?;]+)", re.I),
+    "played_for": re.compile(r"^(?P<subj>.+?)\s+played\s+for\s+(?P<obj>[^,.!?;]+)", re.I),
+}
+
+@lru_cache(maxsize=32768)
+def _extract_relation_triples(title: str, text: str) -> tuple[tuple[str, str, str], ...]:
+    """Extract conservative, source-backed triples from simple English clauses."""
+    triples = []
+    clean = " ".join(text.strip().split()).strip(" .!?;")
+    for relation, pattern in _TRIPLE_PATTERNS.items():
+        match = pattern.search(clean)
+        if not match:
+            continue
+        normalized_relation = "directed" if relation == "directed_active" else relation
+        subject = (title.strip() or match.group("subj")).strip(" []")
+        obj = match.group("obj").strip(" []")
+        if subject and obj:
+            triples.append((subject, normalized_relation, obj))
+    return tuple(triples)
+
+def _entity_keys(value: str) -> set[str]:
+    tokens = [t for t in re.findall(r"[a-z0-9]+", value.casefold()) if len(t) > 2]
+    return {" ".join(tokens), *tokens} if tokens else set()
 
 
 def _feature_tokens(text: str) -> set[str]:
@@ -159,6 +225,10 @@ class QualityConstrainedGraphRateDistortionCompressor(EvidenceGraphCompressor):
                 return 2.4
             return 1.35
         return 0.40
+
+    def _relation_chain_bundles(self, hits: list[EvidenceHit]) -> list[tuple[int, int, str]]:
+        """Optional pairs of sentences that jointly encode a relation path."""
+        return []
 
     def _filter_hits(
         self,
@@ -314,6 +384,28 @@ class QualityConstrainedGraphRateDistortionCompressor(EvidenceGraphCompressor):
             else:
                 core_complete = False
 
+        # Relation-aware variants may reserve a complete two-edge path as a
+        # bundle. A path is only counted when both source sentences fit.
+        selected_chain_ids: list[str] = []
+        bundles = self._relation_chain_bundles(hits)
+        if bundles:
+            bundle_options = []
+            for left, right, chain_id in bundles:
+                missing = [i for i in (left, right) if i not in selected]
+                cost = sum(candidate_costs[i] for i in missing)
+                if cost and used + cost <= available:
+                    value = sum(score(i)[0] for i in missing) / max(1, cost)
+                    bundle_options.append((value, -cost, chain_id, missing))
+                elif not missing:
+                    selected_chain_ids.append(chain_id)
+            if bundle_options:
+                _, _, chain_id, bundle = max(bundle_options)
+                for i in bundle:
+                    selected.append(i)
+                    used += candidate_costs[i]
+                    selected_features.update(feature_sets[i])
+                selected_chain_ids.append(chain_id)
+
         # Rate-distortion pass.  The loop is deterministic and uses no model
         # call, so compression overhead stays proportional to candidate count.
         remaining = set(range(len(hits))) - set(selected)
@@ -387,6 +479,7 @@ class QualityConstrainedGraphRateDistortionCompressor(EvidenceGraphCompressor):
             "quality_feature_count_selected": len(selected_quality_features),
             "path_count_full": sum(bool(hit.path) for hit in hits),
             "path_count_selected": sum(bool(hit.path) for hit in selected_hits),
+            "selected_relation_chain_ids": selected_chain_ids,
         }
         return prompt, selected_hits, audit
 
@@ -481,6 +574,10 @@ class QualityConstrainedGraphRateDistortionCompressor(EvidenceGraphCompressor):
         }
         metadata.update(filter_metadata)
         metadata.update(audit)
+        if isinstance(self, TripleAwareQCGRDCCompressor):
+            metadata.update(relation_triple_audit(hits))
+        if isinstance(self, ChainAwareQCGRDCCompressor):
+            metadata["candidate_relation_chain_count"] = len(self._relation_chain_bundles(hits))
         return CompressionRecord(
             method=self.name,
             original_prompt_tokens=original_tokens,
@@ -494,3 +591,106 @@ class QualityConstrainedGraphRateDistortionCompressor(EvidenceGraphCompressor):
 
 # Short alias for callers that want the algorithm name without the full class.
 QCGRDCCompressor = QualityConstrainedGraphRateDistortionCompressor
+
+
+class RelationAwareQCGRDCCompressor(QualityConstrainedGraphRateDistortionCompressor):
+    """QC-GRDC variant that favors sentences matching query relation types.
+
+    Relations are recognized with deterministic cached regex patterns. The
+    extractor contributes a relation feature to the existing marginal-gain
+    objective, so matching predicates and multi-sentence predicate chains can
+    be retained without changing the original v4 compressor.
+    """
+
+    name = "evidence_graph_qc_grdc_relation_v1"
+
+    @staticmethod
+    def _query_features(question: str, hits: Iterable[EvidenceHit]) -> set[str]:
+        features = QualityConstrainedGraphRateDistortionCompressor._query_features(question, hits)
+        features.update(f"relation:{label}" for label in _relation_labels(question))
+        return features
+
+    @staticmethod
+    def _candidate_features(hit: EvidenceHit, query_features: set[str]) -> set[str]:
+        features = QualityConstrainedGraphRateDistortionCompressor._candidate_features(hit, query_features)
+        features.update(f"relation:{label}" for label in _relation_labels(hit.text))
+        return features
+
+    @staticmethod
+    def _is_quality_feature(feature: str) -> bool:
+        return QualityConstrainedGraphRateDistortionCompressor._is_quality_feature(feature)
+
+    @staticmethod
+    def _feature_weight(feature: str, *, query_terms: set[str], current: bool) -> float:
+        if feature.startswith("relation:"):
+            return 2.8 if feature in query_terms else 0.4
+        return QualityConstrainedGraphRateDistortionCompressor._feature_weight(
+            feature, query_terms=query_terms, current=current
+        )
+
+
+class TripleAwareQCGRDCCompressor(RelationAwareQCGRDCCompressor):
+    """Add conservative source-backed subject-relation-object features."""
+
+    name = "evidence_graph_qc_grdc_triple_v1"
+
+    @staticmethod
+    def _candidate_features(hit: EvidenceHit, query_features: set[str]) -> set[str]:
+        features = RelationAwareQCGRDCCompressor._candidate_features(hit, query_features)
+        for subject, relation, obj in _extract_relation_triples(hit.title, hit.text):
+            features.add(f"triple:{_normalize(subject)}|{relation}|{_normalize(obj)}")
+            features.update(f"triple_entity:{entity}" for entity in _entity_keys(subject))
+            features.update(f"triple_entity:{entity}" for entity in _entity_keys(obj))
+        return features
+
+    @staticmethod
+    def _feature_weight(feature: str, *, query_terms: set[str], current: bool) -> float:
+        if feature.startswith("triple:"):
+            return 0.25
+        if feature.startswith("triple_entity:"):
+            return 0.5
+        return RelationAwareQCGRDCCompressor._feature_weight(
+            feature, query_terms=query_terms, current=current
+        )
+
+
+class ChainAwareQCGRDCCompressor(TripleAwareQCGRDCCompressor):
+    """Prefer complete two-edge relation paths that share an entity."""
+
+    name = "evidence_graph_qc_grdc_chain_v1"
+
+    def _relation_chain_bundles(self, hits: list[EvidenceHit]) -> list[tuple[int, int, str]]:
+        triples = []
+        for index, hit in enumerate(hits):
+            for subject, relation, obj in _extract_relation_triples(hit.title, hit.text):
+                triples.append((index, subject, relation, obj))
+        bundles: dict[tuple[int, int], str] = {}
+        for pos, (left, subject_a, relation_a, object_a) in enumerate(triples):
+            keys_a = _entity_keys(subject_a) | _entity_keys(object_a)
+            for right, subject_b, relation_b, object_b in triples[pos + 1:]:
+                if left == right:
+                    continue
+                keys_b = _entity_keys(subject_b) | _entity_keys(object_b)
+                shared = keys_a & keys_b
+                # Ignore single-token matches: common surnames/words create
+                # spurious graph links in this conservative prototype.
+                shared = {key for key in shared if " " in key}
+                if not shared:
+                    continue
+                pair = tuple(sorted((left, right)))
+                chain_id = f"{pair[0]}>{pair[1]}:{relation_a}>{relation_b}:{sorted(shared)[0]}"
+                bundles[pair] = chain_id
+        return [(left, right, chain_id)
+                for (left, right), chain_id in sorted(bundles.items())]
+
+
+def relation_triple_audit(hits: list[EvidenceHit]) -> dict[str, Any]:
+    triples = []
+    for hit in hits:
+        for subject, relation, obj in _extract_relation_triples(hit.title, hit.text):
+            triples.append({
+                "subject": subject, "relation": relation, "object": obj,
+                "sentence_id": hit.node_id,
+            })
+    return {"extracted_relation_triple_count": len(triples),
+            "relation_triples": triples}

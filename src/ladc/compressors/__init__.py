@@ -17,6 +17,9 @@ from ladc.compressors.async_abstractive_memory import AsyncAbstractiveEvidenceMe
 from ladc.compressors.qc_grdc import (
     QCGRDCCompressor,
     QualityConstrainedGraphRateDistortionCompressor,
+    RelationAwareQCGRDCCompressor,
+    TripleAwareQCGRDCCompressor,
+    ChainAwareQCGRDCCompressor,
 )
 
 __all__ = [
@@ -37,4 +40,7 @@ __all__ = [
     "AsyncAbstractiveEvidenceMemoryCompressor",
     "QCGRDCCompressor",
     "QualityConstrainedGraphRateDistortionCompressor",
+    "RelationAwareQCGRDCCompressor",
+    "TripleAwareQCGRDCCompressor",
+    "ChainAwareQCGRDCCompressor",
 ]

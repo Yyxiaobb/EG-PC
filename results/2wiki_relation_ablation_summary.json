@@ -1,0 +1,2514 @@
+{
+  "version": 3,
+  "fraction_per_dataset": 0.05,
+  "seed": 42,
+  "dataset_counts": {
+    "2wikimultihopqa": {
+      "available": 12576,
+      "target_turns": 629,
+      "target_fraction": 0.05001590330788804
+    }
+  },
+  "coverage": {
+    "2wikimultihopqa": {
+      "target_questions": 629,
+      "used_in_multiturn_sessions": 627,
+      "unused_target_questions": 2
+    }
+  },
+  "sequence_length": 3,
+  "sequence_count": 209,
+  "request_count": 627,
+  "methods": [
+    "evidence_graph_qc_grdc_v4",
+    "evidence_graph_qc_grdc_relation_v1"
+  ],
+  "expected_generation_count": 1254,
+  "budget_ratio": 0.5,
+  "budget_policy": "same maximum native prompt token budget; actual usage reported",
+  "sequence_sampling": "three-turn chains selected from full split using visible titles/entities; deterministic mixed fallback fills requested fraction when linked turns run out; not natural dialogue",
+  "inter_turn_wait_ms": 200.0,
+  "method_schedule": "rotate method order across sessions; finish background work before changing methods",
+  "latency_definition": "client compression start to complete generation return, excluding evaluation and post-generation work",
+  "history_readiness_definition": "measured immediately before actual next combo request; final turns excluded",
+  "raw_source_anchors_retained": true,
+  "max_new_tokens": 32,
+  "model": "D:\\HF_dl\\model\\Qwen2.5-7B-Instruct-GGUF\\qwen2.5-7b-instruct-q4_k_m-00001-of-00002.gguf",
+  "llmlingua_model": "D:\\HF_dl\\model\\llmlingua-2-bert-base-multilingual-cased-meetingbank",
+  "abstractive_model": "D:\\HF_dl\\model\\Qwen2.5-0.5B-Instruct",
+  "abstractive_device": "cpu",
+  "abstractive_max_new_tokens": 64,
+  "v3_protocol": "turn 1 sends the original prompt unchanged; after each answer, an asynchronous worker summarizes only that turn's raw source evidence and stores a source-only memory node with provenance IDs; later turns fuse current raw evidence with completed session summaries; a pending summary never blocks a request",
+  "qc_grdc_protocol": "quality-constrained graph rate-distortion coding; protect query variables, numeric/negation features, graph bridge paths and provenance anchors, then select remaining evidence by marginal observable quality gain per native token cost",
+  "datasets": [
+    "2wikimultihopqa"
+  ],
+  "code_sha256": {
+    "C:\\Users\\12777\\Documents\\ChatGPT\\new_compress\\scripts\\run_real_7b_multiturn_v2.py": "a9b8a5f8755a6013485e8fa61954ad6b5e0aa85a5abdefa2503a47d9f155acb9",
+    "scripts\\run_real_7b_multiturn_fraction.py": "ec151dd2915c8239cac012f41a27a3ec95be65efb30673d223bf70de9eb40178",
+    "src\\ladc\\__init__.py": "3e388cdeeda23c84c2b1e12820500ca7262ed70ccd94344ddfacac56141dc3e4",
+    "src\\ladc\\analysis\\__init__.py": "e9bb38aabdad9a8a010259642b2aeb7426a8e03fd6d6020523e2468a66a5d443",
+    "src\\ladc\\analysis\\summary.py": "6d38ef3d42313dcf16eec2ac26cfbc753139c3ff62355bef53e89a3d0288c4a9",
+    "src\\ladc\\calibration.py": "bb54e418d6eea825a70eab183d09ce6f1737dc9ec51900313331b7fe4acfc6d5",
+    "src\\ladc\\calibration_metrics.py": "35e10ddfdb080c4f344e46f1f347eb37053ec701b10b8cf6ab0c8aa283713d8d",
+    "src\\ladc\\compressors\\__init__.py": "fa22e31084f40e3f1e536f132d10fd81049fc0487add430c6419b2cbe0f62479",
+    "src\\ladc\\compressors\\abstractive_fused.py": "8202f300490d8bedaeae6e4e140614729e50a10de85b11104f0cfaa5eaf10274",
+    "src\\ladc\\compressors\\async_abstractive_memory.py": "be1dbc7b46092cb837160e1e6cc979c8ad812af23a5693ad0106bea6c6c01f56",
+    "src\\ladc\\compressors\\baselines.py": "b79efd33068197bf6acf1fc74e852b75206492d13a0de6668e2b81845263b390",
+    "src\\ladc\\compressors\\dual_path.py": "c996cf7effdfd351da09a769948207157c3ed846104f5e4f5d9a4c81195f076c",
+    "src\\ladc\\compressors\\evidence_graph.py": "f89b7c2b04c063a97673ff5c67978a281470374f437cfe2f1f80eb485bc242b3",
+    "src\\ladc\\compressors\\fused_graph.py": "87dae4b6ff02f2609b30ac4d910e320f7de6698967b70a40fdabcec663e2babb",
+    "src\\ladc\\compressors\\llmlingua2.py": "abaa725222dbc43c8e2b0dbea61cb1de1d3bf8da02e4739a230bd5b8fbf40b90",
+    "src\\ladc\\compressors\\post_generation.py": "ccbbd58ad01f9914dc9ce05ecd8b5a5be884484cb89eb9474fab6b1871f8c50a",
+    "src\\ladc\\compressors\\qc_grdc.py": "a43b757814197af8b751f904610374b6b01c629e1ca7faeb9c78831584dc24a2",
+    "src\\ladc\\compressors\\query_aware.py": "741a73dbc53d868f08b8e775b6d86f0a9e35b21692788ea0d2c72e8a786bcecf",
+    "src\\ladc\\compressors\\session_graph.py": "3bb6300b5f4024a508e6933ef40d67a67c92a658a58df33e9bea7316006f92cc",
+    "src\\ladc\\controller.py": "a5a1f2f8e7dc308a962499256428ce53bce722b41552dc2fcd61fd6d91045be0",
+    "src\\ladc\\datasets.py": "96c15cd5fcc867eddca16400a80cfa33121062adbb6c50305926ae83c8a6396b",
+    "src\\ladc\\evidence_builder.py": "cd54ffd035f04f795b95702dd0849ac65b30c7252894471b3476e1afb869acf4",
+    "src\\ladc\\evidence_graph.py": "73e69ff6704934e10b082c42c7285125672962e45a867751604e5dc703e76ac9",
+    "src\\ladc\\experiments\\__init__.py": "eb4391f7ca90e0b202ecc6f7484edba04f435cf18c2c140f155465ed817e72be",
+    "src\\ladc\\experiments\\runner.py": "af5550f738747c49b052070a3c8dc52f5c16a7bcf4c347d374d0570b8681a07f",
+    "src\\ladc\\features.py": "d59e44ae5a8fb3d9dd9e38cdd3a449453b06ea8c69370f0fe9b838cdbd1a0fed",
+    "src\\ladc\\inference\\__init__.py": "d27a8b9d0a27622356d31d5b8a362484e968a239336dea67e1511b0fccb40207",
+    "src\\ladc\\inference\\llama_cli.py": "d543c49b5a1368a589f0d722dcde0b3389ef336858c4fdcc5f58ba97c91d3779",
+    "src\\ladc\\inference\\llama_server.py": "57443b73675f542de3d9b4304c5bec616a9b14e78d1956ba447f5eba3f30c127",
+    "src\\ladc\\inference\\simulated.py": "8c768dc77b84c1dd6f70183dbe912e5ac12f4587a20ea5c8a9aa832869ddba4c",
+    "src\\ladc\\inference\\transformers_backend.py": "63b41ea2a792402ceea29032f358a012fa60dddd712fa931f388d0d46c6c60e5",
+    "src\\ladc\\interfaces.py": "96f1d3f2107a1470e812cdabdba5c4e050d9455fb22ee98e247b0a7fdf04fa57",
+    "src\\ladc\\predictor.py": "95b6308a843aa273447957dec8fd31ae8751254c4ac4a2bc9c40cda66e6e0cc4",
+    "src\\ladc\\quality.py": "ce4041ba070ee235214446d8fdb4325f5c51ee42b17d9c39586017ba5ebe0e28",
+    "src\\ladc\\records.py": "0e6e7e4fbc3161a874cd7bc9175aa3d7b9fcd18ef067080d9a0dbfa95a8f8087",
+    "src\\ladc\\sequences.py": "2a57d4d0a84dabe43ebe4aa376107523d0c4d9fd5a5953efdf4a41306ea2cd2c",
+    "src\\ladc\\timing.py": "2284aeb19cd0eb71fabca478242f0b42a91470deb5eb42ed206656f7f70941fe",
+    "src\\ladc\\tokenizers.py": "12b27257079f51e02a6477afe02c458abcf3d8c73cf7a54becc3a78fe8f8361e",
+    "src\\ladc\\workloads.py": "6ef337a1e32a0006304b23f07a758595e623dbeb2f518b52a4c8dfc548596ab7"
+  },
+  "sequences": [
+    {
+      "sequence_id": "2wikimultihopqa_related_127",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "ff8987ca0bae11ebab90acde48001122",
+        "5c7f95280baf11ebab90acde48001122",
+        "320b908a0baf11ebab90acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_52",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "dd9911900bda11eba7f7acde48001122",
+        "456ab3640bdb11eba7f7acde48001122",
+        "5f5002360bd911eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_63",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "dc0f51e20bdd11eba7f7acde48001122",
+        "95a5f0d60baf11ebab90acde48001122",
+        "3edb926e0bb011ebab90acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_152",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "7d1e554c08a011ebbd78ac1f6bf848b6",
+        "7be29ce208a011ebbd78ac1f6bf848b6",
+        "00dd3bd608ac11ebbd82ac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_4",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "143e7bfe0bdb11eba7f7acde48001122",
+        "43a34d720bde11eba7f7acde48001122",
+        "cfc0d3e80bdd11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_59",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "e1228e9f08ca11ebbd92ac1f6bf848b6",
+        "e28d440408ca11ebbd92ac1f6bf848b6",
+        "75fbf09a08c711ebbd91ac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_68",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "a603e82f092611ebbdaeac1f6bf848b6",
+        "e4b38ee008df11ebbda1ac1f6bf848b6",
+        "a1f15751088e11ebbd70ac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_12",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "0caebed80bb011ebab90acde48001122",
+        "8eb5dfe20bb011ebab90acde48001122",
+        "c6b372a60bdd11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_143",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "8cddc8520baf11ebab90acde48001122",
+        "08cae5720baf11ebab90acde48001122",
+        "0fb0c2d00baf11ebab90acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_126",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "67ecf3100bdc11eba7f7acde48001122",
+        "89a94f720bdb11eba7f7acde48001122",
+        "56064d800bdd11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_124",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "f2b10cf2091b11ebbdaeac1f6bf848b6",
+        "f54b61f0093c11ebbdaeac1f6bf848b6",
+        "3ef53b800bdb11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_121",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "c34451720bdc11eba7f7acde48001122",
+        "f2987f240bdd11eba7f7acde48001122",
+        "955dd72a0bdb11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_192",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "ee484526089f11ebbd78ac1f6bf848b6",
+        "2afa11e908d211ebbd95ac1f6bf848b6",
+        "c6ab5b3c08ce11ebbd94ac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_195",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "ce9cda1608a111ebbd79ac1f6bf848b6",
+        "ec949ad0088c11ebbd70ac1f6bf848b6",
+        "4075e978088911ebbd6eac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_175",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "7ea99e4c08a211ebbd7aac1f6bf848b6",
+        "35ee6c6c087c11ebbd69ac1f6bf848b6",
+        "373e7ab2087c11ebbd69ac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_197",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "c95dbd080bd911eba7f7acde48001122",
+        "495c63980bd911eba7f7acde48001122",
+        "7284db480bdd11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_102",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "bb965c8508af11ebbd83ac1f6bf848b6",
+        "90934fd908dc11ebbd9cac1f6bf848b6",
+        "36a7890a08d511ebbd98ac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_134",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "b7a3a90c0bdd11eba7f7acde48001122",
+        "3630015a0baf11ebab90acde48001122",
+        "606089c00bde11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_58",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "92ebfb8c0bdd11eba7f7acde48001122",
+        "07e964920bde11eba7f7acde48001122",
+        "2c95284e0bde11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_43",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "ca0b4c4108e411ebbda4ac1f6bf848b6",
+        "16cbb9f40bdb11eba7f7acde48001122",
+        "5674280a0bdd11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_82",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "bb73c78a0bdb11eba7f7acde48001122",
+        "e22b6ac20bdb11eba7f7acde48001122",
+        "265daf200bdc11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_81",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "b1232eea0bdd11eba7f7acde48001122",
+        "e33d85f00bd911eba7f7acde48001122",
+        "578144840bde11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_39",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "430966620bde11eba7f7acde48001122",
+        "87724861086d11ebbd62ac1f6bf848b6",
+        "637ddff308c011ebbd8aac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_26",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "5b44ffb00bda11eba7f7acde48001122",
+        "ec95927a0bdc11eba7f7acde48001122",
+        "cca6b86a0bda11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_160",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "37a7af5a0bb011ebab90acde48001122",
+        "5ead23420baf11ebab90acde48001122",
+        "8dab3a8e0bb011ebab90acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_169",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "abf4c578090811ebbdadac1f6bf848b6",
+        "d6382e5d095211ebbdaeac1f6bf848b6",
+        "c969c20c087711ebbd67ac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_133",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "03f2846e0bb011ebab90acde48001122",
+        "72f602e60bb011ebab90acde48001122",
+        "2f064e5c0baf11ebab90acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_145",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "3413a86c0bb011ebab90acde48001122",
+        "655987360bdb11eba7f7acde48001122",
+        "77fd1ca20bb011ebab90acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_13",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "5119e8ac08ba11ebbd88ac1f6bf848b6",
+        "f13a163908b311ebbd86ac1f6bf848b6",
+        "904d037508ab11ebbd82ac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_64",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "251db78c0bdb11eba7f7acde48001122",
+        "60a5dd3a0bda11eba7f7acde48001122",
+        "33f51d7e0bde11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_201",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "c3d3f23b089611ebbd76ac1f6bf848b6",
+        "c4f5ca80089611ebbd76ac1f6bf848b6",
+        "a2f105fa088511ebbd6dac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_95",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "77137ac60bdc11eba7f7acde48001122",
+        "45153f740bdb11eba7f7acde48001122",
+        "2e5a18f60bde11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_47",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "4772896e0bdd11eba7f7acde48001122",
+        "249b346e0bdc11eba7f7acde48001122",
+        "8b9607820bd911eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_18",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "6bcf2c260bde11eba7f7acde48001122",
+        "f06cd3be0bdb11eba7f7acde48001122",
+        "385457c20bde11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_70",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "09f56d900bdd11eba7f7acde48001122",
+        "d9b4231a0bdc11eba7f7acde48001122",
+        "88c8cfc80bdc11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_30",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "c1ae09ce0bdd11eba7f7acde48001122",
+        "32d9179c0bde11eba7f7acde48001122",
+        "06e765d00bde11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_11",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "c9b515020bda11eba7f7acde48001122",
+        "04e1b6760bdb11eba7f7acde48001122",
+        "474254660baf11ebab90acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_100",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "45463c0f091611ebbdaeac1f6bf848b6",
+        "c483d452090111ebbdadac1f6bf848b6",
+        "5c7fbb01091a11ebbdaeac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_187",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "f927d5420bdd11eba7f7acde48001122",
+        "1ca3370c0bdc11eba7f7acde48001122",
+        "58b1f1c20bda11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_35",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "99abc1cc085511ebbd59ac1f6bf848b6",
+        "62df628e0bde11eba7f7acde48001122",
+        "a944870c0bdb11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_123",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "cf9bee240bd911eba7f7acde48001122",
+        "f0696baa0bdd11eba7f7acde48001122",
+        "7e83cbd40bb011ebab90acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_122",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "8dc138ae08e311ebbda4ac1f6bf848b6",
+        "42dac74c089311ebbd74ac1f6bf848b6",
+        "415c96a2089311ebbd74ac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_208",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "e50ad0e508e211ebbda4ac1f6bf848b6",
+        "8231a2ae08b011ebbd84ac1f6bf848b6",
+        "630bc32a08a411ebbd7cac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_3",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "eb63d1060bae11ebab90acde48001122",
+        "4062254e0bb011ebab90acde48001122",
+        "bfb3c5880baf11ebab90acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_90",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "f643bee20bae11ebab90acde48001122",
+        "483045fe0baf11ebab90acde48001122",
+        "0c491a740bb011ebab90acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_105",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "e473d60c08b111ebbd85ac1f6bf848b6",
+        "48c0c6fa089011ebbd72ac1f6bf848b6",
+        "f6731dd308ab11ebbd82ac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_153",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "87154f1e0bda11eba7f7acde48001122",
+        "fc5a0af80bda11eba7f7acde48001122",
+        "32f471ae0bde11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_96",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "12f91576089111ebbd72ac1f6bf848b6",
+        "9a4a20a40bdb11eba7f7acde48001122",
+        "8e410d9a0bdb11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_20",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "cece8b7e0bdd11eba7f7acde48001122",
+        "4f6bc4a20bdb11eba7f7acde48001122",
+        "254784f60bde11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_2",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "e10f53d00bd911eba7f7acde48001122",
+        "d4416e6a0bdc11eba7f7acde48001122",
+        "f6e0ce060bdd11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_79",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "7fc10b4c087211ebbd66ac1f6bf848b6",
+        "dfaed4a408b211ebbd85ac1f6bf848b6",
+        "f8e48ec508bb11ebbd88ac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_158",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "0e967bac08a711ebbd7fac1f6bf848b6",
+        "0e967bad08a711ebbd7fac1f6bf848b6",
+        "701b5e2a090a11ebbdadac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_8",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "f78d85300bae11ebab90acde48001122",
+        "30e023220bde11eba7f7acde48001122",
+        "89a9c0ea0bb011ebab90acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_38",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "e507406a087d11ebbd6bac1f6bf848b6",
+        "e63bfc97087d11ebbd6bac1f6bf848b6",
+        "83c0b2aa08e111ebbda2ac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_190",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "a400ea0a0bdc11eba7f7acde48001122",
+        "16e632b80bde11eba7f7acde48001122",
+        "9bd0c7e60bdd11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_92",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "40d326d80bdb11eba7f7acde48001122",
+        "9640a3fa0bdd11eba7f7acde48001122",
+        "09050ca00bde11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_198",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "6434ea6708eb11ebbda7ac1f6bf848b6",
+        "b0ac0fc8087b11ebbd68ac1f6bf848b6",
+        "90c0142e08a911ebbd80ac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_114",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "2de3495a0bda11eba7f7acde48001122",
+        "6897dda00bd911eba7f7acde48001122",
+        "686c70060bda11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_41",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "4b879bd6087a11ebbd67ac1f6bf848b6",
+        "138cc7ac086f11ebbd62ac1f6bf848b6",
+        "4fcd45d9092311ebbdaeac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_71",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "1cc76b380bda11eba7f7acde48001122",
+        "c9f64a9a0bda11eba7f7acde48001122",
+        "8abaaafe0bdc11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_55",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "c3d904dc08fa11ebbdacac1f6bf848b6",
+        "fdcce32008b911ebbd88ac1f6bf848b6",
+        "afc663b80bd911eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_19",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "4d71099308ba11ebbd88ac1f6bf848b6",
+        "375e7e4408c611ebbd90ac1f6bf848b6",
+        "87c2be8908ab11ebbd82ac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_53",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "a7c458ef089311ebbd75ac1f6bf848b6",
+        "a6d5d65608f711ebbdaaac1f6bf848b6",
+        "4e7c40ed08ea11ebbda7ac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_45",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "c3aa16f8089711ebbd77ac1f6bf848b6",
+        "1f77cec108ad11ebbd83ac1f6bf848b6",
+        "c787a5cc08a811ebbd7fac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_112",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "a8dc19ef08fa11ebbdacac1f6bf848b6",
+        "1a85ec0e08e311ebbda4ac1f6bf848b6",
+        "45af359408ab11ebbd82ac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_168",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "8b8c4bda0bdd11eba7f7acde48001122",
+        "00a1b60e0bdd11eba7f7acde48001122",
+        "c058eb020bdd11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_128",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "f6973183085a11ebbd5cac1f6bf848b6",
+        "ed92779008c811ebbd92ac1f6bf848b6",
+        "f13389ac08c811ebbd92ac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_185",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "08d00bcc0bde11eba7f7acde48001122",
+        "1bb4e14a0bde11eba7f7acde48001122",
+        "816523c60bdc11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_142",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "998f8786089711ebbd77ac1f6bf848b6",
+        "2cb9850508b411ebbd87ac1f6bf848b6",
+        "2f54952f087811ebbd67ac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_85",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "fb65a4c40bdd11eba7f7acde48001122",
+        "dd9e17e60bdd11eba7f7acde48001122",
+        "9be20dbc0bdd11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_167",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "629b294c088311ebbd6dac1f6bf848b6",
+        "90a97f7308c011ebbd8aac1f6bf848b6",
+        "b61ebcc1086d11ebbd62ac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_163",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "1584965c0bda11eba7f7acde48001122",
+        "ce5ad97e0bdb11eba7f7acde48001122",
+        "3630fd780bda11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_108",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "4d2f930608c711ebbd91ac1f6bf848b6",
+        "2d1c1cd008c511ebbd8eac1f6bf848b6",
+        "b32bf86a089611ebbd76ac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_31",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "5a3102b8084c11ebbd56ac1f6bf848b6",
+        "de7e12d3089111ebbd73ac1f6bf848b6",
+        "cc5279cb08ae11ebbd83ac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_166",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "805844f80bdd11eba7f7acde48001122",
+        "a4c46e840bdd11eba7f7acde48001122",
+        "0fd5f2ec0bde11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_106",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "246985c00bde11eba7f7acde48001122",
+        "725b8d040bda11eba7f7acde48001122",
+        "a4f96ce80bdc11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_27",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "203b441208db11ebbd9cac1f6bf848b6",
+        "ab8ed2fa0bdc11eba7f7acde48001122",
+        "215697fc0bdd11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_116",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "2252d6700bdd11eba7f7acde48001122",
+        "60bd48de0bdb11eba7f7acde48001122",
+        "33a5ee2e0bda11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_120",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "1bf2b79308d511ebbd98ac1f6bf848b6",
+        "6bb80b9c087b11ebbd68ac1f6bf848b6",
+        "b70ee38708d011ebbd95ac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_73",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "92372c900bdb11eba7f7acde48001122",
+        "907721840baf11ebab90acde48001122",
+        "f4a66ac60bae11ebab90acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_177",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "e476b380090c11ebbdadac1f6bf848b6",
+        "99d7edfa086011ebbd5dac1f6bf848b6",
+        "6e88d85e0bde11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_135",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "31eeaa6608cf11ebbd94ac1f6bf848b6",
+        "61276448089411ebbd75ac1f6bf848b6",
+        "a75801860bda11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_155",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "58ea00460bdd11eba7f7acde48001122",
+        "897ea8c40bdd11eba7f7acde48001122",
+        "c1f7e2a60bdd11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_50",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "ab8e3e620baf11ebab90acde48001122",
+        "896795760bb011ebab90acde48001122",
+        "7df3efc40baf11ebab90acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_206",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "8f3395c1087e11ebbd6bac1f6bf848b6",
+        "d01da635086011ebbd5dac1f6bf848b6",
+        "5effec28087111ebbd63ac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_189",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "cff95a4108b011ebbd85ac1f6bf848b6",
+        "edcafb20089f11ebbd78ac1f6bf848b6",
+        "80f04af008b311ebbd86ac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_32",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "442430e20bdc11eba7f7acde48001122",
+        "bebbb5ec0bdb11eba7f7acde48001122",
+        "66cc23c40bdd11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_1",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "c2fe721a0baf11ebab90acde48001122",
+        "a5b060a00bdd11eba7f7acde48001122",
+        "09d13d200bde11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_200",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "5490ad000bde11eba7f7acde48001122",
+        "2cdc97dc0bda11eba7f7acde48001122",
+        "822c4ee40bda11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_164",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "169a48d80bdb11eba7f7acde48001122",
+        "5cb814860bda11eba7f7acde48001122",
+        "ea8f4d240bda11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_37",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "7a2630040bdd11eba7f7acde48001122",
+        "24eb62980bde11eba7f7acde48001122",
+        "a4d8ea760bdd11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_161",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "0c5bb45608a211ebbd7aac1f6bf848b6",
+        "40600a2e08d711ebbd99ac1f6bf848b6",
+        "a91c363708e711ebbda6ac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_170",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "3e4d9e0a0bb011ebab90acde48001122",
+        "5051011e0bb011ebab90acde48001122",
+        "19813bf40bb011ebab90acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_22",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "b4bac67c0bdc11eba7f7acde48001122",
+        "7a6381980bdd11eba7f7acde48001122",
+        "50eae6ee0bdd11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_61",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "772e74ec0bb011ebab90acde48001122",
+        "ef50c4040bae11ebab90acde48001122",
+        "2700de160baf11ebab90acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_184",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "61644425091011ebbdadac1f6bf848b6",
+        "98a31aee0bdb11eba7f7acde48001122",
+        "678090620bdc11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_146",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "2ea72c0c084d11ebbd56ac1f6bf848b6",
+        "b1395d3e089311ebbd75ac1f6bf848b6",
+        "c6c2d01c087111ebbd63ac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_178",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "6726d43e0bda11eba7f7acde48001122",
+        "0c4974760bdb11eba7f7acde48001122",
+        "e862a5900bdb11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_0",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "90fa07ec087c11ebbd6aac1f6bf848b6",
+        "6ad78d00086311ebbd5eac1f6bf848b6",
+        "a2745ec4085d11ebbd5cac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_42",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "122aa7a60baf11ebab90acde48001122",
+        "5a4826b00bde11eba7f7acde48001122",
+        "437bed640bdd11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_150",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "97c6181e0baf11ebab90acde48001122",
+        "767c8a160bb011ebab90acde48001122",
+        "619580300bb011ebab90acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_76",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "22be69d908b511ebbd88ac1f6bf848b6",
+        "22be69d808b511ebbd88ac1f6bf848b6",
+        "6983889c08d011ebbd95ac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_148",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "1a25fd560bb011ebab90acde48001122",
+        "404937860bde11eba7f7acde48001122",
+        "f299dd600bdd11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_24",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "68e99387085d11ebbd5cac1f6bf848b6",
+        "d58ede7c086e11ebbd62ac1f6bf848b6",
+        "23a5200e08c311ebbd8dac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_15",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "f47416a6085811ebbd5bac1f6bf848b6",
+        "3b9eb6a00bdb11eba7f7acde48001122",
+        "2ef9a6e3088b11ebbd6fac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_129",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "828b1390093511ebbdaeac1f6bf848b6",
+        "df0079d408fe11ebbdadac1f6bf848b6",
+        "79db6f78098111ebbdb0ac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_202",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "62a8a59c0bb011ebab90acde48001122",
+        "78bc5f540bb011ebab90acde48001122",
+        "f4a616ac0bae11ebab90acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_115",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "c74304f20bdd11eba7f7acde48001122",
+        "6ae076e40bde11eba7f7acde48001122",
+        "6a91fe6a0bde11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_174",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "92f031d708c511ebbd8eac1f6bf848b6",
+        "9237272a085911ebbd5bac1f6bf848b6",
+        "b60c16c108c111ebbd8bac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_137",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "30c8f31e0bde11eba7f7acde48001122",
+        "0cc33f200bdd11eba7f7acde48001122",
+        "8babf99e0bdd11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_36",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "acb0fe5608a311ebbd7bac1f6bf848b6",
+        "68364d0a08b511ebbd88ac1f6bf848b6",
+        "c0fa7d3d08d111ebbd95ac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_21",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "d64d24180bd911eba7f7acde48001122",
+        "1b365e5e0bdb11eba7f7acde48001122",
+        "73c202840bdc11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_194",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "03fbfaa80bb011ebab90acde48001122",
+        "612d63f00bde11eba7f7acde48001122",
+        "4cc4963c0bb011ebab90acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_91",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "185a906e0bdc11eba7f7acde48001122",
+        "38ecffde0bdb11eba7f7acde48001122",
+        "903eac2e0bdb11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_56",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "362fbfec0baf11ebab90acde48001122",
+        "b6f2bce20baf11ebab90acde48001122",
+        "a70548900baf11ebab90acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_156",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "7f49e96e0baf11ebab90acde48001122",
+        "cc96bdc00bda11eba7f7acde48001122",
+        "12231fea0baf11ebab90acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_154",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "38c774800bdb11eba7f7acde48001122",
+        "f12b4dd80bdd11eba7f7acde48001122",
+        "ba1542d00bd911eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_199",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "6b466508097711ebbdb0ac1f6bf848b6",
+        "1f447f24096411ebbdafac1f6bf848b6",
+        "3001a6880bde11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_72",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "551d82440bdd11eba7f7acde48001122",
+        "5510d0620bdd11eba7f7acde48001122",
+        "616d9e8c0bdb11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_118",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "249c78b80bde11eba7f7acde48001122",
+        "322178260bde11eba7f7acde48001122",
+        "37490a640baf11ebab90acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_117",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "0bedb7e80bdc11eba7f7acde48001122",
+        "8171f7920bda11eba7f7acde48001122",
+        "0a98773a0bdb11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_25",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "f3fb7e0708b411ebbd88ac1f6bf848b6",
+        "d0c7b05e084a11ebbd56ac1f6bf848b6",
+        "53e08c32088611ebbd6dac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_6",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "6f8bb027090811ebbdadac1f6bf848b6",
+        "14a68691090311ebbdadac1f6bf848b6",
+        "2cb1fed1094311ebbdaeac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_107",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "deea8eb80bdd11eba7f7acde48001122",
+        "3d24d6740bb011ebab90acde48001122",
+        "5819f5620bde11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_7",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "64d60446097911ebbdb0ac1f6bf848b6",
+        "d94b8e3708e911ebbda7ac1f6bf848b6",
+        "a3d71b380bd911eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_93",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "767b64380bb011ebab90acde48001122",
+        "6d273fd80bb011ebab90acde48001122",
+        "f96b81940baf11ebab90acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_33",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "3472a2680bb011ebab90acde48001122",
+        "dd04b44e0baf11ebab90acde48001122",
+        "5ff45ef00baf11ebab90acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_97",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "db7b4a600bdd11eba7f7acde48001122",
+        "2b9500fe0bde11eba7f7acde48001122",
+        "7adefa720bdc11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_104",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "2a0b670e08c911ebbd92ac1f6bf848b6",
+        "25ca7393088d11ebbd70ac1f6bf848b6",
+        "db456131089411ebbd75ac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_5",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "1fc14b400bdc11eba7f7acde48001122",
+        "671322a00bde11eba7f7acde48001122",
+        "bef95be60bda11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_138",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "90287e020bdd11eba7f7acde48001122",
+        "16d7bb720bdc11eba7f7acde48001122",
+        "90bfa26c0bda11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_87",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "249354360bde11eba7f7acde48001122",
+        "05f0e6680bdb11eba7f7acde48001122",
+        "f36595920bae11ebab90acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_162",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "17384fa3087411ebbd67ac1f6bf848b6",
+        "9522a858088911ebbd6eac1f6bf848b6",
+        "a842a2a0088c11ebbd6fac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_125",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "18d4a1f8085611ebbd59ac1f6bf848b6",
+        "c42bcfc0084911ebbd55ac1f6bf848b6",
+        "fe24d22808e211ebbda4ac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_48",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "c9c9b1b208b311ebbd86ac1f6bf848b6",
+        "a2d3f112097311ebbdb0ac1f6bf848b6",
+        "08ff055a085311ebbd58ac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_131",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "da27ae4f08d411ebbd98ac1f6bf848b6",
+        "e08d59e00bdc11eba7f7acde48001122",
+        "57c03881088f11ebbd72ac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_180",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "33f00706085711ebbd5aac1f6bf848b6",
+        "7ef61266089511ebbd75ac1f6bf848b6",
+        "98a3e5e9089111ebbd73ac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_57",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "805d68d608d911ebbd9cac1f6bf848b6",
+        "649f970208c211ebbd8cac1f6bf848b6",
+        "db5f1aa2088b11ebbd6fac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_193",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "279379df092411ebbdaeac1f6bf848b6",
+        "32c45810094511ebbdaeac1f6bf848b6",
+        "52bd3f41097011ebbdb0ac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_88",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "e8d5af180bdb11eba7f7acde48001122",
+        "0dfb58240bdc11eba7f7acde48001122",
+        "df41588c0bd911eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_77",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "cfb1d1ed092e11ebbdaeac1f6bf848b6",
+        "47a59362091411ebbdadac1f6bf848b6",
+        "c789bc3b087211ebbd66ac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_181",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "59771aa8089511ebbd75ac1f6bf848b6",
+        "ccc108cd089d11ebbd78ac1f6bf848b6",
+        "6588c837088711ebbd6dac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_141",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "469cfb7a088911ebbd6eac1f6bf848b6",
+        "9ddd446b089f11ebbd78ac1f6bf848b6",
+        "2f09d428089e11ebbd78ac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_54",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "4294eaae0bb011ebab90acde48001122",
+        "8ccb38ea0baf11ebab90acde48001122",
+        "c43dabfa0baf11ebab90acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_80",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "6defc6ac0bdc11eba7f7acde48001122",
+        "017a4e840bdc11eba7f7acde48001122",
+        "6a807fc40bb011ebab90acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_44",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "5f83bcd2088411ebbd6dac1f6bf848b6",
+        "ffe22f5b08c111ebbd8bac1f6bf848b6",
+        "0e73737408ba11ebbd88ac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_86",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "0188e46808e511ebbda4ac1f6bf848b6",
+        "a87bbb8e089211ebbd73ac1f6bf848b6",
+        "a87bbb8f089211ebbd73ac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_10",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "2817c05d08b811ebbd88ac1f6bf848b6",
+        "14f5dbb208b811ebbd88ac1f6bf848b6",
+        "c7a9e30308ae11ebbd83ac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_83",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "172fd661094811ebbdaeac1f6bf848b6",
+        "cd28d63f087511ebbd67ac1f6bf848b6",
+        "36810e1f088311ebbd6dac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_84",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "ceef393e0bdb11eba7f7acde48001122",
+        "f43e790a0bdd11eba7f7acde48001122",
+        "b2bbb9500bda11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_165",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "fbfb55ac0bdb11eba7f7acde48001122",
+        "2dc690ba0bdc11eba7f7acde48001122",
+        "5a7041840bdb11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_74",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "32812fde0baf11ebab90acde48001122",
+        "22f89c100bdb11eba7f7acde48001122",
+        "2b94cd280bde11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_51",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "85f984c20baf11ebab90acde48001122",
+        "897586180bb011ebab90acde48001122",
+        "3084cf1e0bb011ebab90acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_110",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "148ba80c0bdb11eba7f7acde48001122",
+        "fb9d9ba40bdd11eba7f7acde48001122",
+        "c99fc05e0bd911eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_9",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "6ffa31bc0bdc11eba7f7acde48001122",
+        "4c286ada0bda11eba7f7acde48001122",
+        "66c972400bde11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_149",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "b9fecf600bdd11eba7f7acde48001122",
+        "6aada36a0baf11ebab90acde48001122",
+        "7246ee5a0bb011ebab90acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_49",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "dbe86508084c11ebbd56ac1f6bf848b6",
+        "b8e9d716088411ebbd6dac1f6bf848b6",
+        "47f1959408c011ebbd8aac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_186",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "7327e1d9089211ebbd73ac1f6bf848b6",
+        "361dc208086f11ebbd62ac1f6bf848b6",
+        "a391993708bf11ebbd8aac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_103",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "bdd526c4091811ebbdaeac1f6bf848b6",
+        "46a99487096a11ebbdafac1f6bf848b6",
+        "27987581093611ebbdaeac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_94",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "e130fa9c0bdb11eba7f7acde48001122",
+        "f7ab54440bda11eba7f7acde48001122",
+        "1948b12e0bda11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_151",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "d6d691be095e11ebbdafac1f6bf848b6",
+        "5c7ce15a0bde11eba7f7acde48001122",
+        "410e0f5e0bdc11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_34",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "385c3978086f11ebbd62ac1f6bf848b6",
+        "9310d4b4085b11ebbd5cac1f6bf848b6",
+        "2152e80a0bdd11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_60",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "ccfdb70a08e211ebbda4ac1f6bf848b6",
+        "fdb4a0f7086611ebbd5eac1f6bf848b6",
+        "ff918a88086611ebbd5eac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_89",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "9dab7e3208f711ebbdaaac1f6bf848b6",
+        "900c696108f911ebbdaaac1f6bf848b6",
+        "bd058dbd08fd11ebbdadac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_119",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "8890a29708d611ebbd98ac1f6bf848b6",
+        "60c0663c0bda11eba7f7acde48001122",
+        "a7f52a320bdb11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_62",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "fc04494a0baf11ebab90acde48001122",
+        "6c80bc4e0bb011ebab90acde48001122",
+        "815fa2ae0bda11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_29",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "5c09ba740bdc11eba7f7acde48001122",
+        "f67a19540bdd11eba7f7acde48001122",
+        "39befe640bde11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_159",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "6175a0900baf11ebab90acde48001122",
+        "4b6e740a0bde11eba7f7acde48001122",
+        "5b802d5c0bde11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_204",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "f69997160bdd11eba7f7acde48001122",
+        "6946f8d20baf11ebab90acde48001122",
+        "6080c3080bb011ebab90acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_65",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "361b56400bde11eba7f7acde48001122",
+        "114e11f40bde11eba7f7acde48001122",
+        "9ab545800bdd11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_14",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "0edf5dbf08d811ebbd9aac1f6bf848b6",
+        "a199ab840bdd11eba7f7acde48001122",
+        "17b15a100bde11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_179",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "f0441dea0bd911eba7f7acde48001122",
+        "ff301fb60bd911eba7f7acde48001122",
+        "a6cbb5e80bdd11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_207",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "be0a9cac0baf11ebab90acde48001122",
+        "31d4cbe80bde11eba7f7acde48001122",
+        "c987d3880baf11ebab90acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_40",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "f4d37ea60bdd11eba7f7acde48001122",
+        "a703e1160bdd11eba7f7acde48001122",
+        "33ef347c0bde11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_101",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "a0a66ec40bdd11eba7f7acde48001122",
+        "dc34e9fc0bdd11eba7f7acde48001122",
+        "11ce77860bde11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_147",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "7da905b808dc11ebbd9cac1f6bf848b6",
+        "4eb8cb5208e411ebbda4ac1f6bf848b6",
+        "7d55f0e008d411ebbd96ac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_191",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "da0fc4820bdb11eba7f7acde48001122",
+        "1df3448c0bda11eba7f7acde48001122",
+        "7d4329fe0bdd11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_46",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "b62fb0700bdd11eba7f7acde48001122",
+        "76ad01f60bdc11eba7f7acde48001122",
+        "91edf1460bdc11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_111",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "35568cbc0bb011ebab90acde48001122",
+        "2efd86dc0baf11ebab90acde48001122",
+        "1e9694f20bda11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_203",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "5dde0aca089f11ebbd78ac1f6bf848b6",
+        "4ac069e408ac11ebbd82ac1f6bf848b6",
+        "3d624700088311ebbd6dac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_176",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "36a710500bb011ebab90acde48001122",
+        "d5f1a94a0bdd11eba7f7acde48001122",
+        "6a848a240bb011ebab90acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_144",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "76b1ab3e088a11ebbd6fac1f6bf848b6",
+        "36ab43c108b111ebbd85ac1f6bf848b6",
+        "019842fc089111ebbd72ac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_17",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "4dca6f58089e11ebbd78ac1f6bf848b6",
+        "0c0a8c72088c11ebbd6fac1f6bf848b6",
+        "51fc9f9108c811ebbd91ac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_28",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "885503ba0bda11eba7f7acde48001122",
+        "8a23b5ac0bd911eba7f7acde48001122",
+        "8a6eec600bda11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_205",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "4c47d951091711ebbdaeac1f6bf848b6",
+        "d022b25f090811ebbdadac1f6bf848b6",
+        "00ea5297094a11ebbdaeac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_173",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "33b51db508af11ebbd83ac1f6bf848b6",
+        "3516966008af11ebbd83ac1f6bf848b6",
+        "01758bfb087c11ebbd69ac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_171",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "7546111e0bdb11eba7f7acde48001122",
+        "be501eae0bdb11eba7f7acde48001122",
+        "121ddeae0bdc11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_16",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "e21e04b9089d11ebbd78ac1f6bf848b6",
+        "582deca408bc11ebbd88ac1f6bf848b6",
+        "582deca508bc11ebbd88ac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_136",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "0dfb847c0bda11eba7f7acde48001122",
+        "d8c06f220bdc11eba7f7acde48001122",
+        "ab17df260bda11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_182",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "4dd6b933097411ebbdb0ac1f6bf848b6",
+        "c0d8a92e097211ebbdb0ac1f6bf848b6",
+        "b2a1b19e096e11ebbdb0ac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_75",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "fdf57668086f11ebbd62ac1f6bf848b6",
+        "987795c20bdb11eba7f7acde48001122",
+        "1199d7560bde11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_130",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "de29b27e089a11ebbd78ac1f6bf848b6",
+        "c85f6a7b084e11ebbd56ac1f6bf848b6",
+        "c85f6a7a084e11ebbd56ac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_139",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "82fbc7500bda11eba7f7acde48001122",
+        "71d367cc0bde11eba7f7acde48001122",
+        "c218f9d20bdd11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_69",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "b4399e49089511ebbd75ac1f6bf848b6",
+        "b4399e48089511ebbd75ac1f6bf848b6",
+        "7b4ad90a087a11ebbd67ac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_78",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "5bf96996085111ebbd58ac1f6bf848b6",
+        "a8f4d100093611ebbdaeac1f6bf848b6",
+        "26a0b766090711ebbdadac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_99",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "ce471ffd086011ebbd5dac1f6bf848b6",
+        "d71f453b085811ebbd5bac1f6bf848b6",
+        "2c525424086911ebbd5eac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_157",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "a29bdc540bd911eba7f7acde48001122",
+        "140bbce00bdc11eba7f7acde48001122",
+        "7f64d7820bdd11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_196",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "3cad56f20bde11eba7f7acde48001122",
+        "b75c77b20bdd11eba7f7acde48001122",
+        "48c0eb5c0bde11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_67",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "5388cc82085d11ebbd5cac1f6bf848b6",
+        "3714220108a211ebbd7aac1f6bf848b6",
+        "5f2bce30088111ebbd6dac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_172",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "094c02a40bde11eba7f7acde48001122",
+        "e7b1d7340bda11eba7f7acde48001122",
+        "f9dcb4a60bda11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_98",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "2c5df69e0bde11eba7f7acde48001122",
+        "a4f44cee0bdd11eba7f7acde48001122",
+        "112083160bdd11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_140",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "1ca95b8a084b11ebbd56ac1f6bf848b6",
+        "5f02fdf2084f11ebbd56ac1f6bf848b6",
+        "7661362a0bde11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_188",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "e528e56a085c11ebbd5cac1f6bf848b6",
+        "f1d813c2087e11ebbd6bac1f6bf848b6",
+        "ae2cc7a208cf11ebbd95ac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_132",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "0cdb8dfb086811ebbd5eac1f6bf848b6",
+        "7d569b9108ab11ebbd82ac1f6bf848b6",
+        "a5f7d55508f211ebbdaaac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_183",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "ba27f3860bdd11eba7f7acde48001122",
+        "34caa5ca0bde11eba7f7acde48001122",
+        "fbd86f2a0bda11eba7f7acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_109",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "96beb0b3086111ebbd5dac1f6bf848b6",
+        "d8115658089a11ebbd78ac1f6bf848b6",
+        "470e9857089911ebbd77ac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_66",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "f4c8fc73088d11ebbd70ac1f6bf848b6",
+        "2d97d84f08bf11ebbd8aac1f6bf848b6",
+        "06f3e17d08da11ebbd9cac1f6bf848b6"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_113",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "2ef2a1900baf11ebab90acde48001122",
+        "9078fcca0baf11ebab90acde48001122",
+        "4aa187080baf11ebab90acde48001122"
+      ]
+    },
+    {
+      "sequence_id": "2wikimultihopqa_related_23",
+      "dataset": "2wikimultihopqa",
+      "kind": "related",
+      "request_ids": [
+        "429d41f80bde11eba7f7acde48001122",
+        "164404960bdb11eba7f7acde48001122",
+        "673cc7860bde11eba7f7acde48001122"
+      ]
+    }
+  ],
+  "complete": true,
+  "rows": 1254,
+  "elapsed_this_run_s": 989.110096999997,
+  "summaries": [
+    {
+      "group": "dataset",
+      "value": "2wikimultihopqa",
+      "method": "evidence_graph_qc_grdc_relation_v1",
+      "n": 627,
+      "token_f1": 0.14575198210064705,
+      "exact_match": 0.030303030303030304,
+      "evidence_f1_extractive_only": 0.16959976679776612,
+      "input_tokens": 426.40031897926633,
+      "token_reduction_rate": 0.5969249441496728,
+      "compression_wallclock_ms": 28.754952472287037,
+      "prefill_ms": 169.2665629984051,
+      "decode_ms": 405.8036267942584,
+      "end_to_end_wallclock_ms": 652.5700175440994,
+      "p50_end_to_end_ms": 661.8844000040554,
+      "p95_end_to_end_ms": 896.4942000020528,
+      "component_sum_ms": 598.5937835725678,
+      "reused_evidence_count": 2.041467304625199,
+      "compressed_memory_selected_count": 0,
+      "retrieval_winners": {
+        "n/a": 627
+      },
+      "history_compute_ms": null,
+      "history_queue_ms": null,
+      "history_total_ms": null,
+      "history_supplemented_source_count": 0,
+      "history_ready_numerator": 0,
+      "history_ready_denominator": 0,
+      "history_ready_rate": null,
+      "history_errors": [],
+      "history_summary_fallback_count": 0,
+      "history_mean_reduction_rate": 0.0
+    },
+    {
+      "group": "dataset",
+      "value": "2wikimultihopqa",
+      "method": "evidence_graph_qc_grdc_v4",
+      "n": 627,
+      "token_f1": 0.13395028212434348,
+      "exact_match": 0.028708133971291867,
+      "evidence_f1_extractive_only": 0.15774653946182574,
+      "input_tokens": 263.762360446571,
+      "token_reduction_rate": 0.7391798059510613,
+      "compression_wallclock_ms": 24.486087400072954,
+      "prefill_ms": 111.8477081339713,
+      "decode_ms": 402.45349122807016,
+      "end_to_end_wallclock_ms": 578.9432802229773,
+      "p50_end_to_end_ms": 616.1981999903219,
+      "p95_end_to_end_ms": 799.9684999958845,
+      "component_sum_ms": 533.0728822966507,
+      "reused_evidence_count": 1.3125996810207337,
+      "compressed_memory_selected_count": 0,
+      "retrieval_winners": {
+        "n/a": 627
+      },
+      "history_compute_ms": null,
+      "history_queue_ms": null,
+      "history_total_ms": null,
+      "history_supplemented_source_count": 0,
+      "history_ready_numerator": 0,
+      "history_ready_denominator": 0,
+      "history_ready_rate": null,
+      "history_errors": [],
+      "history_summary_fallback_count": 0,
+      "history_mean_reduction_rate": 0.0
+    },
+    {
+      "group": "overall",
+      "value": "all",
+      "method": "evidence_graph_qc_grdc_relation_v1",
+      "n": 627,
+      "token_f1": 0.14575198210064705,
+      "exact_match": 0.030303030303030304,
+      "evidence_f1_extractive_only": 0.16959976679776612,
+      "input_tokens": 426.40031897926633,
+      "token_reduction_rate": 0.5969249441496728,
+      "compression_wallclock_ms": 28.754952472287037,
+      "prefill_ms": 169.2665629984051,
+      "decode_ms": 405.8036267942584,
+      "end_to_end_wallclock_ms": 652.5700175440994,
+      "p50_end_to_end_ms": 661.8844000040554,
+      "p95_end_to_end_ms": 896.4942000020528,
+      "component_sum_ms": 598.5937835725678,
+      "reused_evidence_count": 2.041467304625199,
+      "compressed_memory_selected_count": 0,
+      "retrieval_winners": {
+        "n/a": 627
+      },
+      "history_compute_ms": null,
+      "history_queue_ms": null,
+      "history_total_ms": null,
+      "history_supplemented_source_count": 0,
+      "history_ready_numerator": 0,
+      "history_ready_denominator": 0,
+      "history_ready_rate": null,
+      "history_errors": [],
+      "history_summary_fallback_count": 0,
+      "history_mean_reduction_rate": 0.0
+    },
+    {
+      "group": "overall",
+      "value": "all",
+      "method": "evidence_graph_qc_grdc_v4",
+      "n": 627,
+      "token_f1": 0.13395028212434348,
+      "exact_match": 0.028708133971291867,
+      "evidence_f1_extractive_only": 0.15774653946182574,
+      "input_tokens": 263.762360446571,
+      "token_reduction_rate": 0.7391798059510613,
+      "compression_wallclock_ms": 24.486087400072954,
+      "prefill_ms": 111.8477081339713,
+      "decode_ms": 402.45349122807016,
+      "end_to_end_wallclock_ms": 578.9432802229773,
+      "p50_end_to_end_ms": 616.1981999903219,
+      "p95_end_to_end_ms": 799.9684999958845,
+      "component_sum_ms": 533.0728822966507,
+      "reused_evidence_count": 1.3125996810207337,
+      "compressed_memory_selected_count": 0,
+      "retrieval_winners": {
+        "n/a": 627
+      },
+      "history_compute_ms": null,
+      "history_queue_ms": null,
+      "history_total_ms": null,
+      "history_supplemented_source_count": 0,
+      "history_ready_numerator": 0,
+      "history_ready_denominator": 0,
+      "history_ready_rate": null,
+      "history_errors": [],
+      "history_summary_fallback_count": 0,
+      "history_mean_reduction_rate": 0.0
+    },
+    {
+      "group": "turn",
+      "value": "1",
+      "method": "evidence_graph_qc_grdc_relation_v1",
+      "n": 209,
+      "token_f1": 0.16685673730382944,
+      "exact_match": 0.04784688995215311,
+      "evidence_f1_extractive_only": 0.17506657016852528,
+      "input_tokens": 350.1387559808612,
+      "token_reduction_rate": 0.6569493042974018,
+      "compression_wallclock_ms": 22.829350718293167,
+      "prefill_ms": 143.51617224880383,
+      "decode_ms": 397.19915311004786,
+      "end_to_end_wallclock_ms": 610.7601660293884,
+      "p50_end_to_end_ms": 642.2244999994291,
+      "p95_end_to_end_ms": 831.343800004106,
+      "component_sum_ms": 558.5848531100478,
+      "reused_evidence_count": 0.0,
+      "compressed_memory_selected_count": 0,
+      "retrieval_winners": {
+        "n/a": 209
+      },
+      "history_compute_ms": null,
+      "history_queue_ms": null,
+      "history_total_ms": null,
+      "history_supplemented_source_count": 0,
+      "history_ready_numerator": 0,
+      "history_ready_denominator": 0,
+      "history_ready_rate": null,
+      "history_errors": [],
+      "history_summary_fallback_count": 0,
+      "history_mean_reduction_rate": 0.0
+    },
+    {
+      "group": "turn",
+      "value": "1",
+      "method": "evidence_graph_qc_grdc_v4",
+      "n": 209,
+      "token_f1": 0.14919807492327436,
+      "exact_match": 0.03827751196172249,
+      "evidence_f1_extractive_only": 0.15802078530389407,
+      "input_tokens": 214.1866028708134,
+      "token_reduction_rate": 0.775989149265103,
+      "compression_wallclock_ms": 19.675090908725707,
+      "prefill_ms": 96.75917703349283,
+      "decode_ms": 389.6782344497608,
+      "end_to_end_wallclock_ms": 550.0518617223147,
+      "p50_end_to_end_ms": 606.8204000039259,
+      "p95_end_to_end_ms": 749.6651999972528,
+      "component_sum_ms": 498.9080416267943,
+      "reused_evidence_count": 0.0,
+      "compressed_memory_selected_count": 0,
+      "retrieval_winners": {
+        "n/a": 209
+      },
+      "history_compute_ms": null,
+      "history_queue_ms": null,
+      "history_total_ms": null,
+      "history_supplemented_source_count": 0,
+      "history_ready_numerator": 0,
+      "history_ready_denominator": 0,
+      "history_ready_rate": null,
+      "history_errors": [],
+      "history_summary_fallback_count": 0,
+      "history_mean_reduction_rate": 0.0
+    },
+    {
+      "group": "turn",
+      "value": "2",
+      "method": "evidence_graph_qc_grdc_relation_v1",
+      "n": 209,
+      "token_f1": 0.1341156130109973,
+      "exact_match": 0.019138755980861243,
+      "evidence_f1_extractive_only": 0.16596355797350915,
+      "input_tokens": 414.67464114832535,
+      "token_reduction_rate": 0.6087382336511069,
+      "compression_wallclock_ms": 28.026399522299574,
+      "prefill_ms": 165.7222918660287,
+      "decode_ms": 405.0313923444976,
+      "end_to_end_wallclock_ms": 646.5540220098304,
+      "p50_end_to_end_ms": 647.532200004207,
+      "p95_end_to_end_ms": 896.4942000020528,
+      "component_sum_ms": 593.5712784688994,
+      "reused_evidence_count": 2.1674641148325358,
+      "compressed_memory_selected_count": 0,
+      "retrieval_winners": {
+        "n/a": 209
+      },
+      "history_compute_ms": null,
+      "history_queue_ms": null,
+      "history_total_ms": null,
+      "history_supplemented_source_count": 0,
+      "history_ready_numerator": 0,
+      "history_ready_denominator": 0,
+      "history_ready_rate": null,
+      "history_errors": [],
+      "history_summary_fallback_count": 0,
+      "history_mean_reduction_rate": 0.0
+    },
+    {
+      "group": "turn",
+      "value": "2",
+      "method": "evidence_graph_qc_grdc_v4",
+      "n": 209,
+      "token_f1": 0.12576248206755297,
+      "exact_match": 0.023923444976076555,
+      "evidence_f1_extractive_only": 0.14845358916053034,
+      "input_tokens": 265.1866028708134,
+      "token_reduction_rate": 0.7448383135666901,
+      "compression_wallclock_ms": 18.298892822669725,
+      "prefill_ms": 111.45674162679425,
+      "decode_ms": 411.1488421052631,
+      "end_to_end_wallclock_ms": 576.2566933011509,
+      "p50_end_to_end_ms": 604.9040000070818,
+      "p95_end_to_end_ms": 778.4976000111783,
+      "component_sum_ms": 536.6168770334928,
+      "reused_evidence_count": 1.444976076555024,
+      "compressed_memory_selected_count": 0,
+      "retrieval_winners": {
+        "n/a": 209
+      },
+      "history_compute_ms": null,
+      "history_queue_ms": null,
+      "history_total_ms": null,
+      "history_supplemented_source_count": 0,
+      "history_ready_numerator": 0,
+      "history_ready_denominator": 0,
+      "history_ready_rate": null,
+      "history_errors": [],
+      "history_summary_fallback_count": 0,
+      "history_mean_reduction_rate": 0.0
+    },
+    {
+      "group": "turn",
+      "value": "3",
+      "method": "evidence_graph_qc_grdc_relation_v1",
+      "n": 209,
+      "token_f1": 0.13628359598711443,
+      "exact_match": 0.023923444976076555,
+      "evidence_f1_extractive_only": 0.16776917225126392,
+      "input_tokens": 514.3875598086124,
+      "token_reduction_rate": 0.5250872945005098,
+      "compression_wallclock_ms": 35.40910717626838,
+      "prefill_ms": 198.56122488038278,
+      "decode_ms": 415.1803349282297,
+      "end_to_end_wallclock_ms": 700.3958645930795,
+      "p50_end_to_end_ms": 695.0116999942111,
+      "p95_end_to_end_ms": 950.4971999995178,
+      "component_sum_ms": 643.6252191387559,
+      "reused_evidence_count": 3.9569377990430623,
+      "compressed_memory_selected_count": 0,
+      "retrieval_winners": {
+        "n/a": 209
+      },
+      "history_compute_ms": null,
+      "history_queue_ms": null,
+      "history_total_ms": null,
+      "history_supplemented_source_count": 0,
+      "history_ready_numerator": 0,
+      "history_ready_denominator": 0,
+      "history_ready_rate": null,
+      "history_errors": [],
+      "history_summary_fallback_count": 0,
+      "history_mean_reduction_rate": 0.0
+    },
+    {
+      "group": "turn",
+      "value": "3",
+      "method": "evidence_graph_qc_grdc_v4",
+      "n": 209,
+      "token_f1": 0.1268902893822031,
+      "exact_match": 0.023923444976076555,
+      "evidence_f1_extractive_only": 0.16676524392105277,
+      "input_tokens": 311.9138755980861,
+      "token_reduction_rate": 0.6967119550213908,
+      "compression_wallclock_ms": 35.48427846882343,
+      "prefill_ms": 127.32720574162678,
+      "decode_ms": 406.5333971291866,
+      "end_to_end_wallclock_ms": 610.521285645466,
+      "p50_end_to_end_ms": 623.1234000006225,
+      "p95_end_to_end_ms": 830.4908999998588,
+      "component_sum_ms": 563.693728229665,
+      "reused_evidence_count": 2.492822966507177,
+      "compressed_memory_selected_count": 0,
+      "retrieval_winners": {
+        "n/a": 209
+      },
+      "history_compute_ms": null,
+      "history_queue_ms": null,
+      "history_total_ms": null,
+      "history_supplemented_source_count": 0,
+      "history_ready_numerator": 0,
+      "history_ready_denominator": 0,
+      "history_ready_rate": null,
+      "history_errors": [],
+      "history_summary_fallback_count": 0,
+      "history_mean_reduction_rate": 0.0
+    }
+  ]
+}

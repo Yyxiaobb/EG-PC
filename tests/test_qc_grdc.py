@@ -2,8 +2,12 @@ from dataclasses import replace
 
 from ladc.compressors import (
     QualityConstrainedGraphRateDistortionCompressor,
+    RelationAwareQCGRDCCompressor,
+    TripleAwareQCGRDCCompressor,
+    ChainAwareQCGRDCCompressor,
     SessionEvidenceGraphCompressor,
 )
+from ladc.compressors.qc_grdc import _relation_labels, _extract_relation_triples
 from ladc.tokenizers import WhitespaceTokenizer
 from ladc.workloads import WorkloadRequest
 
@@ -78,3 +82,37 @@ def test_qc_grdc_is_deterministic_for_same_graph_and_budget():
     finally:
         first.close()
         second.close()
+
+
+def test_relation_aware_qc_grdc_detects_predicates_and_rewards_matching_evidence():
+    assert _relation_labels("Who directed Blue Horizon?") == {"directed"}
+    assert _relation_labels("Blue Horizon was directed by Bob Stone.") == {"directed"}
+    compressor = RelationAwareQCGRDCCompressor()
+    try:
+        query_features = compressor._query_features("Who directed Blue Horizon?", [])
+        hit = type("Hit", (), {
+            "title": "Film", "text": "Blue Horizon was directed by Bob Stone.",
+            "source_document_id": "doc", "path": (), "hops": 0, "node_id": "sentence:1",
+        })()
+        candidate_features = compressor._candidate_features(hit, query_features)
+        assert "relation:directed" in candidate_features
+        assert compressor._feature_weight("relation:directed", query_terms=query_features, current=True) > 1.0
+    finally:
+        compressor.close()
+
+
+def test_triple_and_chain_variants_extract_provenance_and_detect_shared_entity():
+    assert _extract_relation_triples("Blue Horizon", "Blue Horizon was directed by Bob Stone.") == (
+        ("Blue Horizon", "directed", "Bob Stone"),
+    )
+    triples = TripleAwareQCGRDCCompressor()
+    chain = ChainAwareQCGRDCCompressor()
+    try:
+        first = type("Hit", (), {"title": "Blue Horizon", "text": "Blue Horizon was directed by Bob Stone.", "source_document_id": "d1", "path": (), "hops": 0, "node_id": "s1"})()
+        second = type("Hit", (), {"title": "Bob Stone", "text": "Bob Stone directed Moonfall.", "source_document_id": "d2", "path": (), "hops": 0, "node_id": "s2"})()
+        qf = triples._query_features("Which other film did the director direct?", [first, second])
+        assert any(x.startswith("triple:") for x in triples._candidate_features(first, qf))
+        assert chain._relation_chain_bundles([first, second])
+    finally:
+        triples.close()
+        chain.close()
